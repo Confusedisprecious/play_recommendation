@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="武汉亲子游玩推荐 — 按季节、区域、类别推荐武汉适合带小孩去的商场、游乐场、公园和大型活动">
+  <meta name="theme-color" content="#FF7E36">
+  <title>武汉亲子游玩推荐 — 周末带娃去哪玩</title>
+  <style>
+/* ===== 武汉亲子游玩推荐 - 样式 ===== */
+
+/* ---- CSS Variables ---- */
+:root {
+  --primary: #FF7E36;
+  --primary-light: #FFA366;
+  --primary-dark: #E55D1A;
+  --secondary: #4ECDC4;
+  --secondary-light: #7EDDD6;
+  --accent: #FFD93D;
+  --accent-light: #FFE680;
+  --bg: #FFFAF5;
+  --bg-card: #FFFFFF;
+  --bg-section: #FFF5EB;
+  --text: #2D3436;
+  --text-secondary: #636E72;
+  --text-light: #B2BEC3;
+  --border: #F0E6DC;
+  --shadow: 0 2px 12px rgba(255, 126, 54, 0.1);
+  --shadow-hover: 0 8px 30px rgba(255, 126, 54, 0.18);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --max-width: 1200px;
+  --header-height: 64px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Noto Sans SC', sans-serif;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ---- Loading Screen ---- */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s;
+}
+.loading-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+.loading-text {
+  margin-top: 16px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---- Header ---- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: rgba(255, 250, 245, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  transition: var(--transition);
+}
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+}
+.logo-icon {
+  font-size: 28px;
+}
+.logo-sub {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-nav a {
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+.header-nav a:hover {
+  background: var(--bg-section);
+  color: var(--primary);
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+  display: none;
+  font-size: 24px;
+  padding: 8px;
+  color: var(--text);
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  background: var(--bg-card);
+  border-bottom: 2px solid var(--border);
+  padding: 16px 20px;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 99;
+}
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+.mobile-menu a {
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 16px;
+  color: var(--text);
+}
+.mobile-menu a:last-child { border-bottom: none; }
+
+/* ---- Hero Section ---- */
+.hero {
+  margin-top: var(--header-height);
+  padding: 60px 20px 48px;
+  background: linear-gradient(135deg, #FFF5EB 0%, #FFE8D6 50%, #FFEDE0 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 40%, rgba(255, 126, 54, 0.06) 0%, transparent 50%),
+              radial-gradient(circle at 70% 60%, rgba(78, 205, 196, 0.06) 0%, transparent 50%);
+  animation: heroFloat 20s ease-in-out infinite;
+}
+@keyframes heroFloat {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, 20px); }
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.hero-title {
+  font-size: clamp(24px, 5vw, 40px);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.hero-title span {
+  color: var(--primary);
+}
+.hero-desc {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+.hero-season {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card);
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+.hero-season .season-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+.hero-season .season-dot.spring { background: #FFB7B2; }
+.hero-season .season-dot.summer { background: #FF9A56; }
+.hero-season .season-dot.autumn { background: #D4A373; }
+.hero-season .season-dot.winter { background: #89B0D6; }
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Search */
+.search-box {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.search-box input {
+  width: 100%;
+  padding: 14px 20px 14px 48px;
+  border: 2px solid var(--border);
+  border-radius: 100px;
+  font-size: 16px;
+  background: var(--bg-card);
+  color: var(--text);
+  outline: none;
+  transition: var(--transition);
+}
+.search-box input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(255, 126, 54, 0.12);
+}
+.search-box .search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--text-light);
+}
+.search-box input::placeholder {
+  color: var(--text-light);
+}
+
+/* ---- Section Layout ---- */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title .count {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  background: var(--bg-section);
+  padding: 2px 12px;
+  border-radius: 100px;
+}
+
+/* ---- Season Tabs ---- */
+.season-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 0;
+  scrollbar-width: none;
+}
+.season-tabs::-webkit-scrollbar { display: none; }
+
+.season-tab {
+  flex-shrink: 0;
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.season-tab:hover {
+  border-color: var(--primary-light);
+  color: var(--primary);
+}
+.season-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 126, 54, 0.3);
+}
+
+/* ---- Category Tabs ---- */
+.category-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 0;
+  scrollbar-width: none;
+}
+.category-tabs::-webkit-scrollbar { display: none; }
+
+.category-tab {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+.category-tab:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+.category-tab.active {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);
+}
+.category-icon { font-size: 18px; }
+
+/* ---- District Filter ---- */
+.district-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.district-chip {
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+.district-chip:hover {
+  border-color: var(--primary-light);
+  color: var(--primary);
+}
+.district-chip.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+/* ---- Results Grid ---- */
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.results-count {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* ---- Place Card ---- */
+.place-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(20px);
+}
+.place-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.place-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.place-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-rating {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+.card-rating .star { color: var(--accent); }
+
+.fav-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  font-size: 18px;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.fav-btn:hover { transform: scale(1.15); }
+.fav-btn.active { animation: heartPop 0.3s; }
+@keyframes heartPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+.badge-deal {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.tag {
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.tag-district {
+  background: #FFF0E6;
+  color: var(--primary-dark);
+}
+.tag-season {
+  background: #E8F8F5;
+  color: #1ABC9C;
+}
+.tag-custom {
+  background: #F5F0FF;
+  color: #8B5CF6;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.card-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-events, .card-deals {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.event-icon, .deal-icon { margin-right: 4px; }
+.event-text { color: #8B5CF6; }
+.deal-text {
+  color: #E55D1A;
+  font-weight: 500;
+}
+.card-events .event-text::before { content: '• '; }
+.card-deals .deal-text::before { content: '• '; }
+
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text-light);
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+/* ---- Favorites Toggle ---- */
+.fav-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.fav-toggle:hover {
+  border-color: #FF6B6B;
+  color: #FF6B6B;
+}
+.fav-toggle.active {
+  background: #FF6B6B;
+  border-color: #FF6B6B;
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* ---- Empty State ---- */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+.empty-state .empty-icon { font-size: 48px; margin-bottom: 16px; }
+.empty-state h3 { font-size: 18px; margin-bottom: 8px; }
+.empty-state p { color: var(--text-secondary); font-size: 14px; }
+.hidden { display: none !important; }
+
+/* ---- Highlights / Carousel ---- */
+.highlights-section {
+  background: var(--bg-section);
+}
+.highlights-carousel {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+}
+
+.highlights-track {
+  position: relative;
+  overflow: hidden;
+}
+.highlight-slide {
+  display: none;
+  animation: fadeSlideIn 0.5s ease;
+}
+.highlight-slide.active {
+  display: block;
+}
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.highlight-link {
+  display: flex;
+  flex-direction: row;
+  min-height: 200px;
+}
+.highlight-img {
+  width: 45%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.highlight-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.highlight-info {
+  flex: 1;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.highlight-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 4px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.highlight-info h3 {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.highlight-info p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.highlights-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: var(--transition);
+}
+.dot.active {
+  background: var(--primary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ---- Scroll To Top ---- */
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(255, 126, 54, 0.35);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+  z-index: 50;
+  pointer-events: none;
+}
+.scroll-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.scroll-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 126, 54, 0.45);
+}
+
+/* ---- Toast ---- */
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(45, 52, 54, 0.92);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-size: 14px;
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 200;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ---- Footer ---- */
+.footer {
+  background: #2D3436;
+  color: rgba(255,255,255,0.7);
+  padding: 40px 20px 24px;
+  margin-top: 40px;
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+}
+.footer-desc {
+  font-size: 14px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  font-size: 13px;
+  transition: var(--transition);
+}
+.footer-links a:hover { color: white; }
+.footer-copy {
+  font-size: 12px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 16px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  :root { --header-height: 56px; }
+
+  .header-nav { display: none; }
+  .mobile-menu-btn { display: block; }
+  .mobile-menu { display: block; }
+
+  .hero { padding: 40px 16px 32px; }
+
+  .section { padding: 24px 16px; }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .highlight-link {
+    flex-direction: column;
+  }
+  .highlight-img {
+    width: 100%;
+    height: 180px;
+  }
+  .highlight-info {
+    padding: 20px;
+  }
+
+  .card-image { height: 180px; }
+
+  .season-tabs { gap: 6px; }
+  .season-tab { padding: 8px 16px; font-size: 13px; }
+
+  .category-tab { padding: 8px 14px; font-size: 13px; }
+  .category-label { display: none; }
+
+  .district-filter { gap: 6px; }
+  .district-chip { padding: 5px 12px; font-size: 12px; }
+
+  .scroll-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+  .toast { bottom: 70px; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- Animations ---- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* ---- Print ---- */
+@media print {
+  .header, .scroll-top, .toast, .mobile-menu, .mobile-menu-btn { display: none; }
+  .hero { margin-top: 0; padding: 20px; }
+  .place-card { break-inside: avoid; opacity: 1 !important; transform: none !important; }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">加载武汉亲子好去处...</div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast hidden" id="toast"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">🎠</span>
+        <span>
+          武汉亲子游
+          <span class="logo-sub">· 周末去哪玩</span>
+        </span>
+      </a>
+
+      <nav class="header-nav">
+        <a href="#places">📍 推荐去处</a>
+        <a href="#highlights">🔥 热门活动</a>
+      </nav>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="菜单">☰</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#places">📍 推荐去处</a>
+      <a href="#highlights">🔥 热门活动</a>
+      <a href="#footer">📋 关于我们</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-season" id="hero-season">
+        <span class="season-dot" id="season-dot"></span>
+        <span id="season-label">当前季节推荐</span>
+      </div>
+
+      <h1 class="hero-title">
+        这个<span>周末</span>，带娃去哪玩？
+      </h1>
+      <p class="hero-desc">
+        按季节、区域和类别，精选武汉最适合亲子的商场、游乐场、公园和大型活动
+      </p>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="搜索商场、公园、活动..." aria-label="搜索推荐去处">
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Carousel -->
+  <section class="highlights-section" id="highlights">
+    <div class="section">
+      <h2 class="section-title">🔥 热门推荐 & 限时优惠</h2>
+      <div class="highlights-carousel" id="highlights">
+        <div class="highlights-track" id="highlights-track"></div>
+        <div class="highlights-dots" id="highlights-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Places Section -->
+  <section class="section" id="places">
+    <!-- Season Tabs -->
+    <div class="season-tabs" id="season-tabs"></div>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs" id="category-tabs"></div>
+
+    <!-- District Filter -->
+    <div class="district-filter" id="district-filter"></div>
+
+    <!-- Results -->
+    <div class="results-header">
+      <h2 class="section-title">
+        📍 推荐去处
+        <span class="count" id="results-count"></span>
+      </h2>
+      <button class="fav-toggle" id="fav-toggle">♡ 收藏</button>
+    </div>
+
+    <div class="results-grid" id="results-grid"></div>
+
+    <!-- Empty State -->
+    <div class="empty-state hidden" id="empty-state">
+      <div class="empty-icon">🔍</div>
+      <h3>没有找到匹配的推荐</h3>
+      <p>试试调整筛选条件或搜索其他关键词</p>
+    </div>
+  </section>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scroll-top" aria-label="回到顶部">↑</button>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">🎠 武汉亲子游玩推荐</div>
+      <p class="footer-desc">
+        为武汉家长精选周末遛娃好去处，按季节、区域智能推荐商场、游乐场、公园和大型活动。
+      </p>
+      <nav class="footer-links">
+        <a href="#places">推荐去处</a>
+        <a href="#highlights">热门活动</a>
+        <a href="https://www.wuhan.gov.cn" target="_blank" rel="noopener">武汉市政府</a>
+      </nav>
+      <div class="footer-copy">
+        © 2026 武汉亲子游玩推荐 · 数据仅供参考，出行前请核实最新信息
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+/**
+ * 武汉亲子游玩推荐数据
+ * 按季节、区域、类别整理
+ */
+const DATA = {
+  seasons: [
+    { id: 'spring', label: '🌸 春季', months: [3, 4, 5] },
+    { id: 'summer', label: '🏖️ 夏季', months: [6, 7, 8] },
+    { id: 'autumn', label: '🍂 秋季', months: [9, 10, 11] },
+    { id: 'winter', label: '❄️ 冬季', months: [12, 1, 2] }
+  ],
+
+  categories: [
+    { id: 'all', label: '全部', icon: '📌' },
+    { id: 'mall', label: '商场', icon: '🛍️' },
+    { id: 'playground', label: '游乐场', icon: '🎡' },
+    { id: 'park', label: '公园', icon: '🌳' },
+    { id: 'event', label: '大型活动', icon: '🎪' }
+  ],
+
+  districts: [
+    '武昌区', '江岸区', '江汉区', '硚口区',
+    '汉阳区', '洪山区', '青山区', '东西湖区',
+    '蔡甸区', '江夏区', '黄陂区', '新洲区'
+  ],
+
+  // 所有推荐场所
+  places: [
+    // ===== 商场 =====
+    {
+      id: 1,
+      name: '武汉梦时代',
+      category: 'mall',
+      district: '武昌区',
+      seasons: ['spring', 'summer', 'autumn', 'winter'],
+      description: '华中地区最大的商业综合体，拥有室内游乐场、冰雪世界、亲子餐厅等一站式亲子体验。',
+      tags: ['室内游乐', '冰雪世界', '亲子餐厅', '地铁直达'],
+      rating: 4.6,
+      address: '武昌区武珞路628号',
+      hours: '10:00-22:00',
+      transport: '地铁2号线宝通寺站',
+      image: 'https://picsum.photos/seed/wuhan-mengshidai/400/300',
+      events: [],
+      deals: [
+        { text: '工作日亲子套餐 8折', validUntil: '2026-12-31' }
+      ]
+    },
+    {
+      id: 2,
+      name: '武汉天地',
+      category: 'mall',
+      district: '江岸区',
+      seasons: ['spring', 'autumn', 'winter'],
+      description: '开放式商业街区，经常举办亲子市集、户外展览，环境优美适合带娃散步。',
+      tags: ['开放式街区', '亲子市集', '户外展览', '网红餐饮'],
+      rating: 4.5,
+      address: '江岸区中山大道1506号',
+      hours: '10:00-22:00',
+      transport: '地铁1号线/8号线黄浦路站',
+      image: 'https://picsum.photos/seed/wuhan-tiandi/400/300',
+      events: [
+        { text: '周末亲子创意市集', schedule: '每周末 14:00-18:00' }
+      ],
+      deals: []
+    },
+    {
+      id: 3,
+      name: '武商摩尔城',
+      category: 'mall',
+      district: '江汉区',
+      seasons: ['spring', 'summer', 'autumn', 'winter'],
+      description: '武汉老牌大型商场，拥有丰富的儿童娱乐区和教育培训机构，适合一站式遛娃。',
+      tags: ['儿童乐园', '教育培训', '美食广场', '地铁直达'],
+      rating: 4.3,
+      address: '江汉区解放大道688号',
+      hours: '09:30-21:30',
+      transport: '地铁2号线中山公园站',
+      image: 'https://picsum.photos/seed/wuhan-moer/400/300',
+      events: [],
+      deals: [
+        { text: '会员日儿童游乐区免费', validUntil: '2026-12-31' },
+        { text: '亲子餐饮满200减50', validUntil: '2026-09-30' }
+      ]
+    },
+    {
+      id: 4,
+      name: '群光广场',
+      category: 'mall',
+      district: '洪山区',
+      seasons: ['spring', 'summer', 'autumn', 'winter'],
+      description: '街道口商圈核心，儿童楼层有丰富的亲子互动项目和早教机构。',
+      tags: ['早教机构', '亲子互动', '地铁直达', '学生群体'],
+      rating: 4.2,
+      address: '洪山区珞喻路6号',
+      hours: '10:00-21:30',
+      transport: '地铁2号线街道口站',
+      image: 'https://picsum.photos/seed/wuhan-qunguang/400/300',
+      events: [],
+      deals: []
+    },
+    {
+      id: 5,
+      name: '永旺梦乐城金银潭',
+      category: 'mall',
+      district: '东西湖区',
+      seasons: ['spring', 'summer', 'autumn', 'winter'],
+      description: '大型日式购物中心，亲子设施完善，设有大面积的儿童免费游乐区。',
+      tags: ['免费游乐区', '日式购物', '亲子卫生间', '超大停车场'],
+      rating: 4.7,
+      address: '东西湖区金银潭大道1号',
+      hours: '10:00-22:00',
+      transport: '地铁2号线金银潭站',
+      image: 'https://picsum.photos/seed/wuhan-yongwang/400/300',
+      events: [
+        { text: '暑期亲子夏令营', schedule: '7月-8月 每周末' }
+      ],
+      deals: [
+        { text: '周二会员日 餐饮8折', validUntil: '2026-12-31' }
+      ]
+    },
+    {
+      id: 6,
+      name: '经开永旺',
+      category: 'mall',
+      district: '蔡甸区',
+      seasons: ['spring', 'summer', 'autumn', 'winter'],
+      description: '武汉最大永旺，拥有超大型儿童乐园和丰富的亲子体验设施。',
+      tags: ['大型儿童乐园', '亲子体验', '免费停车', '美食丰富'],
+      rating: 4.6,
+      address: '蔡甸区江城大道与三环线交汇处',
+      hours: '10:00-22:00',
+      transport: '地铁6号线江城大道站',
+      image: 'https://picsum.photos/seed/wuhan-jingkai/400/300',
+      events: [],
+      deals: []
+    },
+    {
+      id: 7,
+      name: '宜家荟聚',
+      category: 'mall',
+      district: '硚口区',
+      seasons: ['spring', 'summer', 'autumn', 'winter'],
+      description: '北欧风格家居商场，有儿童乐园和亲子餐厅，适合周末家庭出游。',
+      tags: ['儿童乐园', '亲子餐厅', '北欧设计', '免费停车'],
+      rating: 4.4,
+      address: '硚口区长宜大道1号',
+      hours: '10:00-21:00',
+      transport: '地铁1号线竹叶海站',
+      image: 'https://picsum.photos/seed/wuhan-yijia/400/300',
+      events: [],
+      deals: []
+    },
+    {
+      id: 8,
+      name: '楚河汉街',
+      category: 'mall',
+      district: '武昌区',
+      seasons: ['spring', 'autumn'],
+      description: '滨水商业步行街，集合了文化、娱乐、餐饮，节假日有丰富的街头表演。',
+      tags: ['滨水街区', '街头表演', '文化体验', '夜景优美'],
+      rating: 4.5,
+      address: '武昌区中北路',
+      hours: '全天开放',
+      transport: '地铁4号线楚河汉街站',
+      image: 'https://picsum.photos/seed/wuhan-han-street/400/300',
+      events: [
+        { text: '节假日街头艺术节', schedule: '法定节假日全天' }
+      ],
+      deals: []
+    },
+
+    // ===== 游乐场 =====
+    {
+      id: 9,
+      name: '武汉欢乐谷',
+      category: 'playground',
+      district: '洪山区',
+      seasons: ['spring', 'summer', 'autumn'],
+      description: '华中地区大型主题乐园，拥有百余项游乐设施，分设亲子区和刺激项目区。',
+      tags: ['主题乐园', '亲子项目', '水上乐园', '年卡优惠'],
+      rating: 4.7,
+      address: '洪山区欢乐大道196号',
+      hours: '09:30-18:00（周末延至21:00）',
+      transport: '地铁4号线仁和路站换乘公交',
+      image: 'https://picsum.photos/seed/wuhan-huanlegu/400/300',
+      events: [
+        { text: '欢乐谷万圣节主题活动', schedule: '10月-11月' },
+        { text: '暑期夜场开放', schedule: '7月-8月 18:00-21:00' }
+      ],
+      deals: [
+        { text: '亲子年卡 698元/年（1大1小）', validUntil: '2026-12-31' }
+      ]
+    },
+    {
+      id: 10,
+      name: '武汉极地海洋世界',
+      category: 'playground',
+      district: '东西湖区',
+      seasons: ['spring', 'summer', 'autumn', 'winter'],
+      description: '集海洋动物展示、表演和互动体验于一体，企鹅馆、白鲸馆深受小朋友喜爱。',
+      tags: ['海洋动物', '动物表演', '互动体验', '室内场馆'],
+      rating: 4.6,
+      address: '东西湖区金银潭大道96号',
+      hours: '09:00-17:30',
+      transport: '地铁2号线宏图大道站',
+      image: 'https://picsum.photos/seed/wuhan-ocean/400/300',
+      events: [
+        { text: '海洋奇妙夜露营', schedule: '每月第三个周末' }
+      ],
+      deals: [
+        { text: '儿童节特惠 儿童票半价', validUntil: '2026-06-30' }
+      ]
+    },
+    {
+      id: 11,
+      name: '东湖海洋乐园',
+      category: 'playground',
+      district: '武昌区',
+      seasons: ['spring', 'summer', 'autumn'],
+      description: '东湖边的海洋主题乐园，有海底隧道、美人鱼表演和萌宠互动区。',
+      tags: ['海底隧道', '美人鱼表演', '萌宠互动', '东湖景观'],
+      rating: 4.4,
+      address: '武昌区沿湖大道20号（东湖梨园）',
+      hours: '09:00-17:00',
+      transport: '地铁8号线梨园站',
+      image: 'https://picsum.photos/seed/wuhan-eastlake-ocean/400/300',
+      events: [],
+      deals: []
+    },
+    {
+      id: 12,
+      name: '玛雅海滩水公园',
+      category: 'playground',
+      district: '洪山区',
+      seasons: ['summer'],
+      description: '华中大型水上乐园，有人造海浪池、儿童戏水区和刺激的水滑道。',
+      tags: ['水上乐园', '夏日消暑', '亲子戏水', '人造海浪'],
+      rating: 4.5,
+      address: '洪山区欢乐大道196号（欢乐谷旁）',
+      hours: '10:00-21:00（夏季）',
+      transport: '地铁4号线仁和路站换乘公交',
+      image: 'https://picsum.photos/seed/wuhan-maya/400/300',
+      events: [
+        { text: '玛雅沙滩音乐节', schedule: '7月中旬-8月' }
+      ],
+      deals: [
+        { text: '欢乐谷+玛雅联票 299元', validUntil: '2026-08-31' }
+      ]
+    },
+    {
+      id: 13,
+      name: '光谷有田儿童乐园',
+      category: 'playground',
+      district: '江夏区',
+      seasons: ['spring', 'summer', 'autumn'],
+      description: '户外自然探索乐园，有农田体验、萌宠牧场、丛林穿越等项目。',
+      tags: ['自然探索', '农田体验', '萌宠牧场', '户外拓展'],
+      rating: 4.3,
+      address: '江夏区光谷三路与高新大道交汇处',
+      hours: '09:00-18:00',
+      transport: '地铁11号线光谷生物园站',
+      image: 'https://picsum.photos/seed/wuhan-youtian/400/300',
+      events: [
+        { text: '秋收节——割稻体验', schedule: '9月-10月' }
+      ],
+      deals: []
+    },
+    {
+      id: 14,
+      name: '武汉自然博物馆·贝林大河生命馆',
+      category: 'playground',
+      district: '硚口区',
+      seasons: ['spring', 'summer', 'autumn', 'winter'],
+      description: '以大河为主题的自然博物馆，馆藏大量珍稀动物标本，寓教于乐。',
+      tags: ['自然科普', '动物标本', '室内场馆', '研学基地'],
+      rating: 4.8,
+      address: '硚口区园博园内',
+      hours: '09:00-17:00（周一闭馆）',
+      transport: '地铁7号线园博园站',
+      image: 'https://picsum.photos/seed/wuhan-nature-museum/400/300',
+      events: [
+        { text: '小小讲解员招募活动', schedule: '暑假期间' }
+      ],
+      deals: [
+        { text: '周三免费开放日', validUntil: '2026-12-31' }
+      ]
+    },
+
+    // ===== 公园 =====
+    {
+      id: 15,
+      name: '东湖绿道',
+      category: 'park',
+      district: '武昌区',
+      seasons: ['spring', 'autumn'],
+      description: '百公里城市绿道，适合亲子骑行、野餐、观鸟，四季风景各异。',
+      tags: ['亲子骑行', '野餐', '观鸟', '自然风光'],
+      rating: 4.9,
+      address: '武昌区东湖风景区',
+      hours: '全天开放',
+      transport: '地铁8号线梨园站/省博湖北日报站',
+      image: 'https://picsum.photos/seed/wuhan-eastlake/400/300',
+      events: [
+        { text: '东湖樱花节', schedule: '3月-4月' },
+        { text: '东湖秋日赏叶季', schedule: '10月-11月' }
+      ],
+      deals: []
+    },
+    {
+      id: 16,
+      name: '中山公园',
+      category: 'park',
+      district: '江汉区',
+      seasons: ['spring', 'summer', 'autumn'],
+      description: '武汉最老牌的公园之一，内有小型游乐场、湖泊和草坪，是市中心遛娃好去处。',
+      tags: ['老牌公园', '小型游乐场', '市中心', '免费入园'],
+      rating: 4.4,
+      address: '江汉区解放大道1265号',
+      hours: '06:00-22:00',
+      transport: '地铁2号线中山公园站',
+      image: 'https://picsum.photos/seed/wuhan-zhongshan/400/300',
+      events: [],
+      deals: []
+    },
+    {
+      id: 17,
+      name: '解放公园',
+      category: 'park',
+      district: '江岸区',
+      seasons: ['spring', 'summer', 'autumn'],
+      description: '欧式风格公园，有鸽子广场、游船和儿童活动区，适合周末休闲。',
+      tags: ['鸽子广场', '游船', '欧式园林', '亲子休闲'],
+      rating: 4.5,
+      address: '江岸区解放大道1861号',
+      hours: '06:00-22:00',
+      transport: '地铁1号线/8号线黄浦路站',
+      image: 'https://picsum.photos/seed/wuhan-jiefang/400/300',
+      events: [
+        { text: '金秋菊花展', schedule: '10月-11月' }
+      ],
+      deals: []
+    },
+    {
+      id: 18,
+      name: '沙湖公园',
+      category: 'park',
+      district: '武昌区',
+      seasons: ['spring', 'summer', 'autumn'],
+      description: '城市滨湖公园，有儿童乐园、亲水平台和健身步道，环境宜居。',
+      tags: ['滨湖公园', '儿童乐园', '健身步道', '亲水平台'],
+      rating: 4.3,
+      address: '武昌区沙湖大道',
+      hours: '全天开放',
+      transport: '地铁4号线东亭站',
+      image: 'https://picsum.photos/seed/wuhan-shahu/400/300',
+      events: [],
+      deals: []
+    },
+    {
+      id: 19,
+      name: '武汉动物园',
+      category: 'park',
+      district: '汉阳区',
+      seasons: ['spring', 'summer', 'autumn'],
+      description: '经过全面改造的现代化动物园，动物种类丰富，设有亲子科普讲解。',
+      tags: ['动物园', '亲子科普', '动物互动', '大熊猫'],
+      rating: 4.6,
+      address: '汉阳区动物园路60号',
+      hours: '08:00-17:00',
+      transport: '地铁4号线五里墩站换乘公交',
+      image: 'https://picsum.photos/seed/wuhan-zoo/400/300',
+      events: [
+        { text: '动物科普月', schedule: '5月' }
+      ],
+      deals: [
+        { text: '亲子年票 198元', validUntil: '2026-12-31' }
+      ]
+    },
+    {
+      id: 20,
+      name: '武汉园博园',
+      category: 'park',
+      district: '硚口区',
+      seasons: ['spring', 'autumn'],
+      description: '大型园林博览园，汇聚全国各城市园林景观，内有自然博物馆和儿童游乐区。',
+      tags: ['园林景观', '自然博物馆', '花展', '儿童游乐'],
+      rating: 4.5,
+      address: '硚口区园博园路',
+      hours: '08:30-17:30',
+      transport: '地铁7号线园博园站',
+      image: 'https://picsum.photos/seed/wuhan-expo/400/300',
+      events: [
+        { text: '武汉园博园花灯会', schedule: '春节期间' },
+        { text: '春季郁金香花展', schedule: '3月-4月' }
+      ],
+      deals: []
+    },
+    {
+      id: 21,
+      name: '马鞍山森林公园',
+      category: 'park',
+      district: '洪山区',
+      seasons: ['spring', 'summer', 'autumn'],
+      description: '城市中的天然氧吧，有烧烤区、骑行道和户外拓展项目。',
+      tags: ['烧烤', '户外拓展', '天然氧吧', '骑行'],
+      rating: 4.2,
+      address: '洪山区珞喻东路',
+      hours: '08:00-18:00',
+      transport: '地铁2号线光谷大道站换乘公交',
+      image: 'https://picsum.photos/seed/wuhan-maanshan/400/300',
+      events: [],
+      deals: []
+    },
+    {
+      id: 22,
+      name: '青山江滩',
+      category: 'park',
+      district: '青山区',
+      seasons: ['spring', 'summer', 'autumn'],
+      description: '长江边生态江滩公园，有儿童沙池、运动场地和观景平台，夕阳超美。',
+      tags: ['江滩公园', '儿童沙池', '运动场地', '夕阳观景'],
+      rating: 4.4,
+      address: '青山区临江大道',
+      hours: '全天开放',
+      transport: '地铁5号线和平公园站',
+      image: 'https://picsum.photos/seed/wuhan-qingshan-river/400/300',
+      events: [],
+      deals: []
+    },
+
+    // ===== 大型活动 =====
+    {
+      id: 23,
+      name: '武汉马拉松亲子跑',
+      category: 'event',
+      district: '武昌区',
+      seasons: ['spring'],
+      description: '汉马配套亲子活动，沿东湖绿道设置短距离亲子跑路线，完赛颁发奖牌。',
+      tags: ['亲子运动', '马拉松', '东湖绿道', '完赛奖牌'],
+      rating: 4.8,
+      address: '东湖绿道（起点：梨园广场）',
+      hours: '赛程半天',
+      transport: '地铁8号线梨园站',
+      image: 'https://picsum.photos/seed/wuhan-marathon/400/300',
+      events: [],
+      deals: []
+    },
+    {
+      id: 24,
+      name: '武汉渡江节',
+      category: 'event',
+      district: '武昌区',
+      seasons: ['summer'],
+      description: '武汉传统水上活动，设有亲子戏水区和岸上嘉年华活动。',
+      tags: ['水上活动', '传统节日', '嘉年华', '亲子互动'],
+      rating: 4.3,
+      address: '武昌江滩（汉阳门码头）',
+      hours: '7月16日全天',
+      transport: '地铁2号线积玉桥站',
+      image: 'https://picsum.photos/seed/wuhan-river-fest/400/300',
+      events: [],
+      deals: []
+    },
+    {
+      id: 25,
+      name: '武汉国际杂技艺术节',
+      category: 'event',
+      district: '江汉区',
+      seasons: ['autumn'],
+      description: '国际级杂技表演盛会，适合全家观看，精彩绝伦的杂技和魔术表演。',
+      tags: ['杂技表演', '魔术', '国际盛会', '室内场馆'],
+      rating: 4.6,
+      address: '江汉区武汉杂技厅',
+      hours: '演出日 19:30-21:30',
+      transport: '地铁2号线中山公园站',
+      image: 'https://picsum.photos/seed/wuhan-circus/400/300',
+      events: [],
+      deals: [
+        { text: '家庭套票3张8折', validUntil: '2026-11-30' }
+      ]
+    },
+    {
+      id: 26,
+      name: '武汉欢乐谷灯光节',
+      category: 'event',
+      district: '洪山区',
+      seasons: ['winter'],
+      description: '冬季大型灯光秀，千万盏彩灯打造梦幻世界，还有巡游表演和美食集市。',
+      tags: ['灯光秀', '冬季活动', '巡游表演', '美食集市'],
+      rating: 4.5,
+      address: '洪山区欢乐谷内',
+      hours: '18:00-22:00',
+      transport: '地铁4号线仁和路站换乘公交',
+      image: 'https://picsum.photos/seed/wuhan-light-fest/400/300',
+      events: [],
+      deals: [
+        { text: '早鸟票 49.9元（原价80元）', validUntil: '2026-12-31' }
+      ]
+    },
+    {
+      id: 27,
+      name: '武汉东湖灯会',
+      category: 'event',
+      district: '武昌区',
+      seasons: ['winter'],
+      description: '东湖传统灯会，大型水上灯组、民俗表演和特色美食，年味十足。',
+      tags: ['传统灯会', '水上灯组', '民俗表演', '年味'],
+      rating: 4.7,
+      address: '东湖风景区听涛景区',
+      hours: '18:00-22:00（春节期间）',
+      transport: '地铁8号线梨园站',
+      image: 'https://picsum.photos/seed/wuhan-lantern/400/300',
+      events: [],
+      deals: [
+        { text: '家庭套票2大1小 168元', validUntil: '2026-02-28' }
+      ]
+    },
+    {
+      id: 28,
+      name: '武汉花博会',
+      category: 'event',
+      district: '蔡甸区',
+      seasons: ['spring', 'autumn'],
+      description: '大型花卉展览，春季郁金香、秋季菊花，还有亲子花艺体验课程。',
+      tags: ['花卉展览', '花艺体验', '亲子课程', '拍照打卡'],
+      rating: 4.4,
+      address: '蔡甸区花博大道',
+      hours: '09:00-18:00',
+      transport: '建议自驾（有大型停车场）',
+      image: 'https://picsum.photos/seed/wuhan-flower/400/300',
+      events: [],
+      deals: [
+        { text: '亲子花艺课 含门票98元', validUntil: '2026-10-31' }
+      ]
+    },
+    {
+      id: 29,
+      name: '武汉国际会展中心动漫展',
+      category: 'event',
+      district: '江汉区',
+      seasons: ['summer', 'winter'],
+      description: '大型动漫展览，设有亲子互动区、Cosplay表演和动漫周边集市。',
+      tags: ['动漫展览', 'Cosplay', '亲子互动', '室内活动'],
+      rating: 4.2,
+      address: '江汉区解放大道696号',
+      hours: '09:00-17:00',
+      transport: '地铁2号线中山公园站',
+      image: 'https://picsum.photos/seed/wuhan-anime/400/300',
+      events: [],
+      deals: []
+    },
+    {
+      id: 30,
+      name: '武汉草莓音乐节',
+      category: 'event',
+      district: '蔡甸区',
+      seasons: ['spring'],
+      description: '知名音乐节品牌，设有亲子家庭区，让家长和孩子一起感受音乐魅力。',
+      tags: ['音乐节', '亲子家庭区', '户外音乐', '文创集市'],
+      rating: 4.5,
+      address: '蔡甸区花博汇',
+      hours: '14:00-22:00',
+      transport: '建议自驾或乘坐音乐节专线大巴',
+      image: 'https://picsum.photos/seed/wuhan-strawberry/400/300',
+      events: [],
+      deals: [
+        { text: '亲子套票 299元（2大1小）', validUntil: '2026-05-31' }
+      ]
+    }
+  ],
+
+  // 当前重点优惠/活动（首页高亮）
+  highlights: [
+    {
+      title: '欢乐谷亲子年卡特惠',
+      desc: '698元畅玩一整年，1大1小超值组合',
+      image: 'https://picsum.photos/seed/deal-huanlegu/800/400',
+      link: '#place-9',
+      badge: '限时优惠',
+      season: 'all'
+    },
+    {
+      title: '武汉极地海洋世界儿童节特惠',
+      desc: '儿童票半价，带孩子探索海洋奥秘',
+      image: 'https://picsum.photos/seed/deal-ocean/800/400',
+      link: '#place-10',
+      badge: '限时活动',
+      season: 'all'
+    },
+    {
+      title: '东湖樱花节即将开幕',
+      desc: '三月东湖樱花烂漫，亲子赏花正当时',
+      image: 'https://picsum.photos/seed/deal-sakura/800/400',
+      link: '#place-15',
+      badge: '春季限定',
+      season: 'spring'
+    },
+    {
+      title: '玛雅海滩水公园夏日狂欢',
+      desc: '联票299元畅玩欢乐谷+玛雅',
+      image: 'https://picsum.photos/seed/deal-maya/800/400',
+      link: '#place-12',
+      badge: '夏季限定',
+      season: 'summer'
+    }
+  ]
+};
+
+// 获取当前季节
+function getCurrentSeason() {
+  const month = new Date().getMonth() + 1;
+  for (const s of DATA.seasons) {
+    if (s.months.includes(month)) return s.id;
+  }
+  return 'spring';
+}
+  </script>
+  <script>
+/**
+ * 武汉亲子游玩推荐 - 应用逻辑
+ */
+
+// ===== 状态管理 =====
+const state = {
+  currentSeason: getCurrentSeason(),
+  activeCategory: 'all',
+  activeDistrict: 'all',
+  searchQuery: '',
+  showFavoritesOnly: false,
+  favorites: JSON.parse(localStorage.getItem('wh-favorites') || '[]')
+};
+
+// ===== DOM 引用 =====
+const $ = (sel, ctx = document) => ctx.querySelector(sel);
+const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+const el = {
+  app: $('#app'),
+  header: $('#header'),
+  hero: $('#hero'),
+  seasonTabs: $('#season-tabs'),
+  categoryTabs: $('#category-tabs'),
+  districtFilter: $('#district-filter'),
+  searchInput: $('#search-input'),
+  resultsGrid: $('#results-grid'),
+  resultsCount: $('#results-count'),
+  highlights: $('#highlights'),
+  highlightsTrack: $('#highlights-track'),
+  highlightsDots: $('#highlights-dots'),
+  featuredDeals: $('#featured-deals'),
+  scrollTop: $('#scroll-top'),
+  emptyState: $('#empty-state'),
+  mobileMenuBtn: $('#mobile-menu-btn'),
+  mobileMenu: $('#mobile-menu'),
+  toast: $('#toast'),
+  loading: $('#loading'),
+  favToggle: $('#fav-toggle')
+};
+
+// ===== 初始化 =====
+function init() {
+  renderSeasonTabs();
+  renderCategoryTabs();
+  renderDistrictFilter();
+  renderHighlights();
+  setupEventListeners();
+  filterAndRender();
+  setupScrollAnimations();
+  updateSeasonDot();
+  setTimeout(() => {
+    el.loading?.classList.add('hidden');
+  }, 500);
+}
+
+// ===== 季节 Tab =====
+function renderSeasonTabs() {
+  el.seasonTabs.innerHTML = DATA.seasons.map(s => `
+    <button class="season-tab ${s.id === state.currentSeason ? 'active' : ''}"
+            data-season="${s.id}">
+      ${s.label}
+    </button>
+  `).join('');
+}
+
+// ===== 分类 Tab =====
+function renderCategoryTabs() {
+  el.categoryTabs.innerHTML = DATA.categories.map(c => `
+    <button class="category-tab ${c.id === state.activeCategory ? 'active' : ''}"
+            data-category="${c.id}">
+      <span class="category-icon">${c.icon}</span>
+      <span class="category-label">${c.label}</span>
+    </button>
+  `).join('');
+}
+
+// ===== 区域筛选 =====
+function renderDistrictFilter() {
+  el.districtFilter.innerHTML = `
+    <button class="district-chip ${state.activeDistrict === 'all' ? 'active' : ''}"
+            data-district="all">全部区域</button>
+    ${DATA.districts.map(d => `
+      <button class="district-chip ${d === state.activeDistrict ? 'active' : ''}"
+              data-district="${d}">${d}</button>
+    `).join('')}
+  `;
+}
+
+// ===== 搜索 =====
+function setupSearch() {
+  el.searchInput.addEventListener('input', (e) => {
+    state.searchQuery = e.target.value.trim().toLowerCase();
+    filterAndRender();
+  });
+}
+
+// ===== 筛选与渲染 =====
+function filterAndRender() {
+  const results = filterPlaces();
+  renderResults(results);
+  updateFavBtnLabel();
+  el.resultsCount.textContent = `找到 ${results.length} 个推荐去处`;
+}
+
+function filterPlaces() {
+  let places = [...DATA.places];
+
+  // 按季节筛选
+  if (state.currentSeason) {
+    places = places.filter(p => p.seasons.includes(state.currentSeason));
+  }
+
+  // 按分类筛选
+  if (state.activeCategory !== 'all') {
+    places = places.filter(p => p.category === state.activeCategory);
+  }
+
+  // 按区域筛选
+  if (state.activeDistrict !== 'all') {
+    places = places.filter(p => p.district === state.activeDistrict);
+  }
+
+  // 按搜索词筛选
+  if (state.searchQuery) {
+    const q = state.searchQuery;
+    places = places.filter(p =>
+      p.name.toLowerCase().includes(q) ||
+      p.description.toLowerCase().includes(q) ||
+      p.tags.some(t => t.toLowerCase().includes(q)) ||
+      p.district.includes(q)
+    );
+  }
+
+  // 收藏筛选（如果启用）
+  if (state.showFavoritesOnly) {
+    places = places.filter(p => state.favorites.includes(p.id));
+  }
+
+  // 按评分排序
+  places.sort((a, b) => b.rating - a.rating);
+
+  return places;
+}
+
+function renderResults(places) {
+  if (places.length === 0) {
+    el.resultsGrid.innerHTML = '';
+    el.emptyState.classList.remove('hidden');
+    return;
+  }
+  el.emptyState.classList.add('hidden');
+  el.resultsGrid.innerHTML = places.map(p => createCard(p)).join('');
+
+  // 绑定收藏按钮
+  $$('.fav-btn', el.resultsGrid).forEach(btn => {
+    btn.addEventListener('click', toggleFavorite);
+  });
+
+  // View animation
+  requestAnimationFrame(() => {
+    $$('.place-card', el.resultsGrid).forEach((card, i) => {
+      setTimeout(() => card.classList.add('visible'), i * 50);
+    });
+  });
+}
+
+// ===== 卡片模板 =====
+function createCard(place) {
+  const isFav = state.favorites.includes(place.id);
+  const seasonLabels = place.seasons.map(s => {
+    const found = DATA.seasons.find(se => se.id === s);
+    return found ? found.label.split(' ')[1] : s;
+  }).join(' ');
+
+  const hasDeals = place.deals && place.deals.length > 0;
+  const hasEvents = place.events && place.events.length > 0;
+
+  return `
+    <article class="place-card" data-id="${place.id}" data-animate>
+      <div class="card-image">
+        <img src="${place.image}" alt="${place.name}" loading="lazy"
+             onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%22200%22 y=%22150%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2218%22>${encodeURIComponent(place.name)}</text></svg>'">
+        <div class="card-rating">
+          <span class="star">★</span> ${place.rating}
+        </div>
+        <button class="fav-btn ${isFav ? 'active' : ''}" data-id="${place.id}">
+          ${isFav ? '❤️' : '🤍'}
+        </button>
+        ${hasDeals ? '<span class="badge-deal">有优惠</span>' : ''}
+      </div>
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="tag tag-district">${place.district}</span>
+          <span class="tag tag-season">${seasonLabels}</span>
+          ${place.tags.slice(0, 2).map(t => `<span class="tag tag-custom">${t}</span>`).join('')}
+        </div>
+        <h3 class="card-title">${place.name}</h3>
+        <p class="card-desc">${place.description}</p>
+
+        ${hasEvents ? `
+          <div class="card-events">
+            <span class="event-icon">📅</span>
+            ${place.events.slice(0, 2).map(e => `
+              <span class="event-text">${e.text}</span>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        ${hasDeals ? `
+          <div class="card-deals">
+            <span class="deal-icon">🏷️</span>
+            ${place.deals.slice(0, 2).map(d => `
+              <span class="deal-text">${d.text}</span>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        <div class="card-meta">
+          <span>📍 ${place.address}</span>
+          <span>🕐 ${place.hours}</span>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+// ===== 收藏 =====
+function toggleFavorite(e) {
+  const btn = e.currentTarget;
+  const id = parseInt(btn.dataset.id);
+  const idx = state.favorites.indexOf(id);
+
+  if (idx > -1) {
+    state.favorites.splice(idx, 1);
+    btn.textContent = '🤍';
+    btn.classList.remove('active');
+    showToast('已取消收藏');
+  } else {
+    state.favorites.push(id);
+    btn.textContent = '❤️';
+    btn.classList.add('active');
+    showToast('已收藏 ❤️');
+  }
+
+  localStorage.setItem('wh-favorites', JSON.stringify(state.favorites));
+}
+
+// ===== 高亮/轮播 =====
+let highlightIndex = 0;
+let highlightTimer = null;
+
+function renderHighlights() {
+  // 筛选当前季节的高亮
+  const items = DATA.highlights.filter(h =>
+    h.season === 'all' || h.season === state.currentSeason
+  );
+
+  if (items.length === 0) {
+    el.highlights.classList.add('hidden');
+    return;
+  }
+  el.highlights.classList.remove('hidden');
+
+  el.highlightsTrack.innerHTML = items.map((h, i) => `
+    <div class="highlight-slide ${i === 0 ? 'active' : ''}" data-index="${i}">
+      <a href="${h.link}" class="highlight-link">
+        <div class="highlight-img">
+          <img src="${h.image}" alt="${h.title}" onerror="this.style.display='none'">
+        </div>
+        <div class="highlight-info">
+          <span class="highlight-badge">${h.badge}</span>
+          <h3>${h.title}</h3>
+          <p>${h.desc}</p>
+        </div>
+      </a>
+    </div>
+  `).join('');
+
+  el.highlightsDots.innerHTML = items.map((_, i) => `
+    <button class="dot ${i === 0 ? 'active' : ''}" data-index="${i}"></button>
+  `).join('');
+
+  startHighlightAutoPlay();
+}
+
+function goToHighlight(index) {
+  const slides = $$('.highlight-slide', el.highlightsTrack);
+  const dots = $$('.dot', el.highlightsDots);
+  if (index >= slides.length) index = 0;
+  if (index < 0) index = slides.length - 1;
+
+  slides.forEach(s => s.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
+  slides[index]?.classList.add('active');
+  dots[index]?.classList.add('active');
+  highlightIndex = index;
+}
+
+function startHighlightAutoPlay() {
+  stopHighlightAutoPlay();
+  highlightTimer = setInterval(() => {
+    goToHighlight(highlightIndex + 1);
+  }, 4000);
+}
+
+function stopHighlightAutoPlay() {
+  if (highlightTimer) {
+    clearInterval(highlightTimer);
+    highlightTimer = null;
+  }
+}
+
+// ===== Toast 消息 =====
+function showToast(msg) {
+  el.toast.textContent = msg;
+  el.toast.classList.remove('hidden');
+  el.toast.classList.add('show');
+  clearTimeout(el.toast._timer);
+  el.toast._timer = setTimeout(() => {
+    el.toast.classList.remove('show');
+    setTimeout(() => el.toast.classList.add('hidden'), 300);
+  }, 2000);
+}
+
+// ===== 事件绑定 =====
+function setupEventListeners() {
+  // 季节切换
+  el.seasonTabs.addEventListener('click', (e) => {
+    const tab = e.target.closest('.season-tab');
+    if (!tab) return;
+    $$('.season-tab', el.seasonTabs).forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    state.currentSeason = tab.dataset.season;
+    renderHighlights();
+    filterAndRender();
+  });
+
+  // 分类切换
+  el.categoryTabs.addEventListener('click', (e) => {
+    const tab = e.target.closest('.category-tab');
+    if (!tab) return;
+    $$('.category-tab', el.categoryTabs).forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    state.activeCategory = tab.dataset.category;
+    filterAndRender();
+  });
+
+  // 区域筛选
+  el.districtFilter.addEventListener('click', (e) => {
+    const chip = e.target.closest('.district-chip');
+    if (!chip) return;
+    $$('.district-chip', el.districtFilter).forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    state.activeDistrict = chip.dataset.district;
+    filterAndRender();
+  });
+
+  // 搜索
+  el.searchInput.addEventListener('input', (e) => {
+    state.searchQuery = e.target.value.trim().toLowerCase();
+    filterAndRender();
+  });
+
+  // 高亮轮播点击
+  el.highlightsDots.addEventListener('click', (e) => {
+    const dot = e.target.closest('.dot');
+    if (!dot) return;
+    stopHighlightAutoPlay();
+    goToHighlight(parseInt(dot.dataset.index));
+    startHighlightAutoPlay();
+  });
+
+  // 高亮触摸支持
+  let touchStartX = 0;
+  el.highlightsTrack.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    stopHighlightAutoPlay();
+  }, { passive: true });
+
+  el.highlightsTrack.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      goToHighlight(highlightIndex + (diff > 0 ? 1 : -1));
+    }
+    startHighlightAutoPlay();
+  }, { passive: true });
+
+  // 收藏筛选切换
+  el.favToggle.addEventListener('click', () => {
+    state.showFavoritesOnly = !state.showFavoritesOnly;
+    filterAndRender();
+  });
+
+  // 回到顶部
+  window.addEventListener('scroll', () => {
+    el.scrollTop.classList.toggle('visible', window.scrollY > 400);
+  });
+  el.scrollTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 移动端菜单
+  el.mobileMenuBtn.addEventListener('click', () => {
+    el.mobileMenu.classList.toggle('open');
+  });
+
+  // 点击外部关闭菜单
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#mobile-menu') && !e.target.closest('#mobile-menu-btn')) {
+      el.mobileMenu.classList.remove('open');
+    }
+  });
+
+  // ESC 键关闭菜单
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') el.mobileMenu.classList.remove('open');
+  });
+
+  // 键盘导航
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') el.mobileMenu.classList.remove('open');
+  });
+}
+
+// ===== 收藏筛选按钮 =====
+function updateFavBtnLabel() {
+  const btn = el.favToggle;
+  if (state.showFavoritesOnly) {
+    btn.textContent = '❤️ 仅看收藏';
+    btn.classList.add('active');
+  } else {
+    btn.textContent = '♡ 收藏 (' + state.favorites.length + ')';
+    btn.classList.remove('active');
+  }
+}
+
+// ===== 季节指示器 =====
+function updateSeasonDot() {
+  const dot = document.getElementById('season-dot');
+  if (dot) dot.className = 'season-dot ' + state.currentSeason;
+}
+
+// ===== 滚动动画 =====
+function setupScrollAnimations() {
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '50px' });
+
+    // 观察所有需要动画的元素
+    setTimeout(() => {
+      $$('[data-animate]').forEach(el => observer.observe(el));
+    }, 600);
+  }
+}
+
+// ===== 启动 =====
+document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
