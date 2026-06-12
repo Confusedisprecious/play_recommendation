@@ -1,0 +1,8 @@
+[
+  {"id": "deal_001", "title": "欢乐谷亲子年卡特惠", "location": "武汉欢乐谷", "original_price": 1298, "price": 698, "desc": "698元畅玩一整年，1大1小超值组合", "start_date": "2026-01-01", "end_date": "2026-12-31", "source": "欢乐谷官网", "place_id": 9},
+  {"id": "deal_002", "title": "儿童节特惠 儿童票半价", "location": "武汉极地海洋世界", "original_price": 240, "price": 120, "desc": "儿童票半价，带孩子探索海洋奥秘", "start_date": "2026-06-01", "end_date": "2026-06-30", "source": "海昌极地官网", "place_id": 10},
+  {"id": "deal_003", "title": "欢乐谷+玛雅联票", "location": "武汉欢乐谷/玛雅海滩", "original_price": 498, "price": 299, "desc": "联票299元畅玩欢乐谷+玛雅", "start_date": "2026-06-15", "end_date": "2026-08-31", "source": "欢乐谷官网", "place_id": 12},
+  {"id": "deal_004", "title": "工作日亲子套餐 8折", "location": "武汉梦时代", "original_price": 200, "price": 160, "desc": "工作日亲子套餐 8折优惠", "start_date": "2026-01-01", "end_date": "2026-12-31", "source": "梦时代", "place_id": 1},
+  {"id": "deal_005", "title": "会员日儿童游乐区免费", "location": "武商摩尔城", "original_price": 50, "price": 0, "desc": "会员日儿童游乐区免费开放", "start_date": "2026-01-01", "end_date": "2026-12-31", "source": "武商摩尔城", "place_id": 3},
+  {"id": "deal_006", "title": "亲子年票 198元", "location": "武汉动物园", "original_price": 396, "price": 198, "desc": "1大1小亲子年票，全年不限次", "start_date": "2026-01-01", "end_date": "2026-12-31", "source": "武汉动物园", "place_id": 19}
+]

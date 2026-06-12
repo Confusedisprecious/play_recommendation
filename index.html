@@ -256,6 +256,48 @@ ul { list-style: none; }
   50% { opacity: 0.4; }
 }
 
+/* ---- Update Time ---- */
+.update-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 16px;
+  background: rgba(255,255,255,0.6);
+  padding: 4px 14px;
+  border-radius: 100px;
+}
+.update-icon { font-size: 12px; }
+
+/* ---- Quick Entry ---- */
+.quick-entry {
+  background: var(--bg);
+}
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+}
+.quick-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.quick-btn:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+.quick-btn-icon { font-size: 28px; }
+.quick-btn-label { font-size: 13px; font-weight: 500; color: var(--text); }
+
 /* Search */
 .search-box {
   position: relative;
@@ -1004,6 +1046,10 @@ ul { list-style: none; }
         <span class="season-dot" id="season-dot"></span>
         <span id="season-label">当前季节推荐</span>
       </div>
+      <div class="update-time" id="update-time">
+        <span class="update-icon">🔄</span>
+        <span>数据更新时间：<span id="update-time-text">加载中...</span></span>
+      </div>
 
       <h1 class="hero-title">
         这个<span>周末</span>，带娃去哪玩？
@@ -1016,6 +1062,13 @@ ul { list-style: none; }
         <span class="search-icon">🔍</span>
         <input type="text" id="search-input" placeholder="搜索商场、公园、活动..." aria-label="搜索推荐去处">
       </div>
+    </div>
+  </section>
+
+  <!-- Quick Entry Buttons -->
+  <section class="quick-entry">
+    <div class="section">
+      <div class="quick-grid" id="quick-grid"></div>
     </div>
   </section>
 
@@ -1117,8 +1170,23 @@ ul { list-style: none; }
   <!-- Scripts -->
   <script>
 /**
- * 武汉亲子游玩推荐数据
- * 按季节、区域、类别整理
+ * 快速入口按钮配置
+ */
+const QUICK_ENTRIES = [
+  { id: 'weekend', icon: '🎉', label: '周末推荐', filter: { category: 'all' } },
+  { id: 'rainy', icon: '🌧️', label: '雨天推荐', filter: { tags: ['室内游乐', '室内场馆', '儿童乐园', '科普', '自然科学'] } },
+  { id: 'free', icon: '💰', label: '免费活动', filter: { free: true } },
+  { id: 'mall', icon: '🛍️', label: '商场活动', filter: { category: 'mall' } },
+  { id: 'park', icon: '🌳', label: '公园活动', filter: { category: 'park' } },
+  { id: 'playground', icon: '🎡', label: '游乐场', filter: { category: 'playground' } },
+  { id: 'museum', icon: '🏛️', label: '博物馆', filter: { tags: ['自然科普', '自然科学'] } },
+  { id: 'science', icon: '🔬', label: '科技馆', filter: { tags: ['科普', '研学基地'] } }
+];
+
+/**
+ * 武汉亲子游玩推荐 - 默认数据
+ * 运行时优先从 data/spots.json 和 data/events.json 加载
+ * 加载失败时使用此默认数据
  */
 const DATA = {
   seasons: [
@@ -1732,6 +1800,41 @@ function getCurrentSeason() {
   }
   return 'spring';
 }
+
+// ===== 数据加载 =====
+async function loadData() {
+  try {
+    const [spotsRes, eventsRes] = await Promise.all([
+      fetch('data/spots.json'),
+      fetch('data/events.json')
+    ]);
+    const spots = await spotsRes.json();
+    const events = await eventsRes.json();
+    DATA = { ...DATA, places: [...spots, ...events] };
+  } catch (e) {
+    console.log('使用默认数据');
+  }
+  try {
+    const updateRes = await fetch('data/last_update.json');
+    const updateData = await updateRes.json();
+    document.getElementById('update-time-text').textContent = updateData.last_update || '未知';
+  } catch (e) {
+    document.getElementById('update-time-text').textContent = '离线模式';
+  }
+  renderQuickEntries();
+  init();
+}
+
+function renderQuickEntries() {
+  const grid = document.getElementById('quick-grid');
+  if (!grid) return;
+  grid.innerHTML = QUICK_ENTRIES.map(e => `
+    <button class="quick-btn" data-quick="${e.id}">
+      <span class="quick-btn-icon">${e.icon}</span>
+      <span class="quick-btn-label">${e.label}</span>
+    </button>
+  `).join('');
+}
   </script>
   <script>
 /**
@@ -2129,6 +2232,32 @@ function setupEventListeners() {
     filterAndRender();
   });
 
+  // 快速入口按钮
+  document.getElementById('quick-grid').addEventListener('click', (e) => {
+    const btn = e.target.closest('.quick-btn');
+    if (!btn) return;
+    const entry = QUICK_ENTRIES.find(q => q.id === btn.dataset.quick);
+    if (!entry) return;
+    const { filter } = entry;
+    // 重置搜索
+    state.searchQuery = '';
+    el.searchInput.value = '';
+    // 按分类筛选
+    if (filter.category) {
+      state.activeCategory = filter.category;
+      $$('.category-tab').forEach(t => t.classList.remove('active'));
+      const tab = $(`.category-tab[data-category="${filter.category}"]`);
+      if (tab) tab.classList.add('active');
+    }
+    // 按标签搜索
+    if (filter.tags) {
+      state.searchQuery = filter.tags.join(' ').toLowerCase();
+      el.searchInput.value = state.searchQuery;
+    }
+    filterAndRender();
+    document.getElementById('places').scrollIntoView({ behavior: 'smooth' });
+  });
+
   // 回到顶部
   window.addEventListener('scroll', () => {
     el.scrollTop.classList.toggle('visible', window.scrollY > 400);
@@ -2232,7 +2361,7 @@ function openMap(type) {
 }
 
 // ===== 启动 =====
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', loadData);
   </script>
 </body>
 </html>
