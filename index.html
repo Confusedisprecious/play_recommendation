@@ -1174,13 +1174,13 @@ ul { list-style: none; }
  */
 const QUICK_ENTRIES = [
   { id: 'weekend', icon: '🎉', label: '周末推荐', filter: { category: 'all' } },
-  { id: 'rainy', icon: '🌧️', label: '雨天推荐', filter: { tags: ['室内游乐', '室内场馆', '儿童乐园', '科普', '自然科学'] } },
+  { id: 'rainy', icon: '🌧️', label: '雨天推荐', filter: { tags: ['室内', '室内游乐', '室内场馆', '儿童乐园', '科普', '自然科学'] } },
   { id: 'free', icon: '💰', label: '免费活动', filter: { free: true } },
   { id: 'mall', icon: '🛍️', label: '商场活动', filter: { category: 'mall' } },
   { id: 'park', icon: '🌳', label: '公园活动', filter: { category: 'park' } },
   { id: 'playground', icon: '🎡', label: '游乐场', filter: { category: 'playground' } },
-  { id: 'museum', icon: '🏛️', label: '博物馆', filter: { tags: ['自然科普', '自然科学'] } },
-  { id: 'science', icon: '🔬', label: '科技馆', filter: { tags: ['科普', '研学基地'] } }
+  { id: 'museum', icon: '🏛️', label: '博物馆', filter: { tags: ['展览', '文物', '博物馆', '考古'] } },
+  { id: 'science', icon: '🔬', label: '科技馆', filter: { tags: ['科普', '科技馆', '科技', '科学', '人工智能', '机器人'] } }
 ];
 
 /**
@@ -1847,6 +1847,7 @@ const state = {
   activeCategory: 'all',
   activeDistrict: 'all',
   searchQuery: '',
+  activeTagFilter: null,
   showFavoritesOnly: false,
   favorites: JSON.parse(localStorage.getItem('wh-favorites') || '[]')
 };
@@ -1968,6 +1969,15 @@ function filterPlaces() {
       p.description.toLowerCase().includes(q) ||
       p.tags.some(t => t.toLowerCase().includes(q)) ||
       p.district.includes(q)
+    );
+  }
+
+  // 按标签过滤（快速入口，OR 逻辑）
+  if (state.activeTagFilter) {
+    places = places.filter(p =>
+      state.activeTagFilter.some(tag =>
+        p.tags.some(t => t.toLowerCase().includes(tag.toLowerCase()))
+      )
     );
   }
 
@@ -2249,10 +2259,11 @@ function setupEventListeners() {
       const tab = $(`.category-tab[data-category="${filter.category}"]`);
       if (tab) tab.classList.add('active');
     }
-    // 按标签搜索
+    // 按标签搜索（每个标签独立匹配，OR 逻辑）
     if (filter.tags) {
-      state.searchQuery = filter.tags.join(' ').toLowerCase();
-      el.searchInput.value = state.searchQuery;
+      state.activeTagFilter = filter.tags.map(t => t.toLowerCase());
+    } else {
+      state.activeTagFilter = null;
     }
     filterAndRender();
     document.getElementById('places').scrollIntoView({ behavior: 'smooth' });

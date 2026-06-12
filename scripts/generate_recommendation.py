@@ -59,7 +59,7 @@ def generate_recommendations():
             "place_ids": [p["id"] for p in all_places if p.get("age_min", 0) <= age_min and p.get("age_max", 12) >= age_max]
         }
 
-    save_json("weather_recommendation.json", [recommendations])
+    save_json("weather_recommendation.json", recommendations)
     print(f"  ✔ 场景推荐已生成 ({len(recommendations)} 个场景)")
 
 if __name__ == "__main__":

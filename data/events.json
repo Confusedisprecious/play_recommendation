@@ -4,9 +4,16 @@
     "name": "武汉马拉松亲子跑",
     "category": "event",
     "district": "武昌区",
-    "seasons": ["spring"],
+    "seasons": [
+      "spring"
+    ],
     "description": "汉马配套亲子活动，沿东湖绿道设置短距离亲子跑路线，完赛颁发奖牌。",
-    "tags": ["亲子运动", "马拉松", "东湖绿道", "完赛奖牌"],
+    "tags": [
+      "亲子运动",
+      "马拉松",
+      "东湖绿道",
+      "完赛奖牌"
+    ],
     "rating": 4.8,
     "address": "东湖绿道（起点：梨园广场）",
     "hours": "赛程半天",
@@ -27,9 +34,16 @@
     "name": "武汉渡江节",
     "category": "event",
     "district": "武昌区",
-    "seasons": ["summer"],
+    "seasons": [
+      "summer"
+    ],
     "description": "武汉传统水上活动，设有亲子戏水区和岸上嘉年华活动。",
-    "tags": ["水上活动", "传统节日", "嘉年华", "亲子互动"],
+    "tags": [
+      "水上活动",
+      "传统节日",
+      "嘉年华",
+      "亲子互动"
+    ],
     "rating": 4.3,
     "address": "武昌江滩（汉阳门码头）",
     "hours": "7月16日全天",
@@ -50,9 +64,16 @@
     "name": "武汉国际杂技艺术节",
     "category": "event",
     "district": "江汉区",
-    "seasons": ["autumn"],
+    "seasons": [
+      "autumn"
+    ],
     "description": "国际级杂技表演盛会，适合全家观看，精彩绝伦的杂技和魔术表演。",
-    "tags": ["杂技表演", "魔术", "国际盛会", "室内场馆"],
+    "tags": [
+      "杂技表演",
+      "魔术",
+      "国际盛会",
+      "室内场馆"
+    ],
     "rating": 4.6,
     "address": "江汉区武汉杂技厅",
     "hours": "演出日 19:30-21:30",
@@ -60,7 +81,10 @@
     "image": "https://picsum.photos/seed/wuhan-circus/400/300",
     "events": [],
     "deals": [
-      { "text": "家庭套票3张8折", "validUntil": "2026-11-30" }
+      {
+        "text": "家庭套票3张8折",
+        "validUntil": "2026-11-30"
+      }
     ],
     "age_min": 3,
     "age_max": 12,
@@ -75,9 +99,16 @@
     "name": "武汉欢乐谷灯光节",
     "category": "event",
     "district": "洪山区",
-    "seasons": ["winter"],
+    "seasons": [
+      "winter"
+    ],
     "description": "冬季大型灯光秀，千万盏彩灯打造梦幻世界，还有巡游表演和美食集市。",
-    "tags": ["灯光秀", "冬季活动", "巡游表演", "美食集市"],
+    "tags": [
+      "灯光秀",
+      "冬季活动",
+      "巡游表演",
+      "美食集市"
+    ],
     "rating": 4.5,
     "address": "洪山区欢乐谷内",
     "hours": "18:00-22:00",
@@ -85,7 +116,10 @@
     "image": "https://picsum.photos/seed/wuhan-light-fest/400/300",
     "events": [],
     "deals": [
-      { "text": "早鸟票 49.9元（原价80元）", "validUntil": "2026-12-31" }
+      {
+        "text": "早鸟票 49.9元（原价80元）",
+        "validUntil": "2026-12-31"
+      }
     ],
     "age_min": 3,
     "age_max": 12,
@@ -100,9 +134,16 @@
     "name": "武汉东湖灯会",
     "category": "event",
     "district": "武昌区",
-    "seasons": ["winter"],
+    "seasons": [
+      "winter"
+    ],
     "description": "东湖传统灯会，大型水上灯组、民俗表演和特色美食，年味十足。",
-    "tags": ["传统灯会", "水上灯组", "民俗表演", "年味"],
+    "tags": [
+      "传统灯会",
+      "水上灯组",
+      "民俗表演",
+      "年味"
+    ],
     "rating": 4.7,
     "address": "东湖风景区听涛景区",
     "hours": "18:00-22:00（春节期间）",
@@ -110,7 +151,10 @@
     "image": "https://picsum.photos/seed/wuhan-lantern/400/300",
     "events": [],
     "deals": [
-      { "text": "家庭套票2大1小 168元", "validUntil": "2026-02-28" }
+      {
+        "text": "家庭套票2大1小 168元",
+        "validUntil": "2026-02-28"
+      }
     ],
     "age_min": 3,
     "age_max": 12,
@@ -125,9 +169,17 @@
     "name": "武汉花博会",
     "category": "event",
     "district": "蔡甸区",
-    "seasons": ["spring", "autumn"],
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
     "description": "大型花卉展览，春季郁金香、秋季菊花，还有亲子花艺体验课程。",
-    "tags": ["花卉展览", "花艺体验", "亲子课程", "拍照打卡"],
+    "tags": [
+      "花卉展览",
+      "花艺体验",
+      "亲子课程",
+      "拍照打卡"
+    ],
     "rating": 4.4,
     "address": "蔡甸区花博大道",
     "hours": "09:00-18:00",
@@ -135,7 +187,10 @@
     "image": "https://picsum.photos/seed/wuhan-flower/400/300",
     "events": [],
     "deals": [
-      { "text": "亲子花艺课 含门票98元", "validUntil": "2026-10-31" }
+      {
+        "text": "亲子花艺课 含门票98元",
+        "validUntil": "2026-10-31"
+      }
     ],
     "age_min": 3,
     "age_max": 12,
@@ -150,9 +205,17 @@
     "name": "武汉国际会展中心动漫展",
     "category": "event",
     "district": "江汉区",
-    "seasons": ["summer", "winter"],
+    "seasons": [
+      "summer",
+      "winter"
+    ],
     "description": "大型动漫展览，设有亲子互动区、Cosplay表演和动漫周边集市。",
-    "tags": ["动漫展览", "Cosplay", "亲子互动", "室内活动"],
+    "tags": [
+      "动漫展览",
+      "Cosplay",
+      "亲子互动",
+      "室内活动"
+    ],
     "rating": 4.2,
     "address": "江汉区解放大道696号",
     "hours": "09:00-17:00",
@@ -173,9 +236,16 @@
     "name": "武汉草莓音乐节",
     "category": "event",
     "district": "蔡甸区",
-    "seasons": ["spring"],
+    "seasons": [
+      "spring"
+    ],
     "description": "知名音乐节品牌，设有亲子家庭区，让家长和孩子一起感受音乐魅力。",
-    "tags": ["音乐节", "亲子家庭区", "户外音乐", "文创集市"],
+    "tags": [
+      "音乐节",
+      "亲子家庭区",
+      "户外音乐",
+      "文创集市"
+    ],
     "rating": 4.5,
     "address": "蔡甸区花博汇",
     "hours": "14:00-22:00",
@@ -183,7 +253,10 @@
     "image": "https://picsum.photos/seed/wuhan-strawberry/400/300",
     "events": [],
     "deals": [
-      { "text": "亲子套票 299元（2大1小）", "validUntil": "2026-05-31" }
+      {
+        "text": "亲子套票 299元（2大1小）",
+        "validUntil": "2026-05-31"
+      }
     ],
     "age_min": 3,
     "age_max": 12,
@@ -192,5 +265,1150 @@
     "indoor": false,
     "parking": "有停车场",
     "source": "草莓音乐节"
+  },
+  {
+    "id": 31,
+    "name": "2026武汉国际旅游节",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "节庆活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-31/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 32,
+    "name": "武汉城市定向赛亲子专场",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "亲子活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-32/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 33,
+    "name": "江滩露天电影季",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-33/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 34,
+    "name": "武汉非遗文化展",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "展览",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-34/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 35,
+    "name": "暑期儿童剧展演",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "summer"
+    ],
+    "description": "",
+    "tags": [
+      "演出活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-35/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 36,
+    "name": "楚国八百年文物展",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "展览",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-36/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "湖北省博物馆"
+  },
+  {
+    "id": 37,
+    "name": "小小考古学家亲子体验",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "亲子活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-37/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "湖北省博物馆"
+  },
+  {
+    "id": 38,
+    "name": "曾侯乙编钟演奏会",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "演出",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-38/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "湖北省博物馆"
+  },
+  {
+    "id": 39,
+    "name": "欢乐谷暑期夜场开放",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "summer"
+    ],
+    "description": "7月-8月 18:00-21:00",
+    "tags": [
+      "主题活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-39/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉欢乐谷"
+  },
+  {
+    "id": 40,
+    "name": "亲子年卡特惠 698元",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "1大1小超值组合",
+    "tags": [
+      "门票优惠",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-40/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉欢乐谷"
+  },
+  {
+    "id": 41,
+    "name": "玛雅海滩水公园联票",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "summer"
+    ],
+    "description": "欢乐谷+玛雅 299元",
+    "tags": [
+      "门票优惠",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-41/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉欢乐谷"
+  },
+  {
+    "id": 42,
+    "name": "武汉周末亲子活动汇总（6月）",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "亲子活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-42/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉本地宝"
+  },
+  {
+    "id": 43,
+    "name": "武汉室内遛娃好去处推荐",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "亲子活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-43/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉本地宝"
+  },
+  {
+    "id": 44,
+    "name": "武汉6月展览演出清单",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "亲子活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-44/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉本地宝"
+  },
+  {
+    "id": 45,
+    "name": "武汉免费亲子活动合集",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "亲子活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-45/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉本地宝"
+  },
+  {
+    "id": 46,
+    "name": "武汉之夏音乐节",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "summer"
+    ],
+    "description": "",
+    "tags": [
+      "演出活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-46/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 47,
+    "name": "博物馆奇妙夜-夜宿活动",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "在博物馆搭帐篷过夜，探索夜晚的文物世界",
+    "tags": [
+      "亲子活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "武昌区东湖路160号",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-47/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "湖北省博物馆"
+  },
+  {
+    "id": 48,
+    "name": "周六科普课堂：神奇的物理",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "通过趣味实验了解物理原理，适合6-12岁",
+    "tags": [
+      "科普活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "洪山区高新大道779号",
+    "hours": "09:30-16:30（周三闭馆）",
+    "transport": "地铁11号线光谷五路站",
+    "image": "https://picsum.photos/seed/event-48/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "湖北省科技馆"
+  },
+  {
+    "id": 49,
+    "name": "暑期科学夏令营招募",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "summer"
+    ],
+    "description": "为期3天的科学探索夏令营，包含机器人、天文等课程",
+    "tags": [
+      "亲子活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "洪山区高新大道779号",
+    "hours": "09:30-16:30",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-49/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "湖北省科技馆"
+  },
+  {
+    "id": 50,
+    "name": "人工智能互动体验展",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "体验AI绘画、智能机器人、虚拟现实等前沿科技",
+    "tags": [
+      "展览",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "洪山区高新大道779号",
+    "hours": "09:30-16:30（周三闭馆）",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-50/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "湖北省科技馆"
+  },
+  {
+    "id": 51,
+    "name": "小小科学家实验课",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "3-6岁幼儿科学启蒙课程，每周六上午",
+    "tags": [
+      "科普活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "洪山区高新大道779号",
+    "hours": "10:00-11:30（周六）",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-51/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "湖北省科技馆"
+  },
+  {
+    "id": 52,
+    "name": "白鲸表演时间调整通知",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "",
+    "tags": [
+      "演出信息",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-52/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉海昌极地"
+  },
+  {
+    "id": 53,
+    "name": "暑期夜场亲子优惠票",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "summer"
+    ],
+    "description": "",
+    "tags": [
+      "门票优惠",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-53/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉海昌极地"
+  },
+  {
+    "id": 54,
+    "name": "武汉市文化和旅游局关于2026年度剧本孵化计划项目评审结果的公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202606/t20260605_2774108.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-54/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 55,
+    "name": "关于湖北省四季悦途旅游有限责任公司办理旅游服务质量保证金提取事项情况的公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202605/t20260528_2770139.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-55/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 56,
+    "name": "武汉市文化和旅游局关于2026年支持文化和旅游产业高质量发展若干奖补政策拟奖励名单公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202605/t20260521_2767391.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-56/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 57,
+    "name": "武汉市文化和旅游局关于第七批省级非物质文化遗产代表性传承人推荐名单的公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202605/t20260521_2767322.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-57/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 58,
+    "name": "关于湖北星旅程国际旅行社有限公司、湖北青岚国际旅行社有限公司办理旅游服务质量保证金提取事项情况的公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202605/t20260515_2765035.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-58/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 59,
+    "name": "武汉动漫协会第三届理事会负责人候选人公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202605/t20260512_2763663.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-59/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 60,
+    "name": "关于湖北徐东国际旅行社有限公司办理旅游服务质量保证金提取事项情况的公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202605/t20260512_2763621.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-60/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 61,
+    "name": "关于浩远国际旅行社（武汉）有限公司、湖北省森林国际旅行社办理旅游服务质量保证金提取事项情况的公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202604/t20260430_2759644.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-61/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 62,
+    "name": "关于武汉市享轻松国际旅行社有限公司办理旅游服务质量保证金提取事项情况的公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202604/t20260422_2756177.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-62/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 63,
+    "name": "“五一”旅游热辣滚烫，“顶流武汉”上榜多个全国前十2026-05-07",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn./zwgk_27/zwdt/jdxw/202605/t20260507_2761235.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-63/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 64,
+    "name": "春天里，看见活力涌动的中国2026-03-18",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring"
+    ],
+    "description": "https://wlj.wuhan.gov.cn./zwgk_27/zwdt/xydt/202603/t20260318_2741704.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-64/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 65,
+    "name": "博物馆之友",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://www.hbww.org.cn/bwgzy",
+    "tags": [
+      "展览",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-65/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "湖北省博物馆"
+  },
+  {
+    "id": 66,
+    "name": "English",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://www.hbww.org.cn/english",
+    "tags": [
+      "展览",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-66/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "湖北省博物馆"
+  },
+  {
+    "id": 67,
+    "name": "本地宝App下载",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "http://www.bendibao.com/app/pc.html",
+    "tags": [
+      "亲子活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-67/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉本地宝"
+  },
+  {
+    "id": 68,
+    "name": "武汉城市选择",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "http://www.bendibao.com/city.htm",
+    "tags": [
+      "亲子活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-68/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉本地宝"
   }
 ]

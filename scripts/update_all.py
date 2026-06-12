@@ -66,7 +66,24 @@ def main():
     print(f"时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 50)
 
-    # 验证数据完整性
+    # 1. 运行爬虫采集数据
+    print(f"\n🕷️ 阶段1: 数据爬取")
+    try:
+        from crawler.runner import run_all_crawlers
+        run_all_crawlers()
+    except Exception as e:
+        print(f"  ⚠ 爬虫执行失败: {e}")
+
+    # 2. 合并爬取数据到主文件
+    print(f"\n🔗 阶段2: 数据合并")
+    try:
+        from merge_crawled_data import merge_all
+        merge_all()
+    except Exception as e:
+        print(f"  ⚠ 数据合并失败: {e}")
+
+    # 3. 验证数据完整性
+    print(f"\n📊 阶段3: 数据验证")
     spots = load_json("spots.json")
     events = load_json("events.json")
     promotions = load_json("promotions.json")
