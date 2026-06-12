@@ -591,6 +591,21 @@ ul { list-style: none; }
   padding-top: 8px;
   border-top: 1px solid var(--border);
 }
+.nav-btn {
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  background: #E8F4FD;
+  color: #1A7DCB;
+  transition: var(--transition);
+  align-self: flex-start;
+}
+.nav-btn:hover { background: #D0EBFB; }
 
 /* ---- Favorites Toggle ---- */
 .fav-toggle {
@@ -873,6 +888,69 @@ ul { list-style: none; }
   animation: fadeInUp 0.5s ease forwards;
 }
 
+/* ---- Map Picker ---- */
+.map-picker-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 300;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.map-picker-modal {
+  background: var(--bg-card);
+  border-radius: var(--radius) var(--radius) 0 0;
+  width: 100%;
+  max-width: 480px;
+  padding: 20px 20px 32px;
+  animation: slideUp 0.3s ease;
+}
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.map-picker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.map-picker-close {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f5f5f5;
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+.map-picker-close:hover { background: #e8e8e8; }
+.map-picker-body { display: flex; flex-direction: column; gap: 12px; }
+.map-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  text-align: left;
+  width: 100%;
+}
+.map-btn:hover { border-color: var(--primary); background: #FFF5EB; }
+.map-btn-icon { font-size: 28px; }
+.map-btn-name { font-size: 15px; font-weight: 600; color: var(--text); }
+.map-btn-desc { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
 /* ---- Print ---- */
 @media print {
   .header, .scroll-top, .toast, .mobile-menu, .mobile-menu-btn { display: none; }
@@ -985,7 +1063,40 @@ ul { list-style: none; }
   <!-- Scroll to Top -->
   <button class="scroll-top" id="scroll-top" aria-label="回到顶部">↑</button>
 
-  <!-- Footer -->
+  <!-- Map Picker Modal -->
+<div class="map-picker-overlay hidden" id="map-picker">
+  <div class="map-picker-modal">
+    <div class="map-picker-header">
+      <span id="map-picker-title">导航到</span>
+      <button class="map-picker-close" id="map-picker-close">✕</button>
+    </div>
+    <div class="map-picker-body">
+      <button class="map-btn" data-map="baidu">
+        <span class="map-btn-icon">🗺️</span>
+        <div>
+          <div class="map-btn-name">百度地图</div>
+          <div class="map-btn-desc">打开百度地图导航</div>
+        </div>
+      </button>
+      <button class="map-btn" data-map="amap">
+        <span class="map-btn-icon">🗺️</span>
+        <div>
+          <div class="map-btn-name">高德地图</div>
+          <div class="map-btn-desc">打开高德地图导航</div>
+        </div>
+      </button>
+      <button class="map-btn" data-map="tencent">
+        <span class="map-btn-icon">🗺️</span>
+        <div>
+          <div class="map-btn-name">腾讯地图</div>
+          <div class="map-btn-desc">打开腾讯地图导航</div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
   <footer class="footer" id="footer">
     <div class="footer-inner">
       <div class="footer-logo">🎠 武汉亲子游玩推荐</div>
@@ -1844,6 +1955,7 @@ function createCard(place) {
         <div class="card-meta">
           <span>📍 ${place.address}</span>
           <span>🕐 ${place.hours}</span>
+          <button class="nav-btn" data-id="${place.id}" onclick="showMapPicker(${place.id})">🛣️ 导航</button>
         </div>
       </div>
     </article>
@@ -2046,6 +2158,17 @@ function setupEventListeners() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') el.mobileMenu.classList.remove('open');
   });
+
+  // 地图菜单
+  document.querySelectorAll('.map-btn').forEach(btn => {
+    btn.addEventListener('click', () => openMap(btn.dataset.map));
+  });
+  document.getElementById('map-picker-close').addEventListener('click', () => {
+    document.getElementById('map-picker').classList.add('hidden');
+  });
+  document.getElementById('map-picker').addEventListener('click', (e) => {
+    if (e.target.id === 'map-picker') document.getElementById('map-picker').classList.add('hidden');
+  });
 }
 
 // ===== 收藏筛选按钮 =====
@@ -2083,6 +2206,29 @@ function setupScrollAnimations() {
       $$('[data-animate]').forEach(el => observer.observe(el));
     }, 600);
   }
+}
+
+// ===== 地图导航 =====
+let mapTarget = null;
+
+function showMapPicker(placeId) {
+  const place = DATA.places.find(p => p.id === placeId);
+  if (!place) return;
+  mapTarget = place;
+  document.getElementById('map-picker-title').textContent = '导航到 ' + place.name;
+  document.getElementById('map-picker').classList.remove('hidden');
+}
+
+function openMap(type) {
+  if (!mapTarget) return;
+  const { name, address } = mapTarget;
+  const q = encodeURIComponent(name + ' ' + address);
+  const urls = {
+    baidu: 'https://map.baidu.com/search/' + q + '/',
+    amap: 'https://uri.amap.com/search?keyword=' + q + '&city=武汉',
+    tencent: 'https://apis.map.qq.com/uri/v1/search?keyword=' + q + '&city=武汉'
+  };
+  window.open(urls[type], '_blank');
 }
 
 // ===== 启动 =====
