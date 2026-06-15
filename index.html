@@ -3420,12 +3420,62 @@ function renderResults(places) {
 // ===== 卡片图像 =====
 function placeImage(place) {
   const cfg = {
-    park: { g1: '43B97F', g2: '1ABC9C', icon: '🌳' },
-    mall: { g1: 'FF8E53', g2: 'FF6B6B', icon: '🛍️' },
-    playground: { g1: 'A29BFE', g2: '6C5CE7', icon: '🎠' },
-    event: { g1: 'FD79A8', g2: 'E84393', icon: '🎪' }
+    park: {
+      g1: '43B97F', g2: '1ABC9C',
+      icon: '🌳',
+      // Mountain + tree silhouettes
+      deco: `<path d="M0 300 L0 180 Q40 140 80 180 Q130 100 180 170 Q230 90 280 160 Q320 110 360 150 Q380 130 400 160 L400 300Z" fill="rgba(255,255,255,0.1)"/>
+<path d="M0 300 L0 210 Q50 180 100 210 Q160 120 230 200 Q300 130 370 190 Q390 170 400 190 L400 300Z" fill="rgba(255,255,255,0.06)"/>
+<circle cx="80" cy="60" r="30" fill="rgba(255,255,255,0.15)"/>
+<circle cx="110" cy="50" r="22" fill="rgba(255,255,255,0.1)"/>
+<path d="M300 70 L310 100 L290 100Z" fill="rgba(255,255,255,0.2)"/>
+<path d="M310 70 L320 100 L300 100Z" fill="rgba(255,255,255,0.2)"/>`
+    },
+    mall: {
+      g1: 'FF8E53', g2: 'FF6B6B',
+      icon: '🛍️',
+      deco: `<rect x="40" y="140" width="60" height="160" rx="3" fill="rgba(255,255,255,0.1)"/>
+<rect x="110" y="100" width="50" height="200" rx="3" fill="rgba(255,255,255,0.08)"/>
+<rect x="170" y="130" width="70" height="170" rx="3" fill="rgba(255,255,255,0.1)"/>
+<rect x="250" y="80" width="45" height="220" rx="3" fill="rgba(255,255,255,0.08)"/>
+<rect x="310" y="120" width="55" height="180" rx="3" fill="rgba(255,255,255,0.1)"/>
+<rect x="375" y="160" width="25" height="140" rx="2" fill="rgba(255,255,255,0.06)"/>
+<circle cx="320" cy="50" r="3" fill="rgba(255,255,255,0.3)"/>
+<circle cx="350" cy="35" r="2" fill="rgba(255,255,255,0.2)"/>
+<circle cx="280" cy="45" r="2.5" fill="rgba(255,255,255,0.25)"/>`
+    },
+    playground: {
+      g1: 'A29BFE', g2: '6C5CE7',
+      icon: '🎠',
+      deco: `<path d="M60 300 L100 180 L120 180 L80 300Z" fill="rgba(255,255,255,0.08)"/>
+<path d="M80 180 L110 160 L140 180Z" fill="rgba(255,255,255,0.12)"/>
+<rect x="155" y="160" width="8" height="140" fill="rgba(255,255,255,0.08)"/>
+<circle cx="159" cy="145" r="18" fill="rgba(255,255,255,0.1)"/>
+<circle cx="159" cy="145" r="10" fill="rgba(255,255,255,0.05)"/>
+<rect x="220" y="140" width="8" height="160" fill="rgba(255,255,255,0.08)"/>
+<circle cx="224" cy="125" r="18" fill="rgba(255,255,255,0.1)"/>
+<circle cx="224" cy="125" r="10" fill="rgba(255,255,255,0.05)"/>
+<rect x="290" y="120" width="8" height="180" fill="rgba(255,255,255,0.08)"/>
+<circle cx="294" cy="105" r="18" fill="rgba(255,255,255,0.1)"/>
+<circle cx="294" cy="105" r="10" fill="rgba(255,255,255,0.05)"/>
+<circle cx="50" cy="80" r="4" fill="rgba(255,255,255,0.3)"/>
+<circle cx="340" cy="60" r="3" fill="rgba(255,255,255,0.25)"/>
+<circle cx="200" cy="50" r="3.5" fill="rgba(255,255,255,0.2)"/>`
+    },
+    event: {
+      g1: 'FD79A8', g2: 'E84393',
+      icon: '🎪',
+      deco: `<path d="M60 300 L60 180 Q60 140 100 140 L300 140 Q340 140 340 180 L340 300Z" fill="rgba(255,255,255,0.06)"/>
+<path d="M100 140 L140 70 L260 70 L300 140Z" fill="rgba(255,255,255,0.08)"/>
+<line x1="200" y1="70" x2="200" y2="140" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+<circle cx="60" cy="50" r="3" fill="rgba(255,255,255,0.3)"/>
+<circle cx="100" cy="40" r="2" fill="rgba(255,255,255,0.2)"/>
+<circle cx="320" cy="55" r="2.5" fill="rgba(255,255,255,0.25)"/>
+<circle cx="350" cy="45" r="2" fill="rgba(255,255,255,0.15)"/>
+<circle cx="50" cy="70" r="2" fill="rgba(255,255,255,0.2)"/>`
+    }
   };
-  const c = cfg[place.category] || { g1: '636E72', g2: 'B2BEC3', icon: '📍' };
+  const c = cfg[place.category] || { g1: '636E72', g2: 'B2BEC3', icon: '📍', deco: '' };
   const name = place.name.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   return `data:image/svg+xml,${encodeURIComponent(
     `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300">
@@ -3433,9 +3483,7 @@ function placeImage(place) {
         <stop offset="0" stop-color="#${c.g1}"/><stop offset="1" stop-color="#${c.g2}"/>
       </linearGradient></defs>
       <rect width="400" height="300" fill="url(#g)"/>
-      <circle cx="340" cy="60" r="90" fill="rgba(255,255,255,0.08)"/>
-      <circle cx="60" cy="260" r="70" fill="rgba(255,255,255,0.06)"/>
-      <circle cx="200" cy="150" r="100" fill="rgba(255,255,255,0.04)"/>
+      ${c.deco}
       <text x="200" y="115" text-anchor="middle" font-size="56">${c.icon}</text>
       <text x="200" y="200" text-anchor="middle" fill="#fff" font-size="20" font-weight="600" font-family="system-ui,sans-serif">${name}</text>
     </svg>`
@@ -3556,15 +3604,15 @@ function renderHighlights() {
   el.highlightsTrack.innerHTML = items.map((h, i) => {
     // 高亮推荐用SVG图像
     const hlConfig = {
-      '夏季限定': { g1: 'FF6B6B', g2: 'FF8E53', icon: '☀️' },
-      '夏季推荐': { g1: 'FF8E53', g2: 'FDCB6E', icon: '☀️' },
-      '春季限定': { g1: 'FDA7DF', g2: 'E84393', icon: '🌸' },
-      '热门推荐': { g1: 'A29BFE', g2: '6C5CE7', icon: '🔥' },
-      '文化体验': { g1: '55EFC4', g2: '00CEC9', icon: '🎭' },
-      '限时活动': { g1: 'FF6B6B', g2: 'EE5A24', icon: '⏰' },
-      '限时优惠': { g1: 'FF6B6B', g2: 'EE5A24', icon: '🏷️' },
+      '夏季限定': { g1: 'FF6B6B', g2: 'FF8E53', icon: '☀️', deco: `<circle cx="700" cy="80" r="160" fill="rgba(255,255,255,0.06)"/><circle cx="120" cy="350" r="120" fill="rgba(255,255,255,0.05)"/><path d="M0 400 L0 320 Q100 280 200 330 Q300 260 400 310 Q500 240 600 300 Q700 220 800 290 L800 400Z" fill="rgba(255,255,255,0.05)"/>` },
+      '夏季推荐': { g1: 'FF8E53', g2: 'FDCB6E', icon: '☀️', deco: `<circle cx="700" cy="80" r="160" fill="rgba(255,255,255,0.06)"/><circle cx="120" cy="350" r="120" fill="rgba(255,255,255,0.05)"/><path d="M0 400 L0 340 Q80 300 160 330 Q240 280 320 320 Q400 250 500 310 Q600 230 700 300 Q750 260 800 290 L800 400Z" fill="rgba(255,255,255,0.05)"/>` },
+      '春季限定': { g1: 'FDA7DF', g2: 'E84393', icon: '🌸', deco: `<circle cx="700" cy="80" r="160" fill="rgba(255,255,255,0.06)"/><circle cx="120" cy="350" r="120" fill="rgba(255,255,255,0.05)"/><circle cx="300" cy="100" r="4" fill="rgba(255,255,255,0.15)"/><circle cx="500" cy="60" r="3" fill="rgba(255,255,255,0.12)"/><circle cx="650" cy="50" r="3.5" fill="rgba(255,255,255,0.1)"/><circle cx="400" cy="80" r="2.5" fill="rgba(255,255,255,0.15)"/>` },
+      '热门推荐': { g1: 'A29BFE', g2: '6C5CE7', icon: '🔥', deco: `<circle cx="700" cy="80" r="160" fill="rgba(255,255,255,0.06)"/><circle cx="120" cy="350" r="120" fill="rgba(255,255,255,0.05)"/><rect x="60" y="250" width="60" height="150" rx="3" fill="rgba(255,255,255,0.06)"/><rect x="140" y="200" width="50" height="200" rx="3" fill="rgba(255,255,255,0.05)"/><rect x="210" y="230" width="60" height="170" rx="3" fill="rgba(255,255,255,0.06)"/>` },
+      '文化体验': { g1: '55EFC4', g2: '00CEC9', icon: '🎭', deco: `<circle cx="700" cy="80" r="160" fill="rgba(255,255,255,0.06)"/><circle cx="120" cy="350" r="120" fill="rgba(255,255,255,0.05)"/><path d="M200 200 Q200 160 240 160 L560 160 Q600 160 600 200 L600 300 L560 300 L200 300Z" fill="rgba(255,255,255,0.05)"/><path d="M350 160 L400 130 L450 160Z" fill="rgba(255,255,255,0.07)"/>` },
+      '限时活动': { g1: 'FF6B6B', g2: 'EE5A24', icon: '⏰', deco: `<circle cx="700" cy="80" r="160" fill="rgba(255,255,255,0.06)"/><circle cx="120" cy="350" r="120" fill="rgba(255,255,255,0.05)"/><circle cx="350" cy="60" r="3" fill="rgba(255,255,255,0.2)"/><circle cx="450" cy="45" r="4" fill="rgba(255,255,255,0.15)"/><circle cx="550" cy="55" r="2.5" fill="rgba(255,255,255,0.2)"/><circle cx="300" cy="70" r="2" fill="rgba(255,255,255,0.15)"/>` },
+      '限时优惠': { g1: 'FF6B6B', g2: 'EE5A24', icon: '🏷️', deco: `<circle cx="700" cy="80" r="160" fill="rgba(255,255,255,0.06)"/><circle cx="120" cy="350" r="120" fill="rgba(255,255,255,0.05)"/><circle cx="350" cy="50" r="3" fill="rgba(255,255,255,0.2)"/><circle cx="450" cy="65" r="2.5" fill="rgba(255,255,255,0.15)"/><circle cx="550" cy="50" r="3.5" fill="rgba(255,255,255,0.2)"/>` },
     };
-    const hc = hlConfig[h.badge] || { g1: '636E72', g2: 'B2BEC3', icon: '🎯' };
+    const hc = hlConfig[h.badge] || { g1: '636E72', g2: 'B2BEC3', icon: '🎯', deco: '' };
     const hlTitle = h.title.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
     const hlDesc = h.desc.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
     const hlSrc = `data:image/svg+xml,${encodeURIComponent(
@@ -3573,8 +3621,7 @@ function renderHighlights() {
           <stop offset="0" stop-color="#${hc.g1}"/><stop offset="1" stop-color="#${hc.g2}"/>
         </linearGradient></defs>
         <rect width="800" height="400" fill="url(#h)"/>
-        <circle cx="650" cy="80" r="160" fill="rgba(255,255,255,0.06)"/>
-        <circle cx="120" cy="350" r="120" fill="rgba(255,255,255,0.05)"/>
+        ${hc.deco}
         <text x="120" y="160" font-size="80">${hc.icon}</text>
         <text x="120" y="240" fill="#fff" font-size="32" font-weight="700" font-family="system-ui,sans-serif">${hlTitle}</text>
         <text x="120" y="280" fill="rgba(255,255,255,0.85)" font-size="18" font-family="system-ui,sans-serif">${hlDesc}</text>
