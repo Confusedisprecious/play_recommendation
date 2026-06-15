@@ -561,6 +561,48 @@ ul { list-style: none; }
   box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
 }
 
+/* ---- Parent Pick Badge ---- */
+.badge-top {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #FFD93D, #FFB347);
+  color: #7A4A00;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255, 179, 71, 0.4);
+}
+
+/* ---- Practical Info Bar ---- */
+.card-practical {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.practical-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.chip-age { background: #E8F4FD; color: #1A7DCB; }
+.chip-indoor { background: #FFF0E6; color: #E55D1A; }
+.chip-outdoor { background: #E8F8F5; color: #1ABC9C; }
+.chip-free { background: #F0FFF0; color: #27AE60; font-weight: 600; }
+.chip-paid { background: #FFF5F5; color: #E74C3C; }
+.chip-parking { background: #F5F0FF; color: #8B5CF6; }
+.chip-noparking { background: #F9F9F9; color: #B2BEC3; }
+
 .card-body {
   padding: 16px;
 }
@@ -602,7 +644,7 @@ ul { list-style: none; }
   line-height: 1.6;
   margin-bottom: 12px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1180,7 +1222,10 @@ const QUICK_ENTRIES = [
   { id: 'park', icon: '🌳', label: '公园活动', filter: { category: 'park' } },
   { id: 'playground', icon: '🎡', label: '游乐场', filter: { category: 'playground' } },
   { id: 'museum', icon: '🏛️', label: '博物馆', filter: { tags: ['展览', '文物', '博物馆', '考古'] } },
-  { id: 'science', icon: '🔬', label: '科技馆', filter: { tags: ['科普', '科技馆', '科技', '科学', '人工智能', '机器人'] } }
+  { id: 'science', icon: '🔬', label: '科技馆', filter: { tags: ['科普', '科技馆', '科技', '科学', '人工智能', '机器人'] } },
+  { id: 'stroller', icon: '👶', label: '婴儿车友好', filter: { tags: ['滨湖步道', '绿道', '骑行', '大草坪', '江滩公园', '步道'] } },
+  { id: 'indoor_play', icon: '🧸', label: '室内游乐', filter: { tags: ['室内游乐', '室内场馆', '儿童乐园', '冰雪世界', '早教机构'] } },
+  { id: 'free_parking', icon: '🅿️', label: '免费停车', filter: { tags: ['免费停车场', '免费停车', '超大停车场', '大型免费停车场'] } }
 ];
 
 /**
@@ -2072,6 +2117,182 @@ const DATA = {
         parking: '有停车场'
       },
       {
+        id: 40,
+        name: '洪山江滩',
+        category: 'park',
+        district: '洪山区',
+        seasons: ['spring', 'summer', 'autumn'],
+        description: '杨泗港长江大桥下的生态江滩公园，2022年新开放，有儿童乐园、篮球场、滑板公园和超长滨江步道，樱花季绝美。',
+        tags: ['江滩公园', '儿童乐园', '滑板公园', '滨江步道', '樱花'],
+        rating: 4.5,
+        address: '洪山区白沙洲大道与江国路交汇处（杨泗港大桥下）',
+        hours: '全天开放',
+        transport: '地铁5号线烽胜路站换乘公交',
+        image: 'https://picsum.photos/seed/wuhan-hongshan-river/400/300',
+        events: [],
+        deals: [],
+        age_min: 0,
+        age_max: 12,
+        price: 0,
+        free: true,
+        indoor: false,
+        parking: '江滩停车场'
+      },
+      {
+        id: 41,
+        name: '武昌江滩',
+        category: 'park',
+        district: '武昌区',
+        seasons: ['spring', 'summer', 'autumn'],
+        description: '武昌段滨江长廊，从大堤口到月亮湾，有观景平台、儿童沙池和骑行绿道，对望汉口江滩和长江大桥，夜景超美。',
+        tags: ['江滩公园', '观景平台', '儿童沙池', '骑行', '夜景'],
+        rating: 4.3,
+        address: '武昌区临江大道（大堤口至月亮湾）',
+        hours: '全天开放',
+        transport: '地铁5号线三层楼站/积玉桥站',
+        image: 'https://picsum.photos/seed/wuhan-wuchang-river/400/300',
+        events: [],
+        deals: [],
+        age_min: 0,
+        age_max: 12,
+        price: 0,
+        free: true,
+        indoor: false,
+        parking: '月亮湾停车场'
+      },
+      {
+        id: 42,
+        name: '汉阳江滩',
+        category: 'park',
+        district: '汉阳区',
+        seasons: ['spring', 'summer', 'autumn'],
+        description: '汉阳沿江生态江滩，从晴川阁到杨泗港，有大禹神话园、儿童乐园和体育设施，鹦鹉洲长江大桥下很适合拍照。',
+        tags: ['江滩公园', '大禹神话园', '儿童乐园', '体育设施', '桥梁景观'],
+        rating: 4.2,
+        address: '汉阳区晴川大道（晴川阁至杨泗港）',
+        hours: '全天开放',
+        transport: '地铁4号线拦江路站',
+        image: 'https://picsum.photos/seed/wuhan-hanyang-river/400/300',
+        events: [],
+        deals: [],
+        age_min: 0,
+        age_max: 12,
+        price: 0,
+        free: true,
+        indoor: false,
+        parking: '有停车场'
+      },
+      {
+        id: 43,
+        name: '武汉科学技术馆',
+        category: 'playground',
+        district: '江岸区',
+        seasons: ['spring', 'summer', 'autumn', 'winter'],
+        description: '武汉科技馆新馆，紧邻汉口江滩，常设宇宙、生命、水、光、信息、交通等八大展厅，大量互动体验项目，孩子可以玩一整天。',
+        tags: ['科技馆', '互动体验', '科普教育', '室内场馆', '地铁直达'],
+        rating: 4.7,
+        address: '江岸区沿江大道68号（汉口江滩旁）',
+        hours: '09:00-16:30（周一周二闭馆）',
+        transport: '地铁1号线/8号线黄浦路站',
+        image: 'https://picsum.photos/seed/wuhan-sci-museum/400/300',
+        events: [],
+        deals: [],
+        age_min: 3,
+        age_max: 12,
+        price: 0,
+        free: true,
+        indoor: true,
+        parking: '武汉科技馆停车场'
+      },
+      {
+        id: 44,
+        name: '东湖磨山',
+        category: 'park',
+        district: '武昌区',
+        seasons: ['spring', 'autumn'],
+        description: '东湖风景区核心景点，有楚天台、索道、滑道、儿童乐园、樱花园（东湖樱花节主场地），登山观湖视野极佳，可玩半天到一天。',
+        tags: ['东湖', '索道', '滑道', '樱花园', '登山观湖'],
+        rating: 4.6,
+        address: '武昌区东湖风景区磨山景区',
+        hours: '08:00-17:00',
+        transport: '地铁8号线梨园站转乘东湖观光车',
+        image: 'https://picsum.photos/seed/wuhan-moshan/400/300',
+        events: [{ text: '东湖樱花节', schedule: '3月-4月' }],
+        deals: [],
+        age_min: 3,
+        age_max: 12,
+        price: 60,
+        free: false,
+        indoor: false,
+        parking: '磨山停车场'
+      },
+      {
+        id: 45,
+        name: '花博汇',
+        category: 'park',
+        district: '蔡甸区',
+        seasons: ['spring', 'summer', 'autumn'],
+        description: '武汉大型花卉主题景区，四季花海、萌宠乐园、亲子农场、帐篷露营、焰火秀和游乐嘉年华，适合全家出游一整天的好去处。',
+        tags: ['花海', '萌宠乐园', '亲子农场', '露营', '焰火秀'],
+        rating: 4.5,
+        address: '蔡甸区大集街知音湖大道天星村1号',
+        hours: '08:30-17:30（周末延至21:00）',
+        transport: '建议自驾，地铁3号线/4号线转公交',
+        image: 'https://picsum.photos/seed/wuhan-huabohui/400/300',
+        events: [{ text: '花博汇焰火秀', schedule: '周末及节假日 20:00' }],
+        deals: [{ text: '亲子年票 198元（不限次）', validUntil: '2026-12-31' }],
+        age_min: 0,
+        age_max: 12,
+        price: 60,
+        free: false,
+        indoor: false,
+        parking: '大型免费停车场'
+      },
+      {
+        id: 46,
+        name: '盘龙城遗址博物院',
+        category: 'playground',
+        district: '黄陂区',
+        seasons: ['spring', 'summer', 'autumn', 'winter'],
+        description: '武汉新晋文化地标，3500年前商代遗址，博物院建筑获国际设计大奖，有儿童考古体验区和大量珍贵文物展出，兼具教育性和趣味性。',
+        tags: ['博物院', '考古体验', '商代遗址', '建筑地标', '文化教育'],
+        rating: 4.6,
+        address: '黄陂区盘龙城经济开发区盘龙大道1号',
+        hours: '09:00-17:00（周一闭馆）',
+        transport: '地铁2号线盘龙城站',
+        image: 'https://picsum.photos/seed/wuhan-panlong/400/300',
+        events: [{ text: '小小考古家体验营', schedule: '每月第二个周末' }],
+        deals: [],
+        age_min: 3,
+        age_max: 12,
+        price: 0,
+        free: true,
+        indoor: true,
+        parking: '免费停车场'
+      },
+      {
+        id: 47,
+        name: '奇趣蛋壳公园',
+        category: 'park',
+        district: '硚口区',
+        seasons: ['spring', 'summer', 'autumn'],
+        description: '2023年新开的网红无动力儿童公园，以巨型蛋壳滑梯为标志，有超长滑梯、攀爬网、沙池、蹦床、秋千等，全部免费，孩子能玩到不想走。',
+        tags: ['无动力乐园', '蛋壳滑梯', '攀爬', '沙池', '免费'],
+        rating: 4.6,
+        address: '硚口区解放大道与汉西一路交汇处',
+        hours: '全天开放',
+        transport: '地铁1号线汉西一路站',
+        image: 'https://picsum.photos/seed/wuhan-egg-park/400/300',
+        events: [],
+        deals: [],
+        age_min: 1,
+        age_max: 12,
+        price: 0,
+        free: true,
+        indoor: false,
+        parking: '停车位较少，建议公共交通'
+      },
+      {
         id: 23,
         name: '武汉马拉松亲子跑',
         category: 'event',
@@ -2259,7 +2480,7 @@ const DATA = {
         address: '武昌区楚河汉街（主会场）',
         hours: '全天（9月-10月）',
         transport: '地铁4号线楚河汉街站',
-        image: 'https://picsum.photos/seed/event-31/400/300',
+        image: 'https://picsum.photos/seed/wuhan-tourism-fest/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2281,7 +2502,7 @@ const DATA = {
         address: '武昌区东湖绿道（起点：梨园广场）',
         hours: '赛程半天 09:00-12:00',
         transport: '地铁8号线梨园站',
-        image: 'https://picsum.photos/seed/event-32/400/300',
+        image: 'https://picsum.photos/seed/wuhan-city-orienteering/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2303,7 +2524,7 @@ const DATA = {
         address: '江岸区汉口江滩三峡石广场',
         hours: '19:30-21:30（7月-8月 每周末）',
         transport: '地铁1号线/8号线黄浦路站',
-        image: 'https://picsum.photos/seed/event-33/400/300',
+        image: 'https://picsum.photos/seed/wuhan-river-film/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2325,7 +2546,7 @@ const DATA = {
         address: '武昌区武汉非遗文化馆',
         hours: '09:00-17:00',
         transport: '地铁4号线东亭站',
-        image: 'https://picsum.photos/seed/event-34/400/300',
+        image: 'https://picsum.photos/seed/wuhan-intangible-heritage/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2347,7 +2568,7 @@ const DATA = {
         address: '江岸区中南剧场/武汉剧院',
         hours: '演出日 10:30/15:00/19:30',
         transport: '地铁1号线/8号线黄浦路站',
-        image: 'https://picsum.photos/seed/event-35/400/300',
+        image: 'https://picsum.photos/seed/wuhan-children-play/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2369,7 +2590,7 @@ const DATA = {
         address: '待确认',
         hours: '待确认',
         transport: '待确认',
-        image: 'https://picsum.photos/seed/event-36/400/300',
+        image: 'https://picsum.photos/seed/wuhan-chu-cultural/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2391,7 +2612,7 @@ const DATA = {
         address: '待确认',
         hours: '待确认',
         transport: '待确认',
-        image: 'https://picsum.photos/seed/event-37/400/300',
+        image: 'https://picsum.photos/seed/wuhan-archaeology-kid/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2413,7 +2634,7 @@ const DATA = {
         address: '待确认',
         hours: '待确认',
         transport: '待确认',
-        image: 'https://picsum.photos/seed/event-38/400/300',
+        image: 'https://picsum.photos/seed/wuhan-bianzhong/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2435,7 +2656,7 @@ const DATA = {
         address: '武昌区首义广场/各城区广场',
         hours: '19:00-21:00（7月-8月）',
         transport: '地铁4号线首义路站',
-        image: 'https://picsum.photos/seed/event-46/400/300',
+        image: 'https://picsum.photos/seed/wuhan-summer-music-old/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2457,7 +2678,7 @@ const DATA = {
         address: '武昌区东湖路160号',
         hours: '待确认',
         transport: '待确认',
-        image: 'https://picsum.photos/seed/event-47/400/300',
+        image: 'https://picsum.photos/seed/wuhan-museum-night/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2479,7 +2700,7 @@ const DATA = {
         address: '洪山区高新大道779号',
         hours: '09:30-16:30（周三闭馆）',
         transport: '地铁11号线光谷五路站',
-        image: 'https://picsum.photos/seed/event-48/400/300',
+        image: 'https://picsum.photos/seed/wuhan-physics-class/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2501,7 +2722,7 @@ const DATA = {
         address: '洪山区高新大道779号',
         hours: '09:30-16:30',
         transport: '待确认',
-        image: 'https://picsum.photos/seed/event-49/400/300',
+        image: 'https://picsum.photos/seed/wuhan-science-camp/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2523,7 +2744,7 @@ const DATA = {
         address: '洪山区高新大道779号',
         hours: '09:30-16:30（周三闭馆）',
         transport: '待确认',
-        image: 'https://picsum.photos/seed/event-50/400/300',
+        image: 'https://picsum.photos/seed/wuhan-ai-expo/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -2545,7 +2766,7 @@ const DATA = {
         address: '洪山区高新大道779号',
         hours: '10:00-11:30（周六）',
         transport: '待确认',
-        image: 'https://picsum.photos/seed/event-51/400/300',
+        image: 'https://picsum.photos/seed/wuhan-scientist-class/400/300',
         events: [],
         deals: [],
         age_min: 3,
@@ -3024,6 +3245,7 @@ const state = {
   activeDistrict: 'all',
   searchQuery: '',
   activeTagFilter: null,
+  activeFreeFilter: false,
   showFavoritesOnly: false,
   favorites: JSON.parse(localStorage.getItem('wh-favorites') || '[]')
 };
@@ -3157,6 +3379,11 @@ function filterPlaces() {
     );
   }
 
+  // 按免费筛选（快速入口）
+  if (state.activeFreeFilter) {
+    places = places.filter(p => p.free === true || p.price === 0);
+  }
+
   // 收藏筛选（如果启用）
   if (state.showFavoritesOnly) {
     places = places.filter(p => state.favorites.includes(p.id));
@@ -3201,11 +3428,15 @@ function createCard(place) {
   const hasDeals = place.deals && place.deals.length > 0;
   const hasEvents = place.events && place.events.length > 0;
 
+  // 类别对应的占位图颜色
+  const catColors = { park: 'E8F8F5', mall: 'FFF0E6', playground: 'F5F0FF', event: 'FFF5F5' };
+  const fallbackColor = catColors[place.category] || 'f0f0f0';
+
   return `
     <article class="place-card" data-id="${place.id}" data-animate>
       <div class="card-image">
         <img src="${place.image}" alt="${place.name}" loading="lazy"
-             onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%22200%22 y=%22150%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2218%22>${encodeURIComponent(place.name)}</text></svg>'">
+             onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23${fallbackColor}%22 width=%22400%22 height=%22300%22/><text x=%22200%22 y=%22150%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2218%22>${encodeURIComponent(place.name)}</text></svg>'">
         <div class="card-rating">
           <span class="star">★</span> ${place.rating}
         </div>
@@ -3213,6 +3444,7 @@ function createCard(place) {
           ${isFav ? '❤️' : '🤍'}
         </button>
         ${hasDeals ? '<span class="badge-deal">有优惠</span>' : ''}
+        ${place.rating >= 4.6 ? '<span class="badge-top">👑 家长推荐</span>' : ''}
       </div>
       <div class="card-body">
         <div class="card-tags">
@@ -3222,6 +3454,19 @@ function createCard(place) {
         </div>
         <h3 class="card-title">${place.name}</h3>
         <p class="card-desc">${place.description}</p>
+
+        <div class="card-practical">
+          <span class="practical-chip chip-age">👶 ${place.age_min}-${place.age_max}岁</span>
+          <span class="practical-chip ${place.indoor ? 'chip-indoor' : 'chip-outdoor'}">
+            ${place.indoor ? '🏠 室内' : '🌳 户外'}
+          </span>
+          <span class="practical-chip ${place.free || place.price === 0 ? 'chip-free' : 'chip-paid'}">
+            ${place.free || place.price === 0 ? '💰 免费' : '💰 收费'}
+          </span>
+          <span class="practical-chip ${place.parking && !place.parking.includes('不便') && !place.parking.includes('建议') ? 'chip-parking' : 'chip-noparking'}">
+            ${place.parking && !place.parking.includes('不便') && !place.parking.includes('建议') ? '🅿️ 有停车' : '🅿️ 停车不便'}
+          </span>
+        </div>
 
         ${hasEvents ? `
           <div class="card-events">
@@ -3440,6 +3685,12 @@ function setupEventListeners() {
       state.activeTagFilter = filter.tags.map(t => t.toLowerCase());
     } else {
       state.activeTagFilter = null;
+    }
+    // 按免费筛选
+    if (filter.free !== undefined) {
+      state.activeFreeFilter = filter.free;
+    } else {
+      state.activeFreeFilter = false;
     }
     filterAndRender();
     document.getElementById('places').scrollIntoView({ behavior: 'smooth' });
