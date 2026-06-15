@@ -1,24 +1,1352 @@
 [
-  {"id": 1, "name": "武汉梦时代", "category": "mall", "district": "武昌区", "seasons": ["spring", "summer", "autumn", "winter"], "description": "华中地区最大的商业综合体，拥有室内游乐场、冰雪世界、亲子餐厅等一站式亲子体验。", "tags": ["室内游乐", "冰雪世界", "亲子餐厅", "地铁直达"], "rating": 4.6, "address": "武昌区武珞路628号", "hours": "10:00-22:00", "transport": "地铁2号线宝通寺站", "image": "https://picsum.photos/seed/wuhan-mengshidai/400/300", "events": [], "deals": [{"text": "工作日亲子套餐 8折", "validUntil": "2026-12-31"}], "age_min": 0, "age_max": 12, "price": 0, "free": false, "indoor": true, "parking": "有停车场"},
-  {"id": 2, "name": "武汉天地", "category": "mall", "district": "江岸区", "seasons": ["spring", "autumn", "winter"], "description": "开放式商业街区，经常举办亲子市集、户外展览，环境优美适合带娃散步。", "tags": ["开放式街区", "亲子市集", "户外展览", "网红餐饮"], "rating": 4.5, "address": "江岸区中山大道1506号", "hours": "10:00-22:00", "transport": "地铁1号线/8号线黄浦路站", "image": "https://picsum.photos/seed/wuhan-tiandi/400/300", "events": [{"text": "周末亲子创意市集", "schedule": "每周末 14:00-18:00"}], "deals": [], "age_min": 0, "age_max": 12, "price": 0, "free": true, "indoor": false, "parking": "有停车场"},
-  {"id": 3, "name": "武商摩尔城", "category": "mall", "district": "江汉区", "seasons": ["spring", "summer", "autumn", "winter"], "description": "武汉老牌大型商场，拥有丰富的儿童娱乐区和教育培训机构，适合一站式遛娃。", "tags": ["儿童乐园", "教育培训", "美食广场", "地铁直达"], "rating": 4.3, "address": "江汉区解放大道688号", "hours": "09:30-21:30", "transport": "地铁2号线中山公园站", "image": "https://picsum.photos/seed/wuhan-moer/400/300", "events": [], "deals": [{"text": "会员日儿童游乐区免费", "validUntil": "2026-12-31"}, {"text": "亲子餐饮满200减50", "validUntil": "2026-09-30"}], "age_min": 0, "age_max": 12, "price": 0, "free": false, "indoor": true, "parking": "有停车场"},
-  {"id": 4, "name": "群光广场", "category": "mall", "district": "洪山区", "seasons": ["spring", "summer", "autumn", "winter"], "description": "街道口商圈核心，儿童楼层有丰富的亲子互动项目和早教机构。", "tags": ["早教机构", "亲子互动", "地铁直达", "学生群体"], "rating": 4.2, "address": "洪山区珞喻路6号", "hours": "10:00-21:30", "transport": "地铁2号线街道口站", "image": "https://picsum.photos/seed/wuhan-qunguang/400/300", "events": [], "deals": [], "age_min": 0, "age_max": 12, "price": 0, "free": false, "indoor": true, "parking": "有停车场"},
-  {"id": 5, "name": "永旺梦乐城金银潭", "category": "mall", "district": "东西湖区", "seasons": ["spring", "summer", "autumn", "winter"], "description": "大型日式购物中心，亲子设施完善，设有大面积的儿童免费游乐区。", "tags": ["免费游乐区", "日式购物", "亲子卫生间", "超大停车场"], "rating": 4.7, "address": "东西湖区金银潭大道1号", "hours": "10:00-22:00", "transport": "地铁2号线金银潭站", "image": "https://picsum.photos/seed/wuhan-yongwang/400/300", "events": [{"text": "暑期亲子夏令营", "schedule": "7月-8月 每周末"}], "deals": [{"text": "周二会员日 餐饮8折", "validUntil": "2026-12-31"}], "age_min": 0, "age_max": 12, "price": 0, "free": false, "indoor": true, "parking": "免费停车场"},
-  {"id": 6, "name": "经开永旺", "category": "mall", "district": "蔡甸区", "seasons": ["spring", "summer", "autumn", "winter"], "description": "武汉最大永旺，拥有超大型儿童乐园和丰富的亲子体验设施。", "tags": ["大型儿童乐园", "亲子体验", "免费停车", "美食丰富"], "rating": 4.6, "address": "蔡甸区江城大道与三环线交汇处", "hours": "10:00-22:00", "transport": "地铁6号线江城大道站", "image": "https://picsum.photos/seed/wuhan-jingkai/400/300", "events": [], "deals": [], "age_min": 0, "age_max": 12, "price": 0, "free": false, "indoor": true, "parking": "免费停车场"},
-  {"id": 7, "name": "宜家荟聚", "category": "mall", "district": "硚口区", "seasons": ["spring", "summer", "autumn", "winter"], "description": "北欧风格家居商场，有儿童乐园和亲子餐厅，适合周末家庭出游。", "tags": ["儿童乐园", "亲子餐厅", "北欧设计", "免费停车"], "rating": 4.4, "address": "硚口区长宜大道1号", "hours": "10:00-21:00", "transport": "地铁1号线竹叶海站", "image": "https://picsum.photos/seed/wuhan-yijia/400/300", "events": [], "deals": [], "age_min": 0, "age_max": 12, "price": 0, "free": false, "indoor": true, "parking": "免费停车场"},
-  {"id": 8, "name": "楚河汉街", "category": "mall", "district": "武昌区", "seasons": ["spring", "autumn"], "description": "滨水商业步行街，集合了文化、娱乐、餐饮，节假日有丰富的街头表演。", "tags": ["滨水街区", "街头表演", "文化体验", "夜景优美"], "rating": 4.5, "address": "武昌区中北路", "hours": "全天开放", "transport": "地铁4号线楚河汉街站", "image": "https://picsum.photos/seed/wuhan-han-street/400/300", "events": [{"text": "节假日街头艺术节", "schedule": "法定节假日全天"}], "deals": [], "age_min": 0, "age_max": 12, "price": 0, "free": true, "indoor": false, "parking": "有停车场"},
-  {"id": 9, "name": "武汉欢乐谷", "category": "playground", "district": "洪山区", "seasons": ["spring", "summer", "autumn"], "description": "华中地区大型主题乐园，拥有百余项游乐设施，分设亲子区和刺激项目区。", "tags": ["主题乐园", "亲子项目", "水上乐园", "年卡优惠"], "rating": 4.7, "address": "洪山区欢乐大道196号", "hours": "09:30-18:00（周末延至21:00）", "transport": "地铁4号线仁和路站换乘公交", "image": "https://picsum.photos/seed/wuhan-huanlegu/400/300", "events": [{"text": "欢乐谷万圣节主题活动", "schedule": "10月-11月"}, {"text": "暑期夜场开放", "schedule": "7月-8月 18:00-21:00"}], "deals": [{"text": "亲子年卡 698元/年（1大1小）", "validUntil": "2026-12-31"}], "age_min": 3, "age_max": 12, "price": 698, "free": false, "indoor": false, "parking": "有停车场"},
-  {"id": 10, "name": "武汉极地海洋世界", "category": "playground", "district": "东西湖区", "seasons": ["spring", "summer", "autumn", "winter"], "description": "集海洋动物展示、表演和互动体验于一体，企鹅馆、白鲸馆深受小朋友喜爱。", "tags": ["海洋动物", "动物表演", "互动体验", "室内场馆"], "rating": 4.6, "address": "东西湖区金银潭大道96号", "hours": "09:00-17:30", "transport": "地铁2号线宏图大道站", "image": "https://picsum.photos/seed/wuhan-ocean/400/300", "events": [{"text": "海洋奇妙夜露营", "schedule": "每月第三个周末"}], "deals": [{"text": "儿童节特惠 儿童票半价", "validUntil": "2026-06-30"}], "age_min": 3, "age_max": 12, "price": 120, "free": false, "indoor": true, "parking": "有停车场"},
-  {"id": 11, "name": "东湖海洋乐园", "category": "playground", "district": "武昌区", "seasons": ["spring", "summer", "autumn"], "description": "东湖边的海洋主题乐园，有海底隧道、美人鱼表演和萌宠互动区。", "tags": ["海底隧道", "美人鱼表演", "萌宠互动", "东湖景观"], "rating": 4.4, "address": "武昌区沿湖大道20号（东湖梨园）", "hours": "09:00-17:00", "transport": "地铁8号线梨园站", "image": "https://picsum.photos/seed/wuhan-eastlake-ocean/400/300", "events": [], "deals": [], "age_min": 3, "age_max": 12, "price": 80, "free": false, "indoor": true, "parking": "有停车场"},
-  {"id": 12, "name": "玛雅海滩水公园", "category": "playground", "district": "洪山区", "seasons": ["summer"], "description": "华中大型水上乐园，有人造海浪池、儿童戏水区和刺激的水滑道。", "tags": ["水上乐园", "夏日消暑", "亲子戏水", "人造海浪"], "rating": 4.5, "address": "洪山区欢乐大道196号（欢乐谷旁）", "hours": "10:00-21:00（夏季）", "transport": "地铁4号线仁和路站换乘公交", "image": "https://picsum.photos/seed/wuhan-maya/400/300", "events": [{"text": "玛雅沙滩音乐节", "schedule": "7月中旬-8月"}], "deals": [{"text": "欢乐谷+玛雅联票 299元", "validUntil": "2026-08-31"}], "age_min": 3, "age_max": 12, "price": 299, "free": false, "indoor": false, "parking": "有停车场"},
-  {"id": 13, "name": "光谷有田儿童乐园", "category": "playground", "district": "江夏区", "seasons": ["spring", "summer", "autumn"], "description": "户外自然探索乐园，有农田体验、萌宠牧场、丛林穿越等项目。", "tags": ["自然探索", "农田体验", "萌宠牧场", "户外拓展"], "rating": 4.3, "address": "江夏区光谷三路与高新大道交汇处", "hours": "09:00-18:00", "transport": "地铁11号线光谷生物园站", "image": "https://picsum.photos/seed/wuhan-youtian/400/300", "events": [{"text": "秋收节——割稻体验", "schedule": "9月-10月"}], "deals": [], "age_min": 3, "age_max": 12, "price": 60, "free": false, "indoor": false, "parking": "有停车场"},
-  {"id": 14, "name": "武汉自然博物馆·贝林大河生命馆", "category": "playground", "district": "硚口区", "seasons": ["spring", "summer", "autumn", "winter"], "description": "以大河为主题的自然博物馆，馆藏大量珍稀动物标本，寓教于乐。", "tags": ["自然科普", "动物标本", "室内场馆", "研学基地"], "rating": 4.8, "address": "硚口区园博园内", "hours": "09:00-17:00（周一闭馆）", "transport": "地铁7号线园博园站", "image": "https://picsum.photos/seed/wuhan-nature-museum/400/300", "events": [{"text": "小小讲解员招募活动", "schedule": "暑假期间"}], "deals": [{"text": "周三免费开放日", "validUntil": "2026-12-31"}], "age_min": 3, "age_max": 12, "price": 0, "free": true, "indoor": true, "parking": "园博园停车场"},
-  {"id": 15, "name": "东湖绿道", "category": "park", "district": "武昌区", "seasons": ["spring", "autumn"], "description": "百公里城市绿道，适合亲子骑行、野餐、观鸟，四季风景各异。", "tags": ["亲子骑行", "野餐", "观鸟", "自然风光"], "rating": 4.9, "address": "武昌区东湖风景区", "hours": "全天开放", "transport": "地铁8号线梨园站/省博湖北日报站", "image": "https://picsum.photos/seed/wuhan-eastlake/400/300", "events": [{"text": "东湖樱花节", "schedule": "3月-4月"}, {"text": "东湖秋日赏叶季", "schedule": "10月-11月"}], "deals": [], "age_min": 0, "age_max": 12, "price": 0, "free": true, "indoor": false, "parking": "有停车场"},
-  {"id": 16, "name": "中山公园", "category": "park", "district": "江汉区", "seasons": ["spring", "summer", "autumn"], "description": "武汉最老牌的公园之一，内有小型游乐场、湖泊和草坪，是市中心遛娃好去处。", "tags": ["老牌公园", "小型游乐场", "市中心", "免费入园"], "rating": 4.4, "address": "江汉区解放大道1265号", "hours": "06:00-22:00", "transport": "地铁2号线中山公园站", "image": "https://picsum.photos/seed/wuhan-zhongshan/400/300", "events": [], "deals": [], "age_min": 0, "age_max": 12, "price": 0, "free": true, "indoor": false, "parking": "建议公共交通"},
-  {"id": 17, "name": "解放公园", "category": "park", "district": "江岸区", "seasons": ["spring", "summer", "autumn"], "description": "欧式风格公园，有鸽子广场、游船和儿童活动区，适合周末休闲。", "tags": ["鸽子广场", "游船", "欧式园林", "亲子休闲"], "rating": 4.5, "address": "江岸区解放大道1861号", "hours": "06:00-22:00", "transport": "地铁1号线/8号线黄浦路站", "image": "https://picsum.photos/seed/wuhan-jiefang/400/300", "events": [{"text": "金秋菊花展", "schedule": "10月-11月"}], "deals": [], "age_min": 0, "age_max": 12, "price": 0, "free": true, "indoor": false, "parking": "建议公共交通"},
-  {"id": 18, "name": "沙湖公园", "category": "park", "district": "武昌区", "seasons": ["spring", "summer", "autumn"], "description": "城市滨湖公园，有儿童乐园、亲水平台和健身步道，环境宜居。", "tags": ["滨湖公园", "儿童乐园", "健身步道", "亲水平台"], "rating": 4.3, "address": "武昌区沙湖大道", "hours": "全天开放", "transport": "地铁4号线东亭站", "image": "https://picsum.photos/seed/wuhan-shahu/400/300", "events": [], "deals": [], "age_min": 0, "age_max": 12, "price": 0, "free": true, "indoor": false, "parking": "有停车场"},
-  {"id": 19, "name": "武汉动物园", "category": "park", "district": "汉阳区", "seasons": ["spring", "summer", "autumn"], "description": "经过全面改造的现代化动物园，动物种类丰富，设有亲子科普讲解。", "tags": ["动物园", "亲子科普", "动物互动", "大熊猫"], "rating": 4.6, "address": "汉阳区动物园路60号", "hours": "08:00-17:00", "transport": "地铁4号线五里墩站换乘公交", "image": "https://picsum.photos/seed/wuhan-zoo/400/300", "events": [{"text": "动物科普月", "schedule": "5月"}], "deals": [{"text": "亲子年票 198元", "validUntil": "2026-12-31"}], "age_min": 3, "age_max": 12, "price": 20, "free": false, "indoor": false, "parking": "有停车场"},
-  {"id": 20, "name": "武汉园博园", "category": "park", "district": "硚口区", "seasons": ["spring", "autumn"], "description": "大型园林博览园，汇聚全国各城市园林景观，内有自然博物馆和儿童游乐区。", "tags": ["园林景观", "自然博物馆", "花展", "儿童游乐"], "rating": 4.5, "address": "硚口区园博园路", "hours": "08:30-17:30", "transport": "地铁7号线园博园站", "image": "https://picsum.photos/seed/wuhan-expo/400/300", "events": [{"text": "武汉园博园花灯会", "schedule": "春节期间"}, {"text": "春季郁金香花展", "schedule": "3月-4月"}], "deals": [], "age_min": 0, "age_max": 12, "price": 30, "free": false, "indoor": false, "parking": "有停车场"},
-  {"id": 21, "name": "马鞍山森林公园", "category": "park", "district": "洪山区", "seasons": ["spring", "summer", "autumn"], "description": "城市中的天然氧吧，有烧烤区、骑行道和户外拓展项目。", "tags": ["烧烤", "户外拓展", "天然氧吧", "骑行"], "rating": 4.2, "address": "洪山区珞喻东路", "hours": "08:00-18:00", "transport": "地铁2号线光谷大道站换乘公交", "image": "https://picsum.photos/seed/wuhan-maanshan/400/300", "events": [], "deals": [], "age_min": 3, "age_max": 12, "price": 10, "free": false, "indoor": false, "parking": "有停车场"},
-  {"id": 22, "name": "青山江滩", "category": "park", "district": "青山区", "seasons": ["spring", "summer", "autumn"], "description": "长江边生态江滩公园，有儿童沙池、运动场地和观景平台，夕阳超美。", "tags": ["江滩公园", "儿童沙池", "运动场地", "夕阳观景"], "rating": 4.4, "address": "青山区临江大道", "hours": "全天开放", "transport": "地铁5号线和平公园站", "image": "https://picsum.photos/seed/wuhan-qingshan-river/400/300", "events": [], "deals": [], "age_min": 0, "age_max": 12, "price": 0, "free": true, "indoor": false, "parking": "有停车场"}
+  {
+    "id": 1,
+    "name": "武汉梦时代",
+    "category": "mall",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "华中地区最大的商业综合体，拥有室内游乐场、冰雪世界、亲子餐厅等一站式亲子体验。",
+    "tags": [
+      "室内游乐",
+      "冰雪世界",
+      "亲子餐厅",
+      "地铁直达"
+    ],
+    "rating": 4.6,
+    "address": "武昌区武珞路628号",
+    "hours": "10:00-22:00",
+    "transport": "地铁2号线宝通寺站",
+    "image": "https://picsum.photos/seed/wuhan-mengshidai/400/300",
+    "events": [],
+    "deals": [
+      {
+        "text": "工作日亲子套餐 8折",
+        "validUntil": "2026-12-31"
+      }
+    ],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 2,
+    "name": "武汉天地",
+    "category": "mall",
+    "district": "江岸区",
+    "seasons": [
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "description": "开放式商业街区，经常举办亲子市集、户外展览，环境优美适合带娃散步。",
+    "tags": [
+      "开放式街区",
+      "亲子市集",
+      "户外展览",
+      "网红餐饮"
+    ],
+    "rating": 4.5,
+    "address": "江岸区中山大道1506号",
+    "hours": "10:00-22:00",
+    "transport": "地铁1号线/8号线黄浦路站",
+    "image": "https://picsum.photos/seed/wuhan-tiandi/400/300",
+    "events": [
+      {
+        "text": "周末亲子创意市集",
+        "schedule": "每周末 14:00-18:00"
+      }
+    ],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 3,
+    "name": "武商摩尔城",
+    "category": "mall",
+    "district": "江汉区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "武汉老牌大型商场，拥有丰富的儿童娱乐区和教育培训机构，适合一站式遛娃。",
+    "tags": [
+      "儿童乐园",
+      "教育培训",
+      "美食广场",
+      "地铁直达"
+    ],
+    "rating": 4.3,
+    "address": "江汉区解放大道688号",
+    "hours": "09:30-21:30",
+    "transport": "地铁2号线中山公园站",
+    "image": "https://picsum.photos/seed/wuhan-moer/400/300",
+    "events": [],
+    "deals": [
+      {
+        "text": "会员日儿童游乐区免费",
+        "validUntil": "2026-12-31"
+      },
+      {
+        "text": "亲子餐饮满200减50",
+        "validUntil": "2026-09-30"
+      }
+    ],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 4,
+    "name": "群光广场",
+    "category": "mall",
+    "district": "洪山区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "街道口商圈核心，儿童楼层有丰富的亲子互动项目和早教机构。",
+    "tags": [
+      "早教机构",
+      "亲子互动",
+      "地铁直达",
+      "学生群体"
+    ],
+    "rating": 4.2,
+    "address": "洪山区珞喻路6号",
+    "hours": "10:00-21:30",
+    "transport": "地铁2号线街道口站",
+    "image": "https://picsum.photos/seed/wuhan-qunguang/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 5,
+    "name": "永旺梦乐城金银潭",
+    "category": "mall",
+    "district": "东西湖区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "大型日式购物中心，亲子设施完善，设有大面积的儿童免费游乐区。",
+    "tags": [
+      "免费游乐区",
+      "日式购物",
+      "亲子卫生间",
+      "超大停车场"
+    ],
+    "rating": 4.7,
+    "address": "东西湖区金银潭大道1号",
+    "hours": "10:00-22:00",
+    "transport": "地铁2号线金银潭站",
+    "image": "https://picsum.photos/seed/wuhan-yongwang/400/300",
+    "events": [
+      {
+        "text": "暑期亲子夏令营",
+        "schedule": "7月-8月 每周末"
+      }
+    ],
+    "deals": [
+      {
+        "text": "周二会员日 餐饮8折",
+        "validUntil": "2026-12-31"
+      }
+    ],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "免费停车场"
+  },
+  {
+    "id": 6,
+    "name": "经开永旺",
+    "category": "mall",
+    "district": "蔡甸区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "武汉最大永旺，拥有超大型儿童乐园和丰富的亲子体验设施。",
+    "tags": [
+      "大型儿童乐园",
+      "亲子体验",
+      "免费停车",
+      "美食丰富"
+    ],
+    "rating": 4.6,
+    "address": "蔡甸区江城大道与三环线交汇处",
+    "hours": "10:00-22:00",
+    "transport": "地铁6号线江城大道站",
+    "image": "https://picsum.photos/seed/wuhan-jingkai/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "免费停车场"
+  },
+  {
+    "id": 7,
+    "name": "宜家荟聚",
+    "category": "mall",
+    "district": "硚口区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "北欧风格家居商场，有儿童乐园和亲子餐厅，适合周末家庭出游。",
+    "tags": [
+      "儿童乐园",
+      "亲子餐厅",
+      "北欧设计",
+      "免费停车"
+    ],
+    "rating": 4.4,
+    "address": "硚口区长宜大道1号",
+    "hours": "10:00-21:00",
+    "transport": "地铁1号线竹叶海站",
+    "image": "https://picsum.photos/seed/wuhan-yijia/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "免费停车场"
+  },
+  {
+    "id": 8,
+    "name": "楚河汉街",
+    "category": "mall",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "description": "滨水商业步行街，集合了文化、娱乐、餐饮，节假日有丰富的街头表演。",
+    "tags": [
+      "滨水街区",
+      "街头表演",
+      "文化体验",
+      "夜景优美"
+    ],
+    "rating": 4.5,
+    "address": "武昌区中北路",
+    "hours": "全天开放",
+    "transport": "地铁4号线楚河汉街站",
+    "image": "https://picsum.photos/seed/wuhan-han-street/400/300",
+    "events": [
+      {
+        "text": "节假日街头艺术节",
+        "schedule": "法定节假日全天"
+      }
+    ],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 9,
+    "name": "武汉欢乐谷",
+    "category": "playground",
+    "district": "洪山区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "华中地区大型主题乐园，拥有百余项游乐设施，分设亲子区和刺激项目区。",
+    "tags": [
+      "主题乐园",
+      "亲子项目",
+      "水上乐园",
+      "年卡优惠"
+    ],
+    "rating": 4.7,
+    "address": "洪山区欢乐大道196号",
+    "hours": "09:30-18:00（周末延至21:00）",
+    "transport": "地铁4号线仁和路站换乘公交",
+    "image": "https://picsum.photos/seed/wuhan-huanlegu/400/300",
+    "events": [
+      {
+        "text": "欢乐谷万圣节主题活动",
+        "schedule": "10月-11月"
+      },
+      {
+        "text": "暑期夜场开放",
+        "schedule": "7月-8月 18:00-21:00"
+      }
+    ],
+    "deals": [
+      {
+        "text": "亲子年卡 698元/年（1大1小）",
+        "validUntil": "2026-12-31"
+      }
+    ],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 698,
+    "free": false,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 10,
+    "name": "武汉极地海洋世界",
+    "category": "playground",
+    "district": "东西湖区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "集海洋动物展示、表演和互动体验于一体，企鹅馆、白鲸馆深受小朋友喜爱。",
+    "tags": [
+      "海洋动物",
+      "动物表演",
+      "互动体验",
+      "室内场馆"
+    ],
+    "rating": 4.6,
+    "address": "东西湖区金银潭大道96号",
+    "hours": "09:00-17:30",
+    "transport": "地铁2号线宏图大道站",
+    "image": "https://picsum.photos/seed/wuhan-ocean/400/300",
+    "events": [
+      {
+        "text": "海洋奇妙夜露营",
+        "schedule": "每月第三个周末"
+      }
+    ],
+    "deals": [
+      {
+        "text": "儿童节特惠 儿童票半价",
+        "validUntil": "2026-06-30"
+      }
+    ],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 120,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 11,
+    "name": "东湖海洋乐园",
+    "category": "playground",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "东湖边的海洋主题乐园，有海底隧道、美人鱼表演和萌宠互动区。",
+    "tags": [
+      "海底隧道",
+      "美人鱼表演",
+      "萌宠互动",
+      "东湖景观"
+    ],
+    "rating": 4.4,
+    "address": "武昌区沿湖大道20号（东湖梨园）",
+    "hours": "09:00-17:00",
+    "transport": "地铁8号线梨园站",
+    "image": "https://picsum.photos/seed/wuhan-eastlake-ocean/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 80,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 12,
+    "name": "玛雅海滩水公园",
+    "category": "playground",
+    "district": "洪山区",
+    "seasons": [
+      "summer"
+    ],
+    "description": "华中大型水上乐园，有人造海浪池、儿童戏水区和刺激的水滑道。",
+    "tags": [
+      "水上乐园",
+      "夏日消暑",
+      "亲子戏水",
+      "人造海浪"
+    ],
+    "rating": 4.5,
+    "address": "洪山区欢乐大道196号（欢乐谷旁）",
+    "hours": "10:00-21:00（夏季）",
+    "transport": "地铁4号线仁和路站换乘公交",
+    "image": "https://picsum.photos/seed/wuhan-maya/400/300",
+    "events": [
+      {
+        "text": "玛雅沙滩音乐节",
+        "schedule": "7月中旬-8月"
+      }
+    ],
+    "deals": [
+      {
+        "text": "欢乐谷+玛雅联票 299元",
+        "validUntil": "2026-08-31"
+      }
+    ],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 299,
+    "free": false,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 13,
+    "name": "光谷有田儿童乐园",
+    "category": "playground",
+    "district": "江夏区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "户外自然探索乐园，有农田体验、萌宠牧场、丛林穿越等项目。",
+    "tags": [
+      "自然探索",
+      "农田体验",
+      "萌宠牧场",
+      "户外拓展"
+    ],
+    "rating": 4.3,
+    "address": "江夏区光谷三路与高新大道交汇处",
+    "hours": "09:00-18:00",
+    "transport": "地铁11号线光谷生物园站",
+    "image": "https://picsum.photos/seed/wuhan-youtian/400/300",
+    "events": [
+      {
+        "text": "秋收节——割稻体验",
+        "schedule": "9月-10月"
+      }
+    ],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 60,
+    "free": false,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 14,
+    "name": "武汉自然博物馆·贝林大河生命馆",
+    "category": "playground",
+    "district": "硚口区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "以大河为主题的自然博物馆，馆藏大量珍稀动物标本，寓教于乐。",
+    "tags": [
+      "自然科普",
+      "动物标本",
+      "室内场馆",
+      "研学基地"
+    ],
+    "rating": 4.8,
+    "address": "硚口区园博园内",
+    "hours": "09:00-17:00（周一闭馆）",
+    "transport": "地铁7号线园博园站",
+    "image": "https://picsum.photos/seed/wuhan-nature-museum/400/300",
+    "events": [
+      {
+        "text": "小小讲解员招募活动",
+        "schedule": "暑假期间"
+      }
+    ],
+    "deals": [
+      {
+        "text": "周三免费开放日",
+        "validUntil": "2026-12-31"
+      }
+    ],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": true,
+    "parking": "园博园停车场"
+  },
+  {
+    "id": 15,
+    "name": "东湖绿道",
+    "category": "park",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "description": "百公里城市绿道，适合亲子骑行、野餐、观鸟，四季风景各异。",
+    "tags": [
+      "亲子骑行",
+      "野餐",
+      "观鸟",
+      "自然风光"
+    ],
+    "rating": 4.9,
+    "address": "武昌区东湖风景区",
+    "hours": "全天开放",
+    "transport": "地铁8号线梨园站/省博湖北日报站",
+    "image": "https://picsum.photos/seed/wuhan-eastlake/400/300",
+    "events": [
+      {
+        "text": "东湖樱花节",
+        "schedule": "3月-4月"
+      },
+      {
+        "text": "东湖秋日赏叶季",
+        "schedule": "10月-11月"
+      }
+    ],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 16,
+    "name": "中山公园",
+    "category": "park",
+    "district": "江汉区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "武汉最老牌的公园之一，内有小型游乐场、湖泊和草坪，是市中心遛娃好去处。",
+    "tags": [
+      "老牌公园",
+      "小型游乐场",
+      "市中心",
+      "免费入园"
+    ],
+    "rating": 4.4,
+    "address": "江汉区解放大道1265号",
+    "hours": "06:00-22:00",
+    "transport": "地铁2号线中山公园站",
+    "image": "https://picsum.photos/seed/wuhan-zhongshan/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "建议公共交通"
+  },
+  {
+    "id": 17,
+    "name": "解放公园",
+    "category": "park",
+    "district": "江岸区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "欧式风格公园，有鸽子广场、游船和儿童活动区，适合周末休闲。",
+    "tags": [
+      "鸽子广场",
+      "游船",
+      "欧式园林",
+      "亲子休闲"
+    ],
+    "rating": 4.5,
+    "address": "江岸区解放大道1861号",
+    "hours": "06:00-22:00",
+    "transport": "地铁1号线/8号线黄浦路站",
+    "image": "https://picsum.photos/seed/wuhan-jiefang/400/300",
+    "events": [
+      {
+        "text": "金秋菊花展",
+        "schedule": "10月-11月"
+      }
+    ],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "建议公共交通"
+  },
+  {
+    "id": 18,
+    "name": "沙湖公园",
+    "category": "park",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "城市滨湖公园，有儿童乐园、亲水平台和健身步道，环境宜居。",
+    "tags": [
+      "滨湖公园",
+      "儿童乐园",
+      "健身步道",
+      "亲水平台"
+    ],
+    "rating": 4.3,
+    "address": "武昌区沙湖大道",
+    "hours": "全天开放",
+    "transport": "地铁4号线东亭站",
+    "image": "https://picsum.photos/seed/wuhan-shahu/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 19,
+    "name": "武汉动物园",
+    "category": "park",
+    "district": "汉阳区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "经过全面改造的现代化动物园，动物种类丰富，设有亲子科普讲解。",
+    "tags": [
+      "动物园",
+      "亲子科普",
+      "动物互动",
+      "大熊猫"
+    ],
+    "rating": 4.6,
+    "address": "汉阳区动物园路60号",
+    "hours": "08:00-17:00",
+    "transport": "地铁4号线五里墩站换乘公交",
+    "image": "https://picsum.photos/seed/wuhan-zoo/400/300",
+    "events": [
+      {
+        "text": "动物科普月",
+        "schedule": "5月"
+      }
+    ],
+    "deals": [
+      {
+        "text": "亲子年票 198元",
+        "validUntil": "2026-12-31"
+      }
+    ],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 20,
+    "free": false,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 20,
+    "name": "武汉园博园",
+    "category": "park",
+    "district": "硚口区",
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "description": "大型园林博览园，汇聚全国各城市园林景观，内有自然博物馆和儿童游乐区。",
+    "tags": [
+      "园林景观",
+      "自然博物馆",
+      "花展",
+      "儿童游乐"
+    ],
+    "rating": 4.5,
+    "address": "硚口区园博园路",
+    "hours": "08:30-17:30",
+    "transport": "地铁7号线园博园站",
+    "image": "https://picsum.photos/seed/wuhan-expo/400/300",
+    "events": [
+      {
+        "text": "武汉园博园花灯会",
+        "schedule": "春节期间"
+      },
+      {
+        "text": "春季郁金香花展",
+        "schedule": "3月-4月"
+      }
+    ],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 30,
+    "free": false,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 21,
+    "name": "马鞍山森林公园",
+    "category": "park",
+    "district": "洪山区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "城市中的天然氧吧，有烧烤区、骑行道和户外拓展项目。",
+    "tags": [
+      "烧烤",
+      "户外拓展",
+      "天然氧吧",
+      "骑行"
+    ],
+    "rating": 4.2,
+    "address": "洪山区珞喻东路",
+    "hours": "08:00-18:00",
+    "transport": "地铁2号线光谷大道站换乘公交",
+    "image": "https://picsum.photos/seed/wuhan-maanshan/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 10,
+    "free": false,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 22,
+    "name": "青山江滩",
+    "category": "park",
+    "district": "青山区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "长江边生态江滩公园，有儿童沙池、运动场地和观景平台，夕阳超美。",
+    "tags": [
+      "江滩公园",
+      "儿童沙池",
+      "运动场地",
+      "夕阳观景"
+    ],
+    "rating": 4.4,
+    "address": "青山区临江大道",
+    "hours": "全天开放",
+    "transport": "地铁5号线和平公园站",
+    "image": "https://picsum.photos/seed/wuhan-qingshan-river/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 23,
+    "name": "汉口江滩",
+    "category": "park",
+    "district": "江岸区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "亚洲最大滨江公园，有大型沙池、观光小火车、大草坪、放风筝，江滩三期芦苇荡秋季绝美。",
+    "tags": [
+      "江滩公园",
+      "沙池",
+      "观光小火车",
+      "放风筝",
+      "大草坪"
+    ],
+    "rating": 4.7,
+    "address": "江岸区沿江大道",
+    "hours": "全天开放",
+    "transport": "地铁1号线/8号线黄浦路站",
+    "image": "https://picsum.photos/seed/wuhan-hankou-river/400/300",
+    "events": [
+      {
+        "text": "汉口江滩芦苇节",
+        "schedule": "10月-11月"
+      },
+      {
+        "text": "江滩露天电影季",
+        "schedule": "7月-8月 每周末"
+      }
+    ],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "汉口江滩停车场"
+  },
+  {
+    "id": 24,
+    "name": "堤角公园",
+    "category": "park",
+    "district": "江岸区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "苏州园林风格公园，有湖可划船、儿童乐园、竹林和樱花，还有锦鲤池，小朋友很喜欢。",
+    "tags": [
+      "江南园林",
+      "儿童乐园",
+      "划船",
+      "樱花",
+      "竹林"
+    ],
+    "rating": 4.3,
+    "address": "江岸区解放大道2058号",
+    "hours": "06:00-22:00",
+    "transport": "地铁1号线堤角站",
+    "image": "https://picsum.photos/seed/wuhan-dijiao/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 25,
+    "name": "王家墩公园",
+    "category": "park",
+    "district": "江汉区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "原王家墩机场跑道改造的航空主题公园，超大草坪适合奔跑放风筝，有儿童游乐区和运动场地。",
+    "tags": [
+      "航空主题",
+      "大草坪",
+      "儿童游乐区",
+      "放风筝"
+    ],
+    "rating": 4.3,
+    "address": "江汉区青年路与淮海路交汇处",
+    "hours": "全天开放",
+    "transport": "地铁2号线/3号线王家墩东站",
+    "image": "https://picsum.photos/seed/wuhan-wangjiadun/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 26,
+    "name": "菱角湖公园",
+    "category": "park",
+    "district": "江汉区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "城市滨湖公园，环湖步道适合散步推车，有儿童乐园和健身设施，晚饭后遛娃好去处。",
+    "tags": [
+      "滨湖步道",
+      "儿童乐园",
+      "夜景",
+      "健身设施"
+    ],
+    "rating": 4.1,
+    "address": "江汉区菱角湖路",
+    "hours": "全天开放",
+    "transport": "地铁2号线/3号线范湖站",
+    "image": "https://picsum.photos/seed/wuhan-lingjiao/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "停车不便，建议公共交通"
+  },
+  {
+    "id": 27,
+    "name": "紫阳公园",
+    "category": "park",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "2021年改造后成为武昌最美城市公园之一，超大儿童沙池、划船、鸽子广场，周末亲子热门。",
+    "tags": [
+      "儿童乐园",
+      "沙池",
+      "划船",
+      "鸽子",
+      "亭台楼阁"
+    ],
+    "rating": 4.5,
+    "address": "武昌区张之洞路222号",
+    "hours": "06:00-22:00",
+    "transport": "地铁4号线/5号线复兴路站",
+    "image": "https://picsum.photos/seed/wuhan-ziyang/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "紫阳公园停车场"
+  },
+  {
+    "id": 28,
+    "name": "四美塘公园",
+    "category": "park",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "宁静的城市湖泊公园，有儿童游乐区、亲水平台和树荫步道，人少清静，适合低龄幼儿。",
+    "tags": [
+      "城市公园",
+      "亲水平台",
+      "儿童游乐",
+      "清静"
+    ],
+    "rating": 4.0,
+    "address": "武昌区四美塘路",
+    "hours": "全天开放",
+    "transport": "地铁5号线余家头站",
+    "image": "https://picsum.photos/seed/wuhan-simeitang/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有少量停车位"
+  },
+  {
+    "id": 29,
+    "name": "月湖公园",
+    "category": "park",
+    "district": "汉阳区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "毗邻琴台大剧院的湖景公园，有开阔儿童乐园、大草坪可野餐，文化氛围浓厚，适合平衡车骑行。",
+    "tags": [
+      "湖景公园",
+      "儿童乐园",
+      "琴台剧院",
+      "大草坪",
+      "艺术氛围"
+    ],
+    "rating": 4.4,
+    "address": "汉阳区琴台大道",
+    "hours": "全天开放",
+    "transport": "地铁6号线琴台站",
+    "image": "https://picsum.photos/seed/wuhan-yuehu/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "琴台大剧院停车场"
+  },
+  {
+    "id": 30,
+    "name": "汉水公园",
+    "category": "park",
+    "district": "汉阳区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "汉江边沿河公园，有儿童乐园、健身步道和大量绿化，人少清静，适合午后休闲遛娃。",
+    "tags": [
+      "沿河公园",
+      "儿童乐园",
+      "健身步道",
+      "清静"
+    ],
+    "rating": 4.0,
+    "address": "汉阳区郭茨口汉江边",
+    "hours": "全天开放",
+    "transport": "地铁3号线王家湾站",
+    "image": "https://picsum.photos/seed/wuhan-hanshui/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "停车位较少"
+  },
+  {
+    "id": 31,
+    "name": "和平公园",
+    "category": "park",
+    "district": "青山区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "青山最大公园之一，以玫瑰园闻名（5月玫瑰节），有儿童乐园、大草坪和健身设施。",
+    "tags": [
+      "玫瑰园",
+      "儿童乐园",
+      "花展",
+      "大草坪"
+    ],
+    "rating": 4.3,
+    "address": "青山区和平大道与建设五路交汇处",
+    "hours": "全天开放",
+    "transport": "地铁5号线和平公园站",
+    "image": "https://picsum.photos/seed/wuhan-heping/400/300",
+    "events": [
+      {
+        "text": "和平公园玫瑰节",
+        "schedule": "5月"
+      }
+    ],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 32,
+    "name": "戴家湖公园",
+    "category": "park",
+    "district": "青山区",
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "description": "工业遗址改造的独特公园，有老火车车厢可以攀爬探索（工业记忆主题），大草坪和运动区。",
+    "tags": [
+      "工业遗址",
+      "火车主题",
+      "大草坪",
+      "怀旧",
+      "儿童游乐"
+    ],
+    "rating": 4.2,
+    "address": "青山区建设十路与冶金大道交汇处",
+    "hours": "全天开放",
+    "transport": "地铁5号线工人村站",
+    "image": "https://picsum.photos/seed/wuhan-daijiahu/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 33,
+    "name": "竹叶海公园",
+    "category": "park",
+    "district": "硚口区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "湿地湖泊公园，有亲水步道、儿童乐园和湖景，比园博园清静人少，适合安静遛娃。",
+    "tags": [
+      "湿地公园",
+      "儿童乐园",
+      "湖景",
+      "步道"
+    ],
+    "rating": 4.1,
+    "address": "硚口区长丰大道与竹叶海路交汇处",
+    "hours": "全天开放",
+    "transport": "地铁1号线竹叶海站",
+    "image": "https://picsum.photos/seed/wuhan-zhuye-sea/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车位"
+  },
+  {
+    "id": 34,
+    "name": "金银湖湿地公园",
+    "category": "park",
+    "district": "东西湖区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "国家城市湿地公园，木质栈道穿行湿地，观鸟天堂，适合亲子骑行和自然科普教育。",
+    "tags": [
+      "湿地公园",
+      "观鸟",
+      "栈道",
+      "自然科普",
+      "骑行"
+    ],
+    "rating": 4.4,
+    "address": "东西湖区金山大道",
+    "hours": "全天开放",
+    "transport": "地铁6号线金银湖站",
+    "image": "https://picsum.photos/seed/wuhan-yinjin-lake/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 35,
+    "name": "张公堤城市森林公园",
+    "category": "park",
+    "district": "东西湖区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "沿百年张公堤修建的线性森林公园，有独立自行车绿道和步行道，贯穿多个公园，亲子骑行圣地。",
+    "tags": [
+      "森林公园",
+      "骑行绿道",
+      "城市绿带",
+      "自然风光"
+    ],
+    "rating": 4.2,
+    "address": "东西湖区张公堤（东起姑嫂树路）",
+    "hours": "全天开放",
+    "transport": "地铁2号线金银潭站",
+    "image": "https://picsum.photos/seed/wuhan-zhanggong/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有多个入口停车场"
+  },
+  {
+    "id": 36,
+    "name": "后官湖湿地公园",
+    "category": "park",
+    "district": "蔡甸区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "武汉最大湿地公园之一（3186公顷），20+公里环湖绿道可骑行划船，大草坪可露营，适合全家出游一整天。",
+    "tags": [
+      "湿地公园",
+      "骑行",
+      "划船",
+      "露营",
+      "大草坪"
+    ],
+    "rating": 4.4,
+    "address": "蔡甸区彭家山头58号",
+    "hours": "08:00-18:00",
+    "transport": "建议自驾，地铁4号线新农站换乘公交",
+    "image": "https://picsum.photos/seed/wuhan-houguanhu/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "大型免费停车场"
+  },
+  {
+    "id": 37,
+    "name": "汤湖公园",
+    "category": "park",
+    "district": "蔡甸区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "独特公园内含图书馆、戏院和美术馆！儿童乐园+图书馆故事会+儿童剧，一站式文体亲子体验。",
+    "tags": [
+      "图书馆",
+      "戏院",
+      "儿童乐园",
+      "湖景",
+      "美术馆"
+    ],
+    "rating": 4.3,
+    "address": "蔡甸区（沌口）车城大道与兴华路交汇处",
+    "hours": "公园全天开放（图书馆09:00-17:00）",
+    "transport": "建议自驾，地铁3号线沌阳大道站换乘公交",
+    "image": "https://picsum.photos/seed/wuhan-tanghu/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "免费停车场"
+  },
+  {
+    "id": 38,
+    "name": "藏龙岛湿地公园",
+    "category": "park",
+    "district": "江夏区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "国家级湿地公园，湿地湖泊和树林由栈道和骑行道连接，可观鸟赏鱼，人少清静的自然探索地。",
+    "tags": [
+      "湿地公园",
+      "骑行",
+      "观鸟",
+      "栈道",
+      "自然风光"
+    ],
+    "rating": 4.2,
+    "address": "江夏区藏龙岛科技园",
+    "hours": "全天开放",
+    "transport": "建议自驾，地铁2号线佛祖岭站换乘公交",
+    "image": "https://picsum.photos/seed/wuhan-canglong/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 39,
+    "name": "南湖幸福湾公园",
+    "category": "park",
+    "district": "洪山区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "description": "南湖之滨的公园，有儿童乐园、大草坪和沿湖步道，南湖片区居民日常遛娃好去处。",
+    "tags": [
+      "滨湖公园",
+      "儿童乐园",
+      "大草坪",
+      "步道"
+    ],
+    "rating": 4.0,
+    "address": "洪山区南湖大道与珞狮南路交汇处",
+    "hours": "全天开放",
+    "transport": "地铁8号线文昌路站",
+    "image": "https://picsum.photos/seed/wuhan-nanhu/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  }
 ]
