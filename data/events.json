@@ -1831,5 +1831,36 @@
     "indoor": true,
     "parking": "待确认",
     "source": "武汉本地宝"
+  },
+  {
+    "id": 89,
+    "name": "遇见“屈原”、粽王争霸赛……端午假期武汉景区节日氛围浓2026-06-22",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn./zwgk_27/zwdt/jdxw/202606/t20260623_2780242.shtml",
+    "tags": [
+      "节庆活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-89/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
   }
 ]

@@ -1,9 +1,9 @@
 {
-  "last_update": "2026-06-22 20:55",
-  "next_update": "2026-06-23 02:00",
+  "last_update": "2026-06-23 02:54",
+  "next_update": "2026-06-23 08:00",
   "data_version": "1.0",
   "total_places": 47,
-  "total_events": 59,
+  "total_events": 60,
   "total_promotions": 7,
   "total_hot_events": 10,
   "generated_by": "update_all.py"
