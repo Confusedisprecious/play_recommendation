@@ -1,34 +1,16 @@
 [
   {
-    "title": "楚国八百年文物展",
+    "title": "博物馆之友",
+    "url": "https://www.hbww.org.cn/bwgzy",
     "source": "湖北省博物馆",
     "category": "展览",
-    "description": "展出楚国精品文物200余件，包括青铜器、玉器、漆器等",
-    "address": "武昌区东湖路160号",
-    "crawled_at": "2026-06-25T09:26:19.119690"
+    "crawled_at": "2026-06-25T14:02:06.777246"
   },
   {
-    "title": "小小考古学家亲子体验",
+    "title": "English",
+    "url": "https://www.hbww.org.cn/english",
     "source": "湖北省博物馆",
-    "category": "亲子活动",
-    "description": "6-12岁儿童考古模拟体验，亲手挖掘文物复制品",
-    "address": "武昌区东湖路160号",
-    "crawled_at": "2026-06-25T09:26:19.119701"
-  },
-  {
-    "title": "曾侯乙编钟演奏会",
-    "source": "湖北省博物馆",
-    "category": "演出",
-    "description": "每天两场编钟演奏，感受千年古乐",
-    "address": "武昌区东湖路160号",
-    "crawled_at": "2026-06-25T09:26:19.119703"
-  },
-  {
-    "title": "博物馆奇妙夜-夜宿活动",
-    "source": "湖北省博物馆",
-    "category": "亲子活动",
-    "description": "在博物馆搭帐篷过夜，探索夜晚的文物世界",
-    "address": "武昌区东湖路160号",
-    "crawled_at": "2026-06-25T09:26:19.119705"
+    "category": "展览",
+    "crawled_at": "2026-06-25T14:02:06.777261"
   }
 ]
