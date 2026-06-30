@@ -2048,5 +2048,67 @@
     "indoor": true,
     "parking": "待确认",
     "source": "武汉本地宝"
+  },
+  {
+    "id": 96,
+    "name": "关于湖北中旅假日旅行社有限责任公司、武汉凯旋国际旅行社有限公司办理旅游服务质量保证金提取事项情况的公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202606/t20260630_2814839.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-96/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 97,
+    "name": "关于湖北盛迦国际旅行社有限公司办理旅游服务质量保证金提取事项情况的公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202606/t20260630_2814835.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-97/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
   }
 ]
