@@ -2110,5 +2110,117 @@
     "indoor": true,
     "parking": "待确认",
     "source": "武汉文旅局"
+  },
+  {
+    "id": 98,
+    "name": "旅行社设立许可旅行社申请注销公告（2026年第9号）",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202607/t20260701_2815596.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-98/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 99,
+    "name": "旅行社设立许可旅行社信息变更公告（2026年第8号）",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202607/t20260701_2815593.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-99/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 100,
+    "name": "旅行社设立许可新办公告（2026年第7号）",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202607/t20260701_2815590.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-100/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 101,
+    "name": "市文旅局发布2026年首批“人工智能+文旅”应用场景需求清单",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202607/t20260701_2815459.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-101/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
   }
 ]
