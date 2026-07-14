@@ -2284,5 +2284,36 @@
     "indoor": true,
     "parking": "待确认",
     "source": "武汉文旅局"
+  },
+  {
+    "id": 104,
+    "name": "市文旅局关于未按时交纳旅游服务质量保证金的旅行社予以责令改正的通告",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202607/t20260714_2820876.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-104/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
   }
 ]
