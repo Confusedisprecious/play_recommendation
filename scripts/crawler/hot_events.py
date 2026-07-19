@@ -4,7 +4,6 @@
 通过分析现有数据中的趋势生成热点排行
 """
 import json
-import random
 from pathlib import Path
 from datetime import datetime
 
@@ -32,6 +31,8 @@ def analyze_hot_events():
     spots = load_json("spots.json")
     events = load_json("events.json")
     promotions = load_json("promotions.json")
+    social_feed = load_json("social_feed.json")
+    social_items = social_feed.get("items", []) if isinstance(social_feed, dict) else []
     all_places = spots + events
 
     # 为每个有活动的场所计算热度
@@ -39,7 +40,14 @@ def analyze_hot_events():
     for p in all_places:
         has_events = len(p.get("events", [])) > 0
         has_deals = len(p.get("deals", [])) > 0
-        if not has_events and not has_deals:
+        social_mentions = sum(
+            1
+            for item in social_items
+            if item.get("place_name") == p.get("name")
+            or p.get("name", "") in item.get("title", "")
+            or p.get("name", "") in item.get("summary", "")
+        )
+        if not has_events and not has_deals and not social_mentions:
             continue
 
         # 基础热度分
@@ -54,9 +62,8 @@ def analyze_hot_events():
         # 免费加分
         if p.get("free"):
             score += 800
-        # 随机波动模拟真实趋势
-        score += random.randint(-500, 500)
-        trend = random.choice(["up", "stable", "down"])
+        score += min(3000, social_mentions * 900)
+        trend = "up" if social_mentions else "stable"
 
         scored.append({
             "rank": 0,
@@ -64,7 +71,8 @@ def analyze_hot_events():
             "heat": int(score),
             "trend": trend,
             "place_id": p["id"],
-            "reason": _generate_reason(p)
+            "reason": _generate_reason(p, social_mentions),
+            "social_mentions": social_mentions,
         })
 
     # 按热度排序
@@ -78,11 +86,13 @@ def analyze_hot_events():
     return top10
 
 
-def _generate_reason(place):
+def _generate_reason(place, social_mentions=0):
     """生成热度理由"""
     reasons = []
     if place.get("deals"):
         reasons.append(f"限时优惠")
+    if social_mentions:
+        reasons.append(f"社交平台 {social_mentions} 条提及")
     if place.get("events"):
         reasons.append(f"近期活动")
     if place.get("free"):

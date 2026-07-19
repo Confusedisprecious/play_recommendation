@@ -45,15 +45,18 @@ def update_last_update():
     events = load_json("events.json")
     promotions = load_json("promotions.json")
     hot_events = load_json("hot_events.json")
+    social_feed = load_json("social_feed.json")
+    social_items = social_feed.get("items", []) if isinstance(social_feed, dict) else []
 
     data = {
         "last_update": now.strftime("%Y-%m-%d %H:%M"),
         "next_update": next_update.strftime("%Y-%m-%d %H:%M"),
-        "data_version": "1.0",
+        "data_version": "1.2",
         "total_places": len(spots),
         "total_events": len(events),
         "total_promotions": len(promotions),
         "total_hot_events": len(hot_events),
+        "total_social_items": len(social_items),
         "generated_by": "update_all.py"
     }
     save_json("last_update.json", data)
@@ -66,28 +69,38 @@ def main():
     print(f"时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 50)
 
-    # 1. 运行爬虫采集数据
-    print(f"\n🕷️ 阶段1: 数据爬取")
+    # 1. 聚合经过审核的社交平台公开信息
+    print(f"\n📣 阶段1: 社交信息聚合")
+    try:
+        from social_ingest import build_feed
+        build_feed()
+    except Exception as e:
+        print(f"  ⚠ 社交信息聚合失败: {e}")
+
+    # 2. 运行爬虫采集数据，热点计算会读取最新社交信号
+    print(f"\n🕷️ 阶段2: 数据爬取")
     try:
         from crawler.runner import run_all_crawlers
         run_all_crawlers()
     except Exception as e:
         print(f"  ⚠ 爬虫执行失败: {e}")
 
-    # 2. 合并爬取数据到主文件
-    print(f"\n🔗 阶段2: 数据合并")
+    # 3. 合并爬取数据到主文件
+    print(f"\n🔗 阶段3: 数据合并")
     try:
         from merge_crawled_data import merge_all
         merge_all()
     except Exception as e:
         print(f"  ⚠ 数据合并失败: {e}")
 
-    # 3. 验证数据完整性
-    print(f"\n📊 阶段3: 数据验证")
+    # 4. 验证数据完整性
+    print(f"\n📊 阶段4: 数据验证")
     spots = load_json("spots.json")
     events = load_json("events.json")
     promotions = load_json("promotions.json")
     hot_events = load_json("hot_events.json")
+    social_feed = load_json("social_feed.json")
+    social_items = social_feed.get("items", []) if isinstance(social_feed, dict) else []
     weather = load_json("weather_recommendation.json")
 
     print(f"\n📊 数据统计:")
@@ -95,6 +108,7 @@ def main():
     print(f"  活动: {len(events)}")
     print(f"  优惠: {len(promotions)}")
     print(f"  热门: {len(hot_events)}")
+    print(f"  社交信息: {len(social_items)}")
 
     # 更新 last_update.json
     info = update_last_update()

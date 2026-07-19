@@ -558,7 +558,10 @@
     "price": 0,
     "free": true,
     "indoor": false,
-    "parking": "有停车场"
+    "parking": "有停车场",
+    "classic": true,
+    "coverLabel": "经典景区",
+    "coverNote": "东湖景区封面照"
   },
   {
     "id": 16,
@@ -697,7 +700,10 @@
     "price": 20,
     "free": false,
     "indoor": false,
-    "parking": "有停车场"
+    "parking": "有停车场",
+    "classic": true,
+    "coverLabel": "经典景区",
+    "coverNote": "亲子动物园封面照"
   },
   {
     "id": 20,
@@ -736,7 +742,10 @@
     "price": 30,
     "free": false,
     "indoor": false,
-    "parking": "有停车场"
+    "parking": "有停车场",
+    "classic": true,
+    "coverLabel": "经典景区",
+    "coverNote": "园博园封面照"
   },
   {
     "id": 21,
@@ -1512,7 +1521,10 @@
     "price": 60,
     "free": false,
     "indoor": false,
-    "parking": "磨山停车场"
+    "parking": "磨山停车场",
+    "classic": true,
+    "coverLabel": "经典景区",
+    "coverNote": "东湖磨山封面照"
   },
   {
     "id": 45,
@@ -1554,7 +1566,10 @@
     "price": 60,
     "free": false,
     "indoor": false,
-    "parking": "大型免费停车场"
+    "parking": "大型免费停车场",
+    "classic": true,
+    "coverLabel": "经典景区",
+    "coverNote": "花海景区封面照"
   },
   {
     "id": 46,
@@ -1625,5 +1640,371 @@
     "free": true,
     "indoor": false,
     "parking": "停车位较少，建议公共交通"
+  },
+  {
+    "id": 48,
+    "name": "黄鹤楼公园",
+    "category": "park",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "武汉城市地标和经典登高景区，可看长江大桥、龟山与武昌老城风貌，适合带孩子认识武汉历史和城市天际线。",
+    "tags": [
+      "经典景区",
+      "城市地标",
+      "登高观景",
+      "历史文化",
+      "武汉必去"
+    ],
+    "rating": 4.8,
+    "address": "武昌区蛇山西山坡特1号",
+    "hours": "08:30-18:00",
+    "transport": "地铁5号线司门口黄鹤楼站",
+    "image": "images/e31.jpg",
+    "events": [
+      {
+        "text": "夜上黄鹤楼光影演艺",
+        "schedule": "晚间场次以景区公告为准"
+      }
+    ],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 70,
+    "free": false,
+    "indoor": false,
+    "parking": "景区周边停车紧张，建议公共交通",
+    "classic": true,
+    "coverLabel": "经典景区",
+    "coverNote": "黄鹤楼城市地标封面"
+  },
+  {
+    "id": 49,
+    "name": "武汉万象城",
+    "category": "mall",
+    "district": "江岸区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "建设大道核心商业综合体，餐饮、亲子零售和室内休闲选择丰富，适合雨天或高温天安排半日遛娃。",
+    "tags": [
+      "高端商场",
+      "亲子餐厅",
+      "室内休闲",
+      "地铁直达"
+    ],
+    "rating": 4.6,
+    "address": "江岸区建设大道668号",
+    "hours": "10:00-22:00",
+    "transport": "地铁7号线取水楼站",
+    "image": "images/2.jpg",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 50,
+    "name": "武汉恒隆广场",
+    "category": "mall",
+    "district": "硚口区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "硚口核心商圈的大型购物中心，空间开阔、餐饮集中，适合亲子用餐、看展和室内散步。",
+    "tags": [
+      "大型商场",
+      "亲子餐饮",
+      "室内散步",
+      "停车方便"
+    ],
+    "rating": 4.5,
+    "address": "硚口区京汉大道668号",
+    "hours": "10:00-22:00",
+    "transport": "地铁1号线友谊路站/循礼门站",
+    "image": "images/3.jpg",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 51,
+    "name": "武汉K11 Select",
+    "category": "mall",
+    "district": "洪山区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "光谷商圈艺术商业空间，常有展陈、快闪和亲子友好的餐饮选择，适合和光谷步行街一起安排。",
+    "tags": [
+      "艺术商业",
+      "光谷商圈",
+      "展陈快闪",
+      "亲子餐厅"
+    ],
+    "rating": 4.4,
+    "address": "洪山区关山大道355号",
+    "hours": "10:00-22:00",
+    "transport": "地铁2号线光谷广场站换乘",
+    "image": "images/8.jpg",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 52,
+    "name": "世界城光谷步行街",
+    "category": "mall",
+    "district": "洪山区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "光谷经典商圈，街区空间大、餐饮密集，适合傍晚散步、吃饭和顺路看街头演出。",
+    "tags": [
+      "开放式街区",
+      "光谷商圈",
+      "街头演出",
+      "餐饮丰富"
+    ],
+    "rating": 4.4,
+    "address": "洪山区珞喻路726号",
+    "hours": "10:00-22:00",
+    "transport": "地铁2号线光谷广场站",
+    "image": "images/8.jpg",
+    "events": [
+      {
+        "text": "节假日街头艺术节",
+        "schedule": "节假日以商圈公告为准"
+      }
+    ],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": true,
+    "indoor": false,
+    "parking": "有停车场"
+  },
+  {
+    "id": 53,
+    "name": "龙湖武汉江宸天街",
+    "category": "mall",
+    "district": "江汉区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "青年路片区的大型商业综合体，儿童零售、餐饮和生活配套集中，适合周末室内遛娃。",
+    "tags": [
+      "龙湖天街",
+      "儿童零售",
+      "亲子餐饮",
+      "室内遛娃"
+    ],
+    "rating": 4.5,
+    "address": "江汉区青年路518号",
+    "hours": "10:00-22:00",
+    "transport": "地铁2号线王家墩东站",
+    "image": "images/3.jpg",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 54,
+    "name": "龙湖武汉白沙天街",
+    "category": "mall",
+    "district": "洪山区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "白沙洲片区亲子友好的大型商场，儿童游乐、影院和家庭餐饮选择较多，覆盖武昌南部家庭。",
+    "tags": [
+      "龙湖天街",
+      "儿童游乐",
+      "家庭餐饮",
+      "影院"
+    ],
+    "rating": 4.4,
+    "address": "洪山区白沙三路与烽胜路交会处",
+    "hours": "10:00-22:00",
+    "transport": "地铁5号线张家湾站换乘",
+    "image": "images/4.jpg",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 55,
+    "name": "龙湖武汉滨江天街",
+    "category": "mall",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "武昌滨江片区商业综合体，可与江滩散步组合，适合亲子餐饮、观江和室内休闲。",
+    "tags": [
+      "滨江商圈",
+      "亲子餐饮",
+      "室内休闲",
+      "江滩周边"
+    ],
+    "rating": 4.4,
+    "address": "武昌区和平大道659号",
+    "hours": "10:00-22:00",
+    "transport": "地铁5号线积玉桥站换乘",
+    "image": "images/2.jpg",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 56,
+    "name": "武汉大悦城",
+    "category": "mall",
+    "district": "洪山区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "光谷东片区大型商业综合体，餐饮、零售、亲子服务和休闲娱乐组合完整，适合覆盖东湖高新区家庭。",
+    "tags": [
+      "光谷东",
+      "亲子服务",
+      "休闲娱乐",
+      "室内商场"
+    ],
+    "rating": 4.5,
+    "address": "洪山区高新大道与光谷五路片区",
+    "hours": "10:00-22:00",
+    "transport": "地铁11号线光谷五路站",
+    "image": "images/5.jpg",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 57,
+    "name": "武汉经开万达广场",
+    "category": "mall",
+    "district": "蔡甸区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "经开片区成熟商场，儿童游乐、影院、餐饮和停车配套完整，适合汉阳、沌口家庭就近遛娃。",
+    "tags": [
+      "万达广场",
+      "儿童游乐",
+      "影院",
+      "停车方便"
+    ],
+    "rating": 4.3,
+    "address": "武汉经济技术开发区东风大道111号",
+    "hours": "10:00-22:00",
+    "transport": "地铁3号线体育中心站",
+    "image": "images/6.jpg",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
+  },
+  {
+    "id": 58,
+    "name": "江夏永旺梦乐城",
+    "category": "mall",
+    "district": "江夏区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "江夏片区大型购物中心，儿童零售、家庭餐饮和室内活动空间丰富，适合南部家庭周末半日游。",
+    "tags": [
+      "永旺梦乐城",
+      "儿童零售",
+      "家庭餐饮",
+      "室内活动"
+    ],
+    "rating": 4.4,
+    "address": "江夏区文化大道199号",
+    "hours": "10:00-22:00",
+    "transport": "地铁7号线江夏客厅站",
+    "image": "images/5.jpg",
+    "events": [],
+    "deals": [],
+    "age_min": 0,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "有停车场"
   }
 ]

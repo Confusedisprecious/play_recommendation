@@ -1,0 +1,152 @@
+{
+  "generated_at": "2026-07-19T09:29:22+08:00",
+  "policy": {
+    "collection_mode": "official_api_or_reviewed_public_url",
+    "login_automation": false,
+    "undocumented_api": false,
+    "copy_full_content": false,
+    "display_notice": "社交内容仅作出行灵感，开放时间、票价和活动安排请以官方渠道为准。"
+  },
+  "platforms": [
+    {
+      "id": "xiaohongshu",
+      "label": "小红书",
+      "mode": "reviewed_public_url",
+      "status": "ready_for_authorized_links"
+    },
+    {
+      "id": "douyin",
+      "label": "抖音",
+      "mode": "public_page_or_open_api",
+      "status": "public_pages_enabled"
+    },
+    {
+      "id": "weibo",
+      "label": "微博",
+      "mode": "official_api",
+      "status": "credentials_required"
+    }
+  ],
+  "items": [
+    {
+      "id": "douyin-mulan-water-202607",
+      "platform": "douyin",
+      "source_type": "public_search_page",
+      "title": "木兰山水世界暑期亲子玩水热度上升",
+      "summary": "湖北文旅近期推荐大型亲子水乐园，适合把它加入高温天气的玩水备选清单。",
+      "author": "湖北文旅",
+      "url": "https://www.douyin.com/search/%E6%AD%A6%E6%B1%89%E9%80%82%E5%90%88%E5%B8%A6%E5%AD%A9%E5%AD%90%E7%8E%A9%E5%91%A8%E8%BE%B912-15%E5%B2%81%E7%8E%A9%E7%9A%84%E9%A1%B9%E7%9B%AE",
+      "published_at": "2026-07-13",
+      "place_name": "木兰山水世界",
+      "district": "黄陂区",
+      "tags": [
+        "暑期",
+        "玩水",
+        "亲子水乐园"
+      ],
+      "image": "",
+      "review_status": "reviewed",
+      "collected_at": "2026-07-19T09:29:22+08:00"
+    },
+    {
+      "id": "douyin-jiefang-park-202603",
+      "platform": "douyin",
+      "source_type": "public_page",
+      "title": "解放公园春花实拍提供现场参考",
+      "summary": "公开视频展示了解放公园春季花景，能补充官方信息之外的现场氛围与亲子散步体验。",
+      "author": "摄影师中国龙自驾游天下",
+      "url": "https://jingxuan.douyin.com/m/video/7618943307016319411",
+      "published_at": "2026-03-19",
+      "place_name": "解放公园",
+      "district": "江岸区",
+      "tags": [
+        "赏花",
+        "免费公园",
+        "亲子散步"
+      ],
+      "image": "",
+      "review_status": "reviewed",
+      "collected_at": "2026-07-19T09:29:22+08:00"
+    },
+    {
+      "id": "douyin-east-lake-sakura-202602",
+      "platform": "douyin",
+      "source_type": "public_page",
+      "title": "东湖磨山早樱实拍引发春季出游关注",
+      "summary": "公开视频记录了东湖磨山早樱状态，适合用于判断春季花期，但出发前仍需查看景区公告。",
+      "author": "麦乐个萌呀",
+      "url": "https://www.douyin.com/video/7611438368303395914",
+      "published_at": "2026-02-27",
+      "place_name": "东湖磨山景区",
+      "district": "武昌区",
+      "tags": [
+        "赏花",
+        "东湖",
+        "春季"
+      ],
+      "image": "",
+      "review_status": "reviewed",
+      "collected_at": "2026-07-19T09:29:22+08:00"
+    },
+    {
+      "id": "douyin-anshan-wetland-202601",
+      "platform": "douyin",
+      "source_type": "public_page",
+      "title": "安山湿地公园露营与亲子户外体验",
+      "summary": "公开视频分享了湿地公园的草地、观景和亲子户外条件，可作为武汉周边轻露营备选。",
+      "author": "胡小米",
+      "url": "https://jingxuan.douyin.com/m/video/7595194435172863284",
+      "published_at": "2026-01-15",
+      "place_name": "安山国家湿地公园",
+      "district": "江夏区",
+      "tags": [
+        "露营",
+        "湿地",
+        "周边游"
+      ],
+      "image": "",
+      "review_status": "reviewed",
+      "collected_at": "2026-07-19T09:29:22+08:00"
+    },
+    {
+      "id": "xiaohongshu-family-hike-2025",
+      "platform": "xiaohongshu",
+      "source_type": "official_media_summary",
+      "title": "小红书亲子徒步活动带火武汉暑期研学路线",
+      "summary": "公开报道显示，首义公园亲子徒步与自然教育活动受到家庭关注，可作为周末研学型玩法参考。",
+      "author": "长江云新闻",
+      "url": "https://news.hbtv.com.cn/p/4533133.html",
+      "published_at": "2025-06-29",
+      "place_name": "首义公园",
+      "district": "武昌区",
+      "tags": [
+        "亲子徒步",
+        "研学",
+        "自然教育"
+      ],
+      "image": "",
+      "review_status": "reviewed",
+      "collected_at": "2026-07-19T09:29:22+08:00"
+    },
+    {
+      "id": "xiaohongshu-wuhan-family-guide",
+      "platform": "xiaohongshu",
+      "source_type": "official_media_summary",
+      "title": "武汉爸妈共同整理的城市遛娃路线",
+      "summary": "武汉文旅曾汇总小红书家长的实地经验，涵盖亲子散步、书店与轻量 Citywalk 路线。",
+      "author": "武汉市文化和旅游局",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202310/t4720409.htm",
+      "published_at": "2023-10-23",
+      "place_name": "西北湖绿化广场",
+      "district": "江汉区",
+      "tags": [
+        "Citywalk",
+        "亲子散步",
+        "书店"
+      ],
+      "image": "",
+      "review_status": "reviewed",
+      "collected_at": "2026-07-19T09:29:22+08:00"
+    }
+  ]
+}

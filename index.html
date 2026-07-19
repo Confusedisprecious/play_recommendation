@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="description" content="武汉亲子游玩推荐 — 按季节、区域、类别推荐武汉适合带小孩去的商场、游乐场、公园和大型活动">
   <meta name="theme-color" content="#FF7E36">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF7E36'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='34'%3E%F0%9F%8E%A0%3C/text%3E%3C/svg%3E">
   <title>武汉亲子游玩推荐 — 周末带娃去哪玩</title>
   <style>
 /* ===== 武汉亲子游玩推荐 - 样式 ===== */
@@ -187,7 +188,7 @@ ul { list-style: none; }
 /* ---- Hero Section ---- */
 .hero {
   margin-top: var(--header-height);
-  padding: 60px 20px 48px;
+  padding: 48px 20px 40px;
   background: linear-gradient(135deg, #FFF5EB 0%, #FFE8D6 50%, #FFEDE0 100%);
   text-align: center;
   position: relative;
@@ -211,8 +212,23 @@ ul { list-style: none; }
 
 .hero-content {
   position: relative;
-  max-width: 600px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
+  align-items: center;
+  gap: 44px;
+  max-width: var(--max-width);
   margin: 0 auto;
+  text-align: left;
+}
+.hero-copy {
+  min-width: 0;
+}
+.hero-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
 }
 .hero-title {
   font-size: clamp(24px, 5vw, 40px);
@@ -239,7 +255,7 @@ ul { list-style: none; }
   font-size: 14px;
   color: var(--text-secondary);
   box-shadow: var(--shadow);
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .hero-season .season-dot {
   width: 8px;
@@ -263,20 +279,71 @@ ul { list-style: none; }
   gap: 6px;
   font-size: 12px;
   color: var(--text-light);
-  margin-bottom: 16px;
+  margin-bottom: 0;
   background: rgba(255,255,255,0.6);
   padding: 4px 14px;
   border-radius: 100px;
 }
 .update-icon { font-size: 12px; }
 
+/* ---- Live Trip Panel ---- */
+.live-panel {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: none;
+  text-align: left;
+}
+.live-card {
+  min-height: 92px;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(240, 230, 220, 0.95);
+  box-shadow: 0 10px 26px rgba(255, 126, 54, 0.08);
+  backdrop-filter: blur(10px);
+}
+.live-card.primary {
+  background: linear-gradient(135deg, rgba(255,126,54,0.96), rgba(255,163,102,0.92));
+  color: white;
+  border-color: rgba(255,255,255,0.35);
+}
+.live-label {
+  display: block;
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+.live-card.primary .live-label { color: rgba(255,255,255,0.78); }
+.live-value {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text);
+}
+.live-card.primary .live-value { color: white; }
+.live-note {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+.live-card.primary .live-note { color: rgba(255,255,255,0.82); }
+
 /* ---- Quick Entry ---- */
 .quick-entry {
   background: var(--bg);
 }
+.quick-entry .section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 .quick-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
   gap: 10px;
 }
 .quick-btn {
@@ -284,7 +351,8 @@ ul { list-style: none; }
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  padding: 16px 12px;
+  min-height: 78px;
+  padding: 12px 10px;
   border-radius: var(--radius-sm);
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -295,14 +363,19 @@ ul { list-style: none; }
   box-shadow: var(--shadow);
   transform: translateY(-2px);
 }
-.quick-btn-icon { font-size: 28px; }
+.quick-btn.active {
+  border-color: var(--primary);
+  background: #FFF0E6;
+  box-shadow: var(--shadow);
+}
+.quick-btn-icon { font-size: 24px; line-height: 1; }
 .quick-btn-label { font-size: 13px; font-weight: 500; color: var(--text); }
 
 /* Search */
 .search-box {
   position: relative;
   max-width: 480px;
-  margin: 0 auto;
+  margin: 0;
 }
 .search-box input {
   width: 100%;
@@ -435,6 +508,7 @@ ul { list-style: none; }
   margin-bottom: 24px;
 }
 .district-chip {
+  flex: 0 0 auto;
   padding: 6px 16px;
   border-radius: 100px;
   font-size: 13px;
@@ -442,6 +516,7 @@ ul { list-style: none; }
   border: 1px solid var(--border);
   color: var(--text-secondary);
   transition: var(--transition);
+  white-space: nowrap;
 }
 .district-chip:hover {
   border-color: var(--primary-light);
@@ -575,6 +650,64 @@ ul { list-style: none; }
   box-shadow: 0 2px 8px rgba(255, 179, 71, 0.4);
 }
 
+/* ---- Filter Workspace ---- */
+.filter-panel {
+  margin-bottom: 24px;
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgba(74, 55, 40, 0.06);
+  backdrop-filter: blur(10px);
+}
+.filter-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.filter-row:last-child { border-bottom: 0; }
+.filter-label {
+  padding-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+.filter-panel .season-tabs,
+.filter-panel .category-tabs,
+.filter-panel .district-filter {
+  margin-bottom: 0;
+}
+
+.badge-classic {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #2D3436, #636E72);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(45, 52, 54, 0.28);
+}
+
+.cover-caption {
+  position: absolute;
+  left: 12px;
+  bottom: 46px;
+  max-width: calc(100% - 24px);
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: rgba(0,0,0,0.52);
+  color: white;
+  font-size: 12px;
+  backdrop-filter: blur(5px);
+}
+
 /* ---- Practical Info Bar ---- */
 .card-practical {
   display: flex;
@@ -602,6 +735,11 @@ ul { list-style: none; }
 .chip-paid { background: #FFF5F5; color: #E74C3C; }
 .chip-parking { background: #F5F0FF; color: #8B5CF6; }
 .chip-noparking { background: #F9F9F9; color: #B2BEC3; }
+.chip-open { background: #ECFFF5; color: #159957; font-weight: 600; }
+.chip-closed { background: #FFF3F0; color: #D14A2E; font-weight: 600; }
+.chip-live { background: #EAF6FF; color: #1976B9; }
+.chip-weather-warn { background: #FFF8DB; color: #A56A00; }
+.chip-weather-good { background: #E8F8F5; color: #0F8F83; }
 
 .card-body {
   padding: 16px;
@@ -818,6 +956,161 @@ ul { list-style: none; }
   border-radius: 4px;
 }
 
+/* ---- Social Signals ---- */
+.social-section {
+  background: var(--bg);
+}
+.social-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.social-heading .section-title { margin-bottom: 4px; }
+.social-subtitle {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+.social-updated {
+  flex: 0 0 auto;
+  color: var(--text-light);
+  font-size: 12px;
+}
+.social-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.social-filters::-webkit-scrollbar { display: none; }
+.social-filter {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.social-filter:hover,
+.social-filter:focus-visible {
+  border-color: var(--primary-light);
+  color: var(--primary);
+}
+.social-filter.active {
+  border-color: var(--text);
+  background: var(--text);
+  color: white;
+}
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.social-card {
+  display: flex;
+  min-width: 0;
+  min-height: 188px;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  transition: var(--transition);
+}
+.social-card:hover {
+  border-color: var(--primary-light);
+  box-shadow: 0 8px 22px rgba(74, 55, 40, 0.08);
+  transform: translateY(-2px);
+}
+.social-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.social-platform {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 4px 9px;
+  border-radius: 4px;
+  background: #FFF0E6;
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 700;
+}
+.social-source-type {
+  overflow: hidden;
+  color: var(--text-light);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.social-card h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+.social-card p {
+  display: -webkit-box;
+  overflow: hidden;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.social-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+.social-tag {
+  padding: 3px 7px;
+  border-radius: 4px;
+  background: var(--bg-section);
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+.social-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  color: var(--text-light);
+  font-size: 11px;
+}
+.social-card-footer a {
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 700;
+}
+.social-card-footer a:hover { text-decoration: underline; }
+.social-notice {
+  margin-top: 12px;
+  color: var(--text-light);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.chip-social {
+  border-color: rgba(255, 126, 54, 0.2);
+  background: #FFF0E6;
+  color: var(--primary-dark);
+}
+
 /* ---- Scroll To Top ---- */
 .scroll-top {
   position: fixed;
@@ -922,9 +1215,62 @@ ul { list-style: none; }
   .mobile-menu-btn { display: block; }
   .mobile-menu { display: block; }
 
-  .hero { padding: 40px 16px 32px; }
+  .hero { padding: 30px 16px 24px; }
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    text-align: center;
+  }
+  .hero-meta { justify-content: center; margin-bottom: 14px; }
+  .hero-desc { margin-bottom: 20px; }
+  .search-box { margin: 0 auto; }
+
+  .live-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 0;
+  }
+  .live-card { min-height: 76px; padding: 11px 12px; }
+  .live-value { font-size: 15px; }
+  .live-note { font-size: 11px; }
 
   .section { padding: 24px 16px; }
+
+  .social-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .social-grid {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+  .social-grid::-webkit-scrollbar { display: none; }
+  .social-card {
+    flex: 0 0 min(84vw, 320px);
+    min-height: 194px;
+    scroll-snap-align: start;
+  }
+
+  .quick-entry .section { padding-top: 16px; padding-bottom: 16px; }
+  .quick-grid {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 2px 0 6px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+  .quick-grid::-webkit-scrollbar { display: none; }
+  .quick-btn {
+    flex: 0 0 96px;
+    min-height: 70px;
+    scroll-snap-align: start;
+  }
 
   .results-grid {
     grid-template-columns: 1fr;
@@ -947,17 +1293,40 @@ ul { list-style: none; }
   .season-tabs { gap: 6px; }
   .season-tab { padding: 8px 16px; font-size: 13px; }
 
-  .category-tab { padding: 8px 14px; font-size: 13px; }
-  .category-label { display: none; }
+  .category-tab { padding: 8px 12px; font-size: 13px; }
+  .category-label { display: inline; }
 
-  .district-filter { gap: 6px; }
+  .district-filter {
+    flex-wrap: nowrap;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+  .district-filter::-webkit-scrollbar { display: none; }
   .district-chip { padding: 5px 12px; font-size: 12px; }
+
+  .filter-panel { padding: 4px 12px; margin-bottom: 18px; }
+  .filter-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 10px 0;
+  }
+  .filter-label { padding-top: 0; }
 
   .scroll-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
   .toast { bottom: 70px; }
 }
 
+@media (min-width: 1025px) {
+  .quick-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+    gap: 28px;
+  }
   .results-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1068,6 +1437,7 @@ ul { list-style: none; }
       <nav class="header-nav">
         <a href="#places">📍 推荐去处</a>
         <a href="#highlights">🔥 热门活动</a>
+        <a href="#social-section">社区热议</a>
       </nav>
 
       <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="菜单">☰</button>
@@ -1077,6 +1447,7 @@ ul { list-style: none; }
     <div class="mobile-menu" id="mobile-menu">
       <a href="#places">📍 推荐去处</a>
       <a href="#highlights">🔥 热门活动</a>
+      <a href="#social-section">社区热议</a>
       <a href="#footer">📋 关于我们</a>
     </div>
   </header>
@@ -1084,25 +1455,52 @@ ul { list-style: none; }
   <!-- Hero -->
   <section class="hero" id="hero">
     <div class="hero-content">
-      <div class="hero-season" id="hero-season">
-        <span class="season-dot" id="season-dot"></span>
-        <span id="season-label">当前季节推荐</span>
-      </div>
-      <div class="update-time" id="update-time">
-        <span class="update-icon">🔄</span>
-        <span>数据更新时间：<span id="update-time-text">加载中...</span></span>
+      <div class="hero-copy">
+        <div class="hero-meta">
+          <div class="hero-season" id="hero-season">
+            <span class="season-dot" id="season-dot"></span>
+            <span id="season-label">当前季节推荐</span>
+          </div>
+          <div class="update-time" id="update-time">
+            <span class="update-icon">🔄</span>
+            <span>数据更新时间：<span id="update-time-text">加载中...</span></span>
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          这个<span>周末</span>，带娃去哪玩？
+        </h1>
+        <p class="hero-desc">
+          按季节、区域和类别，精选武汉最适合亲子的商场、游乐场、公园和大型活动
+        </p>
+
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="搜索商场、公园、活动..." aria-label="搜索推荐去处">
+        </div>
       </div>
 
-      <h1 class="hero-title">
-        这个<span>周末</span>，带娃去哪玩？
-      </h1>
-      <p class="hero-desc">
-        按季节、区域和类别，精选武汉最适合亲子的商场、游乐场、公园和大型活动
-      </p>
-
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="search-input" placeholder="搜索商场、公园、活动..." aria-label="搜索推荐去处">
+      <div class="live-panel" aria-label="实时出行信息">
+        <div class="live-card primary">
+          <span class="live-label">武汉实时天气</span>
+          <span class="live-value" id="live-weather">正在获取...</span>
+          <span class="live-note" id="live-advice">按天气推荐室内/户外去处</span>
+        </div>
+        <div class="live-card">
+          <span class="live-label">当前时间</span>
+          <span class="live-value" id="live-clock">--:--</span>
+          <span class="live-note">营业状态自动刷新</span>
+        </div>
+        <div class="live-card">
+          <span class="live-label">现在可去</span>
+          <span class="live-value" id="live-open-now">-- 个</span>
+          <span class="live-note">按营业时间估算</span>
+        </div>
+        <div class="live-card">
+          <span class="live-label">景区封面</span>
+          <span class="live-value" id="live-cover-count">-- 张</span>
+          <span class="live-note">经典景区优先展示照片</span>
+        </div>
       </div>
     </div>
   </section>
@@ -1125,16 +1523,38 @@ ul { list-style: none; }
     </div>
   </section>
 
+  <!-- Reviewed social signals -->
+  <section class="social-section hidden" id="social-section">
+    <div class="section">
+      <div class="social-heading">
+        <div>
+          <h2 class="section-title">大家最近在聊</h2>
+          <p class="social-subtitle">来自公开页面与官方媒体整理的本地亲子出行线索</p>
+        </div>
+        <span class="social-updated" id="social-updated"></span>
+      </div>
+      <div class="social-filters" id="social-filters" aria-label="社交平台筛选"></div>
+      <div class="social-grid" id="social-grid"></div>
+      <p class="social-notice" id="social-notice"></p>
+    </div>
+  </section>
+
   <!-- Places Section -->
   <section class="section" id="places">
-    <!-- Season Tabs -->
-    <div class="season-tabs" id="season-tabs"></div>
-
-    <!-- Category Tabs -->
-    <div class="category-tabs" id="category-tabs"></div>
-
-    <!-- District Filter -->
-    <div class="district-filter" id="district-filter"></div>
+    <div class="filter-panel" aria-label="推荐筛选条件">
+      <div class="filter-row">
+        <span class="filter-label">季节</span>
+        <div class="season-tabs" id="season-tabs"></div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">类型</span>
+        <div class="category-tabs" id="category-tabs"></div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">区域</span>
+        <div class="district-filter" id="district-filter"></div>
+      </div>
+    </div>
 
     <!-- Results -->
     <div class="results-header">
@@ -1218,7 +1638,8 @@ const QUICK_ENTRIES = [
   { id: 'weekend', icon: '🎉', label: '周末推荐', filter: { category: 'all' } },
   { id: 'rainy', icon: '🌧️', label: '雨天推荐', filter: { tags: ['室内', '室内游乐', '室内场馆', '儿童乐园', '科普', '自然科学'] } },
   { id: 'free', icon: '💰', label: '免费活动', filter: { free: true } },
-  { id: 'mall', icon: '🛍️', label: '商场活动', filter: { category: 'mall' } },
+  { id: 'classic', icon: '🏯', label: '经典必去', filter: { category: 'classic' } },
+  { id: 'mall', icon: '🛍️', label: '商圈遛娃', filter: { category: 'mall' } },
   { id: 'park', icon: '🌳', label: '公园活动', filter: { category: 'park' } },
   { id: 'playground', icon: '🎡', label: '游乐场', filter: { category: 'playground' } },
   { id: 'museum', icon: '🏛️', label: '博物馆', filter: { tags: ['展览', '文物', '博物馆', '考古'] } },
@@ -1233,7 +1654,7 @@ const QUICK_ENTRIES = [
  * 运行时优先从 data/spots.json 和 data/events.json 加载
  * 加载失败时使用此默认数据
  */
-const DATA = {
+let DATA = {
   seasons: [
     { id: 'spring', label: '🌸 春季', months: [3, 4, 5] },
     { id: 'summer', label: '🏖️ 夏季', months: [6, 7, 8] },
@@ -1244,6 +1665,7 @@ const DATA = {
   categories: [
     { id: 'all', label: '全部', icon: '📌' },
     { id: 'mall', label: '商场', icon: '🛍️' },
+    { id: 'classic', label: '经典景区', icon: '🏯' },
     { id: 'playground', label: '游乐场', icon: '🎡' },
     { id: 'park', label: '公园', icon: '🌳' },
     { id: 'event', label: '大型活动', icon: '🎪' }
@@ -1254,6 +1676,13 @@ const DATA = {
     '汉阳区', '洪山区', '青山区', '东西湖区',
     '蔡甸区', '江夏区', '黄陂区', '新洲区'
   ],
+
+  socialFeed: {
+    generated_at: '',
+    policy: {},
+    platforms: [],
+    items: []
+  },
 
   // 所有推荐场所
   places: [
@@ -3652,6 +4081,18 @@ async function loadData() {
     console.log('使用默认数据');
   }
   try {
+    const socialRes = await fetch('data/social_feed.json');
+    if (!socialRes.ok) throw new Error(`HTTP ${socialRes.status}`);
+    DATA.socialFeed = await socialRes.json();
+    const socialItems = DATA.socialFeed.items || [];
+    DATA.places = DATA.places.map(place => ({
+      ...place,
+      socialMentions: socialItems.filter(item => item.place_name === place.name).length
+    }));
+  } catch (e) {
+    DATA.socialFeed = { generated_at: '', policy: {}, platforms: [], items: [] };
+  }
+  try {
     const updateRes = await fetch('data/last_update.json');
     const updateData = await updateRes.json();
     document.getElementById('update-time-text').textContent = updateData.last_update || '未知';
@@ -3686,6 +4127,9 @@ const state = {
   searchQuery: '',
   activeTagFilter: null,
   activeFreeFilter: false,
+  activeQuick: null,
+  activeSocialPlatform: 'all',
+  currentWeather: null,
   showFavoritesOnly: false,
   favorites: JSON.parse(localStorage.getItem('wh-favorites') || '[]')
 };
@@ -3714,7 +4158,17 @@ const el = {
   mobileMenu: $('#mobile-menu'),
   toast: $('#toast'),
   loading: $('#loading'),
-  favToggle: $('#fav-toggle')
+  favToggle: $('#fav-toggle'),
+  liveWeather: $('#live-weather'),
+  liveAdvice: $('#live-advice'),
+  liveClock: $('#live-clock'),
+  liveOpenNow: $('#live-open-now'),
+  liveCoverCount: $('#live-cover-count'),
+  socialSection: $('#social-section'),
+  socialFilters: $('#social-filters'),
+  socialGrid: $('#social-grid'),
+  socialUpdated: $('#social-updated'),
+  socialNotice: $('#social-notice')
 };
 
 // ===== 初始化 =====
@@ -3723,10 +4177,13 @@ function init() {
   renderCategoryTabs();
   renderDistrictFilter();
   renderHighlights();
+  renderSocialFilters();
+  renderSocialFeed();
   setupEventListeners();
   filterAndRender();
   setupScrollAnimations();
   updateSeasonDot();
+  setupRealtimePanel();
   setTimeout(() => {
     el.loading?.classList.add('hidden');
   }, 500);
@@ -3765,6 +4222,97 @@ function renderDistrictFilter() {
   `;
 }
 
+// ===== 社交平台公开信息 =====
+function escapeHtml(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function socialPlatformLabel(platform) {
+  return {
+    xiaohongshu: '小红书',
+    douyin: '抖音',
+    weibo: '微博'
+  }[platform] || platform;
+}
+
+function socialSourceTypeLabel(sourceType) {
+  return {
+    public_page: '公开内容页',
+    public_search_page: '公开搜索页',
+    official_media_summary: '官方媒体整理',
+    official_api: '官方接口'
+  }[sourceType] || '公开来源';
+}
+
+function formatSocialDate(value, includeTime = false) {
+  if (!value) return '';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleDateString('zh-CN', includeTime
+    ? { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }
+    : { year: 'numeric', month: 'numeric', day: 'numeric' });
+}
+
+function renderSocialFilters() {
+  const items = DATA.socialFeed.items || [];
+  if (!items.length || !el.socialFilters) return;
+  const platforms = [...new Set(items.map(item => item.platform))];
+  const filters = ['all', ...platforms];
+  el.socialFilters.innerHTML = filters.map(platform => {
+    const label = platform === 'all' ? '全部平台' : socialPlatformLabel(platform);
+    const count = platform === 'all'
+      ? items.length
+      : items.filter(item => item.platform === platform).length;
+    return `
+      <button class="social-filter ${state.activeSocialPlatform === platform ? 'active' : ''}"
+              data-social-platform="${escapeHtml(platform)}">
+        ${escapeHtml(label)} ${count}
+      </button>`;
+  }).join('');
+}
+
+function renderSocialFeed() {
+  const allItems = DATA.socialFeed.items || [];
+  if (!allItems.length || !el.socialSection || !el.socialGrid) {
+    el.socialSection?.classList.add('hidden');
+    return;
+  }
+
+  const items = state.activeSocialPlatform === 'all'
+    ? allItems
+    : allItems.filter(item => item.platform === state.activeSocialPlatform);
+  el.socialSection.classList.remove('hidden');
+  el.socialUpdated.textContent = DATA.socialFeed.generated_at
+    ? `聚合于 ${formatSocialDate(DATA.socialFeed.generated_at, true)}`
+    : '';
+  el.socialNotice.textContent = DATA.socialFeed.policy?.display_notice ||
+    '社交内容仅作出行灵感，开放时间、票价和活动安排请以官方渠道为准。';
+
+  el.socialGrid.innerHTML = items.map(item => `
+    <article class="social-card">
+      <div class="social-card-top">
+        <span class="social-platform">${escapeHtml(socialPlatformLabel(item.platform))}</span>
+        <span class="social-source-type">${escapeHtml(socialSourceTypeLabel(item.source_type))}</span>
+      </div>
+      <h3>${escapeHtml(item.title)}</h3>
+      <p>${escapeHtml(item.summary)}</p>
+      <div class="social-tags">
+        ${(item.tags || []).slice(0, 3).map(tag => `<span class="social-tag">${escapeHtml(tag)}</span>`).join('')}
+      </div>
+      <div class="social-card-footer">
+        <span>${escapeHtml(item.author || '公开来源')} · ${escapeHtml(formatSocialDate(item.published_at))}</span>
+        <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer"
+           aria-label="查看${escapeHtml(item.title)}原文">查看原文</a>
+      </div>
+    </article>
+  `).join('');
+}
+
 // ===== 搜索 =====
 function setupSearch() {
   el.searchInput.addEventListener('input', (e) => {
@@ -3781,6 +4329,12 @@ function filterAndRender() {
   el.resultsCount.textContent = `找到 ${results.length} 个推荐去处`;
 }
 
+function isClassicPlace(place) {
+  return place.classic === true ||
+    place.coverLabel === '经典景区' ||
+    (place.tags || []).some(t => ['经典景区', '城市地标', '武汉必去', '东湖', '黄鹤楼'].includes(t));
+}
+
 function filterPlaces() {
   let places = [...DATA.places];
 
@@ -3791,7 +4345,11 @@ function filterPlaces() {
 
   // 按分类筛选
   if (state.activeCategory !== 'all') {
-    places = places.filter(p => p.category === state.activeCategory);
+    if (state.activeCategory === 'classic') {
+      places = places.filter(isClassicPlace);
+    } else {
+      places = places.filter(p => p.category === state.activeCategory);
+    }
   }
 
   // 按区域筛选
@@ -3829,8 +4387,12 @@ function filterPlaces() {
     places = places.filter(p => state.favorites.includes(p.id));
   }
 
-  // 按评分排序
-  places.sort((a, b) => b.rating - a.rating);
+  // 按经典景区和评分排序
+  places.sort((a, b) => {
+    const classicDelta = Number(isClassicPlace(b)) - Number(isClassicPlace(a));
+    if (state.activeCategory === 'classic' && classicDelta !== 0) return classicDelta;
+    return b.rating - a.rating;
+  });
 
   return places;
 }
@@ -3930,6 +4492,52 @@ function placeImage(place) {
   )}`;
 }
 
+function getOpenStatus(place, now = new Date()) {
+  const hours = place.hours || '';
+  const dayLabel = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][now.getDay()];
+
+  if (hours.includes(dayLabel) && hours.includes('闭馆')) {
+    return { label: '今日闭馆', isOpen: false, known: true };
+  }
+  if (hours.includes('全天')) {
+    return { label: '全天开放', isOpen: true, known: true };
+  }
+
+  const match = hours.match(/(\d{1,2}):(\d{2})\s*[-–—]\s*(\d{1,2}):(\d{2})/);
+  if (!match) return { label: '出行前核实', isOpen: false, known: false };
+
+  const [, sh, sm, eh, em] = match.map(Number);
+  const current = now.getHours() * 60 + now.getMinutes();
+  const start = sh * 60 + sm;
+  let end = eh * 60 + em;
+  let open = false;
+
+  if (end < start) {
+    end += 24 * 60;
+    open = current >= start || current <= (end - 24 * 60);
+  } else {
+    open = current >= start && current <= end;
+  }
+
+  return { label: open ? '营业中' : '已休息', isOpen: open, known: true };
+}
+
+function getWeatherFit(place) {
+  const weather = state.currentWeather;
+  if (!weather) return { label: '实时天气', tone: 'live' };
+  const isRainy = weather.code >= 51 && weather.code <= 99;
+  const isHot = weather.temp >= 34;
+  if (isRainy && place.indoor) return { label: '雨天友好', tone: 'good' };
+  if (isRainy && !place.indoor) return { label: '雨天谨慎', tone: 'warn' };
+  if (isHot && place.indoor) return { label: '高温友好', tone: 'good' };
+  if (isHot && !place.indoor) return { label: '注意防晒', tone: 'warn' };
+  return { label: place.indoor ? '室内稳妥' : '户外适宜', tone: 'good' };
+}
+
+function coverImage(place) {
+  return place.cover || place.image || placeImage(place);
+}
+
 // ===== 卡片模板 =====
 function createCard(place) {
   const isFav = state.favorites.includes(place.id);
@@ -3940,11 +4548,15 @@ function createCard(place) {
 
   const hasDeals = place.deals && place.deals.length > 0;
   const hasEvents = place.events && place.events.length > 0;
+  const openStatus = getOpenStatus(place);
+  const weatherFit = getWeatherFit(place);
+  const classic = isClassicPlace(place);
+  const coverCaption = classic ? (place.coverNote || '经典景区封面照') : '';
 
   return `
     <article class="place-card" data-id="${place.id}" data-animate>
       <div class="card-image">
-        <img src="${place.image || placeImage(place)}" alt="${place.name}" loading="lazy" onerror="this.onerror=null;this.src='${placeImage(place)}'">
+        <img src="${coverImage(place)}" alt="${place.name}" loading="lazy" onerror="this.onerror=null;this.src='${placeImage(place)}'">
         <div class="card-rating">
           <span class="star">★</span> ${place.rating}
         </div>
@@ -3952,7 +4564,8 @@ function createCard(place) {
           ${isFav ? '❤️' : '🤍'}
         </button>
         ${hasDeals ? '<span class="badge-deal">有优惠</span>' : ''}
-        ${place.rating >= 4.6 ? '<span class="badge-top">👑 家长推荐</span>' : ''}
+        ${classic ? '<span class="badge-classic">经典景区</span>' : (place.rating >= 4.6 ? '<span class="badge-top">👑 家长推荐</span>' : '')}
+        ${coverCaption ? `<span class="cover-caption">${coverCaption}</span>` : ''}
       </div>
       <div class="card-body">
         <div class="card-tags">
@@ -3964,6 +4577,13 @@ function createCard(place) {
         <p class="card-desc">${place.description}</p>
 
         <div class="card-practical">
+          <span class="practical-chip ${openStatus.isOpen ? 'chip-open' : 'chip-closed'}">
+            ${openStatus.label}
+          </span>
+          <span class="practical-chip ${weatherFit.tone === 'warn' ? 'chip-weather-warn' : weatherFit.tone === 'good' ? 'chip-weather-good' : 'chip-live'}">
+            ${weatherFit.label}
+          </span>
+          ${place.socialMentions ? `<span class="practical-chip chip-social">平台提及 ${place.socialMentions}</span>` : ''}
           <span class="practical-chip chip-age">👶 ${place.age_min}-${place.age_max}岁</span>
           <span class="practical-chip ${place.indoor ? 'chip-indoor' : 'chip-outdoor'}">
             ${place.indoor ? '🏠 室内' : '🌳 户外'}
@@ -4130,6 +4750,15 @@ function showToast(msg) {
 
 // ===== 事件绑定 =====
 function setupEventListeners() {
+  el.socialFilters?.addEventListener('click', (e) => {
+    const filter = e.target.closest('.social-filter');
+    if (!filter) return;
+    state.activeSocialPlatform = filter.dataset.socialPlatform;
+    $$('.social-filter', el.socialFilters).forEach(button => button.classList.remove('active'));
+    filter.classList.add('active');
+    renderSocialFeed();
+  });
+
   // 季节切换
   el.seasonTabs.addEventListener('click', (e) => {
     const tab = e.target.closest('.season-tab');
@@ -4137,6 +4766,8 @@ function setupEventListeners() {
     $$('.season-tab', el.seasonTabs).forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     state.currentSeason = tab.dataset.season;
+    state.activeQuick = null;
+    updateQuickActiveState();
     renderHighlights();
     filterAndRender();
   });
@@ -4148,6 +4779,10 @@ function setupEventListeners() {
     $$('.category-tab', el.categoryTabs).forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     state.activeCategory = tab.dataset.category;
+    state.activeTagFilter = null;
+    state.activeFreeFilter = false;
+    state.activeQuick = null;
+    updateQuickActiveState();
     filterAndRender();
   });
 
@@ -4204,6 +4839,7 @@ function setupEventListeners() {
     const entry = QUICK_ENTRIES.find(q => q.id === btn.dataset.quick);
     if (!entry) return;
     const { filter } = entry;
+    state.activeQuick = entry.id;
     // 重置搜索
     state.searchQuery = '';
     el.searchInput.value = '';
@@ -4212,6 +4848,11 @@ function setupEventListeners() {
       state.activeCategory = filter.category;
       $$('.category-tab').forEach(t => t.classList.remove('active'));
       const tab = $(`.category-tab[data-category="${filter.category}"]`);
+      if (tab) tab.classList.add('active');
+    } else {
+      state.activeCategory = 'all';
+      $$('.category-tab').forEach(t => t.classList.remove('active'));
+      const tab = $('.category-tab[data-category="all"]');
       if (tab) tab.classList.add('active');
     }
     // 按标签搜索（每个标签独立匹配，OR 逻辑）
@@ -4226,8 +4867,10 @@ function setupEventListeners() {
     } else {
       state.activeFreeFilter = false;
     }
+    updateQuickActiveState();
     filterAndRender();
-    document.getElementById('places').scrollIntoView({ behavior: 'smooth' });
+    const targetTop = document.getElementById('places').getBoundingClientRect().top + window.scrollY - 72;
+    window.scrollTo({ top: targetTop, behavior: 'smooth' });
   });
 
   // 回到顶部
@@ -4288,6 +4931,73 @@ function updateFavBtnLabel() {
 function updateSeasonDot() {
   const dot = document.getElementById('season-dot');
   if (dot) dot.className = 'season-dot ' + state.currentSeason;
+}
+
+function updateQuickActiveState() {
+  $$('.quick-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.quick === state.activeQuick);
+  });
+}
+
+function setupRealtimePanel() {
+  updateRealtimePanel();
+  fetchRealtimeWeather();
+  setInterval(updateRealtimePanel, 60 * 1000);
+  setInterval(() => {
+    updateRealtimePanel();
+    filterAndRender();
+  }, 5 * 60 * 1000);
+}
+
+function updateRealtimePanel() {
+  const now = new Date();
+  if (el.liveClock) {
+    el.liveClock.textContent = now.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  const normalPlaces = DATA.places.filter(p => p.category !== 'event');
+  const openNow = normalPlaces.filter(p => getOpenStatus(p, now).isOpen).length;
+  const classicCovers = normalPlaces.filter(p => isClassicPlace(p) && (p.cover || p.image)).length;
+
+  if (el.liveOpenNow) el.liveOpenNow.textContent = `${openNow} 个`;
+  if (el.liveCoverCount) el.liveCoverCount.textContent = `${classicCovers} 张`;
+}
+
+function weatherLabel(code) {
+  if (code === 0) return '晴';
+  if (code <= 3) return '多云';
+  if (code <= 48) return '有雾';
+  if (code <= 67) return '有雨';
+  if (code <= 77) return '雨雪';
+  if (code <= 82) return '阵雨';
+  if (code <= 99) return '雷雨';
+  return '实时天气';
+}
+
+async function fetchRealtimeWeather() {
+  if (!el.liveWeather) return;
+  try {
+    const url = 'https://api.open-meteo.com/v1/forecast?latitude=30.5928&longitude=114.3055&current=temperature_2m,weather_code&timezone=Asia%2FShanghai';
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('weather request failed');
+    const data = await res.json();
+    const current = data.current || {};
+    state.currentWeather = {
+      temp: Math.round(current.temperature_2m),
+      code: Number(current.weather_code || 0)
+    };
+    const label = weatherLabel(state.currentWeather.code);
+    el.liveWeather.textContent = `${label} ${state.currentWeather.temp}°C`;
+    if (el.liveAdvice) {
+      const isRainy = state.currentWeather.code >= 51 && state.currentWeather.code <= 99;
+      const isHot = state.currentWeather.temp >= 34;
+      el.liveAdvice.textContent = isRainy ? '优先看室内场馆和商场' : isHot ? '优先看室内或傍晚户外' : '户外和经典景区都适合';
+    }
+    filterAndRender();
+  } catch (e) {
+    el.liveWeather.textContent = '天气暂不可用';
+    if (el.liveAdvice) el.liveAdvice.textContent = '仍可查看营业状态和筛选推荐';
+  }
 }
 
 // ===== 滚动动画 =====
