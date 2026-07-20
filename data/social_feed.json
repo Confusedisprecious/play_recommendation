@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T09:16:38+00:00",
+  "generated_at": "2026-07-20T13:46:30+00:00",
   "policy": {
     "collection_mode": "official_api_or_reviewed_public_url",
     "login_automation": false,
@@ -46,7 +46,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-20T09:16:38+00:00"
+      "collected_at": "2026-07-20T13:46:30+00:00"
     },
     {
       "id": "douyin-jiefang-park-202603",
@@ -66,7 +66,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-20T09:16:38+00:00"
+      "collected_at": "2026-07-20T13:46:30+00:00"
     },
     {
       "id": "douyin-east-lake-sakura-202602",
@@ -86,7 +86,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-20T09:16:38+00:00"
+      "collected_at": "2026-07-20T13:46:30+00:00"
     },
     {
       "id": "douyin-anshan-wetland-202601",
@@ -106,7 +106,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-20T09:16:38+00:00"
+      "collected_at": "2026-07-20T13:46:30+00:00"
     },
     {
       "id": "xiaohongshu-family-hike-2025",
@@ -126,7 +126,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-20T09:16:38+00:00"
+      "collected_at": "2026-07-20T13:46:30+00:00"
     },
     {
       "id": "xiaohongshu-wuhan-family-guide",
@@ -146,7 +146,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-20T09:16:38+00:00"
+      "collected_at": "2026-07-20T13:46:30+00:00"
     }
   ]
 }
