@@ -28,8 +28,8 @@
   --border: #F0E6DC;
   --shadow: 0 2px 12px rgba(255, 126, 54, 0.1);
   --shadow-hover: 0 8px 30px rgba(255, 126, 54, 0.18);
-  --radius: 16px;
-  --radius-sm: 10px;
+  --radius: 8px;
+  --radius-sm: 8px;
   --radius-xs: 6px;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --max-width: 1200px;
@@ -189,21 +189,13 @@ ul { list-style: none; }
 .hero {
   margin-top: var(--header-height);
   padding: 48px 20px 40px;
-  background: linear-gradient(135deg, #FFF5EB 0%, #FFE8D6 50%, #FFEDE0 100%);
+  background: #fff3e8;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 .hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 30% 40%, rgba(255, 126, 54, 0.06) 0%, transparent 50%),
-              radial-gradient(circle at 70% 60%, rgba(78, 205, 196, 0.06) 0%, transparent 50%);
-  animation: heroFloat 20s ease-in-out infinite;
+  content: none;
 }
 @keyframes heroFloat {
   0%, 100% { transform: translate(0, 0); }
@@ -1105,6 +1097,421 @@ ul { list-style: none; }
   font-size: 12px;
   line-height: 1.5;
 }
+
+/* ---- Media-led discovery ---- */
+.hero-photo {
+  grid-column: 1 / -1;
+  position: relative;
+  min-height: 156px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #223c3a;
+  box-shadow: var(--shadow);
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 156px;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+.hero-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(20, 32, 31, 0.82), rgba(20, 32, 31, 0.14));
+}
+.hero-photo-copy {
+  position: relative;
+  z-index: 1;
+  width: min(520px, 75%);
+  padding: 24px;
+  color: #fff;
+}
+.hero-photo-copy span {
+  display: block;
+  margin-bottom: 4px;
+  color: #baf4eb;
+  font-size: 12px;
+  font-weight: 700;
+}
+.hero-photo-copy strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 22px;
+}
+.hero-photo-copy p {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 13px;
+}
+
+.media-section {
+  padding: 48px 0;
+  background: #f3f8f7;
+}
+.section-heading-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.section-heading-row .section-title { margin-bottom: 4px; }
+.section-kicker {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+.source-pill {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  border: 1px solid #cfe3df;
+  border-radius: 999px;
+  color: #22675f;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+.media-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 12px;
+  min-height: 470px;
+}
+.media-feature,
+.media-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #213936;
+  color: #fff;
+}
+.media-feature img,
+.media-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 200ms ease;
+}
+.media-feature:hover img,
+.media-tile:hover img { transform: scale(1.025); }
+.media-feature::after,
+.media-tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(15, 25, 24, 0.88));
+  pointer-events: none;
+}
+.media-feature-content,
+.media-tile-content {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px;
+}
+.media-feature-content h3 {
+  margin: 4px 0 6px;
+  font-size: 28px;
+}
+.media-feature-content p {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 14px;
+}
+.media-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: #baf4eb;
+}
+.media-source {
+  display: inline-flex;
+  margin-top: 12px;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.media-rail {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.media-tile-content { padding: 16px; }
+.media-tile-content strong {
+  display: block;
+  font-size: 15px;
+}
+.media-tile-content span {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.78);
+}
+.media-play {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  left: 14px;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(20, 32, 31, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.social-card-media {
+  display: block;
+  position: relative;
+  height: 154px;
+  margin: -20px -20px 16px;
+  overflow: hidden;
+  background: #e6efed;
+}
+.social-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- Result controls ---- */
+.results-actions,
+.view-controls,
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.results-actions { flex-wrap: wrap; justify-content: flex-end; }
+.sort-control {
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.sort-btn {
+  min-height: 34px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+}
+.sort-btn.active {
+  color: #fff;
+  background: #2f766f;
+}
+.view-btn {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  background: #fff;
+}
+.view-btn.active {
+  color: var(--primary-dark);
+  border-color: #f4b78f;
+  background: #fff3e9;
+}
+.results-grid.view-list {
+  grid-template-columns: 1fr;
+}
+.results-grid.view-list .place-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 34%) minmax(0, 1fr);
+}
+.results-grid.view-list .card-image {
+  height: 100%;
+  min-height: 280px;
+}
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.plan-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 7px 12px;
+  border: 1px solid #cfe3df;
+  border-radius: var(--radius);
+  color: #22675f;
+  background: #f4faf8;
+  font-size: 12px;
+  font-weight: 700;
+}
+.plan-btn.active {
+  color: #fff;
+  border-color: #2f766f;
+  background: #2f766f;
+}
+
+/* ---- Trip planner drawer ---- */
+.trip-toggle {
+  position: fixed;
+  right: 24px;
+  bottom: 82px;
+  z-index: 92;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 9px 14px;
+  border-radius: var(--radius);
+  color: #fff;
+  background: #2f766f;
+  box-shadow: 0 8px 24px rgba(47, 118, 111, 0.26);
+  font-weight: 700;
+}
+.trip-count {
+  display: grid;
+  min-width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 50%;
+  color: #2f766f;
+  background: #fff;
+  font-size: 12px;
+}
+.trip-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(29, 38, 37, 0.42);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+.trip-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.trip-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(430px, 100%);
+  height: 100%;
+  padding: 24px;
+  overflow-y: auto;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 200ms ease;
+}
+.trip-overlay.open .trip-drawer { transform: translateX(0); }
+.trip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.trip-header h2 { font-size: 22px; }
+.icon-btn {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  background: var(--bg-section);
+  font-size: 20px;
+}
+.trip-summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+.trip-list {
+  display: grid;
+  gap: 8px;
+}
+.trip-item {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 34px;
+  gap: 12px;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.trip-item img {
+  width: 64px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.trip-item strong,
+.trip-item span { display: block; }
+.trip-item span {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+.trip-empty {
+  padding: 48px 12px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+.trip-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 20px;
+}
+.trip-action {
+  min-height: 42px;
+  padding: 9px 12px;
+  border-radius: var(--radius);
+  color: #fff;
+  background: var(--primary);
+  font-weight: 700;
+}
+.trip-action.secondary {
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  background: #fff;
+}
+.load-more-wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+.load-more {
+  min-width: 180px;
+  min-height: 42px;
+  padding: 9px 18px;
+  border: 1px solid #efb18a;
+  border-radius: var(--radius);
+  color: var(--primary-dark);
+  background: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+.load-more:hover {
+  color: #fff;
+  background: var(--primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 .chip-social {
   border-color: rgba(255, 126, 54, 0.2);
   background: #FFF0E6;
@@ -1209,6 +1616,57 @@ ul { list-style: none; }
 
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
+  .hero-photo { min-height: 180px; }
+  .hero-photo-copy { width: 100%; padding: 18px; }
+  .hero-photo-copy strong { font-size: 19px; }
+  .media-section { padding: 36px 0; }
+  .section-heading-row { align-items: flex-start; }
+  .source-pill { display: none; }
+  .media-layout {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .media-feature { min-height: 360px; }
+  .media-rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+  .media-tile { min-height: 180px; }
+  .media-feature-content h3 { font-size: 23px; }
+  .results-header { align-items: flex-start; gap: 12px; }
+  .results-actions { justify-content: flex-start; }
+  .sort-control { width: 100%; overflow-x: auto; }
+  .sort-btn { flex: 1 0 auto; }
+  .results-grid.view-list .place-card { display: block; }
+  .results-grid.view-list .card-image { min-height: 210px; height: 210px; }
+  .trip-toggle { right: 16px; bottom: 72px; }
+  .trip-toggle {
+    width: 52px;
+    height: 52px;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+  }
+  .trip-toggle > span:first-child {
+    width: 20px;
+    overflow: hidden;
+    color: transparent;
+    white-space: nowrap;
+  }
+  .trip-toggle > span:first-child::before {
+    content: '＋';
+    color: #fff;
+    font-size: 24px;
+  }
+  .trip-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    min-width: 20px;
+    height: 20px;
+    border: 2px solid #2f766f;
+  }
+  .trip-drawer { padding: 20px 16px; }
   :root { --header-height: 56px; }
 
   .header-nav { display: none; }
@@ -1436,6 +1894,7 @@ ul { list-style: none; }
 
       <nav class="header-nav">
         <a href="#places">📍 推荐去处</a>
+        <a href="#media">影像灵感</a>
         <a href="#highlights">🔥 热门活动</a>
         <a href="#social-section">社区热议</a>
       </nav>
@@ -1446,6 +1905,7 @@ ul { list-style: none; }
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
       <a href="#places">📍 推荐去处</a>
+      <a href="#media">影像灵感</a>
       <a href="#highlights">🔥 热门活动</a>
       <a href="#social-section">社区热议</a>
       <a href="#footer">📋 关于我们</a>
@@ -1501,6 +1961,14 @@ ul { list-style: none; }
           <span class="live-value" id="live-cover-count">-- 张</span>
           <span class="live-note">经典景区优先展示照片</span>
         </div>
+        <div class="hero-photo" id="hero-photo">
+          <img id="hero-photo-image" src="images/media/east-lake.jpg" alt="武汉东湖实景">
+          <div class="hero-photo-copy">
+            <span id="hero-photo-eyebrow">本周影像目的地</span>
+            <strong id="hero-photo-title">东湖 · 湖岸与绿道</strong>
+            <p id="hero-photo-caption">从实景开始选路线，再结合天气、营业状态和家长口碑做决定。</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1509,6 +1977,23 @@ ul { list-style: none; }
   <section class="quick-entry">
     <div class="section">
       <div class="quick-grid" id="quick-grid"></div>
+    </div>
+  </section>
+
+  <!-- Open-license photos and reviewed video links -->
+  <section class="media-section" id="media">
+    <div class="section">
+      <div class="section-heading-row">
+        <div>
+          <h2 class="section-title">武汉游玩影像</h2>
+          <p class="section-kicker">开放许可实景照片与已核验的公开视频线索</p>
+        </div>
+        <span class="source-pill">照片来源可追溯</span>
+      </div>
+      <div class="media-layout">
+        <a class="media-feature" id="media-feature" href="#places"></a>
+        <div class="media-rail" id="media-rail"></div>
+      </div>
     </div>
   </section>
 
@@ -1562,10 +2047,25 @@ ul { list-style: none; }
         📍 推荐去处
         <span class="count" id="results-count"></span>
       </h2>
-      <button class="fav-toggle" id="fav-toggle">♡ 收藏</button>
+      <div class="results-actions">
+        <div class="sort-control" aria-label="结果排序">
+          <button class="sort-btn active" data-sort="smart">智能推荐</button>
+          <button class="sort-btn" data-sort="rating">评分优先</button>
+          <button class="sort-btn" data-sort="open">现在可去</button>
+          <button class="sort-btn" data-sort="free">免费优先</button>
+        </div>
+        <div class="view-controls" aria-label="结果视图">
+          <button class="view-btn active" data-view="grid" aria-label="网格视图" title="网格视图">▦</button>
+          <button class="view-btn" data-view="list" aria-label="列表视图" title="列表视图">☷</button>
+        </div>
+        <button class="fav-toggle" id="fav-toggle">♡ 收藏</button>
+      </div>
     </div>
 
     <div class="results-grid" id="results-grid"></div>
+    <div class="load-more-wrap" id="load-more-wrap">
+      <button class="load-more" id="load-more">加载更多</button>
+    </div>
 
     <!-- Empty State -->
     <div class="empty-state hidden" id="empty-state">
@@ -1574,6 +2074,32 @@ ul { list-style: none; }
       <p>试试调整筛选条件或搜索其他关键词</p>
     </div>
   </section>
+
+  <button class="trip-toggle" id="trip-toggle" aria-label="打开我的行程">
+    <span>＋ 我的行程</span>
+    <span class="trip-count" id="trip-count">0</span>
+  </button>
+
+  <div class="trip-overlay" id="trip-overlay" aria-hidden="true">
+    <aside class="trip-drawer" role="dialog" aria-modal="true" aria-labelledby="trip-title">
+      <div class="trip-header">
+        <div>
+          <span class="section-kicker">本地保存 · 随时调整</span>
+          <h2 id="trip-title">我的周末行程</h2>
+        </div>
+        <button class="icon-btn" id="trip-close" aria-label="关闭行程">×</button>
+      </div>
+      <div class="trip-summary">
+        <span id="trip-summary-count">还没有加入地点</span>
+        <span id="trip-summary-duration">约 0 小时</span>
+      </div>
+      <div class="trip-list" id="trip-list"></div>
+      <div class="trip-footer">
+        <button class="trip-action secondary" id="trip-clear">清空</button>
+        <button class="trip-action" id="trip-copy">复制行程</button>
+      </div>
+    </aside>
+  </div>
 
   <!-- Scroll to Top -->
   <button class="scroll-top" id="scroll-top" aria-label="回到顶部">↑</button>
@@ -1681,6 +2207,11 @@ let DATA = {
     generated_at: '',
     policy: {},
     platforms: [],
+    items: []
+  },
+  mediaGallery: {
+    generated_from: '',
+    usage_notice: '',
     items: []
   },
 
@@ -4093,6 +4624,13 @@ async function loadData() {
     DATA.socialFeed = { generated_at: '', policy: {}, platforms: [], items: [] };
   }
   try {
+    const mediaRes = await fetch('data/media_gallery.json');
+    if (!mediaRes.ok) throw new Error(`HTTP ${mediaRes.status}`);
+    DATA.mediaGallery = await mediaRes.json();
+  } catch (e) {
+    DATA.mediaGallery = { generated_from: '', usage_notice: '', items: [] };
+  }
+  try {
     const updateRes = await fetch('data/last_update.json');
     const updateData = await updateRes.json();
     document.getElementById('update-time-text').textContent = updateData.last_update || '未知';
@@ -4129,9 +4667,13 @@ const state = {
   activeFreeFilter: false,
   activeQuick: null,
   activeSocialPlatform: 'all',
+  sortMode: 'smart',
+  viewMode: localStorage.getItem('wh-view-mode') || 'grid',
+  visibleLimit: 18,
   currentWeather: null,
   showFavoritesOnly: false,
-  favorites: JSON.parse(localStorage.getItem('wh-favorites') || '[]')
+  favorites: JSON.parse(localStorage.getItem('wh-favorites') || '[]'),
+  tripPlan: JSON.parse(localStorage.getItem('wh-trip-plan') || '[]')
 };
 
 // ===== DOM 引用 =====
@@ -4168,7 +4710,17 @@ const el = {
   socialFilters: $('#social-filters'),
   socialGrid: $('#social-grid'),
   socialUpdated: $('#social-updated'),
-  socialNotice: $('#social-notice')
+  socialNotice: $('#social-notice'),
+  mediaFeature: $('#media-feature'),
+  mediaRail: $('#media-rail'),
+  tripToggle: $('#trip-toggle'),
+  tripCount: $('#trip-count'),
+  tripOverlay: $('#trip-overlay'),
+  tripList: $('#trip-list'),
+  tripSummaryCount: $('#trip-summary-count'),
+  tripSummaryDuration: $('#trip-summary-duration'),
+  loadMore: $('#load-more'),
+  loadMoreWrap: $('#load-more-wrap')
 };
 
 // ===== 初始化 =====
@@ -4177,8 +4729,11 @@ function init() {
   renderCategoryTabs();
   renderDistrictFilter();
   renderHighlights();
+  renderMediaGallery();
   renderSocialFilters();
   renderSocialFeed();
+  renderTripPlan();
+  applyViewMode();
   setupEventListeners();
   filterAndRender();
   setupScrollAnimations();
@@ -4220,6 +4775,91 @@ function renderDistrictFilter() {
               data-district="${d}">${d}</button>
     `).join('')}
   `;
+}
+
+// ===== 开放许可照片与视频线索 =====
+function mediaForPlace(place) {
+  if (!place) return null;
+  return (DATA.mediaGallery.items || []).find(item => Number(item.place_id) === Number(place.id)) || null;
+}
+
+function placeForSocial(item) {
+  const target = String(item.place_name || '').replace(/景区$/, '');
+  if (!target) return null;
+  return DATA.places.find(place => {
+    const name = String(place.name || '').replace(/景区$/, '');
+    return name.includes(target) || target.includes(name);
+  }) || null;
+}
+
+function socialPoster(item, index = 0) {
+  if (item.image) return item.image;
+  const place = placeForSocial(item);
+  const media = mediaForPlace(place);
+  const cityImage = (DATA.mediaGallery.items || []).find(mediaItem => mediaItem.slug === 'wuhan-skyline');
+  return media?.image || place?.cover || place?.image || cityImage?.image || '';
+}
+
+function renderMediaGallery() {
+  const gallery = DATA.mediaGallery.items || [];
+  if (!gallery.length || !el.mediaFeature || !el.mediaRail) return;
+
+  const feature = gallery.find(item => item.slug === 'east-lake') || gallery[0];
+  const featureHref = feature.place_id ? `#place-${feature.place_id}` : feature.source_url;
+  el.mediaFeature.href = featureHref;
+  el.mediaFeature.innerHTML = `
+    <img src="${escapeHtml(feature.image)}" alt="${escapeHtml(feature.name)}实景" loading="eager">
+    <div class="media-feature-content">
+      <span class="media-eyebrow">${escapeHtml(feature.district)} · 今日影像目的地</span>
+      <h3>${escapeHtml(feature.name)}</h3>
+      <p>${escapeHtml(feature.caption)}</p>
+      <span class="media-source">查看地点与路线</span>
+    </div>`;
+
+  const heroImage = document.getElementById('hero-photo-image');
+  if (heroImage) {
+    heroImage.src = feature.image;
+    heroImage.alt = `${feature.name}实景`;
+  }
+  const heroTitle = document.getElementById('hero-photo-title');
+  const heroCaption = document.getElementById('hero-photo-caption');
+  if (heroTitle) heroTitle.textContent = `${feature.name} · ${feature.district}`;
+  if (heroCaption) heroCaption.textContent = feature.caption;
+
+  const videoItems = (DATA.socialFeed.items || [])
+    .filter(item => item.platform === 'douyin' && item.url)
+    .slice(0, 2)
+    .map((item, index) => ({
+      name: item.place_name || item.title,
+      caption: item.title,
+      image: socialPoster(item, index),
+      href: item.url,
+      meta: `视频 · ${socialPlatformLabel(item.platform)}`,
+      video: true
+    }));
+  const photoItems = gallery
+    .filter(item => item.slug !== feature.slug)
+    .slice(0, Math.max(2, 4 - videoItems.length))
+    .map(item => ({
+      name: item.name,
+      caption: item.caption,
+      image: item.image,
+      href: item.place_id ? `#place-${item.place_id}` : item.source_url,
+      meta: `${item.kind === 'photo' ? '照片' : '影像'} · ${item.license}`,
+      video: false
+    }));
+  const railItems = [...videoItems, ...photoItems].slice(0, 4);
+
+  el.mediaRail.innerHTML = railItems.map(item => `
+    <a class="media-tile" href="${escapeHtml(item.href)}"
+       ${item.video ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+      <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" loading="lazy">
+      ${item.video ? '<span class="media-play" aria-hidden="true">▶</span>' : ''}
+      <div class="media-tile-content">
+        <strong>${escapeHtml(item.name)}</strong>
+        <span>${escapeHtml(item.meta)}</span>
+      </div>
+    </a>`).join('');
 }
 
 // ===== 社交平台公开信息 =====
@@ -4293,8 +4933,13 @@ function renderSocialFeed() {
   el.socialNotice.textContent = DATA.socialFeed.policy?.display_notice ||
     '社交内容仅作出行灵感，开放时间、票价和活动安排请以官方渠道为准。';
 
-  el.socialGrid.innerHTML = items.map(item => `
+  el.socialGrid.innerHTML = items.map((item, index) => `
     <article class="social-card">
+      <a class="social-card-media" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer"
+         aria-label="查看${escapeHtml(item.title)}原文">
+        <img src="${escapeHtml(socialPoster(item, index))}" alt="${escapeHtml(item.place_name || item.title)}" loading="lazy">
+        ${item.platform === 'douyin' ? '<span class="media-play" aria-hidden="true">▶</span>' : ''}
+      </a>
       <div class="social-card-top">
         <span class="social-platform">${escapeHtml(socialPlatformLabel(item.platform))}</span>
         <span class="social-source-type">${escapeHtml(socialSourceTypeLabel(item.source_type))}</span>
@@ -4324,9 +4969,14 @@ function setupSearch() {
 // ===== 筛选与渲染 =====
 function filterAndRender() {
   const results = filterPlaces();
-  renderResults(results);
+  renderResults(results.slice(0, state.visibleLimit));
   updateFavBtnLabel();
   el.resultsCount.textContent = `找到 ${results.length} 个推荐去处`;
+  if (el.loadMoreWrap && el.loadMore) {
+    const remaining = Math.max(0, results.length - state.visibleLimit);
+    el.loadMoreWrap.classList.toggle('hidden', remaining === 0);
+    el.loadMore.textContent = remaining > 0 ? `再看 ${Math.min(18, remaining)} 个` : '已显示全部';
+  }
 }
 
 function isClassicPlace(place) {
@@ -4387,11 +5037,23 @@ function filterPlaces() {
     places = places.filter(p => state.favorites.includes(p.id));
   }
 
-  // 按经典景区和评分排序
+  // 结果排序
   places.sort((a, b) => {
+    if (state.sortMode === 'rating') return b.rating - a.rating;
+    if (state.sortMode === 'open') {
+      const openDelta = Number(getOpenStatus(b).isOpen) - Number(getOpenStatus(a).isOpen);
+      return openDelta || b.rating - a.rating;
+    }
+    if (state.sortMode === 'free') {
+      const freeDelta = Number(b.free || b.price === 0) - Number(a.free || a.price === 0);
+      return freeDelta || b.rating - a.rating;
+    }
     const classicDelta = Number(isClassicPlace(b)) - Number(isClassicPlace(a));
-    if (state.activeCategory === 'classic' && classicDelta !== 0) return classicDelta;
-    return b.rating - a.rating;
+    const socialDelta = Number(b.socialMentions || 0) - Number(a.socialMentions || 0);
+    const openDelta = Number(getOpenStatus(b).isOpen) - Number(getOpenStatus(a).isOpen);
+    if (classicDelta !== 0) return classicDelta;
+    if (socialDelta !== 0) return socialDelta;
+    return openDelta || b.rating - a.rating;
   });
 
   return places;
@@ -4404,11 +5066,15 @@ function renderResults(places) {
     return;
   }
   el.emptyState.classList.add('hidden');
+  el.resultsGrid.classList.toggle('view-list', state.viewMode === 'list');
   el.resultsGrid.innerHTML = places.map(p => createCard(p)).join('');
 
   // 绑定收藏按钮
   $$('.fav-btn', el.resultsGrid).forEach(btn => {
     btn.addEventListener('click', toggleFavorite);
+  });
+  $$('.plan-btn', el.resultsGrid).forEach(btn => {
+    btn.addEventListener('click', toggleTripPlace);
   });
 
   // View animation
@@ -4535,12 +5201,13 @@ function getWeatherFit(place) {
 }
 
 function coverImage(place) {
-  return place.cover || place.image || placeImage(place);
+  return mediaForPlace(place)?.image || place.cover || place.image || placeImage(place);
 }
 
 // ===== 卡片模板 =====
 function createCard(place) {
   const isFav = state.favorites.includes(place.id);
+  const isInTrip = state.tripPlan.includes(place.id);
   const seasonLabels = place.seasons.map(s => {
     const found = DATA.seasons.find(se => se.id === s);
     return found ? found.label.split(' ')[1] : s;
@@ -4554,13 +5221,15 @@ function createCard(place) {
   const coverCaption = classic ? (place.coverNote || '经典景区封面照') : '';
 
   return `
-    <article class="place-card" data-id="${place.id}" data-animate>
+    <article class="place-card" id="place-${place.id}" data-id="${place.id}" data-animate>
       <div class="card-image">
         <img src="${coverImage(place)}" alt="${place.name}" loading="lazy" onerror="this.onerror=null;this.src='${placeImage(place)}'">
         <div class="card-rating">
           <span class="star">★</span> ${place.rating}
         </div>
-        <button class="fav-btn ${isFav ? 'active' : ''}" data-id="${place.id}">
+        <button class="fav-btn ${isFav ? 'active' : ''}" data-id="${place.id}"
+                aria-label="${isFav ? '取消收藏' : '收藏'}${escapeHtml(place.name)}"
+                aria-pressed="${isFav}">
           ${isFav ? '❤️' : '🤍'}
         </button>
         ${hasDeals ? '<span class="badge-deal">有优惠</span>' : ''}
@@ -4617,6 +5286,12 @@ function createCard(place) {
         <div class="card-meta">
           <span>📍 ${place.address}</span>
           <span>🕐 ${place.hours}</span>
+        </div>
+        <div class="card-actions">
+          <button class="plan-btn ${isInTrip ? 'active' : ''}" data-id="${place.id}"
+                  aria-pressed="${isInTrip}">
+            ${isInTrip ? '✓ 已加入行程' : '＋ 加入行程'}
+          </button>
           <button class="nav-btn" data-id="${place.id}" onclick="showMapPicker(${place.id})">🛣️ 导航</button>
         </div>
       </div>
@@ -4643,6 +5318,115 @@ function toggleFavorite(e) {
   }
 
   localStorage.setItem('wh-favorites', JSON.stringify(state.favorites));
+  updateFavBtnLabel();
+}
+
+// ===== 我的行程 =====
+function toggleTripPlace(e) {
+  const id = Number(e.currentTarget.dataset.id);
+  const index = state.tripPlan.indexOf(id);
+  if (index > -1) {
+    state.tripPlan.splice(index, 1);
+    showToast('已从行程移除');
+  } else {
+    state.tripPlan.push(id);
+    showToast('已加入我的行程');
+  }
+  localStorage.setItem('wh-trip-plan', JSON.stringify(state.tripPlan));
+  renderTripPlan();
+  filterAndRender();
+}
+
+function renderTripPlan() {
+  const places = state.tripPlan
+    .map(id => DATA.places.find(place => Number(place.id) === Number(id)))
+    .filter(Boolean);
+  state.tripPlan = places.map(place => place.id);
+  localStorage.setItem('wh-trip-plan', JSON.stringify(state.tripPlan));
+
+  if (el.tripCount) el.tripCount.textContent = places.length;
+  if (el.tripSummaryCount) {
+    el.tripSummaryCount.textContent = places.length
+      ? `${places.length} 个地点 · ${new Set(places.map(place => place.district)).size} 个区域`
+      : '还没有加入地点';
+  }
+  if (el.tripSummaryDuration) {
+    const hours = Math.max(0, Math.round(places.length * 2.5));
+    el.tripSummaryDuration.textContent = `约 ${hours} 小时`;
+  }
+  if (!el.tripList) return;
+  if (!places.length) {
+    el.tripList.innerHTML = '<div class="trip-empty">从地点卡片中加入想去的地方</div>';
+    return;
+  }
+  el.tripList.innerHTML = places.map((place, index) => `
+    <div class="trip-item">
+      <img src="${escapeHtml(coverImage(place))}" alt="" loading="lazy">
+      <div>
+        <strong>${index + 1}. ${escapeHtml(place.name)}</strong>
+        <span>${escapeHtml(place.district)} · ${escapeHtml(getOpenStatus(place).label)}</span>
+      </div>
+      <button class="icon-btn trip-remove" data-id="${place.id}"
+              aria-label="从行程移除${escapeHtml(place.name)}">×</button>
+    </div>`).join('');
+  $$('.trip-remove', el.tripList).forEach(button => {
+    button.addEventListener('click', () => {
+      state.tripPlan = state.tripPlan.filter(id => Number(id) !== Number(button.dataset.id));
+      localStorage.setItem('wh-trip-plan', JSON.stringify(state.tripPlan));
+      renderTripPlan();
+      filterAndRender();
+    });
+  });
+}
+
+function openTripDrawer() {
+  el.tripOverlay?.classList.add('open');
+  el.tripOverlay?.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeTripDrawer() {
+  el.tripOverlay?.classList.remove('open');
+  el.tripOverlay?.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+async function copyTripPlan() {
+  const places = state.tripPlan
+    .map(id => DATA.places.find(place => Number(place.id) === Number(id)))
+    .filter(Boolean);
+  if (!places.length) {
+    showToast('先加入一个想去的地方');
+    return;
+  }
+  const text = [
+    '我的武汉周末行程',
+    ...places.map((place, index) =>
+      `${index + 1}. ${place.name}｜${place.district}｜${place.address}｜${place.hours}`
+    ),
+    '开放时间和活动安排请在出发前核实。'
+  ].join('\n');
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast('行程已复制');
+  } catch (error) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    showToast('行程已复制');
+  }
+}
+
+function applyViewMode() {
+  el.resultsGrid?.classList.toggle('view-list', state.viewMode === 'list');
+  $$('.view-btn').forEach(button => {
+    button.classList.toggle('active', button.dataset.view === state.viewMode);
+  });
 }
 
 // ===== 高亮/轮播 =====
@@ -4672,31 +5456,22 @@ function renderHighlights() {
       '限时活动': { g1: 'FF6B6B', g2: 'EE5A24', icon: '⏰', deco: `<circle cx="700" cy="80" r="160" fill="rgba(255,255,255,0.06)"/><circle cx="120" cy="350" r="120" fill="rgba(255,255,255,0.05)"/><circle cx="350" cy="60" r="3" fill="rgba(255,255,255,0.2)"/><circle cx="450" cy="45" r="4" fill="rgba(255,255,255,0.15)"/><circle cx="550" cy="55" r="2.5" fill="rgba(255,255,255,0.2)"/><circle cx="300" cy="70" r="2" fill="rgba(255,255,255,0.15)"/>` },
       '限时优惠': { g1: 'FF6B6B', g2: 'EE5A24', icon: '🏷️', deco: `<circle cx="700" cy="80" r="160" fill="rgba(255,255,255,0.06)"/><circle cx="120" cy="350" r="120" fill="rgba(255,255,255,0.05)"/><circle cx="350" cy="50" r="3" fill="rgba(255,255,255,0.2)"/><circle cx="450" cy="65" r="2.5" fill="rgba(255,255,255,0.15)"/><circle cx="550" cy="50" r="3.5" fill="rgba(255,255,255,0.2)"/>` },
     };
-    const hc = hlConfig[h.badge] || { g1: '636E72', g2: 'B2BEC3', icon: '🎯', deco: '' };
-    const hlTitle = h.title.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-    const hlDesc = h.desc.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-    const hlSrc = `data:image/svg+xml,${encodeURIComponent(
-      `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400">
-        <defs><linearGradient id="h" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#${hc.g1}"/><stop offset="1" stop-color="#${hc.g2}"/>
-        </linearGradient></defs>
-        <rect width="800" height="400" fill="url(#h)"/>
-        ${hc.deco}
-        <text x="120" y="160" font-size="80">${hc.icon}</text>
-        <text x="120" y="240" fill="#fff" font-size="32" font-weight="700" font-family="system-ui,sans-serif">${hlTitle}</text>
-        <text x="120" y="280" fill="rgba(255,255,255,0.85)" font-size="18" font-family="system-ui,sans-serif">${hlDesc}</text>
-      </svg>`
-    )}`;
+    const linkedId = Number(String(h.link || '').match(/place-(\d+)/)?.[1]);
+    const linkedPlace = DATA.places.find(place => Number(place.id) === linkedId);
+    const licensedMedia = mediaForPlace(linkedPlace);
+    const galleryFallback = (DATA.mediaGallery.items || [])[i % Math.max((DATA.mediaGallery.items || []).length, 1)];
+    const hlSrc = licensedMedia?.image || linkedPlace?.cover || linkedPlace?.image ||
+      galleryFallback?.image || h.image || placeImage({ name: h.title, category: 'event' });
     return `
     <div class="highlight-slide ${i === 0 ? 'active' : ''}" data-index="${i}">
       <a href="${h.link}" class="highlight-link">
         <div class="highlight-img">
-          <img src="${hlSrc}" alt="${h.title}">
+          <img src="${escapeHtml(hlSrc)}" alt="${escapeHtml(h.title)}">
         </div>
         <div class="highlight-info">
-          <span class="highlight-badge">${h.badge}</span>
-          <h3>${h.title}</h3>
-          <p>${h.desc}</p>
+          <span class="highlight-badge">${escapeHtml(h.badge)}</span>
+          <h3>${escapeHtml(h.title)}</h3>
+          <p>${escapeHtml(h.desc)}</p>
         </div>
       </a>
     </div>`;
@@ -4750,6 +5525,40 @@ function showToast(msg) {
 
 // ===== 事件绑定 =====
 function setupEventListeners() {
+  $$('.sort-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      state.sortMode = button.dataset.sort;
+      $$('.sort-btn').forEach(item => item.classList.toggle('active', item === button));
+      filterAndRender();
+    });
+  });
+
+  $$('.view-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      state.viewMode = button.dataset.view;
+      localStorage.setItem('wh-view-mode', state.viewMode);
+      applyViewMode();
+    });
+  });
+
+  el.tripToggle?.addEventListener('click', openTripDrawer);
+  el.loadMore?.addEventListener('click', () => {
+    state.visibleLimit += 18;
+    filterAndRender();
+  });
+  document.getElementById('trip-close')?.addEventListener('click', closeTripDrawer);
+  document.getElementById('trip-copy')?.addEventListener('click', copyTripPlan);
+  document.getElementById('trip-clear')?.addEventListener('click', () => {
+    state.tripPlan = [];
+    localStorage.setItem('wh-trip-plan', '[]');
+    renderTripPlan();
+    filterAndRender();
+    showToast('行程已清空');
+  });
+  el.tripOverlay?.addEventListener('click', event => {
+    if (event.target === el.tripOverlay) closeTripDrawer();
+  });
+
   el.socialFilters?.addEventListener('click', (e) => {
     const filter = e.target.closest('.social-filter');
     if (!filter) return;
@@ -4895,7 +5704,10 @@ function setupEventListeners() {
 
   // ESC 键关闭菜单
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') el.mobileMenu.classList.remove('open');
+    if (e.key === 'Escape') {
+      el.mobileMenu.classList.remove('open');
+      closeTripDrawer();
+    }
   });
 
   // 键盘导航

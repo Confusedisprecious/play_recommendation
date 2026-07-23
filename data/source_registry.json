@@ -1,0 +1,34 @@
+{
+  "policy": {
+    "publish_requires_review": true,
+    "login_automation": false,
+    "undocumented_api": false,
+    "copy_full_content": false,
+    "candidate_output": "data/social_candidates.json"
+  },
+  "search": {
+    "provider": "SearXNG",
+    "base_url_env": "SEARXNG_BASE_URL",
+    "queries": [
+      "武汉 亲子 周末 活动",
+      "武汉 遛娃 新展览",
+      "武汉 景区 最新 开放",
+      "武汉 商场 亲子 活动"
+    ],
+    "allowed_domains": [
+      "wuhan.gov.cn",
+      "wlj.wuhan.gov.cn",
+      "news.cjn.cn",
+      "news.hbtv.com.cn",
+      "weibo.com",
+      "xiaohongshu.com",
+      "douyin.com",
+      "bilibili.com"
+    ]
+  },
+  "feeds": {
+    "provider": "RSSHub",
+    "base_url_env": "RSSHUB_BASE_URL",
+    "routes": []
+  }
+}

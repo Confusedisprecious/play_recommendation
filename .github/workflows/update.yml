@@ -30,8 +30,12 @@ jobs:
           pip install httpx beautifulsoup4 lxml
 
       - name: 运行数据更新脚本
+        env:
+          SEARXNG_BASE_URL: ${{ secrets.SEARXNG_BASE_URL }}
+          RSSHUB_BASE_URL: ${{ secrets.RSSHUB_BASE_URL }}
         run: |
           echo "📍 开始更新数据..."
+          python scripts/discover_social.py
           python scripts/update_all.py
           python scripts/generate_recommendation.py
           echo "✅ 数据更新完成"
