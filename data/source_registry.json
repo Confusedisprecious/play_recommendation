@@ -30,5 +30,27 @@
     "provider": "RSSHub",
     "base_url_env": "RSSHUB_BASE_URL",
     "routes": []
+  },
+  "news_rss": {
+    "provider": "Bing News RSS",
+    "enabled": true,
+    "endpoint": "https://www.bing.com/news/search",
+    "max_age_days": 45,
+    "max_items": 24,
+    "queries": [
+      "武汉 亲子 活动",
+      "武汉 亲子 暑期",
+      "武汉 景区 暑期",
+      "武汉 景区 最新 开放",
+      "武汉 公园 展览",
+      "武汉 商场 亲子"
+    ],
+    "auto_publish_domains": [
+      "wuhan.gov.cn",
+      "wlj.wuhan.gov.cn",
+      "news.cjn.cn",
+      "news.hbtv.com.cn",
+      "cnhubei.com"
+    ]
   }
 }

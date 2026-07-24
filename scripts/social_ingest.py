@@ -25,6 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 DEFAULT_INPUT = DATA_DIR / "social_sources.json"
 DEFAULT_OUTPUT = DATA_DIR / "social_feed.json"
+DEFAULT_CANDIDATES = DATA_DIR / "social_candidates.json"
 USER_AGENT = "WuhanFamilyGuide/1.0 (+public-metadata-only)"
 ALLOWED_HOSTS = {
     "xiaohongshu.com",
@@ -36,6 +37,11 @@ ALLOWED_HOSTS = {
     "www.weibo.com",
     "news.cjn.cn",
     "news.hbtv.com.cn",
+    "www.cnhubei.com",
+    "cnhubei.com",
+    "wuhan.gov.cn",
+    "www.wuhan.gov.cn",
+    "wlj.wuhan.gov.cn",
 }
 
 
@@ -82,7 +88,11 @@ def clean_text(value: object, limit: int) -> str:
 
 def allowed_url(url: str) -> bool:
     parsed = urllib.parse.urlparse(url)
-    return parsed.scheme == "https" and parsed.hostname in ALLOWED_HOSTS
+    hostname = (parsed.hostname or "").lower()
+    return parsed.scheme == "https" and any(
+        hostname == allowed or hostname.endswith("." + allowed)
+        for allowed in ALLOWED_HOSTS
+    )
 
 
 def robots_allows(url: str) -> bool:
@@ -145,6 +155,7 @@ def build_feed(
     input_path: Path = DEFAULT_INPUT,
     output_path: Path = DEFAULT_OUTPUT,
     refresh_metadata: bool = False,
+    candidates_path: Path = DEFAULT_CANDIDATES,
 ) -> dict:
     config = load_json(input_path)
     now = datetime.now().astimezone().isoformat(timespec="seconds")
@@ -167,11 +178,42 @@ def build_feed(
         if item["title"] and item["summary"]:
             items.append(item)
 
+    if candidates_path.exists():
+        candidates = load_json(candidates_path)
+        for raw in candidates.get("items", []):
+            if raw.get("review_status") not in {"reviewed", "auto_trusted"}:
+                continue
+            url = clean_text(raw.get("url"), 500)
+            if not allowed_url(url) or url in seen_urls:
+                continue
+            seen_urls.add(url)
+            item = normalize_item(raw, {}, now)
+            if item["title"] and item["summary"]:
+                items.append(item)
+
     items.sort(key=lambda item: item.get("published_at", ""), reverse=True)
+    latest_published_at = items[0].get("published_at", "") if items else ""
+    platforms = list(config.get("platforms", []))
+    if any(item.get("platform") == "local_news" for item in items):
+        platforms.insert(
+            0,
+            {
+                "id": "local_news",
+                "label": "实时资讯",
+                "mode": "trusted_public_news_rss",
+                "status": "auto_refreshing",
+            },
+        )
     feed = {
         "generated_at": now,
+        "latest_published_at": latest_published_at,
+        "freshness": {
+            "live_window_days": 7,
+            "current_window_days": 30,
+            "stale_after_days": 30,
+        },
         "policy": config.get("policy", {}),
-        "platforms": config.get("platforms", []),
+        "platforms": platforms,
         "items": items,
     }
     with output_path.open("w", encoding="utf-8") as handle:
@@ -184,13 +226,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Build the reviewed social-content feed")
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--candidates", type=Path, default=DEFAULT_CANDIDATES)
     parser.add_argument(
         "--refresh-metadata",
         action="store_true",
         help="Refresh OpenGraph metadata only when robots.txt allows it",
     )
     args = parser.parse_args()
-    build_feed(args.input, args.output, args.refresh_metadata)
+    build_feed(args.input, args.output, args.refresh_metadata, args.candidates)
 
 
 if __name__ == "__main__":

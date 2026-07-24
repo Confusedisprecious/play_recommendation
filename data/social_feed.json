@@ -1,13 +1,25 @@
 {
-  "generated_at": "2026-07-24T13:15:43+00:00",
+  "generated_at": "2026-07-24T21:51:08+08:00",
+  "latest_published_at": "2026-07-23",
+  "freshness": {
+    "live_window_days": 7,
+    "current_window_days": 30,
+    "stale_after_days": 30
+  },
   "policy": {
     "collection_mode": "official_api_or_reviewed_public_url",
     "login_automation": false,
     "undocumented_api": false,
     "copy_full_content": false,
-    "display_notice": "社交内容仅作出行灵感，开放时间、票价和活动安排请以官方渠道为准。"
+    "display_notice": "实时资讯来自白名单公开新闻源；小红书、抖音等社交内容经人工核验，仅作出行灵感，开放时间与活动安排请以官方渠道为准。"
   },
   "platforms": [
+    {
+      "id": "local_news",
+      "label": "实时资讯",
+      "mode": "trusted_public_news_rss",
+      "status": "auto_refreshing"
+    },
     {
       "id": "xiaohongshu",
       "label": "小红书",
@@ -29,6 +41,44 @@
   ],
   "items": [
     {
+      "id": "2e3cabd260e57351",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "高铁4小时通达，大半个中国游客周末聚武汉",
+      "summary": "周五黄昏，一辆辆高铁从华北平原、岭南大地、西北戈壁、江南水乡出发，朝着同一个坐标飞驰而来。 四面八方的周末客流，沿着铁轨汇聚江城。人们漫步江滩，读长江奔涌的文脉，夜色降临，整座城市为他们点燃万家灯火与不眠剧场。周日午后，游客把两日的松弛与惬意装进行囊，满载记忆从容返程。 当“4小时高铁圈”将大半个中",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202607/t5321643.htm",
+      "published_at": "2026-07-23",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-07-24T21:51:08+08:00"
+    },
+    {
+      "id": "0ac677c19f528ef7",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "2.5小时跨越秦楚！西安武汉暑期交换游，解锁夏日周末新玩法",
+      "summary": "随着西十高铁通车，武汉、西安这两座历史文化名城实现2.5小时极速互通，开启“朝登古城墙，暮赏东湖月”的周末游新时代。恰逢暑期，凉爽夜游、文博研学等多元玩法上线，双城“交换游”为跨城文旅消费注入活力。 7月13日至15日，武汉、西安两地万豪系酒店携手发力，以温情“串门”为主题，邀请主流媒体、旅游达人双",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202607/t5319629.htm",
+      "published_at": "2026-07-17",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-07-24T21:51:08+08:00"
+    },
+    {
       "id": "douyin-mulan-water-202607",
       "platform": "douyin",
       "source_type": "public_search_page",
@@ -46,7 +96,64 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T13:15:43+00:00"
+      "collected_at": "2026-07-24T21:51:08+08:00"
+    },
+    {
+      "id": "dceb19cd837a5683",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "暑期伊始，生产车间迎来亲子观光客，武汉“透明工厂”打开文旅 ...",
+      "summary": "“听到吃到不如亲眼看到，厂区也可以是很好玩的景区。”7月10日下午，15组来自长三角、大湾区的亲子家庭走进东西湖区走马岭街道周黑鸭工业园，广州游客刘凯伦把见闻发进自己的朋友圈。 据介绍，暑期伊始，工厂游线路就迎来预定高峰。今年上半年，东西湖区首条食品健康游线路接待游客3万人次，这种从舌尖到脚尖的武汉",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202607/t5317248.htm",
+      "published_at": "2026-07-12",
+      "place_name": "",
+      "district": "东西湖区",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-07-24T21:51:08+08:00"
+    },
+    {
+      "id": "fe7535b9fe885353",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "台风“巴威”减弱！明天起，武汉景区全部恢复营业",
+      "summary": "前几日，“巴威”台风中心预计将经过湖北，而登陆后路径不断东移。如今，“巴威”风雨影响逐步减弱。7月13日（明天）起，武汉所有景区恢复正常营业。 到了武汉，当然要跟随李白/崔颢/王维/苏轼的步伐，登楼远眺，赏江景。 书画艺术是黄鹤楼文化的重要组成部分，楼阁楹联、匾额、牌坊、石刻，处处可见书画与名楼文化",
+      "author": "长江云 - 湖北网络广播电视台官方网站",
+      "url": "https://news.hbtv.com.cn/p/4617134.html",
+      "published_at": "2026-07-12",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-07-24T21:51:08+08:00"
+    },
+    {
+      "id": "3b9ee4af6acaeef9",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "早安武汉 | 今起免费开放，武汉最大向日葵花海进入盛花期",
+      "summary": "武汉面积最大的向日葵花海正进入盛花期，7月1日起正式向市民免费开放。 花海盛开的向日葵。陈冬青 摄 这片向日葵花海位于洪山区沙湖大道与罗家港路交会处，占地面积3.3万平方米，种植了向日葵20余万株，是目前武汉面积最大的向日葵花海。 6月29日下午 ...",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202607/t5312261.htm",
+      "published_at": "2026-07-01",
+      "place_name": "",
+      "district": "洪山区",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-07-24T21:51:08+08:00"
     },
     {
       "id": "douyin-jiefang-park-202603",
@@ -66,7 +173,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T13:15:43+00:00"
+      "collected_at": "2026-07-24T21:51:08+08:00"
     },
     {
       "id": "douyin-east-lake-sakura-202602",
@@ -86,7 +193,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T13:15:43+00:00"
+      "collected_at": "2026-07-24T21:51:08+08:00"
     },
     {
       "id": "douyin-anshan-wetland-202601",
@@ -106,7 +213,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T13:15:43+00:00"
+      "collected_at": "2026-07-24T21:51:08+08:00"
     },
     {
       "id": "xiaohongshu-family-hike-2025",
@@ -126,7 +233,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T13:15:43+00:00"
+      "collected_at": "2026-07-24T21:51:08+08:00"
     },
     {
       "id": "xiaohongshu-wuhan-family-guide",
@@ -146,7 +253,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T13:15:43+00:00"
+      "collected_at": "2026-07-24T21:51:08+08:00"
     }
   ]
 }
