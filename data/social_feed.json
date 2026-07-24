@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T03:50:27+08:00",
+  "generated_at": "2026-07-25T05:31:41+08:00",
   "latest_published_at": "2026-07-23",
   "freshness": {
     "live_window_days": 7,
@@ -7,19 +7,21 @@
     "stale_after_days": 30
   },
   "source_health": {
-    "status": "healthy",
-    "last_discovery_at": "2026-07-25T03:50:24+08:00",
+    "status": "degraded",
+    "last_discovery_at": "2026-07-25T05:31:41+08:00",
     "automatic_sources": {
       "news_rss": {
-        "status": "healthy",
-        "last_attempt_at": "2026-07-25T03:50:24+08:00",
-        "item_count": 8,
-        "schedule": "every_2_hours"
+        "status": "error",
+        "last_attempt_at": "2026-07-25T05:31:41+08:00",
+        "item_count": 0,
+        "message": "not well-formed (invalid token): line 1, column 41"
       }
     },
     "connectors": {},
     "pending_review": 0,
-    "errors": []
+    "errors": [
+      "News RSS: not well-formed (invalid token): line 1, column 41"
+    ]
   },
   "policy": {
     "collection_mode": "trusted_public_feed_or_reviewed_authorized_export",
@@ -72,7 +74,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-25T03:50:27+08:00",
+      "collected_at": "2026-07-25T05:31:41+08:00",
       "discovery_query": "武汉 夜游 活动"
     },
     {
@@ -92,7 +94,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.P_Nr3aplByEWlLC0FcXdqg&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-25T03:50:27+08:00",
+      "collected_at": "2026-07-25T05:31:41+08:00",
       "discovery_query": "武汉 景区 暑期",
       "image_source": "rss_thumbnail"
     },
@@ -113,7 +115,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.zwCKf9L0BIzuKwBqqKUnUA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-25T03:50:27+08:00",
+      "collected_at": "2026-07-25T05:31:41+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -135,7 +137,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-25T03:50:27+08:00"
+      "collected_at": "2026-07-25T05:31:41+08:00"
     },
     {
       "id": "dceb19cd837a5683",
@@ -154,7 +156,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.ruOlDeTzQO4tkEq5KB2wRQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-25T03:50:27+08:00",
+      "collected_at": "2026-07-25T05:31:41+08:00",
       "discovery_query": "武汉 亲子 暑期",
       "image_source": "rss_thumbnail"
     },
@@ -175,7 +177,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.nyVkFQvYyWQBpFttUiSsvg&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-25T03:50:27+08:00",
+      "collected_at": "2026-07-25T05:31:41+08:00",
       "discovery_query": "武汉 景区 暑期",
       "image_source": "rss_thumbnail"
     },
@@ -196,7 +198,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-25T03:50:27+08:00",
+      "collected_at": "2026-07-25T05:31:41+08:00",
       "discovery_query": "武汉 景区 最新 开放"
     },
     {
@@ -216,7 +218,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-25T03:50:27+08:00",
+      "collected_at": "2026-07-25T05:31:41+08:00",
       "discovery_query": "武汉 亲子 活动"
     },
     {
@@ -236,7 +238,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-25T03:50:27+08:00",
+      "collected_at": "2026-07-25T05:31:41+08:00",
       "discovery_query": "武汉 景区 最新 开放"
     },
     {
@@ -256,7 +258,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-25T03:50:27+08:00",
+      "collected_at": "2026-07-25T05:31:41+08:00",
       "discovery_query": "武汉 亲子 活动"
     },
     {
@@ -276,7 +278,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-25T03:50:27+08:00",
+      "collected_at": "2026-07-25T05:31:41+08:00",
       "discovery_query": "武汉 商场 新店 展览"
     },
     {
@@ -296,7 +298,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-25T03:50:27+08:00",
+      "collected_at": "2026-07-25T05:31:41+08:00",
       "discovery_query": "武汉 周末去哪玩"
     },
     {
@@ -317,7 +319,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-25T03:50:27+08:00"
+      "collected_at": "2026-07-25T05:31:41+08:00"
     },
     {
       "id": "douyin-east-lake-sakura-202602",
@@ -337,7 +339,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-25T03:50:27+08:00"
+      "collected_at": "2026-07-25T05:31:41+08:00"
     },
     {
       "id": "douyin-anshan-wetland-202601",
@@ -357,7 +359,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-25T03:50:27+08:00"
+      "collected_at": "2026-07-25T05:31:41+08:00"
     },
     {
       "id": "xiaohongshu-family-hike-2025",
@@ -377,7 +379,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-25T03:50:27+08:00"
+      "collected_at": "2026-07-25T05:31:41+08:00"
     },
     {
       "id": "xiaohongshu-wuhan-family-guide",
@@ -397,7 +399,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-25T03:50:27+08:00"
+      "collected_at": "2026-07-25T05:31:41+08:00"
     }
   ]
 }
