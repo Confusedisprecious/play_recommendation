@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T01:55:07+08:00",
+  "generated_at": "2026-07-25T03:50:24+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,8 +9,8 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-07-25T01:55:07+08:00",
-      "item_count": 7,
+      "last_attempt_at": "2026-07-25T03:50:24+08:00",
+      "item_count": 8,
       "schedule": "every_2_hours"
     }
   },
@@ -32,9 +32,9 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "https://www.bing.com/th?id=ONUT.4LjdWJGmPXQxyzmAIbXWKA&pid=News&w=960&h=540&c=7&rs=1",
-      "image_source": "rss_thumbnail",
-      "discovery_query": "武汉 景区 暑期",
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 夜游 活动",
       "review_status": "auto_trusted"
     },
     {
@@ -54,7 +54,27 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.P_Nr3aplByEWlLC0FcXdqg&pid=News&w=960&h=540&c=7&rs=1",
       "image_source": "rss_thumbnail",
-      "discovery_query": "武汉 夜游 活动",
+      "discovery_query": "武汉 景区 暑期",
+      "review_status": "auto_trusted"
+    },
+    {
+      "id": "0f10742d065d1f99",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "长江江豚向全球发出盛夏邀请，来武汉共赴长江之约",
+      "summary": "没有哪座城像武汉这样与长江命脉相连。江水是城市的血脉，也是市民的日常，而一年一度的渡江活动，正是这份深情最盛大、最热烈的集中表达。 7月16日，2026武汉7·16渡江活动鸣枪开赛。数千名泳者自“一桥两山”核心区域跃入江流，在龟蛇对望的凝视中劈开波浪——万里长江横渡，是武汉对长江赤诚的回应。 从竞技赛事到文旅盛宴，从劈波斩浪到消费狂欢，渡江活动早已超越体育本身，成为长江文明最鲜活的注脚。 7·16 ...",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/asy/lbt/202607/t5318822.htm",
+      "published_at": "2026-07-16",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.zwCKf9L0BIzuKwBqqKUnUA&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
+      "discovery_query": "武汉 亲子 活动",
       "review_status": "auto_trusted"
     },
     {
@@ -135,6 +155,26 @@
       "image": "",
       "image_source": "",
       "discovery_query": "武汉 亲子 活动",
+      "review_status": "auto_trusted"
+    },
+    {
+      "id": "48e2b9678001c2fe",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "遇见“屈原”、粽王争霸赛……端午假期武汉景区节日氛围浓",
+      "summary": "长江日报大武汉客户端6月20日讯（记者范雅琴）端午假期，武汉多个景区推出特色民俗体验与国风演绎，节日氛围浓厚。“水下屈原·跨时空见面会”、首届荆楚粽王争霸赛等亮点活动集中亮相，从市区到近郊，市民游客在丰富多彩的互动项目中尽享缤纷假日。",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202606/t5307969.htm",
+      "published_at": "2026-06-20",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 景区 最新 开放",
       "review_status": "auto_trusted"
     },
     {
