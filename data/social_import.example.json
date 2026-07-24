@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "platform": "xiaohongshu",
+      "note_id": "replace-with-public-note-id",
+      "xsec_token": "replace-with-current-public-search-token",
+      "title": "武汉周末亲子活动示例",
+      "description": "仅导入公开标题、短摘要、作者、发布时间和封面链接。",
+      "author": {
+        "nickname": "公开作者"
+      },
+      "published_at": "2026-07-24T10:00:00+08:00",
+      "type": "normal",
+      "cover": {
+        "url": "https://example.com/public-cover.jpg"
+      },
+      "tags": [
+        "武汉亲子",
+        "周末活动"
+      ]
+    }
+  ]
+}

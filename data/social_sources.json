@@ -1,23 +1,23 @@
 {
   "policy": {
-    "collection_mode": "official_api_or_reviewed_public_url",
+    "collection_mode": "trusted_public_feed_or_reviewed_authorized_export",
     "login_automation": false,
     "undocumented_api": false,
     "copy_full_content": false,
-    "display_notice": "实时资讯来自白名单公开新闻源；小红书、抖音等社交内容经人工核验，仅作出行灵感，开放时间与活动安排请以官方渠道为准。"
+    "display_notice": "实时资讯每 2 小时检查白名单公开来源；小红书、抖音等内容由本地授权工具导入并经人工核验，仅作出行灵感，开放时间与活动安排请以官方渠道为准。"
   },
   "platforms": [
     {
       "id": "xiaohongshu",
       "label": "小红书",
-      "mode": "reviewed_public_url",
-      "status": "ready_for_authorized_links"
+      "mode": "reviewed_authorized_local_export",
+      "status": "connector_ready"
     },
     {
       "id": "douyin",
       "label": "抖音",
-      "mode": "public_page_or_open_api",
-      "status": "public_pages_enabled"
+      "mode": "reviewed_authorized_local_export",
+      "status": "connector_ready"
     },
     {
       "id": "weibo",

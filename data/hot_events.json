@@ -10,6 +10,15 @@
   },
   {
     "rank": 2,
+    "title": "武汉欢乐谷",
+    "heat": 9100,
+    "trend": "up",
+    "place_id": 9,
+    "reason": "限时优惠 · 社交平台 1 条提及 · 近期活动",
+    "social_mentions": 1
+  },
+  {
+    "rank": 3,
     "title": "永旺梦乐城金银潭",
     "heat": 8700,
     "trend": "stable",
@@ -18,21 +27,12 @@
     "social_mentions": 0
   },
   {
-    "rank": 3,
+    "rank": 4,
     "title": "武汉极地海洋世界",
     "heat": 8600,
     "trend": "stable",
     "place_id": 10,
     "reason": "限时优惠 · 近期活动 · 室内避暑",
-    "social_mentions": 0
-  },
-  {
-    "rank": 4,
-    "title": "武汉欢乐谷",
-    "heat": 8200,
-    "trend": "stable",
-    "place_id": 9,
-    "reason": "限时优惠 · 近期活动",
     "social_mentions": 0
   },
   {

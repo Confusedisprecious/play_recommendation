@@ -1,0 +1,8 @@
+# Local authenticated social-media exports and browser state
+data/imports/
+data/social-private/
+.social-auth/
+
+# Local runtime artifacts
+__pycache__/
+*.pyc

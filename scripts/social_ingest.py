@@ -19,6 +19,7 @@ import urllib.robotparser
 from datetime import datetime
 from html.parser import HTMLParser
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +28,7 @@ DEFAULT_INPUT = DATA_DIR / "social_sources.json"
 DEFAULT_OUTPUT = DATA_DIR / "social_feed.json"
 DEFAULT_CANDIDATES = DATA_DIR / "social_candidates.json"
 USER_AGENT = "WuhanFamilyGuide/1.0 (+public-metadata-only)"
+LOCAL_TIMEZONE = ZoneInfo("Asia/Shanghai")
 ALLOWED_HOSTS = {
     "xiaohongshu.com",
     "www.xiaohongshu.com",
@@ -35,6 +37,9 @@ ALLOWED_HOSTS = {
     "jingxuan.douyin.com",
     "weibo.com",
     "www.weibo.com",
+    "bilibili.com",
+    "www.bilibili.com",
+    "b23.tv",
     "news.cjn.cn",
     "news.hbtv.com.cn",
     "www.cnhubei.com",
@@ -133,7 +138,7 @@ def normalize_item(raw: dict, refreshed: dict[str, str], now: str) -> dict:
     stable_id = raw.get("id") or hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
     title = raw.get("title") or refreshed.get("title")
     summary = raw.get("summary") or refreshed.get("summary")
-    return {
+    item = {
         "id": clean_text(stable_id, 80),
         "platform": clean_text(raw.get("platform"), 32).lower(),
         "source_type": clean_text(raw.get("source_type", "public_page"), 40),
@@ -149,6 +154,23 @@ def normalize_item(raw: dict, refreshed: dict[str, str], now: str) -> dict:
         "review_status": clean_text(raw.get("review_status", "reviewed"), 24),
         "collected_at": clean_text(raw.get("collected_at") or now, 32),
     }
+    for key, limit in (
+        ("media_type", 24),
+        ("connector", 60),
+        ("discovery_query", 120),
+        ("image_source", 40),
+        ("verified_at", 32),
+    ):
+        value = clean_text(raw.get(key), limit)
+        if value:
+            item[key] = value
+    if isinstance(raw.get("engagement"), dict):
+        item["engagement"] = {
+            clean_text(key, 24): clean_text(value, 24)
+            for key, value in raw["engagement"].items()
+            if value not in (None, "")
+        }
+    return item
 
 
 def build_feed(
@@ -158,9 +180,10 @@ def build_feed(
     candidates_path: Path = DEFAULT_CANDIDATES,
 ) -> dict:
     config = load_json(input_path)
-    now = datetime.now().astimezone().isoformat(timespec="seconds")
+    now = datetime.now(LOCAL_TIMEZONE).isoformat(timespec="seconds")
     seen_urls: set[str] = set()
     items: list[dict] = []
+    candidates: dict = {}
 
     for raw in config.get("items", []):
         url = clean_text(raw.get("url"), 500)
@@ -204,6 +227,19 @@ def build_feed(
                 "status": "auto_refreshing",
             },
         )
+    platforms = list({platform["id"]: platform for platform in platforms}.values())
+    pending_count = sum(
+        item.get("review_status") == "pending"
+        for item in candidates.get("items", [])
+    )
+    source_health = {
+        "status": "degraded" if candidates.get("errors") else "healthy",
+        "last_discovery_at": candidates.get("generated_at", ""),
+        "automatic_sources": candidates.get("source_status", {}),
+        "connectors": candidates.get("connectors", {}),
+        "pending_review": pending_count,
+        "errors": candidates.get("errors", []),
+    }
     feed = {
         "generated_at": now,
         "latest_published_at": latest_published_at,
@@ -212,6 +248,7 @@ def build_feed(
             "current_window_days": 30,
             "stale_after_days": 30,
         },
+        "source_health": source_health,
         "policy": config.get("policy", {}),
         "platforms": platforms,
         "items": items,

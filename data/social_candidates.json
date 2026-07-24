@@ -1,11 +1,20 @@
 {
-  "generated_at": "2026-07-24T21:51:07+08:00",
+  "generated_at": "2026-07-24T23:07:39+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
     "rsshub": false,
     "news_rss": true
   },
+  "source_status": {
+    "news_rss": {
+      "status": "healthy",
+      "last_attempt_at": "2026-07-24T23:07:39+08:00",
+      "item_count": 8,
+      "schedule": "every_2_hours"
+    }
+  },
+  "connectors": {},
   "errors": [],
   "items": [
     {
@@ -23,7 +32,9 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "discovery_query": "武汉 景区 暑期",
+      "image": "https://www.bing.com/th?id=ONUT.4LjdWJGmPXQxyzmAIbXWKA&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
+      "discovery_query": "武汉 夜游 活动",
       "review_status": "auto_trusted"
     },
     {
@@ -41,7 +52,9 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "discovery_query": "武汉 景区 暑期",
+      "image": "https://www.bing.com/th?id=ONUT.P_Nr3aplByEWlLC0FcXdqg&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
+      "discovery_query": "武汉 亲子 暑期",
       "review_status": "auto_trusted"
     },
     {
@@ -59,6 +72,8 @@
         "实时资讯",
         "武汉文旅"
       ],
+      "image": "https://www.bing.com/th?id=ONUT.ruOlDeTzQO4tkEq5KB2wRQ&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
       "discovery_query": "武汉 景区 暑期",
       "review_status": "auto_trusted"
     },
@@ -77,6 +92,8 @@
         "实时资讯",
         "武汉文旅"
       ],
+      "image": "https://www.bing.com/th?id=ONUT.nyVkFQvYyWQBpFttUiSsvg&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
       "discovery_query": "武汉 景区 暑期",
       "review_status": "auto_trusted"
     },
@@ -95,7 +112,69 @@
         "实时资讯",
         "武汉文旅"
       ],
+      "image": "",
+      "image_source": "",
       "discovery_query": "武汉 景区 最新 开放",
+      "review_status": "auto_trusted"
+    },
+    {
+      "id": "3743814e8a85d13e",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "全国首创！武汉欢乐谷“武汉话动物城”盛大开城",
+      "summary": "荆楚网（湖北日报网）讯（通讯员 向彩云）6月19日，武汉欢乐谷迎来全新亲子主题区\"武汉话动物城”的盛大启幕。作为全国首个以方言文化为核心的沉浸式亲子主题区，该项目以\"方言+萌宠”的创新模式，为江城家庭开启了一场别开生面的文化探索之旅。",
+      "author": "荆楚网",
+      "url": "https://www.cnhubei.com/content/2026-06/20/content_20043338.html",
+      "published_at": "2026-06-19",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 亲子 活动",
+      "review_status": "auto_trusted"
+    },
+    {
+      "id": "90be9e156b725b94",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "忆江城 “武汉往事”搬进商场",
+      "summary": "6月13日，《武汉往事》城市模型公共空间展暨社区美育计划首展在武汉滨江天街正式开展，吸引了众多消费者围观。 本次展览由湖北省图书馆、湖北省文联文学艺术院联合武汉设计工程学院成龙影视学院共同打造，以微缩模型、视觉装置、影视美术作品等多元 ...",
+      "author": "荆楚网",
+      "url": "https://news.cnhubei.com/content/2026-06/14/content_20032302.html",
+      "published_at": "2026-06-13",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 商场 新店 展览",
+      "review_status": "auto_trusted"
+    },
+    {
+      "id": "4c38cb7639839d45",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "周末去哪玩？武汉周边的乐园地图更新了",
+      "summary": "在京津冀，一句“这么近，那么美，周末到河北”把北京、天津居民的短途度假引流至周边；在长三角，散落于江浙沪腹地的小城度假区，早已成为上海、杭州人触手可及的“后花园”。都市圈的发展把周末微度假模式变成常态，市民在“圈”内就能住进风景里。",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202606/t5304108.htm",
+      "published_at": "2026-06-11",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 周末去哪玩",
       "review_status": "auto_trusted"
     }
   ]

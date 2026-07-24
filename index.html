@@ -972,6 +972,7 @@ ul { list-style: none; }
 .social-health {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 14px;
   padding: 10px 0;
@@ -1000,11 +1001,46 @@ ul { list-style: none; }
   color: #22675f;
   font-size: 13px;
 }
+.social-health-spacer { flex: 1 1 auto; }
+.social-pending {
+  color: var(--text-light);
+  font-size: 11px;
+}
 .social-health-divider { color: var(--text-light); }
+.social-pipeline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: -2px 0 14px;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+.social-pipeline-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.social-pipeline-mark {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #27ae60;
+}
+.social-pipeline-item.is-waiting .social-pipeline-mark { background: #d88732; }
+.social-pipeline-item.is-error .social-pipeline-mark { background: #b85c68; }
+.social-controls {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
 .social-filters {
   display: flex;
   gap: 8px;
-  margin-bottom: 14px;
+  margin-bottom: 0;
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -1028,6 +1064,30 @@ ul { list-style: none; }
 }
 .social-filter.active {
   border-color: var(--text);
+  background: var(--text);
+  color: white;
+}
+.social-window-filters {
+  display: inline-flex;
+  flex: 0 0 auto;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-card);
+}
+.social-window-filter {
+  min-height: 32px;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 600;
+}
+.social-window-filter:hover,
+.social-window-filter:focus-visible { color: var(--text); }
+.social-window-filter.active {
   background: var(--text);
   color: white;
 }
@@ -1131,6 +1191,20 @@ ul { list-style: none; }
   font-weight: 700;
 }
 .social-card-footer a:hover { text-decoration: underline; }
+.social-empty {
+  grid-column: 1 / -1;
+  padding: 34px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  text-align: center;
+}
+.social-empty strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-size: 15px;
+}
 .social-notice {
   margin-top: 12px;
   color: var(--text-light);
@@ -1307,7 +1381,7 @@ ul { list-style: none; }
   display: block;
   position: relative;
   height: 154px;
-  margin: -20px -20px 16px;
+  margin: -16px -16px 16px;
   overflow: hidden;
   background: #e6efed;
 }
@@ -1739,6 +1813,22 @@ ul { list-style: none; }
     flex-direction: column;
     gap: 4px;
   }
+  .social-health-spacer { display: none; }
+  .social-pipeline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .social-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .social-window-filters {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .social-window-filter { padding-inline: 5px; }
   .social-grid {
     display: flex;
     gap: 10px;
@@ -1753,6 +1843,7 @@ ul { list-style: none; }
     min-height: 194px;
     scroll-snap-align: start;
   }
+  .social-empty { flex: 0 0 100%; }
 
   .quick-entry .section { padding-top: 16px; padding-bottom: 16px; }
   .quick-grid {
@@ -2063,8 +2154,19 @@ ul { list-style: none; }
         <strong id="social-latest">正在检查内容时效</strong>
         <span class="social-health-divider">·</span>
         <span id="social-source-status">公开来源</span>
+        <span class="social-health-spacer" aria-hidden="true"></span>
+        <span class="social-pending" id="social-pending"></span>
       </div>
-      <div class="social-filters" id="social-filters" aria-label="社交平台筛选"></div>
+      <div class="social-pipeline" id="social-pipeline" aria-label="资讯来源同步状态"></div>
+      <div class="social-controls">
+        <div class="social-filters" id="social-filters" aria-label="社交平台筛选"></div>
+        <div class="social-window-filters" id="social-window-filters" aria-label="发布时间筛选">
+          <button class="social-window-filter" data-social-window="1">24小时</button>
+          <button class="social-window-filter" data-social-window="7">7天</button>
+          <button class="social-window-filter active" data-social-window="30">30天</button>
+          <button class="social-window-filter" data-social-window="all">全部</button>
+        </div>
+      </div>
       <div class="social-grid" id="social-grid"></div>
       <p class="social-notice" id="social-notice"></p>
     </div>
@@ -4713,6 +4815,7 @@ const state = {
   activeFreeFilter: false,
   activeQuick: null,
   activeSocialPlatform: 'all',
+  activeSocialWindow: '30',
   sortMode: 'smart',
   viewMode: localStorage.getItem('wh-view-mode') || 'grid',
   visibleLimit: 18,
@@ -4759,6 +4862,9 @@ const el = {
   socialNotice: $('#social-notice'),
   socialLatest: $('#social-latest'),
   socialSourceStatus: $('#social-source-status'),
+  socialPending: $('#social-pending'),
+  socialPipeline: $('#social-pipeline'),
+  socialWindowFilters: $('#social-window-filters'),
   mediaFeature: $('#media-feature'),
   mediaRail: $('#media-rail'),
   tripToggle: $('#trip-toggle'),
@@ -4925,7 +5031,8 @@ function socialPlatformLabel(platform) {
     local_news: '实时资讯',
     xiaohongshu: '小红书',
     douyin: '抖音',
-    weibo: '微博'
+    weibo: '微博',
+    bilibili: 'B站'
   }[platform] || platform;
 }
 
@@ -4935,13 +5042,16 @@ function socialSourceTypeLabel(sourceType) {
     public_page: '公开内容页',
     public_search_page: '公开搜索页',
     official_media_summary: '官方媒体整理',
-    official_api: '官方接口'
+    official_api: '官方接口',
+    authorized_local_export: '本地授权导入',
+    rsshub_feed: '订阅源'
   }[sourceType] || '公开来源';
 }
 
 function socialFreshness(value) {
   if (!value) return { label: '日期待核实', tone: 'stale', days: Infinity };
-  const published = new Date(`${value}T00:00:00+08:00`);
+  const normalized = String(value).includes('T') ? String(value) : `${value}T00:00:00+08:00`;
+  const published = new Date(normalized);
   if (Number.isNaN(published.getTime())) {
     return { label: '日期待核实', tone: 'stale', days: Infinity };
   }
@@ -4961,8 +5071,14 @@ function formatSocialDate(value, includeTime = false) {
     : { year: 'numeric', month: 'numeric', day: 'numeric' });
 }
 
+function socialItemsInWindow(items, windowValue = state.activeSocialWindow) {
+  if (windowValue === 'all') return items;
+  const maxDays = Number(windowValue);
+  return items.filter(item => socialFreshness(item.published_at).days <= maxDays);
+}
+
 function renderSocialFilters() {
-  const items = DATA.socialFeed.items || [];
+  const items = socialItemsInWindow(DATA.socialFeed.items || []);
   if (!items.length || !el.socialFilters) return;
   const platforms = [...new Set(items.map(item => item.platform))];
   const filters = ['all', ...platforms];
@@ -4988,12 +5104,13 @@ function renderSocialFeed() {
     return;
   }
 
+  const windowItems = socialItemsInWindow(allItems);
   const items = state.activeSocialPlatform === 'all'
-    ? allItems
-    : allItems.filter(item => item.platform === state.activeSocialPlatform);
+    ? windowItems
+    : windowItems.filter(item => item.platform === state.activeSocialPlatform);
   el.socialSection.classList.remove('hidden');
   el.socialUpdated.textContent = DATA.socialFeed.generated_at
-    ? `抓取于 ${formatSocialDate(DATA.socialFeed.generated_at, true)}`
+    ? `管道检查 ${formatSocialDate(DATA.socialFeed.generated_at, true)}`
     : '';
   const latest = socialFreshness(DATA.socialFeed.latest_published_at || allItems[0]?.published_at);
   const health = document.getElementById('social-health');
@@ -5011,8 +5128,45 @@ function renderSocialFeed() {
     const trustedCount = allItems.filter(item => item.source_type === 'public_news_rss').length;
     el.socialSourceStatus.textContent = `${liveCount} 条本周内容 · ${trustedCount} 条自动更新`;
   }
+  const sourceHealth = DATA.socialFeed.source_health || {};
+  const automaticSources = sourceHealth.automatic_sources || {};
+  const newsStatus = automaticSources.news_rss || {};
+  const connectors = sourceHealth.connectors || {};
+  const socialConnector = connectors.xiaohongshu || connectors.douyin;
+  if (el.socialPending) {
+    const pending = Number(sourceHealth.pending_review || 0);
+    el.socialPending.textContent = pending ? `${pending} 条候选待核验` : '候选队列已处理';
+  }
+  if (el.socialPipeline) {
+    const newsTone = newsStatus.status === 'error' ? 'is-error' : '';
+    const connectorTone = socialConnector?.status === 'connected' ? '' : 'is-waiting';
+    const connectorText = socialConnector?.status === 'connected'
+      ? `社交平台最近导入 ${formatSocialDate(socialConnector.last_success_at, true)}`
+      : '小红书 / 抖音等待本地授权同步';
+    el.socialPipeline.innerHTML = `
+      <span class="social-pipeline-item ${newsTone}">
+        <span class="social-pipeline-mark" aria-hidden="true"></span>
+        公开资讯 ${newsStatus.status === 'error' ? '本轮更新失败' : '每 2 小时更新'}
+      </span>
+      <span class="social-pipeline-item ${connectorTone}">
+        <span class="social-pipeline-mark" aria-hidden="true"></span>
+        ${escapeHtml(connectorText)}
+      </span>`;
+  }
   el.socialNotice.textContent = DATA.socialFeed.policy?.display_notice ||
     '实时资讯来自白名单公开新闻源；社交内容仅作出行灵感，出行前请核实官方公告。';
+
+  if (!items.length) {
+    const windowLabel = state.activeSocialWindow === 'all'
+      ? '当前平台'
+      : `最近 ${state.activeSocialWindow} 天`;
+    el.socialGrid.innerHTML = `
+      <div class="social-empty">
+        <strong>${escapeHtml(windowLabel)}暂无已核验内容</strong>
+        试试切换时间范围或其他来源
+      </div>`;
+    return;
+  }
 
   el.socialGrid.innerHTML = items.map((item, index) => {
     const freshness = socialFreshness(item.published_at);
@@ -5021,7 +5175,7 @@ function renderSocialFeed() {
       <a class="social-card-media" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer"
          aria-label="查看${escapeHtml(item.title)}原文">
         <img src="${escapeHtml(socialPoster(item, index))}" alt="${escapeHtml(item.place_name || item.title)}" loading="lazy">
-        ${item.platform === 'douyin' ? '<span class="media-play" aria-hidden="true">▶</span>' : ''}
+        ${item.platform === 'douyin' || item.media_type === 'video' ? '<span class="media-play" aria-hidden="true">▶</span>' : ''}
       </a>
       <div class="social-card-top">
         <span class="social-platform">${escapeHtml(socialPlatformLabel(item.platform))}</span>
@@ -5649,6 +5803,16 @@ function setupEventListeners() {
     state.activeSocialPlatform = filter.dataset.socialPlatform;
     $$('.social-filter', el.socialFilters).forEach(button => button.classList.remove('active'));
     filter.classList.add('active');
+    renderSocialFeed();
+  });
+  el.socialWindowFilters?.addEventListener('click', (e) => {
+    const filter = e.target.closest('.social-window-filter');
+    if (!filter) return;
+    state.activeSocialWindow = filter.dataset.socialWindow;
+    $$('.social-window-filter', el.socialWindowFilters).forEach(button => {
+      button.classList.toggle('active', button === filter);
+    });
+    renderSocialFilters();
     renderSocialFeed();
   });
 

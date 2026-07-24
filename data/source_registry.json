@@ -6,14 +6,44 @@
     "copy_full_content": false,
     "candidate_output": "data/social_candidates.json"
   },
+  "authorized_connectors": [
+    {
+      "id": "xiaohongshu",
+      "label": "小红书",
+      "adapters": [
+        "xiaohongshu-mcp",
+        "redbook",
+        "Agent-Reach"
+      ],
+      "mode": "authorized_local_export",
+      "publish_requires_review": true,
+      "credential_scope": "local_only"
+    },
+    {
+      "id": "douyin",
+      "label": "抖音",
+      "adapters": [
+        "MediaCrawler",
+        "Agent-Reach"
+      ],
+      "mode": "authorized_local_export",
+      "publish_requires_review": true,
+      "credential_scope": "local_only"
+    }
+  ],
   "search": {
     "provider": "SearXNG",
     "base_url_env": "SEARXNG_BASE_URL",
     "queries": [
       "武汉 亲子 周末 活动",
       "武汉 遛娃 新展览",
+      "武汉 周末去哪玩",
+      "武汉 夜游 新玩法",
       "武汉 景区 最新 开放",
-      "武汉 商场 亲子 活动"
+      "武汉 商场 亲子 活动",
+      "武汉 商场 新店 展览",
+      "site:xiaohongshu.com 武汉 亲子 周末",
+      "site:douyin.com 武汉 景区 实拍"
     ],
     "allowed_domains": [
       "wuhan.gov.cn",
@@ -43,7 +73,10 @@
       "武汉 景区 暑期",
       "武汉 景区 最新 开放",
       "武汉 公园 展览",
-      "武汉 商场 亲子"
+      "武汉 商场 亲子",
+      "武汉 商场 新店 展览",
+      "武汉 夜游 活动",
+      "武汉 周末去哪玩"
     ],
     "auto_publish_domains": [
       "wuhan.gov.cn",

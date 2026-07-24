@@ -6,11 +6,19 @@
 
 import json
 import os
-from datetime import datetime
+import sys
+from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
+LOCAL_TIMEZONE = ZoneInfo("Asia/Shanghai")
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 def load_json(filename):
     path = DATA_DIR / filename
@@ -28,18 +36,12 @@ def save_json(filename, data):
 
 def update_last_update():
     """更新 last_update.json 时间戳"""
-    now = datetime.now()
-    hour = now.hour
-    # 对齐到最近的更新批次
-    batches = [2, 8, 14, 20]
-    current_batch = max(b for b in batches if b <= hour) if hour >= 2 else batches[-1]
-
-    # 计算下次更新时间
-    next_idx = (batches.index(current_batch) + 1) % len(batches)
-    next_hour = batches[next_idx]
-    next_update = now.replace(hour=next_hour, minute=0, second=0, microsecond=0)
-    if next_hour <= current_batch:
-        next_update = next_update.replace(day=next_update.day + 1)
+    now = datetime.now(LOCAL_TIMEZONE)
+    interval_hours = max(1, int(os.environ.get("UPDATE_INTERVAL_HOURS", "2")))
+    elapsed_in_batch = now.hour % interval_hours
+    next_update = now.replace(minute=0, second=0, microsecond=0) + timedelta(
+        hours=interval_hours - elapsed_in_batch
+    )
 
     spots = load_json("spots.json")
     events = load_json("events.json")
@@ -51,7 +53,8 @@ def update_last_update():
     data = {
         "last_update": now.strftime("%Y-%m-%d %H:%M"),
         "next_update": next_update.strftime("%Y-%m-%d %H:%M"),
-        "data_version": "1.2",
+        "data_version": "1.3",
+        "update_interval_hours": interval_hours,
         "total_places": len(spots),
         "total_events": len(events),
         "total_promotions": len(promotions),
@@ -66,7 +69,7 @@ def update_last_update():
 def main():
     print("=" * 50)
     print("武汉亲子游玩推荐 - 数据更新")
-    print(f"时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"时间: {datetime.now(LOCAL_TIMEZONE).strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 50)
 
     # 1. 聚合经过审核的社交平台公开信息

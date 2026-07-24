@@ -20,12 +20,14 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 REGISTRY_PATH = BASE_DIR / "data" / "source_registry.json"
 OUTPUT_PATH = BASE_DIR / "data" / "social_candidates.json"
 USER_AGENT = "WuhanFamilyGuide/1.0 (+review-only-public-discovery)"
+LOCAL_TIMEZONE = ZoneInfo("Asia/Shanghai")
 
 
 def load_json(path: Path) -> dict:
@@ -121,6 +123,19 @@ def unwrap_news_url(url: str) -> str:
     return url
 
 
+def normalize_news_image(url: str) -> str:
+    url = clean_text(url, 800)
+    parsed = urllib.parse.urlparse(url)
+    if parsed.scheme == "http" and parsed.hostname in {"bing.com", "www.bing.com"}:
+        parsed = parsed._replace(scheme="https")
+    if parsed.hostname in {"bing.com", "www.bing.com"} and parsed.path == "/th":
+        query = dict(urllib.parse.parse_qsl(parsed.query))
+        query.update({"w": "960", "h": "540", "c": "7", "rs": "1"})
+        parsed = parsed._replace(query=urllib.parse.urlencode(query))
+        return urllib.parse.urlunparse(parsed)
+    return url if parsed.scheme == "https" else ""
+
+
 def infer_district(text: str) -> str:
     districts = (
         "武昌区", "江岸区", "江汉区", "硚口区", "汉阳区", "洪山区",
@@ -159,6 +174,7 @@ def discover_news_rss(config: dict) -> list[dict]:
             title = clean_text(child_text(item, ("title",)), 120)
             summary = clean_text(child_text(item, ("description", "summary")), 240)
             source = clean_text(child_text(item, ("Source", "source", "author")), 60)
+            image = normalize_news_image(child_text(item, ("Image", "thumbnail")))
             if not title or not summary:
                 continue
             candidates.append(
@@ -174,6 +190,8 @@ def discover_news_rss(config: dict) -> list[dict]:
                     "place_name": "",
                     "district": infer_district(title + " " + summary),
                     "tags": ["实时资讯", "武汉文旅"],
+                    "image": image,
+                    "image_source": "rss_thumbnail" if image else "",
                     "discovery_query": query,
                     "review_status": "auto_trusted",
                 }
@@ -215,6 +233,9 @@ def discover(registry_path: Path = REGISTRY_PATH, output_path: Path = OUTPUT_PAT
     registry = load_json(registry_path)
     candidates = []
     errors = []
+    existing = load_json(output_path) if output_path.exists() else {"items": []}
+    now = datetime.now(LOCAL_TIMEZONE).isoformat(timespec="seconds")
+    source_status = {}
 
     searxng_url = os.environ.get(registry["search"]["base_url_env"], "").strip()
     rsshub_url = os.environ.get(registry["feeds"]["base_url_env"], "").strip()
@@ -226,49 +247,93 @@ def discover(registry_path: Path = REGISTRY_PATH, output_path: Path = OUTPUT_PAT
 
     if news_configured:
         try:
-            candidates.extend(discover_news_rss(registry["news_rss"]))
+            news_items = discover_news_rss(registry["news_rss"])
+            candidates.extend(news_items)
+            source_status["news_rss"] = {
+                "status": "healthy",
+                "last_attempt_at": now,
+                "item_count": len(news_items),
+                "schedule": "every_2_hours",
+            }
         except Exception as error:
             errors.append(f"News RSS: {error}")
+            source_status["news_rss"] = {
+                "status": "error",
+                "last_attempt_at": now,
+                "item_count": 0,
+                "message": clean_text(str(error), 120),
+            }
 
     if searxng_url:
         try:
-            candidates.extend(discover_searxng(registry["search"], searxng_url))
+            search_items = discover_searxng(registry["search"], searxng_url)
+            candidates.extend(search_items)
+            source_status["searxng"] = {
+                "status": "healthy",
+                "last_attempt_at": now,
+                "item_count": len(search_items),
+            }
         except Exception as error:
             errors.append(f"SearXNG: {error}")
+            source_status["searxng"] = {
+                "status": "error",
+                "last_attempt_at": now,
+                "item_count": 0,
+                "message": clean_text(str(error), 120),
+            }
 
     if rsshub_configured:
         try:
-            candidates.extend(discover_rsshub(registry["feeds"], rsshub_url))
+            feed_items = discover_rsshub(registry["feeds"], rsshub_url)
+            candidates.extend(feed_items)
+            source_status["rsshub"] = {
+                "status": "healthy",
+                "last_attempt_at": now,
+                "item_count": len(feed_items),
+            }
         except Exception as error:
             errors.append(f"RSSHub: {error}")
+            source_status["rsshub"] = {
+                "status": "error",
+                "last_attempt_at": now,
+                "item_count": 0,
+                "message": clean_text(str(error), 120),
+            }
 
-    if output_path.exists():
-        existing = load_json(output_path)
-        max_age_days = int(registry.get("news_rss", {}).get("max_age_days", 45))
-        cutoff_date = (
-            datetime.now(timezone.utc) - timedelta(days=max_age_days)
-        ).date().isoformat()
-        candidates.extend(
-            item
-            for item in existing.get("items", [])
-            if item.get("review_status") == "auto_trusted"
+    max_age_days = int(registry.get("news_rss", {}).get("max_age_days", 45))
+    cutoff_date = (
+        datetime.now(timezone.utc) - timedelta(days=max_age_days)
+    ).date().isoformat()
+    preserved_items = [
+        item
+        for item in existing.get("items", [])
+        if item.get("source_type") != "public_news_rss"
+        or (
+            item.get("review_status") == "auto_trusted"
             and item.get("published_at", "") >= cutoff_date
         )
+    ]
 
-    unique = {item["url"]: item for item in candidates}
+    unique = {
+        item["url"]: item
+        for item in [*preserved_items, *candidates]
+        if item.get("url")
+    }
     ordered_items = sorted(
         unique.values(),
         key=lambda item: item.get("published_at", ""),
         reverse=True,
     )
     payload = {
-        "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+        "generated_at": now,
         "publish_requires_review": True,
         "configured": {
             "searxng": bool(searxng_url),
             "rsshub": rsshub_configured,
             "news_rss": news_configured,
         },
+        "source_status": source_status,
+        "connectors": existing.get("connectors", {}),
         "errors": errors,
         "items": ordered_items,
     }
