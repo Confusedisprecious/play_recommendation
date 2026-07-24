@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T23:09:33+08:00",
+  "generated_at": "2026-07-25T01:55:10+08:00",
   "latest_published_at": "2026-07-23",
   "freshness": {
     "live_window_days": 7,
@@ -8,12 +8,12 @@
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-07-24T23:07:39+08:00",
+    "last_discovery_at": "2026-07-25T01:55:07+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-07-24T23:07:39+08:00",
-        "item_count": 8,
+        "last_attempt_at": "2026-07-25T01:55:07+08:00",
+        "item_count": 7,
         "schedule": "every_2_hours"
       }
     },
@@ -72,8 +72,8 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.4LjdWJGmPXQxyzmAIbXWKA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-24T23:09:33+08:00",
-      "discovery_query": "武汉 夜游 活动",
+      "collected_at": "2026-07-25T01:55:10+08:00",
+      "discovery_query": "武汉 景区 暑期",
       "image_source": "rss_thumbnail"
     },
     {
@@ -93,8 +93,8 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.P_Nr3aplByEWlLC0FcXdqg&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-24T23:09:33+08:00",
-      "discovery_query": "武汉 亲子 暑期",
+      "collected_at": "2026-07-25T01:55:10+08:00",
+      "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     },
     {
@@ -115,7 +115,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T23:09:33+08:00"
+      "collected_at": "2026-07-25T01:55:10+08:00"
     },
     {
       "id": "dceb19cd837a5683",
@@ -134,8 +134,8 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.ruOlDeTzQO4tkEq5KB2wRQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-24T23:09:33+08:00",
-      "discovery_query": "武汉 景区 暑期",
+      "collected_at": "2026-07-25T01:55:10+08:00",
+      "discovery_query": "武汉 亲子 暑期",
       "image_source": "rss_thumbnail"
     },
     {
@@ -155,7 +155,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.nyVkFQvYyWQBpFttUiSsvg&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-24T23:09:33+08:00",
+      "collected_at": "2026-07-25T01:55:10+08:00",
       "discovery_query": "武汉 景区 暑期",
       "image_source": "rss_thumbnail"
     },
@@ -176,8 +176,28 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-24T23:09:33+08:00",
+      "collected_at": "2026-07-25T01:55:10+08:00",
       "discovery_query": "武汉 景区 最新 开放"
+    },
+    {
+      "id": "80ef6f70e56a46ca",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "佛祖岭街道黄龙山社区妇联开展科普亲子主题活动",
+      "summary": "长江网讯（通讯员刘仪凡） 为深入推进儿童友好社区建设，切实关爱辖区妇女儿童成长，充分发挥妇联、关工委服务家庭、服务少年儿童的职能作用，近日，由武汉东湖高新区妇联、区关工委主办，佛祖岭街道黄龙山社区妇联承办，依托社区“光谷巾帼荟・妇儿 ...",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/csqpd/wh_20004/202606/t5311668.htm",
+      "published_at": "2026-06-29",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-07-25T01:55:10+08:00",
+      "discovery_query": "武汉 亲子 活动"
     },
     {
       "id": "3743814e8a85d13e",
@@ -196,7 +216,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-24T23:09:33+08:00",
+      "collected_at": "2026-07-25T01:55:10+08:00",
       "discovery_query": "武汉 亲子 活动"
     },
     {
@@ -216,7 +236,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-24T23:09:33+08:00",
+      "collected_at": "2026-07-25T01:55:10+08:00",
       "discovery_query": "武汉 商场 新店 展览"
     },
     {
@@ -236,7 +256,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-24T23:09:33+08:00",
+      "collected_at": "2026-07-25T01:55:10+08:00",
       "discovery_query": "武汉 周末去哪玩"
     },
     {
@@ -257,7 +277,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T23:09:33+08:00"
+      "collected_at": "2026-07-25T01:55:10+08:00"
     },
     {
       "id": "douyin-east-lake-sakura-202602",
@@ -277,7 +297,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T23:09:33+08:00"
+      "collected_at": "2026-07-25T01:55:10+08:00"
     },
     {
       "id": "douyin-anshan-wetland-202601",
@@ -297,7 +317,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T23:09:33+08:00"
+      "collected_at": "2026-07-25T01:55:10+08:00"
     },
     {
       "id": "xiaohongshu-family-hike-2025",
@@ -317,7 +337,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T23:09:33+08:00"
+      "collected_at": "2026-07-25T01:55:10+08:00"
     },
     {
       "id": "xiaohongshu-wuhan-family-guide",
@@ -337,7 +357,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-24T23:09:33+08:00"
+      "collected_at": "2026-07-25T01:55:10+08:00"
     }
   ]
 }
