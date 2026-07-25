@@ -65,7 +65,7 @@
     "provider": "Bing News RSS",
     "enabled": true,
     "endpoint": "https://www.bing.com/news/search",
-    "max_age_days": 45,
+    "max_age_days": 30,
     "max_items": 24,
     "queries": [
       "武汉 亲子 活动",

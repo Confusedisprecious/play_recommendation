@@ -307,10 +307,10 @@ def discover(registry_path: Path = REGISTRY_PATH, output_path: Path = OUTPUT_PAT
     preserved_items = [
         item
         for item in existing.get("items", [])
-        if item.get("source_type") != "public_news_rss"
-        or (
-            item.get("review_status") == "auto_trusted"
-            and item.get("published_at", "") >= cutoff_date
+        if item.get("published_at", "") >= cutoff_date
+        and (
+            item.get("source_type") != "public_news_rss"
+            or item.get("review_status") == "auto_trusted"
         )
     ]
 

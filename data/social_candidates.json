@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T22:05:34+08:00",
+  "generated_at": "2026-07-25T23:11:17+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,7 +9,7 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-07-25T22:05:34+08:00",
+      "last_attempt_at": "2026-07-25T23:11:17+08:00",
       "item_count": 6,
       "schedule": "every_2_hours"
     }
@@ -254,6 +254,26 @@
       "collected_at": "2026-07-25T10:44:53+08:00"
     },
     {
+      "id": "749ab0ed15b45c65",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "武汉三大高铁站，全部开通！",
+      "summary": "你想甩下行李直奔景区，三大高铁站齐齐开通“轻装行”服务；你在路口等红灯，全城有清凉的街头巨型遮阳伞、喷雾送来清凉；酒店推出“延迟退房”服务…… ...",
+      "author": "长江云 - 湖北网络广播电视台官方网站",
+      "url": "https://news.hbtv.com.cn/p/4619047.html",
+      "published_at": "2026-07-22",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.nlJDgQ_8wV_92f0pgUf-SQ&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
+      "discovery_query": "武汉 景区 暑期",
+      "review_status": "auto_trusted"
+    },
+    {
       "id": "c27d80a720d158c9",
       "platform": "xiaohongshu",
       "source_type": "authorized_local_export",
@@ -445,8 +465,8 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "",
-      "image_source": "",
+      "image": "https://www.bing.com/th?id=ONUT.nyVkFQvYyWQBpFttUiSsvg&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
       "discovery_query": "武汉 景区 暑期",
       "review_status": "auto_trusted"
     },
@@ -518,86 +538,6 @@
       "image": "",
       "image_source": "",
       "discovery_query": "武汉 亲子 活动",
-      "review_status": "auto_trusted"
-    },
-    {
-      "id": "48e2b9678001c2fe",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "遇见“屈原”、粽王争霸赛……端午假期武汉景区节日氛围浓",
-      "summary": "长江日报大武汉客户端6月20日讯（记者范雅琴）端午假期，武汉多个景区推出特色民俗体验与国风演绎，节日氛围浓厚。“水下屈原·跨时空见面会”、首届荆楚粽王争霸赛等亮点活动集中亮相，从市区到近郊，市民游客在丰富多彩的互动项目中尽享缤纷假日。",
-      "author": "长江网",
-      "url": "https://news.cjn.cn/whpd/yw_19947/202606/t5307969.htm",
-      "published_at": "2026-06-20",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "",
-      "image_source": "",
-      "discovery_query": "武汉 景区 最新 开放",
-      "review_status": "auto_trusted"
-    },
-    {
-      "id": "3743814e8a85d13e",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "全国首创！武汉欢乐谷“武汉话动物城”盛大开城",
-      "summary": "荆楚网（湖北日报网）讯（通讯员 向彩云）6月19日，武汉欢乐谷迎来全新亲子主题区\"武汉话动物城”的盛大启幕。作为全国首个以方言文化为核心的沉浸式亲子主题区，该项目以\"方言+萌宠”的创新模式，为江城家庭开启了一场别开生面的文化探索之旅。",
-      "author": "荆楚网",
-      "url": "https://www.cnhubei.com/content/2026-06/20/content_20043338.html",
-      "published_at": "2026-06-19",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "",
-      "image_source": "",
-      "discovery_query": "武汉 亲子 活动",
-      "review_status": "auto_trusted"
-    },
-    {
-      "id": "90be9e156b725b94",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "忆江城 “武汉往事”搬进商场",
-      "summary": "6月13日，《武汉往事》城市模型公共空间展暨社区美育计划首展在武汉滨江天街正式开展，吸引了众多消费者围观。 本次展览由湖北省图书馆、湖北省文联文学艺术院联合武汉设计工程学院成龙影视学院共同打造，以微缩模型、视觉装置、影视美术作品等多元 ...",
-      "author": "荆楚网",
-      "url": "https://news.cnhubei.com/content/2026-06/14/content_20032302.html",
-      "published_at": "2026-06-13",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "",
-      "image_source": "",
-      "discovery_query": "武汉 商场 新店 展览",
-      "review_status": "auto_trusted"
-    },
-    {
-      "id": "4c38cb7639839d45",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "周末去哪玩？武汉周边的乐园地图更新了",
-      "summary": "在京津冀，一句“这么近，那么美，周末到河北”把北京、天津居民的短途度假引流至周边；在长三角，散落于江浙沪腹地的小城度假区，早已成为上海、杭州人触手可及的“后花园”。都市圈的发展把周末微度假模式变成常态，市民在“圈”内就能住进风景里。",
-      "author": "长江网",
-      "url": "https://news.cjn.cn/whpd/yw_19947/202606/t5304108.htm",
-      "published_at": "2026-06-11",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "",
-      "image_source": "",
-      "discovery_query": "武汉 周末去哪玩",
       "review_status": "auto_trusted"
     }
   ]

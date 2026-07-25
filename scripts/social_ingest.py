@@ -16,7 +16,7 @@ import time
 import urllib.parse
 import urllib.request
 import urllib.robotparser
-from datetime import datetime
+from datetime import datetime, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -89,6 +89,16 @@ def load_json(path: Path) -> dict:
 def clean_text(value: object, limit: int) -> str:
     text = re.sub(r"\s+", " ", str(value or "")).strip()
     return text[:limit].rstrip()
+
+
+def published_within_retention(value: str, cutoff_date) -> bool:
+    try:
+        published = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except (AttributeError, ValueError):
+        return False
+    if published.tzinfo is not None:
+        published = published.astimezone(LOCAL_TIMEZONE)
+    return published.date() >= cutoff_date
 
 
 def allowed_url(url: str) -> bool:
@@ -180,13 +190,21 @@ def build_feed(
     candidates_path: Path = DEFAULT_CANDIDATES,
 ) -> dict:
     config = load_json(input_path)
-    now = datetime.now(LOCAL_TIMEZONE).isoformat(timespec="seconds")
+    now_datetime = datetime.now(LOCAL_TIMEZONE)
+    now = now_datetime.isoformat(timespec="seconds")
+    retention_days = max(1, int(config.get("policy", {}).get("retention_days", 30)))
+    cutoff_date = (now_datetime - timedelta(days=retention_days)).date()
+    expired_count = 0
     seen_urls: set[str] = set()
     items: list[dict] = []
     candidates: dict = {}
 
     for raw in config.get("items", []):
         url = clean_text(raw.get("url"), 500)
+        published_at = clean_text(raw.get("published_at"), 32)
+        if not published_within_retention(published_at, cutoff_date):
+            expired_count += 1
+            continue
         if not allowed_url(url) or url in seen_urls:
             continue
         seen_urls.add(url)
@@ -207,6 +225,10 @@ def build_feed(
             if raw.get("review_status") not in {"reviewed", "auto_trusted"}:
                 continue
             url = clean_text(raw.get("url"), 500)
+            published_at = clean_text(raw.get("published_at"), 32)
+            if not published_within_retention(published_at, cutoff_date):
+                expired_count += 1
+                continue
             if not allowed_url(url) or url in seen_urls:
                 continue
             seen_urls.add(url)
@@ -245,8 +267,11 @@ def build_feed(
         "latest_published_at": latest_published_at,
         "freshness": {
             "live_window_days": 7,
-            "current_window_days": 30,
-            "stale_after_days": 30,
+            "current_window_days": retention_days,
+            "stale_after_days": retention_days,
+            "retention_days": retention_days,
+            "oldest_kept_date": cutoff_date.isoformat(),
+            "expired_items_removed": expired_count,
         },
         "source_health": source_health,
         "policy": config.get("policy", {}),
@@ -255,7 +280,10 @@ def build_feed(
     }
     with output_path.open("w", encoding="utf-8") as handle:
         json.dump(feed, handle, ensure_ascii=False, indent=2)
-    print(f"  social_feed.json saved ({len(items)} reviewed items)")
+    print(
+        f"  social_feed.json saved ({len(items)} reviewed items, "
+        f"{expired_count} expired removed)"
+    )
     return feed
 
 
