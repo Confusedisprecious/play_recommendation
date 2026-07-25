@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T01:18:57+08:00",
+  "generated_at": "2026-07-26T03:38:00+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,10 +8,10 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "error",
-      "last_attempt_at": "2026-07-26T01:18:57+08:00",
-      "item_count": 0,
-      "message": "not well-formed (invalid token): line 1, column 41"
+      "status": "healthy",
+      "last_attempt_at": "2026-07-26T03:38:00+08:00",
+      "item_count": 6,
+      "schedule": "every_2_hours"
     }
   },
   "connectors": {
@@ -24,9 +24,7 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [
-    "News RSS: not well-formed (invalid token): line 1, column 41"
-  ],
+  "errors": [],
   "items": [
     {
       "id": "8e80a1aed2ebea20",
@@ -467,8 +465,8 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "https://www.bing.com/th?id=ONUT.nyVkFQvYyWQBpFttUiSsvg&pid=News&w=960&h=540&c=7&rs=1",
-      "image_source": "rss_thumbnail",
+      "image": "",
+      "image_source": "",
       "discovery_query": "武汉 景区 暑期",
       "review_status": "auto_trusted"
     },
