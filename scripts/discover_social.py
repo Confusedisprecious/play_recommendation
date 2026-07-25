@@ -344,9 +344,15 @@ def discover(registry_path: Path = REGISTRY_PATH, output_path: Path = OUTPUT_PAT
     auto_trusted = sum(
         item.get("review_status") == "auto_trusted" for item in unique.values()
     )
+    reviewed = sum(
+        item.get("review_status") == "reviewed" for item in unique.values()
+    )
+    pending = sum(
+        item.get("review_status") == "pending" for item in unique.values()
+    )
     print(
         "  social_candidates.json saved "
-        f"({auto_trusted} trusted, {len(unique) - auto_trusted} pending)"
+        f"({auto_trusted} trusted, {reviewed} reviewed, {pending} pending)"
     )
     if not searxng_url and not rsshub_url and not news_configured:
         print("  no discovery endpoint configured; set SEARXNG_BASE_URL or RSSHUB_BASE_URL")

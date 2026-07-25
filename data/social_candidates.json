@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T07:27:31+08:00",
+  "generated_at": "2026-07-25T10:46:37+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,14 +9,203 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-07-25T07:27:31+08:00",
-      "item_count": 6,
+      "last_attempt_at": "2026-07-25T10:46:37+08:00",
+      "item_count": 7,
       "schedule": "every_2_hours"
     }
   },
-  "connectors": {},
+  "connectors": {
+    "xiaohongshu": {
+      "adapter": "opencli-browser",
+      "status": "connected",
+      "last_success_at": "2026-07-25T10:44:53+08:00",
+      "imported_items": 12,
+      "publish_requires_review": true,
+      "credential_scope": "local_only"
+    }
+  },
   "errors": [],
   "items": [
+    {
+      "id": "8e80a1aed2ebea20",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "武汉7月活动合集🔥（30个荷花市集、跳东湖🏊",
+      "summary": "整理7月25日至26日武汉30项活动，覆盖永旺经开店荷花市集、万象城微醺市集与签售、K11展览、大悦城互动活动等，适合按商圈筛选。",
+      "author": "武汉生活",
+      "url": "https://www.xiaohongshu.com/search_result/6a640e0d00000000140041dd?xsec_token=ABl7OQdjP-N_cTMDJ2yULlxZeLnD85W00ZplEiA3IrsZc=&xsec_source=",
+      "published_at": "2026-07-25T00:00:00+08:00",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "武汉周末去哪儿",
+        "寻找城市艺术活动",
+        "走走生活节",
+        "城市的一百种玩法",
+        "夏日集市",
+        "在武汉非遗就是生活"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "8",
+        "comments": "2",
+        "collects": "1"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
+    },
+    {
+      "id": "c78d8fe1a18c5d48",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "武汉遛娃去处15｜滨江天街，免费戏水攀爬公园",
+      "summary": "视频笔记推荐龙湖武汉滨江天街的免费戏水和攀爬空间，适合作为高温天商场遛娃备选；水区开放情况需现场确认。",
+      "author": "阿巡漫游记",
+      "url": "https://www.xiaohongshu.com/search_result/6a641cd3000000000f028ebf?xsec_token=ABl7OQdjP-N_cTMDJ2yULlxe6BV3nMEVgW3DdEp_bxlKY=&xsec_source=",
+      "published_at": "2026-07-25T00:00:00+08:00",
+      "place_name": "龙湖武汉滨江天街",
+      "district": "武昌区",
+      "tags": [
+        "好视频扶持计划",
+        "武汉免费遛娃",
+        "武汉遛娃攻略",
+        "武汉避暑遛娃",
+        "武汉玩水",
+        "武汉免费玩水"
+      ],
+      "image": "",
+      "media_type": "video",
+      "engagement": {
+        "likes": "1",
+        "comments": "0",
+        "collects": "3"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
+    },
+    {
+      "id": "84e5ec2e349fb114",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "武汉一些能量场很强的地方🌳…",
+      "summary": "列出湖美昙华林校区、涨渡湖、东棠书院、小朱湾、白玉公园、沙湖公园、常青人才公园和竹吟山房等武汉小众拍照散步地。",
+      "author": "薄禾糖糖",
+      "url": "https://www.xiaohongshu.com/search_result/6a641a610000000009037ce5?xsec_token=ABl7OQdjP-N_cTMDJ2yULlxeirx5ATDe2kgIcEYbQxCT0=&xsec_source=",
+      "published_at": "2026-07-25T00:00:00+08:00",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "武汉旅游",
+        "武汉周末去哪儿",
+        "城市里的私藏秘境",
+        "武汉拍照",
+        "大自然的疗愈力量",
+        "城市小众打卡地"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "15",
+        "comments": "4",
+        "collects": "12"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
+    },
+    {
+      "id": "39fc6e3d29f2ec3f",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "武汉 0 元新展！汉阳方圆荟百鸟展免门票冲🦜",
+      "summary": "汉阳方圆荟推出免门票百鸟展，包含观鸟、喂食、集章和鹦鹉表演等区域，楼上另有室内运动项目；动物互动与活动安排以现场为准。",
+      "author": "脆皮蛋挞",
+      "url": "https://www.xiaohongshu.com/search_result/6a6345040000000010028860?xsec_token=ABHRqxVlpVNs0EkOBCL6w68StV_kRjCII6mdhQ0u5EY60=&xsec_source=",
+      "published_at": "2026-07-24T00:00:00+08:00",
+      "place_name": "",
+      "district": "汉阳区",
+      "tags": [
+        "武汉方圆荟奥特莱斯",
+        "方圆荟奥莱好买好逛好省心",
+        "室内避暑遛娃免费看百鸟展",
+        "汉阳室内奥莱遛娃神地",
+        "夏穿雨林飞鸟奇遇记",
+        "武汉暑期遛娃"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "20",
+        "comments": "3",
+        "collects": "16"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
+    },
+    {
+      "id": "3eb5a675c58942a6",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "武汉新店｜逛商场终于有地方发呆解压了✨",
+      "summary": "新荣天街新开开放式拼豆DIY店，提供多种图纸与手工作品形式，适合逛街间隙、情侣或亲子休闲；价格与座位情况以现场为准。",
+      "author": "阿执。",
+      "url": "https://www.xiaohongshu.com/search_result/6a634467000000000c0148f0?xsec_token=ABHRqxVlpVNs0EkOBCL6w68fO3gO4GRfN4cvK5mrhK7LQ=&xsec_source=",
+      "published_at": "2026-07-24T00:00:00+08:00",
+      "place_name": "新荣天街",
+      "district": "江岸区",
+      "tags": [
+        "武汉拼豆",
+        "武汉手工DIY",
+        "新荣天街探店",
+        "武汉解压好去处",
+        "偷喝奶茶大赛",
+        "武汉周末去哪玩"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "4",
+        "comments": "0",
+        "collects": "4"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
+    },
+    {
+      "id": "a8005df4d6605b5c",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "🌈武汉周末（7.24-7.26）活动汇总！",
+      "summary": "汇总7月24日至26日武汉市集、展览、采摘、快闪、音乐会与漫展，多数活动标注为免费；具体场次可能调整，出发前请再核对主办方公告。",
+      "author": "武汉周末去哪",
+      "url": "https://www.xiaohongshu.com/search_result/6a61bc7b0000000005039fc0?xsec_token=ABkB_e1L1YNjjAQid-yGBD_L-cS7sYqdA4oW_RIP4vJQs=&xsec_source=",
+      "published_at": "2026-07-23T00:00:00+08:00",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "武汉周末去哪儿",
+        "年轻人活动",
+        "武汉去哪玩",
+        "武汉活动",
+        "免费活动",
+        "免费看展"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "360",
+        "comments": "24",
+        "collects": "239"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
+    },
     {
       "id": "2e3cabd260e57351",
       "platform": "local_news",
@@ -36,6 +225,150 @@
       "image_source": "rss_thumbnail",
       "discovery_query": "武汉 夜游 活动",
       "review_status": "auto_trusted"
+    },
+    {
+      "id": "ab295ef126aef245",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "武汉新天地品牌更新正当时，有心头好吗？",
+      "summary": "关注武汉新天地暑期品牌更新：HOKA、SATUR等新店及餐饮、生活方式品牌陆续进场；开业时间和门店状态请以商场官方信息为准。",
+      "author": "老K世界观",
+      "url": "https://www.xiaohongshu.com/search_result/6a603223000000000f01f3e4?xsec_token=ABd_uZ58EaWAVlc6lLXdFAY58Zn7bTvtH9bn6DkDztpNM=&xsec_source=",
+      "published_at": "2026-07-22T00:00:00+08:00",
+      "place_name": "武汉新天地",
+      "district": "江岸区",
+      "tags": [
+        "武汉商业",
+        "武汉新店",
+        "武汉新天地"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "90",
+        "comments": "28",
+        "collects": "36"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
+    },
+    {
+      "id": "c27d80a720d158c9",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "武汉新开的！！！！巨新！！！（星悦广场🥺🥺",
+      "summary": "光谷星悦广场出现新开自助旗袍体验店，成人和儿童款均有，适合亲子或拍照体验；价格与营业状态需到店确认。",
+      "author": "猫球球酥",
+      "url": "https://www.xiaohongshu.com/search_result/6a5f00bd000000000f00beb9?xsec_token=ABLCLUgI1zCPHea8Qufi7oObGqtqWEoVqE4P6tnHfmzz0=&xsec_source=",
+      "published_at": "2026-07-21T00:00:00+08:00",
+      "place_name": "星悦广场",
+      "district": "洪山区",
+      "tags": [
+        "逛街好去处",
+        "天热也要进商场",
+        "武汉新店",
+        "旗袍推荐",
+        "武汉旗袍",
+        "武汉旅游攻略"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "118",
+        "comments": "25",
+        "collects": "53"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
+    },
+    {
+      "id": "40f326a765bad6fe",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "武汉高温天可以去的32个遛娃好去处",
+      "summary": "发布者整理武汉高温天气下32个亲子去处，重点标签为免费、室内与周末遛娃，可作为备选清单后再逐一核对预约和开放信息。",
+      "author": "添添爱学习🎒",
+      "url": "https://www.xiaohongshu.com/search_result/6a5d7cf8000000001101dcd3?xsec_token=ABhqGMzvnefraUDQk1gtKfxJ7DAzzSHVHeeqTY4nGiF9A=&xsec_source=",
+      "published_at": "2026-07-20T00:00:00+08:00",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "不花钱遛娃",
+        "亲子活动",
+        "一定要带孩子去的城市",
+        "一起去溜娃",
+        "带娃去哪儿玩",
+        "周末溜娃"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "11",
+        "comments": "2",
+        "collects": "21"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
+    },
+    {
+      "id": "9a14d940e40f1bc5",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "湖北省科技馆",
+      "summary": "湖北省科技馆是免费室内亲子去处，邻近光谷五路；帖文提示大人和儿童均需提前预约，儿童区可能需要单独预约。",
+      "author": "宝儿",
+      "url": "https://www.xiaohongshu.com/search_result/6a5c2291000000001101d14e?xsec_token=ABbb1ynD1sUWhoix5Z4SXHeMhhhioCJskWhna7RjTmhGM=&xsec_source=",
+      "published_at": "2026-07-19T00:00:00+08:00",
+      "place_name": "湖北省科技馆",
+      "district": "",
+      "tags": [
+        "武汉遛娃",
+        "不花钱遛娃",
+        "带娃的好去处"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "16",
+        "comments": "16",
+        "collects": "22"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
+    },
+    {
+      "id": "c93b0ecdefc20b58",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "武汉SKP，一座永不停更的惊喜制造机",
+      "summary": "帖文从艺文展览、屋顶酒馆和品牌矩阵梳理武汉SKP近期开业两周年内容，适合关注商场看展、夜间休闲和首店动态的人群。",
+      "author": "商业引力",
+      "url": "https://www.xiaohongshu.com/search_result/6a5ae1630000000011010eef?xsec_token=ABU0mTIRUJZdBFdJB849G8ZYNvR6X2Tp-0Fx8dRqI5wdg=&xsec_source=",
+      "published_at": "2026-07-18T00:00:00+08:00",
+      "place_name": "武汉SKP",
+      "district": "武昌区",
+      "tags": [
+        "武汉SKP",
+        "武汉SKP两周年",
+        "武汉商业",
+        "武汉商场",
+        "武汉购物中心",
+        "商业观察"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "52",
+        "comments": "6",
+        "collects": "18"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
     },
     {
       "id": "0ac677c19f528ef7",
@@ -92,8 +425,8 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "https://www.bing.com/th?id=ONUT.ruOlDeTzQO4tkEq5KB2wRQ&pid=News&w=960&h=540&c=7&rs=1",
-      "image_source": "rss_thumbnail",
+      "image": "",
+      "image_source": "",
       "discovery_query": "武汉 景区 暑期",
       "review_status": "auto_trusted"
     },
@@ -112,10 +445,40 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "https://www.bing.com/th?id=ONUT.nyVkFQvYyWQBpFttUiSsvg&pid=News&w=960&h=540&c=7&rs=1",
-      "image_source": "rss_thumbnail",
+      "image": "",
+      "image_source": "",
       "discovery_query": "武汉 景区 暑期",
       "review_status": "auto_trusted"
+    },
+    {
+      "id": "f074ef8e779f4a28",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli-browser",
+      "title": "武汉夏日夜游活动汇总！江滩顶流回归~",
+      "summary": "汇总武汉暑期夜游：横渡长江博物馆、武汉博物馆、中山公园、东湖及武汉野生动物王国等，包含免费和付费项目，需按日期核对开放时段。",
+      "author": "武汉周末去哪",
+      "url": "https://www.xiaohongshu.com/search_result/6a4ded33000000001702f825?xsec_token=ABENS00MeQ1DG8F3KvSJ8pomRhLeP-K9tkz8XXxaz7nmg=&xsec_source=",
+      "published_at": "2026-07-08T00:00:00+08:00",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "武汉夜游",
+        "武汉散步",
+        "武汉好去处",
+        "武汉周末去哪儿",
+        "城市夜游这么玩",
+        "武汉去哪玩"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "32",
+        "comments": "0",
+        "collects": "30"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-25T10:44:53+08:00"
     },
     {
       "id": "3b9ee4af6acaeef9",
