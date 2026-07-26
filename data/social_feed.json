@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T12:01:55+08:00",
+  "generated_at": "2026-07-26T15:06:59+08:00",
   "latest_published_at": "2026-07-25T00:00:00+08:00",
   "freshness": {
     "live_window_days": 7,
@@ -11,11 +11,11 @@
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-07-26T12:01:52+08:00",
+    "last_discovery_at": "2026-07-26T15:06:57+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-07-26T12:01:52+08:00",
+        "last_attempt_at": "2026-07-26T15:06:57+08:00",
         "item_count": 5,
         "schedule": "every_2_hours"
       }
@@ -265,7 +265,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.4LjdWJGmPXQxyzmAIbXWKA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-26T12:01:55+08:00",
+      "collected_at": "2026-07-26T15:06:59+08:00",
       "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     },
@@ -313,8 +313,29 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.nlJDgQ_8wV_92f0pgUf-SQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-26T12:01:55+08:00",
+      "collected_at": "2026-07-26T15:06:59+08:00",
       "discovery_query": "武汉 景区 暑期",
+      "image_source": "rss_thumbnail"
+    },
+    {
+      "id": "49ce8e04ba47135b",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "来武汉、过周末！112场文旅大餐邀你体验烟火气与松弛感",
+      "summary": "湖北日报讯（见习记者田婉娴、实习生吴乐瑶、孙惠瑄、通讯员武宣、武文旅） 7月23日，武汉市政府新闻办召开武汉周末游新闻发布会。从7月下旬至9月底，武汉市整合全市文旅资源，推出112场精彩活动、六大主题产品、专属优惠礼包及便民服务举措，诚邀八方游客“来武汉、过周末”，体验江城独有的烟火气与微度假的松弛",
+      "author": "荆楚网新闻频道",
+      "url": "https://news.cnhubei.com/content/2026-07/23/content_20101318.html",
+      "published_at": "2026-07-22",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.gU7_Kd7LpIhsTDdjklbCVA&pid=News&w=960&h=540&c=7&rs=1",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-07-26T15:06:59+08:00",
+      "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     },
     {
@@ -451,8 +472,8 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.P_Nr3aplByEWlLC0FcXdqg&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-26T12:01:55+08:00",
-      "discovery_query": "武汉 夜游 活动",
+      "collected_at": "2026-07-26T15:06:59+08:00",
+      "discovery_query": "武汉 景区 暑期",
       "image_source": "rss_thumbnail"
     },
     {
@@ -472,7 +493,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.zwCKf9L0BIzuKwBqqKUnUA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-26T12:01:55+08:00",
+      "collected_at": "2026-07-26T15:06:59+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -494,7 +515,7 @@
       ],
       "image": "",
       "review_status": "reviewed",
-      "collected_at": "2026-07-26T12:01:55+08:00"
+      "collected_at": "2026-07-26T15:06:59+08:00"
     },
     {
       "id": "dceb19cd837a5683",
@@ -513,8 +534,8 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.ruOlDeTzQO4tkEq5KB2wRQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-26T12:01:55+08:00",
-      "discovery_query": "武汉 景区 暑期",
+      "collected_at": "2026-07-26T15:06:59+08:00",
+      "discovery_query": "武汉 亲子 暑期",
       "image_source": "rss_thumbnail"
     },
     {
@@ -534,7 +555,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.nyVkFQvYyWQBpFttUiSsvg&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-26T12:01:55+08:00",
+      "collected_at": "2026-07-26T15:06:59+08:00",
       "discovery_query": "武汉 景区 暑期",
       "image_source": "rss_thumbnail"
     },
@@ -585,7 +606,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-26T12:01:55+08:00",
+      "collected_at": "2026-07-26T15:06:59+08:00",
       "discovery_query": "武汉 景区 最新 开放"
     },
     {
@@ -605,7 +626,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-07-26T12:01:55+08:00",
+      "collected_at": "2026-07-26T15:06:59+08:00",
       "discovery_query": "武汉 亲子 活动"
     }
   ]
