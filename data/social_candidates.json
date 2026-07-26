@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T01:27:08+08:00",
+  "generated_at": "2026-07-27T03:39:12+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,7 +9,7 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-07-27T01:27:08+08:00",
+      "last_attempt_at": "2026-07-27T03:39:12+08:00",
       "item_count": 5,
       "schedule": "every_2_hours"
     }
@@ -221,8 +221,8 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "",
-      "image_source": "",
+      "image": "https://www.bing.com/th?id=ONUT.4LjdWJGmPXQxyzmAIbXWKA&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
       "discovery_query": "武汉 夜游 活动",
       "review_status": "auto_trusted"
     },
