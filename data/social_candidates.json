@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T07:15:51+08:00",
+  "generated_at": "2026-07-26T12:01:52+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,7 +9,7 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-07-26T07:15:51+08:00",
+      "last_attempt_at": "2026-07-26T12:01:52+08:00",
       "item_count": 5,
       "schedule": "every_2_hours"
     }
@@ -447,7 +447,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.ruOlDeTzQO4tkEq5KB2wRQ&pid=News&w=960&h=540&c=7&rs=1",
       "image_source": "rss_thumbnail",
-      "discovery_query": "武汉 亲子 暑期",
+      "discovery_query": "武汉 景区 暑期",
       "review_status": "auto_trusted"
     },
     {
