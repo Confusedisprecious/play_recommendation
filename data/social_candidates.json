@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T12:07:21+08:00",
+  "generated_at": "2026-07-27T15:56:14+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,10 +8,10 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "error",
-      "last_attempt_at": "2026-07-27T12:07:21+08:00",
-      "item_count": 0,
-      "message": "not well-formed (invalid token): line 1, column 41"
+      "status": "healthy",
+      "last_attempt_at": "2026-07-27T15:56:14+08:00",
+      "item_count": 4,
+      "schedule": "every_2_hours"
     }
   },
   "connectors": {
@@ -24,9 +24,7 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [
-    "News RSS: not well-formed (invalid token): line 1, column 41"
-  ],
+  "errors": [],
   "items": [
     {
       "id": "8e80a1aed2ebea20",
@@ -490,6 +488,26 @@
       "image": "https://www.bing.com/th?id=ONUT.nyVkFQvYyWQBpFttUiSsvg&pid=News&w=960&h=540&c=7&rs=1",
       "image_source": "rss_thumbnail",
       "discovery_query": "武汉 景区 暑期",
+      "review_status": "auto_trusted"
+    },
+    {
+      "id": "7f62e79355785b51",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "台风“巴威”绕开湖北强度减弱 武汉景区今起全部恢复营业",
+      "summary": "楚天都市报极目新闻讯（记者徐颖）随着“巴威”对武汉市影响的逐步减弱，武汉市防汛防台风工作已转入常态化管理。13日起，武汉所有景区恢复正常营业。 此前因超强台风“巴威”过境可能造成的影响，本着以“万全之备”应对“万一之变”的态度，武汉A级 ...",
+      "author": "荆楚网",
+      "url": "https://news.cnhubei.com/content/2026-07/13/content_20081896.html",
+      "published_at": "2026-07-12",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 景区 最新 开放",
       "review_status": "auto_trusted"
     },
     {
