@@ -21,6 +21,11 @@ from html.parser import HTMLParser
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+try:
+    from .social_urls import is_direct_social_url, normalize_public_url
+except ImportError:
+    from social_urls import is_direct_social_url, normalize_public_url
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
@@ -40,10 +45,7 @@ ALLOWED_HOSTS = {
     "bilibili.com",
     "www.bilibili.com",
     "b23.tv",
-    "news.cjn.cn",
     "news.hbtv.com.cn",
-    "www.cnhubei.com",
-    "cnhubei.com",
     "wuhan.gov.cn",
     "www.wuhan.gov.cn",
     "wlj.wuhan.gov.cn",
@@ -144,7 +146,7 @@ def fetch_metadata(url: str, timeout: int = 12) -> dict[str, str]:
 
 
 def normalize_item(raw: dict, refreshed: dict[str, str], now: str) -> dict:
-    url = clean_text(raw.get("url"), 500)
+    url = normalize_public_url(clean_text(raw.get("url"), 500))
     stable_id = raw.get("id") or hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
     title = raw.get("title") or refreshed.get("title")
     summary = raw.get("summary") or refreshed.get("summary")
@@ -170,6 +172,7 @@ def normalize_item(raw: dict, refreshed: dict[str, str], now: str) -> dict:
         ("discovery_query", 120),
         ("image_source", 40),
         ("verified_at", 32),
+        ("expires_at", 32),
     ):
         value = clean_text(raw.get(key), limit)
         if value:
@@ -200,10 +203,17 @@ def build_feed(
     candidates: dict = {}
 
     for raw in config.get("items", []):
-        url = clean_text(raw.get("url"), 500)
+        platform = clean_text(raw.get("platform"), 32).lower()
+        url = normalize_public_url(clean_text(raw.get("url"), 500))
         published_at = clean_text(raw.get("published_at"), 32)
         if not published_within_retention(published_at, cutoff_date):
             expired_count += 1
+            continue
+        expires_at = clean_text(raw.get("expires_at"), 32)
+        if expires_at and expires_at[:10] < now_datetime.date().isoformat():
+            expired_count += 1
+            continue
+        if not is_direct_social_url(url, platform):
             continue
         if not allowed_url(url) or url in seen_urls:
             continue
@@ -224,10 +234,17 @@ def build_feed(
         for raw in candidates.get("items", []):
             if raw.get("review_status") not in {"reviewed", "auto_trusted"}:
                 continue
-            url = clean_text(raw.get("url"), 500)
+            platform = clean_text(raw.get("platform"), 32).lower()
+            url = normalize_public_url(clean_text(raw.get("url"), 500))
             published_at = clean_text(raw.get("published_at"), 32)
             if not published_within_retention(published_at, cutoff_date):
                 expired_count += 1
+                continue
+            expires_at = clean_text(raw.get("expires_at"), 32)
+            if expires_at and expires_at[:10] < now_datetime.date().isoformat():
+                expired_count += 1
+                continue
+            if not is_direct_social_url(url, platform):
                 continue
             if not allowed_url(url) or url in seen_urls:
                 continue

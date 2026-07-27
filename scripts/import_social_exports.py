@@ -18,6 +18,11 @@ from pathlib import Path
 from typing import Any, Iterable
 from zoneinfo import ZoneInfo
 
+try:
+    from .social_urls import is_direct_social_url, normalize_public_url
+except ImportError:
+    from social_urls import is_direct_social_url, normalize_public_url
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_OUTPUT = BASE_DIR / "data" / "social_candidates.json"
@@ -150,7 +155,7 @@ def extract_url(raw: dict, platform: str) -> str:
     if url.startswith("http://"):
         url = "https://" + url[7:]
     if url.startswith("https://"):
-        return url
+        return normalize_public_url(url)
 
     post_id = clean_text(
         first_value(
@@ -173,8 +178,10 @@ def extract_url(raw: dict, platform: str) -> str:
         url = f"https://www.xiaohongshu.com/explore/{urllib.parse.quote(post_id)}"
         token = clean_text(raw.get("xsec_token"), 500)
         if token:
-            url += "?" + urllib.parse.urlencode({"xsec_token": token})
-        return url
+            url += "?" + urllib.parse.urlencode(
+                {"xsec_token": token, "xsec_source": "pc_search"}
+            )
+        return normalize_public_url(url)
     if platform == "douyin":
         return f"https://www.douyin.com/video/{urllib.parse.quote(post_id)}"
     if platform == "weibo":
@@ -248,7 +255,7 @@ def normalize_record(
     provisional_platform = infer_platform(raw, default_platform, "")
     url = extract_url(raw, provisional_platform)
     platform = infer_platform(raw, provisional_platform, url)
-    if not valid_public_url(url, platform):
+    if not valid_public_url(url, platform) or not is_direct_social_url(url, platform):
         return None
 
     title = clean_text(
@@ -323,7 +330,7 @@ def normalize_record(
         if value not in (None, "")
     }
     stable_id = hashlib.sha1(url.encode("utf-8")).hexdigest()[:16]
-    return {
+    item = {
         "id": stable_id,
         "platform": platform,
         "source_type": "authorized_local_export",
@@ -345,6 +352,10 @@ def normalize_record(
         "review_status": review_status,
         "collected_at": collected_at,
     }
+    expires_at = clean_text(raw.get("expires_at"), 32)
+    if expires_at:
+        item["expires_at"] = expires_at
+    return item
 
 
 def import_exports(

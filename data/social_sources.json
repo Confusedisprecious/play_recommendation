@@ -27,20 +27,5 @@
       "status": "credentials_required"
     }
   ],
-  "items": [
-    {
-      "id": "douyin-mulan-water-202607",
-      "platform": "douyin",
-      "source_type": "public_search_page",
-      "title": "木兰山水世界暑期亲子玩水热度上升",
-      "summary": "湖北文旅近期推荐大型亲子水乐园，适合把它加入高温天气的玩水备选清单。",
-      "author": "湖北文旅",
-      "url": "https://www.douyin.com/search/%E6%AD%A6%E6%B1%89%E9%80%82%E5%90%88%E5%B8%A6%E5%AD%A9%E5%AD%90%E7%8E%A9%E5%91%A8%E8%BE%B912-15%E5%B2%81%E7%8E%A9%E7%9A%84%E9%A1%B9%E7%9B%AE",
-      "published_at": "2026-07-13",
-      "place_name": "木兰山水世界",
-      "district": "黄陂区",
-      "tags": ["暑期", "玩水", "亲子水乐园"],
-      "review_status": "reviewed"
-    }
-  ]
+  "items": []
 }

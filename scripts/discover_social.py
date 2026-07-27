@@ -22,6 +22,11 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+try:
+    from .social_urls import is_direct_social_url, normalize_public_url
+except ImportError:
+    from social_urls import is_direct_social_url, normalize_public_url
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 REGISTRY_PATH = BASE_DIR / "data" / "source_registry.json"
@@ -144,6 +149,16 @@ def infer_district(text: str) -> str:
     return next((district for district in districts if district in text), "")
 
 
+def news_item_allowed(config: dict, title: str, summary: str, url: str) -> bool:
+    if not allowed_host(url, config.get("auto_publish_domains", [])):
+        return False
+    text = f"{title} {summary}"
+    if any(term in text for term in config.get("exclude_terms", [])):
+        return False
+    title_terms = config.get("title_include_terms", [])
+    return not title_terms or any(term in title for term in title_terms)
+
+
 def discover_news_rss(config: dict) -> list[dict]:
     if not config.get("enabled", False):
         return []
@@ -176,6 +191,8 @@ def discover_news_rss(config: dict) -> list[dict]:
             source = clean_text(child_text(item, ("Source", "source", "author")), 60)
             image = normalize_news_image(child_text(item, ("Image", "thumbnail")))
             if not title or not summary:
+                continue
+            if not news_item_allowed(config, title, summary, url):
                 continue
             candidates.append(
                 {
@@ -304,19 +321,40 @@ def discover(registry_path: Path = REGISTRY_PATH, output_path: Path = OUTPUT_PAT
     cutoff_date = (
         datetime.now(timezone.utc) - timedelta(days=max_age_days)
     ).date().isoformat()
+    today = datetime.now(LOCAL_TIMEZONE).date().isoformat()
     preserved_items = [
         item
         for item in existing.get("items", [])
         if item.get("published_at", "") >= cutoff_date
         and (
+            not item.get("expires_at")
+            or item.get("expires_at", "")[:10] >= today
+        )
+        and (
             item.get("source_type") != "public_news_rss"
-            or item.get("review_status") == "auto_trusted"
+            or (
+                item.get("review_status") == "auto_trusted"
+                and news_item_allowed(
+                    registry.get("news_rss", {}),
+                    item.get("title", ""),
+                    item.get("summary", ""),
+                    item.get("url", ""),
+                )
+            )
         )
     ]
 
+    normalized_items = []
+    for item in [*preserved_items, *candidates]:
+        url = normalize_public_url(item.get("url", ""))
+        platform = item.get("platform", "")
+        if not url or not is_direct_social_url(url, platform):
+            continue
+        normalized = {**item, "id": candidate_id(url), "url": url}
+        normalized_items.append(normalized)
     unique = {
         item["url"]: item
-        for item in [*preserved_items, *candidates]
+        for item in normalized_items
         if item.get("url")
     }
     ordered_items = sorted(

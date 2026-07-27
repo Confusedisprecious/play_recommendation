@@ -67,6 +67,37 @@
     "endpoint": "https://www.bing.com/news/search",
     "max_age_days": 30,
     "max_items": 24,
+    "title_include_terms": [
+      "亲子",
+      "遛娃",
+      "活动",
+      "景区",
+      "公园",
+      "商场",
+      "展览",
+      "市集",
+      "游乐",
+      "乐园",
+      "博物馆",
+      "科技馆",
+      "演出",
+      "夜游",
+      "露营",
+      "采摘",
+      "花海",
+      "开放",
+      "预约"
+    ],
+    "exclude_terms": [
+      "台风",
+      "恢复营业",
+      "高铁站",
+      "高铁圈",
+      "交换游",
+      "江豚",
+      "社区妇联",
+      "生产车间"
+    ],
     "queries": [
       "武汉 亲子 活动",
       "武汉 亲子 暑期",
@@ -81,9 +112,7 @@
     "auto_publish_domains": [
       "wuhan.gov.cn",
       "wlj.wuhan.gov.cn",
-      "news.cjn.cn",
-      "news.hbtv.com.cn",
-      "cnhubei.com"
+      "news.hbtv.com.cn"
     ]
   }
 }
