@@ -58,6 +58,88 @@
       "bilibili.com"
     ]
   },
+  "authorized_social_search": {
+    "strategy": "category_rotation",
+    "max_queries_per_run": 7,
+    "max_results_per_query": 6,
+    "max_age_days": 30,
+    "groups": [
+      {
+        "id": "current-events",
+        "label": "本周活动",
+        "queries": [
+          "武汉 本周 活动",
+          "武汉 周末 市集 演出"
+        ]
+      },
+      {
+        "id": "indoor-weather",
+        "label": "天气与室内",
+        "queries": [
+          "武汉 雨天 室内遛娃",
+          "武汉 高温 室内 亲子"
+        ]
+      },
+      {
+        "id": "culture",
+        "label": "展览与场馆",
+        "queries": [
+          "武汉 免费展览 近期",
+          "武汉 博物馆 亲子 预约"
+        ]
+      },
+      {
+        "id": "outdoor",
+        "label": "公园与户外",
+        "queries": [
+          "武汉 公园 玩水",
+          "武汉 亲子 徒步 骑行"
+        ]
+      },
+      {
+        "id": "night",
+        "label": "夜游",
+        "queries": [
+          "武汉 夏日夜游",
+          "武汉 江滩 东湖 夜场"
+        ]
+      },
+      {
+        "id": "openings",
+        "label": "开放与预约",
+        "queries": [
+          "武汉 景区开放 预约",
+          "武汉 新开 乐园 亲子"
+        ]
+      },
+      {
+        "id": "commercial",
+        "label": "商圈与新店",
+        "queries": [
+          "武汉 商场 首店 快闪",
+          "武汉 商圈 亲子 活动"
+        ]
+      },
+      {
+        "id": "nearby",
+        "label": "武汉周边",
+        "queries": [
+          "武汉 周边 亲子 一日游",
+          "武汉 出发 短途 自驾"
+        ]
+      },
+      {
+        "id": "districts",
+        "label": "区域轮换",
+        "queries": [
+          "武汉 汉口 遛娃",
+          "武汉 汉阳 亲子活动",
+          "武汉 武昌 周末",
+          "武汉 光谷 江夏 周边游"
+        ]
+      }
+    ]
+  },
   "feeds": {
     "provider": "RSSHub",
     "base_url_env": "RSSHUB_BASE_URL",

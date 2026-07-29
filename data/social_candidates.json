@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T10:59:37+08:00",
+  "generated_at": "2026-07-29T11:39:10+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -18,8 +18,8 @@
     "xiaohongshu": {
       "adapter": "opencli",
       "status": "connected",
-      "last_success_at": "2026-07-29T10:59:37+08:00",
-      "imported_items": 4,
+      "last_success_at": "2026-07-29T11:39:10+08:00",
+      "imported_items": 7,
       "publish_requires_review": true,
       "credential_scope": "local_only"
     }
@@ -84,6 +84,62 @@
       "expires_at": "2026-08-02T23:59:59+08:00"
     },
     {
+      "id": "824d744dc00068d7",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli",
+      "title": "武汉白石美术馆：免费室内看展与拍照",
+      "summary": "武汉白石美术馆近期可免费登记入场，帖文记录的开放时间为周二至周日10:00-18:00，一、二层均有展陈与拍照空间；临时展览和闭馆安排以美术馆最新通知为准。",
+      "author": "见风Windvision",
+      "url": "https://www.xiaohongshu.com/discovery/item/6a689a8b000000000401caa0?xsec_token=ABABbX-tFOW399zVqJN0fXWX16DIgcxh5f2X46vrIFgJQ%3D&xsec_source=pc_search",
+      "published_at": "2026-07-28T00:00:00+08:00",
+      "place_name": "武汉白石美术馆",
+      "district": "",
+      "tags": [
+        "免费展览",
+        "美术馆",
+        "室内活动",
+        "拍照"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "98",
+        "comments": "39",
+        "collects": "107"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-29T11:39:10+08:00"
+    },
+    {
+      "id": "4819ce666e15174b",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli",
+      "title": "龟山公园亲子轻徒步：一山看两江",
+      "summary": "龟山公园可串联三国雕塑、城市绿道和山顶观景点，远眺长江、汉江及武汉多处地标；帖子推荐傍晚前往并提示防蚊、带水和穿防滑鞋，雨后坡道湿滑时不建议带低龄儿童登高。",
+      "author": "小昕妈咪",
+      "url": "https://www.xiaohongshu.com/discovery/item/6a68117c000000000f00b4d0?xsec_token=ABABbX-tFOW399zVqJN0fXWfGiEd2gVJj_6j9X7YZDxEU%3D&xsec_source=pc_search",
+      "published_at": "2026-07-28T00:00:00+08:00",
+      "place_name": "龟山公园",
+      "district": "汉阳区",
+      "tags": [
+        "亲子徒步",
+        "城市公园",
+        "日落",
+        "免费活动"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "7",
+        "comments": "3",
+        "collects": "5"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-29T11:39:10+08:00"
+    },
+    {
       "id": "542c58f6c25bc552",
       "platform": "xiaohongshu",
       "source_type": "authorized_local_export",
@@ -139,6 +195,34 @@
       },
       "review_status": "reviewed",
       "collected_at": "2026-07-29T10:59:37+08:00"
+    },
+    {
+      "id": "4eaa80e25062135f",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli",
+      "title": "光谷图书馆与美术馆同步开放，免费需预约",
+      "summary": "湖北文旅介绍光谷文化中心A栋的新场馆：光谷图书馆位于2至4层，光谷美术馆位于8至10层，均免费但需通过场馆官方账号预约；周二闭馆，出发前应再次核对预约名额与开放安排。",
+      "author": "湖北文旅",
+      "url": "https://www.xiaohongshu.com/discovery/item/6a67561e0000000009035b9b?xsec_token=ABGIZs6qTmcKNOZz5N7bmP817rDsfTxUPa5YZlXPtsgeE%3D&xsec_source=pc_search",
+      "published_at": "2026-07-27T00:00:00+08:00",
+      "place_name": "光谷文化中心",
+      "district": "洪山区",
+      "tags": [
+        "图书馆",
+        "美术馆",
+        "免费场馆",
+        "室内避暑"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "40",
+        "comments": "1",
+        "collects": "27"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-29T11:39:10+08:00"
     },
     {
       "id": "bb683d0f174ad132",
@@ -258,6 +342,34 @@
       "collected_at": "2026-07-29T10:59:37+08:00"
     },
     {
+      "id": "a301bc80a344cd9d",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli",
+      "title": "中国建筑科技馆：四大常设展厅免费参观",
+      "summary": "中国建筑科技馆以古代、荆楚、现代和未来建筑四个常设展厅串联建筑与城市知识，适合对模型、工程和设计感兴趣的家庭；帖文提示免费参观，开放安排和入馆要求需以场馆官方信息为准。",
+      "author": "YXO",
+      "url": "https://www.xiaohongshu.com/discovery/item/6a64938c000000000f039c00?xsec_token=ABl7OQdjP-N_cTMDJ2yULlxZN9aH5R8xpiVAWusUIojTw%3D&xsec_source=pc_search",
+      "published_at": "2026-07-25T00:00:00+08:00",
+      "place_name": "中国建筑科技馆",
+      "district": "",
+      "tags": [
+        "建筑科普",
+        "免费场馆",
+        "博物馆",
+        "室内遛娃"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "9",
+        "comments": "0",
+        "collects": "2"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-29T11:39:10+08:00"
+    },
+    {
       "id": "3c13e45f6bebbc49",
       "platform": "xiaohongshu",
       "source_type": "authorized_local_export",
@@ -354,6 +466,34 @@
       "engagement": {},
       "review_status": "rejected",
       "collected_at": "2026-07-29T10:59:37+08:00"
+    },
+    {
+      "id": "32a70156bed1d505",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli",
+      "title": "雨天室内遛娃：武汉城市规划展示馆",
+      "summary": "武汉城市规划展示馆位于市民之家东翼，包含城市模型、模拟地铁驾驶、交通展项、武汉沙盘和地质科普内容；帖文称免费且无需预约，开放时间、影片场次和入馆证件要求以场馆当天通知为准。",
+      "author": "安安和慢慢（在武汉）",
+      "url": "https://www.xiaohongshu.com/discovery/item/6a617403000000000100f467?xsec_token=ABkB_e1L1YNjjAQid-yGBD_J-I1Q07SAvEGhfz-xwd8YA%3D&xsec_source=pc_search",
+      "published_at": "2026-07-23T00:00:00+08:00",
+      "place_name": "武汉城市规划展示馆",
+      "district": "江岸区",
+      "tags": [
+        "雨天遛娃",
+        "城市科普",
+        "免费场馆",
+        "地铁直达"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "131",
+        "comments": "21",
+        "collects": "230"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-29T11:39:10+08:00"
     },
     {
       "id": "afac814634fd372a",
@@ -481,6 +621,34 @@
       "collected_at": "2026-07-25T10:44:53+08:00"
     },
     {
+      "id": "cac598fe07e0f3ee",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli",
+      "title": "武汉出发约2小时：钟祥大口国家森林公园",
+      "summary": "大口国家森林公园适合作为武汉周边短途备选，帖子推荐龙泉溪、九级天溪和大小天池的低强度路线；山林和溪边需准备驱蚊、防滑鞋与替换衣物，票价、天气和开放状态应以景区官方信息为准。",
+      "author": "北北北北boy",
+      "url": "https://www.xiaohongshu.com/discovery/item/6a5d819e000000001c00d5d0?xsec_token=ABhqGMzvnefraUDQk1gtKfxKtyWoKHOIPT8sRH2sBXr4o%3D&xsec_source=pc_search",
+      "published_at": "2026-07-20T00:00:00+08:00",
+      "place_name": "大口国家森林公园",
+      "district": "钟祥市",
+      "tags": [
+        "武汉周边",
+        "森林公园",
+        "短途自驾",
+        "亲子避暑"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "146",
+        "comments": "26",
+        "collects": "200"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-29T11:39:10+08:00"
+    },
+    {
       "id": "2b214d60505f6d93",
       "platform": "xiaohongshu",
       "source_type": "authorized_local_export",
@@ -574,6 +742,34 @@
       "engagement": {},
       "review_status": "rejected",
       "collected_at": "2026-07-29T10:59:37+08:00"
+    },
+    {
+      "id": "43a0a0b9de745124",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "connector": "opencli",
+      "title": "花山河·上岸公园：地铁直达免费玩水",
+      "summary": "花山河站C口可步行到达上岸公园玩水区，帖子记录多数日期10:00-21:00开放，周一和周四安排维护；现场没有冲洗区，需自带防滑鞋和换洗衣物，暴雨等极端天气可能临时关闭。",
+      "author": "小艾阿姨要努力",
+      "url": "https://www.xiaohongshu.com/discovery/item/6a5788c50000000008024ec1?xsec_token=ABShpgA3bh4mrFAVXnkQGSaQhwo5AXKoNraG8Ued_5mUY%3D&xsec_source=pc_search",
+      "published_at": "2026-07-15T00:00:00+08:00",
+      "place_name": "花山河·上岸公园",
+      "district": "洪山区",
+      "tags": [
+        "公园玩水",
+        "地铁直达",
+        "免费遛娃",
+        "亲子活动"
+      ],
+      "image": "",
+      "media_type": "image",
+      "engagement": {
+        "likes": "277",
+        "comments": "22",
+        "collects": "379"
+      },
+      "review_status": "reviewed",
+      "collected_at": "2026-07-29T11:39:10+08:00"
     },
     {
       "id": "224412bc8217903b",
