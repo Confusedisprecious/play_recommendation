@@ -414,7 +414,8 @@ def import_exports(
     )
     print(
         f"  imported {len(imported)} social candidates "
-        f"({sum(item['review_status'] == 'pending' for item in imported)} pending review)"
+        f"({sum(item['review_status'] == 'pending' for item in imported)} pending, "
+        f"{sum(item['review_status'] == 'rejected' for item in imported)} rejected)"
     )
     return existing
 
@@ -437,9 +438,12 @@ def main() -> None:
     )
     parser.add_argument(
         "--review-status",
-        choices=("pending", "reviewed"),
+        choices=("pending", "reviewed", "rejected"),
         default="pending",
-        help="Use reviewed only after a human has checked every imported result",
+        help=(
+            "Use reviewed only after checking every imported result; use rejected "
+            "for stale, duplicate, irrelevant, or low-context results"
+        ),
     )
     args = parser.parse_args()
     import_exports(

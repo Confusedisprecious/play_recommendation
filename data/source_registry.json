@@ -11,9 +11,11 @@
       "id": "xiaohongshu",
       "label": "小红书",
       "adapters": [
+        "opencli",
         "xiaohongshu-mcp",
         "redbook",
-        "Agent-Reach"
+        "Agent-Reach",
+        "MediaCrawler"
       ],
       "mode": "authorized_local_export",
       "publish_requires_review": true,

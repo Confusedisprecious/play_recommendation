@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T07:18:02+08:00",
-  "latest_published_at": "2026-07-25T00:00:00+08:00",
+  "generated_at": "2026-07-29T10:59:38+08:00",
+  "latest_published_at": "2026-07-28T00:00:00+08:00",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
@@ -11,7 +11,7 @@
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-07-29T07:17:48+08:00",
+    "last_discovery_at": "2026-07-29T10:59:37+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
@@ -22,10 +22,10 @@
     },
     "connectors": {
       "xiaohongshu": {
-        "adapter": "opencli-browser",
+        "adapter": "opencli",
         "status": "connected",
-        "last_success_at": "2026-07-25T10:44:53+08:00",
-        "imported_items": 12,
+        "last_success_at": "2026-07-29T10:59:37+08:00",
+        "imported_items": 4,
         "publish_requires_review": true,
         "credential_scope": "local_only"
       }
@@ -62,6 +62,120 @@
     }
   ],
   "items": [
+    {
+      "id": "6cb7aa3b3d603418",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "title": "武汉7月全新首店&新潮展汇总！吃喝玩乐指南",
+      "summary": "汇总武汉各大商圈近期全国、华中、湖北及武汉首店，并收录《糖・果｜烟火神仙》、三丽鸥日晒海岛派对、《中国奇谭》造梦奇境和《恰好是小满》等展览；具体营业与展期以商场官方通知为准。",
+      "author": "武汉周末去哪",
+      "url": "https://www.xiaohongshu.com/discovery/item/6a687d730000000001001ef0?xsec_token=ABABbX-tFOW399zVqJN0fXWSbymOaA5NQLSk2FPASnKPs%3D&xsec_source=pc_search",
+      "published_at": "2026-07-28T00:00:00+08:00",
+      "place_name": "武汉各大商圈",
+      "district": "",
+      "tags": [
+        "武汉商场",
+        "首店",
+        "新展",
+        "吃喝玩乐"
+      ],
+      "image": "",
+      "review_status": "reviewed",
+      "collected_at": "2026-07-29T10:59:37+08:00",
+      "media_type": "image",
+      "connector": "opencli",
+      "engagement": {
+        "likes": "9",
+        "comments": "1",
+        "collects": "8"
+      }
+    },
+    {
+      "id": "945b8ef39ef9414b",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "title": "武汉中心书城儿童艺术展，7月31日开展",
+      "summary": "武汉中心书城三楼展出幼儿园儿童和老师的课程作品，经二次创作呈现儿童创意表达；展期为7月31日至8月2日，帖文称无需预约，实际安排以场地方通知为准。",
+      "author": "雨来 Rainmaker",
+      "url": "https://www.xiaohongshu.com/discovery/item/6a689c89000000001101d841?xsec_token=ABABbX-tFOW399zVqJN0fXWesZoJXq6US-RqK9op2aSvA%3D&xsec_source=pc_search",
+      "published_at": "2026-07-28T00:00:00+08:00",
+      "place_name": "武汉中心书城",
+      "district": "江汉区",
+      "tags": [
+        "儿童美育",
+        "亲子看展",
+        "免费活动",
+        "武汉看展"
+      ],
+      "image": "",
+      "review_status": "reviewed",
+      "collected_at": "2026-07-29T10:59:37+08:00",
+      "media_type": "image",
+      "connector": "opencli",
+      "expires_at": "2026-08-02T23:59:59+08:00",
+      "engagement": {
+        "likes": "16",
+        "comments": "0",
+        "collects": "4"
+      }
+    },
+    {
+      "id": "542c58f6c25bc552",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "title": "武汉本周（7.28-8.2）活动汇总，好多免费！",
+      "summary": "整理本周见面会、江畔嘉年华、文博艺术展、IP主题快闪、露天Live、漫展和戏曲等活动，多数可免费参与；活动可能临时调整，出发前需核对原帖和主办方最新通知。",
+      "author": "武汉周末去哪",
+      "url": "https://www.xiaohongshu.com/discovery/item/6a670d27000000000301f032?xsec_token=ABGIZs6qTmcKNOZz5N7bmP813RceM5lRST6yEDW7mGhss%3D&xsec_source=pc_search",
+      "published_at": "2026-07-27T00:00:00+08:00",
+      "place_name": "武汉全城",
+      "district": "",
+      "tags": [
+        "本周活动",
+        "免费活动",
+        "看展",
+        "演出"
+      ],
+      "image": "",
+      "review_status": "reviewed",
+      "collected_at": "2026-07-29T10:59:37+08:00",
+      "media_type": "image",
+      "connector": "opencli",
+      "expires_at": "2026-08-02T23:59:59+08:00",
+      "engagement": {
+        "likes": "153",
+        "comments": "15",
+        "collects": "98"
+      }
+    },
+    {
+      "id": "60639ae035477740",
+      "platform": "xiaohongshu",
+      "source_type": "authorized_local_export",
+      "title": "武汉恒隆黑皮三丽鸥夏日快闪与拍照点",
+      "summary": "武汉恒隆广场布置三丽鸥日晒海岛派对：东区7号门外、东区B1下沉广场、西区L2轻轨连廊及L1中庭均有拍照或快闪内容；装置和活动开放状态以商场官方信息为准。",
+      "author": "一颗草莓籽🍓",
+      "url": "https://www.xiaohongshu.com/discovery/item/6a66cf29000000000f01702a?xsec_token=ABbN__8TbvjV_rjRnrJJi6AmCiagqAFdErLTjafSC_Umg%3D&xsec_source=pc_search",
+      "published_at": "2026-07-27T00:00:00+08:00",
+      "place_name": "武汉恒隆广场",
+      "district": "硚口区",
+      "tags": [
+        "商场快闪",
+        "三丽鸥",
+        "免费拍照",
+        "室内避暑"
+      ],
+      "image": "",
+      "review_status": "reviewed",
+      "collected_at": "2026-07-29T10:59:37+08:00",
+      "media_type": "image",
+      "connector": "opencli",
+      "engagement": {
+        "likes": "82",
+        "comments": "18",
+        "collects": "23"
+      }
+    },
     {
       "id": "a3bbfa0b8bff0b00",
       "platform": "xiaohongshu",
