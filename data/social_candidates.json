@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T07:28:17+08:00",
+  "generated_at": "2026-08-05T11:38:53+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,8 +9,8 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-08-05T07:28:17+08:00",
-      "item_count": 0,
+      "last_attempt_at": "2026-08-05T11:38:53+08:00",
+      "item_count": 1,
       "schedule": "every_2_hours"
     }
   },
@@ -26,6 +26,26 @@
   },
   "errors": [],
   "items": [
+    {
+      "id": "19c9b216db7a39a6",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "暑期演艺市场热度攀升 湖北将迎来2850场演出",
+      "summary": "近日，依托文化和旅游带动消费、拉动经济发展的作用，湖北暑期演艺市场迎来消费热潮。长江云新闻记者从湖北省文旅厅获悉，2026年8月至9月，全省营业性演出共计2850余场次，预计吸引超百万观众走进各大剧场观演。",
+      "author": "长江云 - 湖北网络广播电视台官方网站",
+      "url": "https://news.hbtv.com.cn/p/4621929.html",
+      "published_at": "2026-08-04",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 景区 暑期",
+      "review_status": "auto_trusted"
+    },
     {
       "id": "6cb7aa3b3d603418",
       "platform": "xiaohongshu",
@@ -742,25 +762,6 @@
       },
       "review_status": "reviewed",
       "collected_at": "2026-07-25T10:44:53+08:00"
-    },
-    {
-      "id": "fdbe1dc2a01a5a75",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli",
-      "title": "黑皮hello kitty来了，武汉恒隆探索新未来👏",
-      "summary": "",
-      "author": "热辣滚烫看商业",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a49cc67000000001100548c?xsec_token=ABNuQs0mJ01-bB0dFn8fybOJIi75oYpW28qY4rZOakkXA%3D&xsec_source=pc_search",
-      "published_at": "2026-07-05T00:00:00+08:00",
-      "place_name": "",
-      "district": "",
-      "tags": [],
-      "image": "",
-      "media_type": "",
-      "engagement": {},
-      "review_status": "rejected",
-      "collected_at": "2026-07-29T10:59:37+08:00"
     }
   ]
 }
