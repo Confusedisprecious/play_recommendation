@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-07T23:12:12+08:00",
+  "generated_at": "2026-08-08T01:11:37+08:00",
   "latest_published_at": "2026-08-04",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-07-08",
-    "expired_items_removed": 0
+    "oldest_kept_date": "2026-07-09",
+    "expired_items_removed": 1
   },
   "source_health": {
-    "status": "degraded",
-    "last_discovery_at": "2026-08-07T23:12:11+08:00",
+    "status": "healthy",
+    "last_discovery_at": "2026-08-08T01:11:34+08:00",
     "automatic_sources": {
       "news_rss": {
-        "status": "error",
-        "last_attempt_at": "2026-08-07T23:12:11+08:00",
+        "status": "healthy",
+        "last_attempt_at": "2026-08-08T01:11:34+08:00",
         "item_count": 0,
-        "message": "not well-formed (invalid token): line 1, column 41"
+        "schedule": "every_2_hours"
       }
     },
     "connectors": {
@@ -31,9 +31,7 @@
       }
     },
     "pending_review": 0,
-    "errors": [
-      "News RSS: not well-formed (invalid token): line 1, column 41"
-    ]
+    "errors": []
   },
   "policy": {
     "collection_mode": "trusted_public_feed_or_reviewed_authorized_export",
@@ -87,7 +85,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-08-07T23:12:12+08:00",
+      "collected_at": "2026-08-08T01:11:37+08:00",
       "discovery_query": "武汉 景区 暑期"
     },
     {
@@ -604,36 +602,6 @@
         "likes": "277",
         "comments": "22",
         "collects": "379"
-      }
-    },
-    {
-      "id": "224412bc8217903b",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "title": "武汉夏日夜游活动汇总！江滩顶流回归~",
-      "summary": "汇总武汉暑期夜游：横渡长江博物馆、武汉博物馆、中山公园、东湖及武汉野生动物王国等，包含免费和付费项目，需按日期核对开放时段。",
-      "author": "武汉周末去哪",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a4ded33000000001702f825?xsec_token=ABENS00MeQ1DG8F3KvSJ8pomRhLeP-K9tkz8XXxaz7nmg%3D&xsec_source=pc_search",
-      "published_at": "2026-07-08T00:00:00+08:00",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "武汉夜游",
-        "武汉散步",
-        "武汉好去处",
-        "武汉周末去哪儿",
-        "城市夜游这么玩",
-        "武汉去哪玩"
-      ],
-      "image": "",
-      "review_status": "reviewed",
-      "collected_at": "2026-07-25T10:44:53+08:00",
-      "media_type": "image",
-      "connector": "opencli-browser",
-      "engagement": {
-        "likes": "32",
-        "comments": "0",
-        "collects": "30"
       }
     }
   ]
