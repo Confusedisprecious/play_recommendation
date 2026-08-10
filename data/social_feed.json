@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T05:04:37+08:00",
+  "generated_at": "2026-08-11T06:59:10+08:00",
   "latest_published_at": "2026-08-04",
   "freshness": {
     "live_window_days": 7,
@@ -11,11 +11,11 @@
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-08-11T05:04:35+08:00",
+    "last_discovery_at": "2026-08-11T06:59:07+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-08-11T05:04:35+08:00",
+        "last_attempt_at": "2026-08-11T06:59:07+08:00",
         "item_count": 0,
         "schedule": "every_2_hours"
       }
@@ -85,7 +85,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-08-11T05:04:37+08:00",
+      "collected_at": "2026-08-11T06:59:10+08:00",
       "discovery_query": "武汉 景区 暑期"
     },
     {
