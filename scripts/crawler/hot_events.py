@@ -51,7 +51,9 @@ def analyze_hot_events():
             continue
 
         # 基础热度分
-        score = p.get("rating", 4.0) * 1000
+        # 新开放地点没有公开评分时，不在前端虚构评分；热度排序使用中性基准值。
+        rating = p.get("rating")
+        score = (float(rating) if isinstance(rating, (int, float)) else 4.0) * 1000
         if has_deals:
             score += 2000
         if has_events:
