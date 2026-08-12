@@ -27,6 +27,11 @@
     return typeof value === 'string' && /^images\//.test(value);
   }
 
+  function sanitizeGallery(item) {
+    const gallery = Array.isArray(item.gallery) ? item.gallery.filter(isLocalImage) : [];
+    return [...new Set([item.image, ...gallery].filter(isLocalImage))].slice(0, 5);
+  }
+
   function qualityEvent(event) {
     const rejectedWords = /公告|公示|旅行社|保证金|责令改正|许可信息|注销/;
     return event &&
@@ -62,7 +67,9 @@
     if (!Array.isArray(spots) || spots.length === 0) throw new Error('场所数据为空');
 
     return {
-      spots: spots.filter((item) => item && item.id && item.name && isLocalImage(item.image)),
+      spots: spots
+        .filter((item) => item && item.id && item.name && isLocalImage(item.image))
+        .map((item) => ({ ...item, gallery: sanitizeGallery(item) })),
       events: Array.isArray(events) ? events.filter(qualityEvent) : [],
       promotions: Array.isArray(promotions) ? promotions : [],
       hot: Array.isArray(hot) ? hot : [],

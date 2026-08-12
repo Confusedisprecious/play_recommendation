@@ -90,6 +90,8 @@
   .footer-bottom { display: block; }
   .footer-bottom a { margin-top: 10px; }
   .dialog-hero { min-height: 330px; }
+  .dialog-gallery { grid-auto-flow: column; grid-auto-columns: minmax(112px, 36%); grid-template-columns: none; overflow-x: auto; scroll-snap-type: x proximity; }
+  .dialog-thumb { scroll-snap-align: start; }
   .dialog-title-block { padding: 23px; }
   .dialog-body { padding: 24px; }
   .dialog-actions { flex-direction: column; }

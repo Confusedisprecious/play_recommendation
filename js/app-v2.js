@@ -350,13 +350,16 @@
     const priceLabel = place.free ? '免费' : Number(place.price || 0) > 0 ? `¥${Number(place.price)}` : '价格待核实';
     const indoorLabel = place.indoor ? '室内' : '户外';
     const badge = place.niche ? '<span class="rating-badge niche">小众宝藏</span>' : `<span class="rating-badge">${Number(place.rating || 0).toFixed(1)} / 5</span>`;
+    const galleryCount = placeGallery(place).length;
+    const galleryBadge = galleryCount > 1 ? `<span class="gallery-count-badge">${galleryCount} 张实景</span>` : '';
     const delay = Math.min(index, 8) * 45;
     return `
       <article class="place-card" data-place-id="${Number(place.id)}" tabindex="0" role="button" aria-label="查看${escapeHtml(place.name)}详情" style="animation-delay:${delay}ms">
         <div class="place-image">
-          <img src="${escapeHtml(place.image)}" data-fallback="images/media/wuhan-skyline.jpg" alt="${escapeHtml(place.name)}">
+          <img src="${escapeHtml(place.image)}" data-fallback="images/media/wuhan-skyline.jpg" loading="lazy" decoding="async" alt="${escapeHtml(place.name)}">
           <button class="favorite-button ${isFavorite ? 'active' : ''}" data-action="favorite" data-place-id="${Number(place.id)}" type="button" aria-label="${isFavorite ? '取消收藏' : '收藏'}${escapeHtml(place.name)}" aria-pressed="${isFavorite}">${icon('heart')}</button>
           ${badge}
+          ${galleryBadge}
         </div>
         <div class="place-card-body">
           <div class="place-meta"><span>${escapeHtml(place.district)}</span><span>${escapeHtml(categoryLabels[place.category] || place.category)}</span></div>
@@ -395,8 +398,25 @@
   }
 
   function placeImage(place) {
-    const licensed = state.data.media.find((item) => Number(item.place_id) === Number(place.id));
-    return licensed?.image || place.image;
+    return place.image;
+  }
+
+  function placeGallery(place) {
+    const images = [place.image, ...(Array.isArray(place.gallery) ? place.gallery : [])]
+      .filter((image) => typeof image === 'string' && /^images\//.test(image));
+    return [...new Set(images)].slice(0, 5);
+  }
+
+  function imageSource(place, image) {
+    return state.data.media.find((item) => Number(item.place_id) === Number(place.id) && item.image === image);
+  }
+
+  function galleryMarkup(place) {
+    const gallery = placeGallery(place);
+    if (gallery.length <= 1) return '';
+    return `<div class="dialog-gallery" role="group" aria-label="${escapeHtml(place.name)}实景图">
+      ${gallery.map((image, index) => `<button class="dialog-thumb ${index === 0 ? 'active' : ''}" type="button" data-gallery-image="${escapeHtml(image)}" aria-label="查看第 ${index + 1} 张实景图" aria-pressed="${index === 0}"><img src="${escapeHtml(image)}" data-fallback="${escapeHtml(place.image)}" loading="lazy" decoding="async" alt=""></button>`).join('')}
+    </div>`;
   }
 
   function renderHot() {
@@ -495,14 +515,19 @@
     const tags = (place.tags || []).slice(0, 8).map((tag) => `<span class="dialog-tag">${escapeHtml(tag)}</span>`).join('');
     const price = place.free ? '免费开放' : Number(place.price || 0) > 0 ? `参考 ¥${Number(place.price)}` : '价格待核实';
     const sourceUrl = /^https?:\/\//.test(place.source_url || '') ? place.source_url : '';
-    const sourceBlock = sourceUrl ? `<div class="dialog-research">
+    const primarySource = imageSource(place, place.image);
+    const imageSourceUrl = /^https?:\/\//.test(primarySource?.source_url || '') ? primarySource.source_url : '';
+    const imageCredit = primarySource?.credit || primarySource?.author || place.image_credit || '';
+    const sourceBlock = sourceUrl || imageSourceUrl ? `<div class="dialog-research">
       ${place.travel_note ? `<p><strong>出行提醒：</strong>${escapeHtml(place.travel_note)}</p>` : ''}
-      ${place.image_credit ? `<p><strong>图片：</strong>${escapeHtml(place.image_credit)}</p>` : ''}
-      <a class="dialog-source" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${icon('external')}查看${escapeHtml(place.source || '资料来源')}</a>
-      <p>资料核验：${escapeHtml(place.verified_at || '待更新')}</p>
+      ${imageCredit ? `<p><strong>主图：</strong>${escapeHtml(imageCredit)}</p>` : ''}
+      ${imageSourceUrl ? `<a class="dialog-source" href="${escapeHtml(imageSourceUrl)}" target="_blank" rel="noopener noreferrer">${icon('external')}查看图片来源</a>` : ''}
+      ${sourceUrl && sourceUrl !== imageSourceUrl ? `<a class="dialog-source" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${icon('external')}查看${escapeHtml(place.source || '资料来源')}</a>` : ''}
+      ${place.verified_at ? `<p>资料核验：${escapeHtml(place.verified_at)}</p>` : ''}
     </div>` : '';
     elements.dialogContent.innerHTML = `
-      <div class="dialog-hero"><img src="${escapeHtml(placeImage(place))}" data-fallback="${escapeHtml(place.image)}" alt="${escapeHtml(place.name)}"><div class="dialog-title-block"><span>${escapeHtml(place.district)} · ${escapeHtml(categoryLabels[place.category] || place.category)}</span><h2 id="dialog-title">${escapeHtml(place.name)}</h2></div></div>
+      <div class="dialog-hero"><img class="dialog-main-image" src="${escapeHtml(placeImage(place))}" data-fallback="${escapeHtml(place.image)}" alt="${escapeHtml(place.name)}实景"><div class="dialog-title-block"><span>${escapeHtml(place.district)} · ${escapeHtml(categoryLabels[place.category] || place.category)}</span><h2 id="dialog-title">${escapeHtml(place.name)}</h2></div></div>
+      ${galleryMarkup(place)}
       <div class="dialog-body">
         <div><p class="dialog-description">${escapeHtml(safeText(place.description, '详细介绍待补充'))}</p><div class="dialog-tags">${tags}</div>${sourceBlock}</div>
         <aside><div class="detail-list">
@@ -522,6 +547,17 @@
   }
 
   function handleDialogClick(event) {
+    const thumbnail = event.target.closest('[data-gallery-image]');
+    if (thumbnail) {
+      const mainImage = elements.dialogContent.querySelector('.dialog-main-image');
+      if (mainImage) mainImage.src = thumbnail.dataset.galleryImage;
+      elements.dialogContent.querySelectorAll('[data-gallery-image]').forEach((item) => {
+        const isActive = item === thumbnail;
+        item.classList.toggle('active', isActive);
+        item.setAttribute('aria-pressed', String(isActive));
+      });
+      return;
+    }
     const button = event.target.closest('[data-dialog-favorite]');
     if (button) toggleFavorite(Number(button.dataset.dialogFavorite));
   }
