@@ -53,7 +53,7 @@ def update_last_update():
     data = {
         "last_update": now.strftime("%Y-%m-%d %H:%M"),
         "next_update": next_update.strftime("%Y-%m-%d %H:%M"),
-        "data_version": "1.3",
+        "data_version": "1.4",
         "update_interval_hours": interval_hours,
         "total_places": len(spots),
         "total_events": len(events),
