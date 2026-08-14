@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-14T23:09:45+08:00",
+  "generated_at": "2026-08-15T01:14:36+08:00",
   "latest_published_at": "2026-08-04",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-07-15",
-    "expired_items_removed": 0
+    "oldest_kept_date": "2026-07-16",
+    "expired_items_removed": 1
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-08-14T23:09:42+08:00",
+    "last_discovery_at": "2026-08-15T01:14:33+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-08-14T23:09:42+08:00",
+        "last_attempt_at": "2026-08-15T01:14:33+08:00",
         "item_count": 0,
         "schedule": "every_2_hours"
       }
@@ -85,7 +85,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-08-14T23:09:45+08:00",
+      "collected_at": "2026-08-15T01:14:36+08:00",
       "discovery_query": "武汉 景区 暑期"
     },
     {
@@ -574,34 +574,6 @@
         "likes": "52",
         "comments": "6",
         "collects": "18"
-      }
-    },
-    {
-      "id": "43a0a0b9de745124",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "title": "花山河·上岸公园：地铁直达免费玩水",
-      "summary": "花山河站C口可步行到达上岸公园玩水区，帖子记录多数日期10:00-21:00开放，周一和周四安排维护；现场没有冲洗区，需自带防滑鞋和换洗衣物，暴雨等极端天气可能临时关闭。",
-      "author": "小艾阿姨要努力",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a5788c50000000008024ec1?xsec_token=ABShpgA3bh4mrFAVXnkQGSaQhwo5AXKoNraG8Ued_5mUY%3D&xsec_source=pc_search",
-      "published_at": "2026-07-15T00:00:00+08:00",
-      "place_name": "花山河·上岸公园",
-      "district": "洪山区",
-      "tags": [
-        "公园玩水",
-        "地铁直达",
-        "免费遛娃",
-        "亲子活动"
-      ],
-      "image": "",
-      "review_status": "reviewed",
-      "collected_at": "2026-07-29T11:39:10+08:00",
-      "media_type": "image",
-      "connector": "opencli",
-      "engagement": {
-        "likes": "277",
-        "comments": "22",
-        "collects": "379"
       }
     }
   ]
