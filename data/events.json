@@ -2501,5 +2501,33 @@
     "indoor": true,
     "parking": "待确认",
     "source": "武汉文旅局"
+  },
+  {
+    "id": 111,
+    "name": "市文旅局关于2025年度市级非遗代表性传承人传承活动评估结果的公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202608/t20260814_2834339.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-111/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
   }
 ]
