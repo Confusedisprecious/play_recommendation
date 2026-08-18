@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T06:44:22+08:00",
+  "generated_at": "2026-08-18T09:53:23+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,7 +9,7 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-08-18T06:44:22+08:00",
+      "last_attempt_at": "2026-08-18T09:53:23+08:00",
       "item_count": 0,
       "schedule": "every_2_hours"
     }
@@ -647,55 +647,6 @@
       "author": "梨发发",
       "url": "https://www.xiaohongshu.com/discovery/item/6a5c3971000000000a038a72?xsec_token=ABbb1ynD1sUWhoix5Z4SXHeM8WzUHYqykyj0IpLXPsW5I%3D&xsec_source=pc_search",
       "published_at": "2026-07-19T00:00:00+08:00",
-      "place_name": "",
-      "district": "",
-      "tags": [],
-      "image": "",
-      "media_type": "",
-      "engagement": {},
-      "review_status": "rejected",
-      "collected_at": "2026-07-29T10:59:37+08:00"
-    },
-    {
-      "id": "7ab0cc6adcf0dc95",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli-browser",
-      "title": "武汉SKP，一座永不停更的惊喜制造机",
-      "summary": "帖文从艺文展览、屋顶酒馆和品牌矩阵梳理武汉SKP近期开业两周年内容，适合关注商场看展、夜间休闲和首店动态的人群。",
-      "author": "商业引力",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a5ae1630000000011010eef?xsec_token=ABU0mTIRUJZdBFdJB849G8ZYNvR6X2Tp-0Fx8dRqI5wdg%3D&xsec_source=pc_search",
-      "published_at": "2026-07-18T00:00:00+08:00",
-      "place_name": "武汉SKP",
-      "district": "武昌区",
-      "tags": [
-        "武汉SKP",
-        "武汉SKP两周年",
-        "武汉商业",
-        "武汉商场",
-        "武汉购物中心",
-        "商业观察"
-      ],
-      "image": "",
-      "media_type": "image",
-      "engagement": {
-        "likes": "52",
-        "comments": "6",
-        "collects": "18"
-      },
-      "review_status": "reviewed",
-      "collected_at": "2026-07-25T10:44:53+08:00"
-    },
-    {
-      "id": "1311fb902145d136",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli",
-      "title": "武汉遛娃好去处🌊幼崽玩的不亦乐乎～🏊",
-      "summary": "",
-      "author": "小🐯",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a5b53cf000000001102d620?xsec_token=ABjbiwBwhvICrRMQp7MO8feAfWaJ46TB6NfTlclOQFBZA%3D&xsec_source=pc_search",
-      "published_at": "2026-07-18T00:00:00+08:00",
       "place_name": "",
       "district": "",
       "tags": [],
