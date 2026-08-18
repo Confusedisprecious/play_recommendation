@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-18T22:55:29+08:00",
+  "generated_at": "2026-08-19T00:52:02+08:00",
   "latest_published_at": "2026-08-04",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-07-19",
-    "expired_items_removed": 0
+    "oldest_kept_date": "2026-07-20",
+    "expired_items_removed": 1
   },
   "source_health": {
-    "status": "degraded",
-    "last_discovery_at": "2026-08-18T22:55:27+08:00",
+    "status": "healthy",
+    "last_discovery_at": "2026-08-19T00:51:59+08:00",
     "automatic_sources": {
       "news_rss": {
-        "status": "error",
-        "last_attempt_at": "2026-08-18T22:55:27+08:00",
+        "status": "healthy",
+        "last_attempt_at": "2026-08-19T00:51:59+08:00",
         "item_count": 0,
-        "message": "not well-formed (invalid token): line 1, column 41"
+        "schedule": "every_2_hours"
       }
     },
     "connectors": {
@@ -31,9 +31,7 @@
       }
     },
     "pending_review": 0,
-    "errors": [
-      "News RSS: not well-formed (invalid token): line 1, column 41"
-    ]
+    "errors": []
   },
   "policy": {
     "collection_mode": "trusted_public_feed_or_reviewed_authorized_export",
@@ -87,7 +85,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-08-18T22:55:29+08:00",
+      "collected_at": "2026-08-19T00:52:02+08:00",
       "discovery_query": "武汉 景区 暑期"
     },
     {
@@ -519,33 +517,6 @@
         "likes": "146",
         "comments": "26",
         "collects": "200"
-      }
-    },
-    {
-      "id": "2b214d60505f6d93",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "title": "湖北省科技馆",
-      "summary": "湖北省科技馆是免费室内亲子去处，邻近光谷五路；帖文提示大人和儿童均需提前预约，儿童区可能需要单独预约。",
-      "author": "宝儿",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a5c2291000000001101d14e?xsec_token=ABbb1ynD1sUWhoix5Z4SXHeMhhhioCJskWhna7RjTmhGM%3D&xsec_source=pc_search",
-      "published_at": "2026-07-19T00:00:00+08:00",
-      "place_name": "湖北省科技馆",
-      "district": "",
-      "tags": [
-        "武汉遛娃",
-        "不花钱遛娃",
-        "带娃的好去处"
-      ],
-      "image": "",
-      "review_status": "reviewed",
-      "collected_at": "2026-07-25T10:44:53+08:00",
-      "media_type": "image",
-      "connector": "opencli-browser",
-      "engagement": {
-        "likes": "16",
-        "comments": "16",
-        "collects": "22"
       }
     }
   ]
