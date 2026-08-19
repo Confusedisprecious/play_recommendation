@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T00:50:57+08:00",
+  "generated_at": "2026-08-20T02:56:50+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,10 +8,10 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "error",
-      "last_attempt_at": "2026-08-20T00:50:57+08:00",
+      "status": "healthy",
+      "last_attempt_at": "2026-08-20T02:56:50+08:00",
       "item_count": 0,
-      "message": "not well-formed (invalid token): line 1, column 41"
+      "schedule": "every_2_hours"
     }
   },
   "connectors": {
@@ -24,9 +24,7 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [
-    "News RSS: not well-formed (invalid token): line 1, column 41"
-  ],
+  "errors": [],
   "items": [
     {
       "id": "19c9b216db7a39a6",
