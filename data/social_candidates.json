@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T06:45:07+08:00",
+  "generated_at": "2026-08-20T09:54:35+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,10 +8,10 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "error",
-      "last_attempt_at": "2026-08-20T06:45:07+08:00",
+      "status": "healthy",
+      "last_attempt_at": "2026-08-20T09:54:35+08:00",
       "item_count": 0,
-      "message": "not well-formed (invalid token): line 1, column 41"
+      "schedule": "every_2_hours"
     }
   },
   "connectors": {
@@ -24,9 +24,7 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [
-    "News RSS: not well-formed (invalid token): line 1, column 41"
-  ],
+  "errors": [],
   "items": [
     {
       "id": "19c9b216db7a39a6",
@@ -553,64 +551,6 @@
       },
       "review_status": "reviewed",
       "collected_at": "2026-07-25T10:44:53+08:00"
-    },
-    {
-      "id": "40195f3e27466d3f",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli-browser",
-      "title": "武汉高温天可以去的32个遛娃好去处",
-      "summary": "发布者整理武汉高温天气下32个亲子去处，重点标签为免费、室内与周末遛娃，可作为备选清单后再逐一核对预约和开放信息。",
-      "author": "添添爱学习🎒",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a5d7cf8000000001101dcd3?xsec_token=ABhqGMzvnefraUDQk1gtKfxJ7DAzzSHVHeeqTY4nGiF9A%3D&xsec_source=pc_search",
-      "published_at": "2026-07-20T00:00:00+08:00",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "不花钱遛娃",
-        "亲子活动",
-        "一定要带孩子去的城市",
-        "一起去溜娃",
-        "带娃去哪儿玩",
-        "周末溜娃"
-      ],
-      "image": "",
-      "media_type": "image",
-      "engagement": {
-        "likes": "11",
-        "comments": "2",
-        "collects": "21"
-      },
-      "review_status": "reviewed",
-      "collected_at": "2026-07-25T10:44:53+08:00"
-    },
-    {
-      "id": "cac598fe07e0f3ee",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli",
-      "title": "武汉出发约2小时：钟祥大口国家森林公园",
-      "summary": "大口国家森林公园适合作为武汉周边短途备选，帖子推荐龙泉溪、九级天溪和大小天池的低强度路线；山林和溪边需准备驱蚊、防滑鞋与替换衣物，票价、天气和开放状态应以景区官方信息为准。",
-      "author": "北北北北boy",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a5d819e000000001c00d5d0?xsec_token=ABhqGMzvnefraUDQk1gtKfxKtyWoKHOIPT8sRH2sBXr4o%3D&xsec_source=pc_search",
-      "published_at": "2026-07-20T00:00:00+08:00",
-      "place_name": "大口国家森林公园",
-      "district": "钟祥市",
-      "tags": [
-        "武汉周边",
-        "森林公园",
-        "短途自驾",
-        "亲子避暑"
-      ],
-      "image": "",
-      "media_type": "image",
-      "engagement": {
-        "likes": "146",
-        "comments": "26",
-        "collects": "200"
-      },
-      "review_status": "reviewed",
-      "collected_at": "2026-07-29T11:39:10+08:00"
     }
   ]
 }

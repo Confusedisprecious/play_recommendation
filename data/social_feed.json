@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T06:45:08+08:00",
+  "generated_at": "2026-08-20T09:54:38+08:00",
   "latest_published_at": "2026-08-04",
   "freshness": {
     "live_window_days": 7,
@@ -7,17 +7,17 @@
     "stale_after_days": 30,
     "retention_days": 30,
     "oldest_kept_date": "2026-07-21",
-    "expired_items_removed": 2
+    "expired_items_removed": 0
   },
   "source_health": {
-    "status": "degraded",
-    "last_discovery_at": "2026-08-20T06:45:07+08:00",
+    "status": "healthy",
+    "last_discovery_at": "2026-08-20T09:54:35+08:00",
     "automatic_sources": {
       "news_rss": {
-        "status": "error",
-        "last_attempt_at": "2026-08-20T06:45:07+08:00",
+        "status": "healthy",
+        "last_attempt_at": "2026-08-20T09:54:35+08:00",
         "item_count": 0,
-        "message": "not well-formed (invalid token): line 1, column 41"
+        "schedule": "every_2_hours"
       }
     },
     "connectors": {
@@ -31,9 +31,7 @@
       }
     },
     "pending_review": 0,
-    "errors": [
-      "News RSS: not well-formed (invalid token): line 1, column 41"
-    ]
+    "errors": []
   },
   "policy": {
     "collection_mode": "trusted_public_feed_or_reviewed_authorized_export",
@@ -87,7 +85,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-08-20T06:45:08+08:00",
+      "collected_at": "2026-08-20T09:54:38+08:00",
       "discovery_query": "武汉 景区 暑期"
     },
     {
