@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-20T22:57:48+08:00",
+  "generated_at": "2026-08-21T00:54:34+08:00",
   "latest_published_at": "2026-08-04",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-07-21",
-    "expired_items_removed": 0
+    "oldest_kept_date": "2026-07-22",
+    "expired_items_removed": 1
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-08-20T22:57:45+08:00",
+    "last_discovery_at": "2026-08-21T00:54:31+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-08-20T22:57:45+08:00",
+        "last_attempt_at": "2026-08-21T00:54:31+08:00",
         "item_count": 0,
         "schedule": "every_2_hours"
       }
@@ -85,7 +85,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-08-20T22:57:48+08:00",
+      "collected_at": "2026-08-21T00:54:34+08:00",
       "discovery_query": "武汉 景区 暑期"
     },
     {
@@ -429,36 +429,6 @@
         "likes": "90",
         "comments": "28",
         "collects": "36"
-      }
-    },
-    {
-      "id": "e12d265f83f6ef95",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "title": "武汉新开的！！！！巨新！！！（星悦广场🥺🥺",
-      "summary": "光谷星悦广场出现新开自助旗袍体验店，成人和儿童款均有，适合亲子或拍照体验；价格与营业状态需到店确认。",
-      "author": "猫球球酥",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a5f00bd000000000f00beb9?xsec_token=ABLCLUgI1zCPHea8Qufi7oObGqtqWEoVqE4P6tnHfmzz0%3D&xsec_source=pc_search",
-      "published_at": "2026-07-21T00:00:00+08:00",
-      "place_name": "星悦广场",
-      "district": "洪山区",
-      "tags": [
-        "逛街好去处",
-        "天热也要进商场",
-        "武汉新店",
-        "旗袍推荐",
-        "武汉旗袍",
-        "武汉旅游攻略"
-      ],
-      "image": "",
-      "review_status": "reviewed",
-      "collected_at": "2026-07-25T10:44:53+08:00",
-      "media_type": "image",
-      "connector": "opencli-browser",
-      "engagement": {
-        "likes": "118",
-        "comments": "25",
-        "collects": "53"
       }
     }
   ]
