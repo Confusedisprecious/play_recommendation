@@ -2619,5 +2619,34 @@
     "indoor": true,
     "parking": "待确认",
     "source": "武汉文旅局"
+  },
+  {
+    "id": 115,
+    "name": "江汉关前吹江风、听音乐，年轻人追捧49岁“武汉之夏”2026-08-11",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "summer",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn./zwgk_27/zwdt/xydt/202608/t20260811_2832434.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-115/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
   }
 ]
