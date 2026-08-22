@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T06:44:39+08:00",
+  "generated_at": "2026-08-22T09:53:13+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,7 +9,7 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-08-22T06:44:39+08:00",
+      "last_attempt_at": "2026-08-22T09:53:13+08:00",
       "item_count": 0,
       "schedule": "every_2_hours"
     }
@@ -456,71 +456,6 @@
       },
       "review_status": "reviewed",
       "collected_at": "2026-07-29T11:39:10+08:00"
-    },
-    {
-      "id": "afac814634fd372a",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli-browser",
-      "title": "武汉新天地品牌更新正当时，有心头好吗？",
-      "summary": "关注武汉新天地暑期品牌更新：HOKA、SATUR等新店及餐饮、生活方式品牌陆续进场；开业时间和门店状态请以商场官方信息为准。",
-      "author": "老K世界观",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a603223000000000f01f3e4?xsec_token=ABd_uZ58EaWAVlc6lLXdFAY58Zn7bTvtH9bn6DkDztpNM%3D&xsec_source=pc_search",
-      "published_at": "2026-07-22T00:00:00+08:00",
-      "place_name": "武汉新天地",
-      "district": "江岸区",
-      "tags": [
-        "武汉商业",
-        "武汉新店",
-        "武汉新天地"
-      ],
-      "image": "",
-      "media_type": "image",
-      "engagement": {
-        "likes": "90",
-        "comments": "28",
-        "collects": "36"
-      },
-      "review_status": "reviewed",
-      "collected_at": "2026-07-25T10:44:53+08:00"
-    },
-    {
-      "id": "7c5b6e1ad8673bf3",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli",
-      "title": "武汉周边溯溪遛娃｜藏在山林里的玩水天堂",
-      "summary": "",
-      "author": "Z_zhao",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a60a8510000000011015df2?xsec_token=ABd_uZ58EaWAVlc6lLXdFAY22Z7bE8m9DFR7qcNKlqe0M%3D&xsec_source=pc_search",
-      "published_at": "2026-07-22T00:00:00+08:00",
-      "place_name": "",
-      "district": "",
-      "tags": [],
-      "image": "",
-      "media_type": "",
-      "engagement": {},
-      "review_status": "rejected",
-      "collected_at": "2026-07-29T10:59:37+08:00"
-    },
-    {
-      "id": "aba1a622ae9d9ab7",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli",
-      "title": "溜娃日常",
-      "summary": "",
-      "author": "小红薯69AE971B",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a6081e7000000002201bca6?xsec_token=ABd_uZ58EaWAVlc6lLXdFAY5YT6zO_ghjskjfeS-ux4Uc%3D&xsec_source=pc_search",
-      "published_at": "2026-07-22T00:00:00+08:00",
-      "place_name": "",
-      "district": "",
-      "tags": [],
-      "image": "",
-      "media_type": "",
-      "engagement": {},
-      "review_status": "rejected",
-      "collected_at": "2026-07-29T10:59:37+08:00"
     }
   ]
 }
