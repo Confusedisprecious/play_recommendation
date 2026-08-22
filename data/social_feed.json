@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-22T22:41:53+08:00",
+  "generated_at": "2026-08-23T00:43:41+08:00",
   "latest_published_at": "2026-08-04",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-07-23",
-    "expired_items_removed": 0
+    "oldest_kept_date": "2026-07-24",
+    "expired_items_removed": 1
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-08-22T22:41:50+08:00",
+    "last_discovery_at": "2026-08-23T00:43:39+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-08-22T22:41:50+08:00",
+        "last_attempt_at": "2026-08-23T00:43:39+08:00",
         "item_count": 0,
         "schedule": "every_2_hours"
       }
@@ -85,7 +85,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-08-22T22:41:53+08:00",
+      "collected_at": "2026-08-23T00:43:41+08:00",
       "discovery_query": "武汉 景区 暑期"
     },
     {
@@ -374,34 +374,6 @@
         "likes": "4",
         "comments": "0",
         "collects": "4"
-      }
-    },
-    {
-      "id": "32a70156bed1d505",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "title": "雨天室内遛娃：武汉城市规划展示馆",
-      "summary": "武汉城市规划展示馆位于市民之家东翼，包含城市模型、模拟地铁驾驶、交通展项、武汉沙盘和地质科普内容；帖文称免费且无需预约，开放时间、影片场次和入馆证件要求以场馆当天通知为准。",
-      "author": "安安和慢慢（在武汉）",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a617403000000000100f467?xsec_token=ABkB_e1L1YNjjAQid-yGBD_J-I1Q07SAvEGhfz-xwd8YA%3D&xsec_source=pc_search",
-      "published_at": "2026-07-23T00:00:00+08:00",
-      "place_name": "武汉城市规划展示馆",
-      "district": "江岸区",
-      "tags": [
-        "雨天遛娃",
-        "城市科普",
-        "免费场馆",
-        "地铁直达"
-      ],
-      "image": "",
-      "review_status": "reviewed",
-      "collected_at": "2026-07-29T11:39:10+08:00",
-      "media_type": "image",
-      "connector": "opencli",
-      "engagement": {
-        "likes": "131",
-        "comments": "21",
-        "collects": "230"
       }
     }
   ]
