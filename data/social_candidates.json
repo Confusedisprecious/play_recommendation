@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T06:41:36+08:00",
+  "generated_at": "2026-08-24T10:00:13+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,7 +9,7 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-08-24T06:41:36+08:00",
+      "last_attempt_at": "2026-08-24T10:00:13+08:00",
       "item_count": 0,
       "schedule": "every_2_hours"
     }
@@ -330,104 +330,6 @@
       },
       "review_status": "reviewed",
       "collected_at": "2026-07-29T11:39:10+08:00"
-    },
-    {
-      "id": "3c13e45f6bebbc49",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli-browser",
-      "title": "武汉 0 元新展！汉阳方圆荟百鸟展免门票冲🦜",
-      "summary": "汉阳方圆荟推出免门票百鸟展，包含观鸟、喂食、集章和鹦鹉表演等区域，楼上另有室内运动项目；动物互动与活动安排以现场为准。",
-      "author": "脆皮蛋挞",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a6345040000000010028860?xsec_token=ABHRqxVlpVNs0EkOBCL6w68StV_kRjCII6mdhQ0u5EY60%3D&xsec_source=pc_search",
-      "published_at": "2026-07-24T00:00:00+08:00",
-      "place_name": "",
-      "district": "汉阳区",
-      "tags": [
-        "武汉方圆荟奥特莱斯",
-        "方圆荟奥莱好买好逛好省心",
-        "室内避暑遛娃免费看百鸟展",
-        "汉阳室内奥莱遛娃神地",
-        "夏穿雨林飞鸟奇遇记",
-        "武汉暑期遛娃"
-      ],
-      "image": "",
-      "media_type": "image",
-      "engagement": {
-        "likes": "20",
-        "comments": "3",
-        "collects": "16"
-      },
-      "review_status": "reviewed",
-      "collected_at": "2026-07-25T10:44:53+08:00"
-    },
-    {
-      "id": "7d0b3e919118a693",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli-browser",
-      "title": "武汉新店｜逛商场终于有地方发呆解压了✨",
-      "summary": "新荣天街新开开放式拼豆DIY店，提供多种图纸与手工作品形式，适合逛街间隙、情侣或亲子休闲；价格与座位情况以现场为准。",
-      "author": "阿执。",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a634467000000000c0148f0?xsec_token=ABHRqxVlpVNs0EkOBCL6w68fO3gO4GRfN4cvK5mrhK7LQ%3D&xsec_source=pc_search",
-      "published_at": "2026-07-24T00:00:00+08:00",
-      "place_name": "新荣天街",
-      "district": "江岸区",
-      "tags": [
-        "武汉拼豆",
-        "武汉手工DIY",
-        "新荣天街探店",
-        "武汉解压好去处",
-        "偷喝奶茶大赛",
-        "武汉周末去哪玩"
-      ],
-      "image": "",
-      "media_type": "image",
-      "engagement": {
-        "likes": "4",
-        "comments": "0",
-        "collects": "4"
-      },
-      "review_status": "reviewed",
-      "collected_at": "2026-07-25T10:44:53+08:00"
-    },
-    {
-      "id": "f73ec60d059f29cb",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli",
-      "title": "汉阳新晋遛娃胜地出现了！！！",
-      "summary": "",
-      "author": "番茄炒蛋",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a631d38000000001b01d23f?xsec_token=ABHRqxVlpVNs0EkOBCL6w68cYmwy5jW5BY4Bc7hF5_wL4%3D&xsec_source=pc_search",
-      "published_at": "2026-07-24T00:00:00+08:00",
-      "place_name": "",
-      "district": "",
-      "tags": [],
-      "image": "",
-      "media_type": "",
-      "engagement": {},
-      "review_status": "rejected",
-      "collected_at": "2026-07-29T10:59:37+08:00"
-    },
-    {
-      "id": "a459bb41499ccdde",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli",
-      "title": "武汉）汉阳新展！！百鸟展！🉑吹空调玩一下午",
-      "summary": "",
-      "author": "爱吃香菜",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a631945000000000f004c39?xsec_token=ABHRqxVlpVNs0EkOBCL6w68WVE1pKJd7uk91u-XnCzwiM%3D&xsec_source=pc_search",
-      "published_at": "2026-07-24T00:00:00+08:00",
-      "place_name": "",
-      "district": "",
-      "tags": [],
-      "image": "",
-      "media_type": "",
-      "engagement": {},
-      "review_status": "rejected",
-      "collected_at": "2026-07-29T10:59:37+08:00"
     }
   ]
 }
