@@ -1,12 +1,12 @@
 {
-  "last_update": "2026-08-24 23:07",
-  "next_update": "2026-08-25 00:00",
+  "last_update": "2026-08-25 01:03",
+  "next_update": "2026-08-25 02:00",
   "data_version": "1.5",
   "update_interval_hours": 2,
   "total_places": 63,
   "total_events": 87,
   "total_promotions": 7,
   "total_hot_events": 10,
-  "total_social_items": 9,
+  "total_social_items": 6,
   "generated_by": "update_all.py"
 }

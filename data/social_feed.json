@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-24T23:03:34+08:00",
+  "generated_at": "2026-08-25T00:58:48+08:00",
   "latest_published_at": "2026-08-04",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-07-25",
-    "expired_items_removed": 0
+    "oldest_kept_date": "2026-07-26",
+    "expired_items_removed": 3
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-08-24T23:03:32+08:00",
+    "last_discovery_at": "2026-08-25T00:58:46+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-08-24T23:03:32+08:00",
+        "last_attempt_at": "2026-08-25T00:58:46+08:00",
         "item_count": 0,
         "schedule": "every_2_hours"
       }
@@ -85,7 +85,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-08-24T23:03:34+08:00",
+      "collected_at": "2026-08-25T00:58:48+08:00",
       "discovery_query": "武汉 景区 暑期"
     },
     {
@@ -226,94 +226,6 @@
         "likes": "40",
         "comments": "1",
         "collects": "27"
-      }
-    },
-    {
-      "id": "a3bbfa0b8bff0b00",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "title": "武汉遛娃去处15｜滨江天街，免费戏水攀爬公园",
-      "summary": "视频笔记推荐龙湖武汉滨江天街的免费戏水和攀爬空间，适合作为高温天商场遛娃备选；水区开放情况需现场确认。",
-      "author": "阿巡漫游记",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a641cd3000000000f028ebf?xsec_token=ABl7OQdjP-N_cTMDJ2yULlxe6BV3nMEVgW3DdEp_bxlKY%3D&xsec_source=pc_search",
-      "published_at": "2026-07-25T00:00:00+08:00",
-      "place_name": "龙湖武汉滨江天街",
-      "district": "武昌区",
-      "tags": [
-        "好视频扶持计划",
-        "武汉免费遛娃",
-        "武汉遛娃攻略",
-        "武汉避暑遛娃",
-        "武汉玩水",
-        "武汉免费玩水"
-      ],
-      "image": "",
-      "review_status": "reviewed",
-      "collected_at": "2026-07-25T10:44:53+08:00",
-      "media_type": "video",
-      "connector": "opencli-browser",
-      "engagement": {
-        "likes": "1",
-        "comments": "0",
-        "collects": "3"
-      }
-    },
-    {
-      "id": "5bec3b9a99cd42b4",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "title": "武汉一些能量场很强的地方🌳…",
-      "summary": "列出湖美昙华林校区、涨渡湖、东棠书院、小朱湾、白玉公园、沙湖公园、常青人才公园和竹吟山房等武汉小众拍照散步地。",
-      "author": "薄禾糖糖",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a641a610000000009037ce5?xsec_token=ABl7OQdjP-N_cTMDJ2yULlxeirx5ATDe2kgIcEYbQxCT0%3D&xsec_source=pc_search",
-      "published_at": "2026-07-25T00:00:00+08:00",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "武汉旅游",
-        "武汉周末去哪儿",
-        "城市里的私藏秘境",
-        "武汉拍照",
-        "大自然的疗愈力量",
-        "城市小众打卡地"
-      ],
-      "image": "",
-      "review_status": "reviewed",
-      "collected_at": "2026-07-25T10:44:53+08:00",
-      "media_type": "image",
-      "connector": "opencli-browser",
-      "engagement": {
-        "likes": "15",
-        "comments": "4",
-        "collects": "12"
-      }
-    },
-    {
-      "id": "a301bc80a344cd9d",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "title": "中国建筑科技馆：四大常设展厅免费参观",
-      "summary": "中国建筑科技馆以古代、荆楚、现代和未来建筑四个常设展厅串联建筑与城市知识，适合对模型、工程和设计感兴趣的家庭；帖文提示免费参观，开放安排和入馆要求需以场馆官方信息为准。",
-      "author": "YXO",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a64938c000000000f039c00?xsec_token=ABl7OQdjP-N_cTMDJ2yULlxZN9aH5R8xpiVAWusUIojTw%3D&xsec_source=pc_search",
-      "published_at": "2026-07-25T00:00:00+08:00",
-      "place_name": "中国建筑科技馆",
-      "district": "",
-      "tags": [
-        "建筑科普",
-        "免费场馆",
-        "博物馆",
-        "室内遛娃"
-      ],
-      "image": "",
-      "review_status": "reviewed",
-      "collected_at": "2026-07-29T11:39:10+08:00",
-      "media_type": "image",
-      "connector": "opencli",
-      "engagement": {
-        "likes": "9",
-        "comments": "0",
-        "collects": "2"
       }
     }
   ]
