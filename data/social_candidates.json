@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T06:48:34+08:00",
+  "generated_at": "2026-08-26T10:01:33+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,7 +9,7 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-08-26T06:48:34+08:00",
+      "last_attempt_at": "2026-08-26T10:01:33+08:00",
       "item_count": 0,
       "schedule": "every_2_hours"
     }
@@ -185,25 +185,6 @@
       },
       "review_status": "reviewed",
       "collected_at": "2026-07-29T11:39:10+08:00"
-    },
-    {
-      "id": "bb683d0f174ad132",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli",
-      "title": "#室内避暑遛娃免费看百鸟展",
-      "summary": "",
-      "author": "小红薯62D3AF51",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a65d8fe000000000101c3be?xsec_token=ABxNKYwEXJK3oQu0nR89Kw67da4EDbZFjFCoST6S_j3Vk%3D&xsec_source=pc_search",
-      "published_at": "2026-07-26T00:00:00+08:00",
-      "place_name": "",
-      "district": "",
-      "tags": [],
-      "image": "",
-      "media_type": "",
-      "engagement": {},
-      "review_status": "rejected",
-      "collected_at": "2026-07-29T10:59:37+08:00"
     }
   ]
 }
