@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-27T17:57:37+08:00",
+  "generated_at": "2026-08-28T04:35:18+08:00",
   "latest_published_at": "2026-08-04",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-07-28",
-    "expired_items_removed": 0
+    "oldest_kept_date": "2026-07-29",
+    "expired_items_removed": 3
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-08-27T17:57:35+08:00",
+    "last_discovery_at": "2026-08-28T04:35:15+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-08-27T17:57:35+08:00",
+        "last_attempt_at": "2026-08-28T04:35:15+08:00",
         "item_count": 0,
         "schedule": "every_2_hours"
       }
@@ -85,92 +85,8 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-08-27T17:57:37+08:00",
+      "collected_at": "2026-08-28T04:35:18+08:00",
       "discovery_query": "武汉 景区 暑期"
-    },
-    {
-      "id": "6cb7aa3b3d603418",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "title": "武汉7月全新首店&新潮展汇总！吃喝玩乐指南",
-      "summary": "汇总武汉各大商圈近期全国、华中、湖北及武汉首店，并收录《糖・果｜烟火神仙》、三丽鸥日晒海岛派对、《中国奇谭》造梦奇境和《恰好是小满》等展览；具体营业与展期以商场官方通知为准。",
-      "author": "武汉周末去哪",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a687d730000000001001ef0?xsec_token=ABABbX-tFOW399zVqJN0fXWSbymOaA5NQLSk2FPASnKPs%3D&xsec_source=pc_search",
-      "published_at": "2026-07-28T00:00:00+08:00",
-      "place_name": "武汉各大商圈",
-      "district": "",
-      "tags": [
-        "武汉商场",
-        "首店",
-        "新展",
-        "吃喝玩乐"
-      ],
-      "image": "",
-      "review_status": "reviewed",
-      "collected_at": "2026-07-29T10:59:37+08:00",
-      "media_type": "image",
-      "connector": "opencli",
-      "engagement": {
-        "likes": "9",
-        "comments": "1",
-        "collects": "8"
-      }
-    },
-    {
-      "id": "824d744dc00068d7",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "title": "武汉白石美术馆：免费室内看展与拍照",
-      "summary": "武汉白石美术馆近期可免费登记入场，帖文记录的开放时间为周二至周日10:00-18:00，一、二层均有展陈与拍照空间；临时展览和闭馆安排以美术馆最新通知为准。",
-      "author": "见风Windvision",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a689a8b000000000401caa0?xsec_token=ABABbX-tFOW399zVqJN0fXWX16DIgcxh5f2X46vrIFgJQ%3D&xsec_source=pc_search",
-      "published_at": "2026-07-28T00:00:00+08:00",
-      "place_name": "武汉白石美术馆",
-      "district": "",
-      "tags": [
-        "免费展览",
-        "美术馆",
-        "室内活动",
-        "拍照"
-      ],
-      "image": "",
-      "review_status": "reviewed",
-      "collected_at": "2026-07-29T11:39:10+08:00",
-      "media_type": "image",
-      "connector": "opencli",
-      "engagement": {
-        "likes": "98",
-        "comments": "39",
-        "collects": "107"
-      }
-    },
-    {
-      "id": "4819ce666e15174b",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "title": "龟山公园亲子轻徒步：一山看两江",
-      "summary": "龟山公园可串联三国雕塑、城市绿道和山顶观景点，远眺长江、汉江及武汉多处地标；帖子推荐傍晚前往并提示防蚊、带水和穿防滑鞋，雨后坡道湿滑时不建议带低龄儿童登高。",
-      "author": "小昕妈咪",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a68117c000000000f00b4d0?xsec_token=ABABbX-tFOW399zVqJN0fXWfGiEd2gVJj_6j9X7YZDxEU%3D&xsec_source=pc_search",
-      "published_at": "2026-07-28T00:00:00+08:00",
-      "place_name": "龟山公园",
-      "district": "汉阳区",
-      "tags": [
-        "亲子徒步",
-        "城市公园",
-        "日落",
-        "免费活动"
-      ],
-      "image": "",
-      "review_status": "reviewed",
-      "collected_at": "2026-07-29T11:39:10+08:00",
-      "media_type": "image",
-      "connector": "opencli",
-      "engagement": {
-        "likes": "7",
-        "comments": "3",
-        "collects": "5"
-      }
     }
   ]
 }
