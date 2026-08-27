@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T07:42:28+08:00",
+  "generated_at": "2026-08-27T17:57:35+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,7 +9,7 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-08-27T07:42:28+08:00",
+      "last_attempt_at": "2026-08-27T17:57:35+08:00",
       "item_count": 0,
       "schedule": "every_2_hours"
     }
@@ -126,62 +126,6 @@
         "likes": "7",
         "comments": "3",
         "collects": "5"
-      },
-      "review_status": "reviewed",
-      "collected_at": "2026-07-29T11:39:10+08:00"
-    },
-    {
-      "id": "60639ae035477740",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli",
-      "title": "武汉恒隆黑皮三丽鸥夏日快闪与拍照点",
-      "summary": "武汉恒隆广场布置三丽鸥日晒海岛派对：东区7号门外、东区B1下沉广场、西区L2轻轨连廊及L1中庭均有拍照或快闪内容；装置和活动开放状态以商场官方信息为准。",
-      "author": "一颗草莓籽🍓",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a66cf29000000000f01702a?xsec_token=ABbN__8TbvjV_rjRnrJJi6AmCiagqAFdErLTjafSC_Umg%3D&xsec_source=pc_search",
-      "published_at": "2026-07-27T00:00:00+08:00",
-      "place_name": "武汉恒隆广场",
-      "district": "硚口区",
-      "tags": [
-        "商场快闪",
-        "三丽鸥",
-        "免费拍照",
-        "室内避暑"
-      ],
-      "image": "",
-      "media_type": "image",
-      "engagement": {
-        "likes": "82",
-        "comments": "18",
-        "collects": "23"
-      },
-      "review_status": "reviewed",
-      "collected_at": "2026-07-29T10:59:37+08:00"
-    },
-    {
-      "id": "4eaa80e25062135f",
-      "platform": "xiaohongshu",
-      "source_type": "authorized_local_export",
-      "connector": "opencli",
-      "title": "光谷图书馆与美术馆同步开放，免费需预约",
-      "summary": "湖北文旅介绍光谷文化中心A栋的新场馆：光谷图书馆位于2至4层，光谷美术馆位于8至10层，均免费但需通过场馆官方账号预约；周二闭馆，出发前应再次核对预约名额与开放安排。",
-      "author": "湖北文旅",
-      "url": "https://www.xiaohongshu.com/discovery/item/6a67561e0000000009035b9b?xsec_token=ABGIZs6qTmcKNOZz5N7bmP817rDsfTxUPa5YZlXPtsgeE%3D&xsec_source=pc_search",
-      "published_at": "2026-07-27T00:00:00+08:00",
-      "place_name": "光谷文化中心",
-      "district": "洪山区",
-      "tags": [
-        "图书馆",
-        "美术馆",
-        "免费场馆",
-        "室内避暑"
-      ],
-      "image": "",
-      "media_type": "image",
-      "engagement": {
-        "likes": "40",
-        "comments": "1",
-        "collects": "27"
       },
       "review_status": "reviewed",
       "collected_at": "2026-07-29T11:39:10+08:00"
