@@ -14,7 +14,7 @@
     "heat": 8700,
     "trend": "stable",
     "place_id": 5,
-    "reason": "限时优惠 · 近期活动 · 室内避暑",
+    "reason": "限时优惠 · 近期活动",
     "social_mentions": 0
   },
   {
@@ -23,7 +23,7 @@
     "heat": 8600,
     "trend": "stable",
     "place_id": 10,
-    "reason": "限时优惠 · 近期活动 · 室内避暑",
+    "reason": "限时优惠 · 近期活动",
     "social_mentions": 0
   },
   {
@@ -68,7 +68,7 @@
     "heat": 7400,
     "trend": "stable",
     "place_id": 46,
-    "reason": "近期活动 · 免费入场 · 室内避暑",
+    "reason": "近期活动 · 免费入场",
     "social_mentions": 0
   },
   {
@@ -86,7 +86,7 @@
     "heat": 7100,
     "trend": "stable",
     "place_id": 1,
-    "reason": "限时优惠 · 室内避暑",
+    "reason": "限时优惠",
     "social_mentions": 0
   }
 ]
