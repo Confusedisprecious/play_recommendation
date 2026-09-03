@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T15:13:58+08:00",
+  "generated_at": "2026-09-03T20:52:07+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,8 +9,8 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-09-03T15:13:58+08:00",
-      "item_count": 0,
+      "last_attempt_at": "2026-09-03T20:52:07+08:00",
+      "item_count": 1,
       "schedule": "every_2_hours"
     }
   },
@@ -26,6 +26,26 @@
   },
   "errors": [],
   "items": [
+    {
+      "id": "424684127b1f7441",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "猛涨！武汉多个景区宣布：免费、半价",
+      "summary": "8月的最后一个周末，两个多月的暑期临近收官，不少家长抓住假期最后的机会，带孩子出门游玩，武汉迎来暑期亲子游的收官客流高峰。 来自飞猪的《2026年暑期出游快报》显示，今年暑期，飞猪上湖北目的地的旅行预订量超越去年同期，其中酒店预订量同比增长67%，武汉的旅游预订最为热门。 记者走访发现，告别传统遛娃模式，武汉文旅市场不断推新，清凉玩水、文博研学、城市实景剧游三类体验热度走高，为家庭游客打造高质量的 ...",
+      "author": "长江云 - 湖北网络广播电视台官方网站",
+      "url": "https://news.hbtv.com.cn/p/4627114.html",
+      "published_at": "2026-08-31",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 亲子 暑期",
+      "review_status": "auto_trusted"
+    },
     {
       "id": "19c9b216db7a39a6",
       "platform": "local_news",
