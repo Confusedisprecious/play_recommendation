@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T05:07:05+08:00",
+  "generated_at": "2026-09-04T08:09:11+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,7 +9,7 @@
   "source_status": {
     "news_rss": {
       "status": "error",
-      "last_attempt_at": "2026-09-04T05:07:05+08:00",
+      "last_attempt_at": "2026-09-04T08:09:11+08:00",
       "item_count": 0,
       "message": "not well-formed (invalid token): line 1, column 41"
     }
@@ -46,26 +46,6 @@
       "image": "",
       "image_source": "",
       "discovery_query": "武汉 亲子 暑期",
-      "review_status": "auto_trusted"
-    },
-    {
-      "id": "19c9b216db7a39a6",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "暑期演艺市场热度攀升 湖北将迎来2850场演出",
-      "summary": "近日，依托文化和旅游带动消费、拉动经济发展的作用，湖北暑期演艺市场迎来消费热潮。长江云新闻记者从湖北省文旅厅获悉，2026年8月至9月，全省营业性演出共计2850余场次，预计吸引超百万观众走进各大剧场观演。",
-      "author": "长江云 - 湖北网络广播电视台官方网站",
-      "url": "https://news.hbtv.com.cn/p/4621929.html",
-      "published_at": "2026-08-04",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "",
-      "image_source": "",
-      "discovery_query": "武汉 景区 暑期",
       "review_status": "auto_trusted"
     }
   ]
