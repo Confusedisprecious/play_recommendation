@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T02:22:18+08:00",
+  "generated_at": "2026-09-06T06:05:31+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,8 +9,8 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-09-06T02:22:18+08:00",
-      "item_count": 0,
+      "last_attempt_at": "2026-09-06T06:05:31+08:00",
+      "item_count": 1,
       "schedule": "every_2_hours"
     }
   },
