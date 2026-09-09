@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T05:14:25+08:00",
+  "generated_at": "2026-09-09T08:19:52+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,7 +9,7 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-09-09T05:14:25+08:00",
+      "last_attempt_at": "2026-09-09T08:19:52+08:00",
       "item_count": 1,
       "schedule": "every_2_hours"
     }
@@ -43,7 +43,7 @@
       ],
       "image": "",
       "image_source": "",
-      "discovery_query": "武汉 亲子 活动",
+      "discovery_query": "武汉 亲子 暑期",
       "review_status": "auto_trusted"
     }
   ]
