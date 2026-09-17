@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-17T15:46:53+08:00",
-  "latest_published_at": "2026-08-31",
+  "generated_at": "2026-09-17T21:34:06+08:00",
+  "latest_published_at": "2026-09-16",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
@@ -11,12 +11,12 @@
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-09-17T15:46:51+08:00",
+    "last_discovery_at": "2026-09-17T21:34:03+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-09-17T15:46:51+08:00",
-        "item_count": 0,
+        "last_attempt_at": "2026-09-17T21:34:03+08:00",
+        "item_count": 1,
         "schedule": "every_2_hours"
       }
     },
@@ -69,6 +69,27 @@
   ],
   "items": [
     {
+      "id": "29b5513fd37f84e1",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "龟山电视塔全面开放、各大艺术节“上新”……金秋文旅消费季 ...",
+      "summary": "本次“畅游武汉”板块覆盖夜间经济、潮玩休闲、文化艺术、城市漫游等多元场景： 长江夜游嘉年华：以国庆烟花秀为核心，配套“璀璨长江”主题灯光秀，同步推出“长江画廊风情游”等长江游船产品。 汽车潮玩嘉年华：联动小米、问界、蔚来、岚图等车企，打造“文旅+汽车”跨界消费新场景。 文艺荟萃嘉年华：第十一届中国京",
+      "author": "长江云 - 湖北网络广播电视台官方网站",
+      "url": "https://news.hbtv.com.cn/p/4630822.html",
+      "published_at": "2026-09-16",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.vR4ItRiQlFsZ33TpStU1ug&pid=News&w=960&h=540&c=7&rs=1",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-09-17T21:34:06+08:00",
+      "discovery_query": "武汉 夜游 活动",
+      "image_source": "rss_thumbnail"
+    },
+    {
       "id": "424684127b1f7441",
       "platform": "local_news",
       "source_type": "public_news_rss",
@@ -85,7 +106,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-09-17T15:46:53+08:00",
+      "collected_at": "2026-09-17T21:34:06+08:00",
       "discovery_query": "武汉 亲子 暑期"
     }
   ]
