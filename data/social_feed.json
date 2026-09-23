@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T08:39:59+08:00",
+  "generated_at": "2026-09-23T15:49:14+08:00",
   "latest_published_at": "2026-09-16",
   "freshness": {
     "live_window_days": 7,
@@ -11,11 +11,11 @@
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-09-23T08:39:57+08:00",
+    "last_discovery_at": "2026-09-23T15:49:12+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-09-23T08:39:57+08:00",
+        "last_attempt_at": "2026-09-23T15:49:12+08:00",
         "item_count": 0,
         "schedule": "every_2_hours"
       }
@@ -85,7 +85,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.vR4ItRiQlFsZ33TpStU1ug&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-09-23T08:39:59+08:00",
+      "collected_at": "2026-09-23T15:49:14+08:00",
       "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     },
@@ -106,7 +106,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-09-23T08:39:59+08:00",
+      "collected_at": "2026-09-23T15:49:14+08:00",
       "discovery_query": "武汉 亲子 暑期"
     }
   ]
