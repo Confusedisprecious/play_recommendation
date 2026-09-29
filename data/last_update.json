@@ -1,10 +1,10 @@
 {
-  "last_update": "2026-09-29 16:40",
-  "next_update": "2026-09-29 18:00",
+  "last_update": "2026-09-30 00:37",
+  "next_update": "2026-09-30 02:00",
   "data_version": "1.5",
   "update_interval_hours": 2,
   "total_places": 63,
-  "total_events": 95,
+  "total_events": 96,
   "total_promotions": 7,
   "total_hot_events": 10,
   "total_social_items": 2,
