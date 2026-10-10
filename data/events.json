@@ -2989,5 +2989,151 @@
     "indoor": true,
     "parking": "待确认",
     "source": "武汉文旅局"
+  },
+  {
+    "id": 127,
+    "name": "旅行社设立许可旅行社信息变更公告（ 2026年第11号）",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202610/t20261010_2858741.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-127/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 128,
+    "name": "旅行社设立许可旅行社申请注销公告（2026年第12号）",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202610/t20261010_2858729.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-128/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 129,
+    "name": "旅行社设立许可新办公告（2026年第10号）",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202610/t20261010_2858723.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-129/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 130,
+    "name": "关于宿星河（武汉）文化旅游有限公司办理旅游服务质量保证金提取事项情况的公示",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202610/t20261010_2858713.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-130/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 131,
+    "name": "武汉市文化和旅游局行政处罚决定书送达公告（家旅地（湖北）国际旅行社有限公司）",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202610/t20261010_2858708.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-131/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
   }
 ]
