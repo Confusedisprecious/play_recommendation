@@ -24,16 +24,35 @@
 
   const sceneCopy = {
     weekend: '周末首选：综合热度、评分、活动与当前季节推荐。',
-    indoor: '高温室内：以场馆、商场与室内乐园为主。',
+    indoor: '室内首选：天气不稳或想轻松一点时，场馆与商场都合适。',
     free: '几乎免费：优先筛选明确标注免费开放的场所。',
     toddler: '低龄友好：适合 0–6 岁家庭，减少高门槛项目。',
     outdoor: '户外放电：公园、绿道、骑行与自然体验。',
     niche: '小众宝藏：优先展示新开放、社区型和容易被忽略的亲子地点。'
   };
 
+  function indoorSceneBySeason() {
+    const month = today.getMonth() + 1;
+    if ([6, 7, 8].includes(month)) return { strong: '高温室内', small: '有空调，少暴晒', copy: '高温避暑：以场馆、商场与室内乐园为主，少暴晒。' };
+    if ([12, 1, 2].includes(month)) return { strong: '保暖室内', small: '天冷也有得玩', copy: '保暖室内：天冷时优先选择场馆、展馆与室内乐园。' };
+    return { strong: '室内首选', small: '天凉雨天都适合', copy: sceneCopy.indoor };
+  }
+
+  function updateSeasonUI() {
+    const indoor = indoorSceneBySeason();
+    const button = elements.sceneRail.querySelector('[data-scene="indoor"]');
+    if (button) {
+      const strong = button.querySelector('strong');
+      const small = button.querySelector('small');
+      if (strong) strong.textContent = indoor.strong;
+      if (small) small.textContent = indoor.small;
+    }
+    if (state.scene === 'indoor') elements.sceneDescription.textContent = indoor.copy;
+  }
+
   const categoryLabels = { park: '公园自然', playground: '场馆乐园', mall: '商场街区', event: '活动' };
-  const platformLabels = { xiaohongshu: '小红书', douyin: '抖音', weibo: '微博' };
-  const platformMarks = { xiaohongshu: 'XHS', douyin: 'DY', weibo: 'WB' };
+  const platformLabels = { xiaohongshu: '小红书', douyin: '抖音', weibo: '微博', bilibili: 'B站', local_news: '本地新闻' };
+  const platformMarks = { xiaohongshu: 'XHS', douyin: 'DY', weibo: 'WB', bilibili: 'BIL', local_news: 'NEWS' };
 
   const elements = {};
 
@@ -388,9 +407,17 @@
     const staleDays = daysBetween(updateDate);
     const dataCopy = staleDays === null ? '更新时间待确认' : staleDays <= 2 ? '数据保持更新' : `数据已 ${staleDays} 天未刷新`;
     const dateLabel = formatDate(today, { month: 'long', day: 'numeric', weekday: 'long' });
-    elements.heroDate.textContent = `武汉 · ${dateLabel}`;
+    const weather = state.data.weather;
+    const weatherAdvice = weather && weather.advice ? `${weather.advice.headline}。${weather.advice.detail}` : '按本地日期生成推荐';
+    if (weather && weather.current) {
+      const temp = Math.round(Number(weather.current.temperature));
+      const tempLabel = Number.isFinite(temp) ? ` ${temp}°C` : '';
+      elements.heroDate.textContent = `武汉 · ${dateLabel} · ${safeText(weather.current.label, '')}${tempLabel}`;
+    } else {
+      elements.heroDate.textContent = `武汉 · ${dateLabel}`;
+    }
     elements.dataStatus.innerHTML = [
-      ['01', `今天 · ${dateLabel}`, '按本地日期生成推荐'],
+      ['01', `今天 · ${dateLabel}`, weatherAdvice],
       ['02', `最近数据：${formatDate(updateDate, { year: 'numeric', month: 'long', day: 'numeric' })}`, safeText(state.data.update.data_version, '版本待确认') === '待确认' ? '版本待确认' : `数据版本 ${state.data.update.data_version}`],
       ['03', dataCopy, '票价、预约和活动档期出发前核实']
     ].map(([index, title, note]) => `<div class="status-item"><span class="status-index">${index}</span><span><strong>${escapeHtml(title)}</strong><small>${escapeHtml(note)}</small></span></div>`).join('');
@@ -494,7 +521,7 @@
     elements.socialList.innerHTML = items.map((item) => `
       <article class="social-card">
         <span class="social-platform">${escapeHtml(platformMarks[item.platform] || 'WEB')}</span>
-        <div class="social-copy"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(safeText(item.summary, '摘要待补充'))}</p><div class="social-meta"><span>${escapeHtml(platformLabels[item.platform] || item.platform)}</span><span>${escapeHtml(item.author || '作者未标注')}</span><span>${escapeHtml(relativeDate(item.published_at))}</span>${daysBetween(parseDate(item.published_at)) > 7 ? '<span>历史参考</span>' : '<span>近期内容</span>'}</div></div>
+        <div class="social-copy"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(safeText(item.summary, '摘要待补充'))}</p><div class="social-meta"><span>${escapeHtml(platformLabels[item.platform] || item.platform)}</span><span>${item.review_status === 'auto_trusted' ? '官方来源' : '人工核验'}</span><span>${escapeHtml(item.author || '作者未标注')}</span><span>${escapeHtml(relativeDate(item.published_at))}</span>${daysBetween(parseDate(item.published_at)) > 7 ? '<span>历史参考</span>' : '<span>近期内容</span>'}</div></div>
         <a class="social-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" aria-label="查看原内容">${icon('external')}</a>
       </article>`).join('');
   }
@@ -646,6 +673,7 @@
     loadPreferences();
     bindEvents();
     updateFavoriteCount();
+    updateSeasonUI();
     showLoadingCards();
     try {
       state.data = await window.WeekendDataService.loadAll();

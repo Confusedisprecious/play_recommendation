@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-11T21:03:11+08:00",
-  "latest_published_at": "2026-09-16",
+  "generated_at": "2026-10-11T13:27:03+08:00",
+  "latest_published_at": "2026-10-03",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
@@ -10,14 +10,14 @@
     "expired_items_removed": 0
   },
   "source_health": {
-    "status": "degraded",
-    "last_discovery_at": "2026-10-11T21:03:10+08:00",
+    "status": "healthy",
+    "last_discovery_at": "2026-10-11T13:19:08+08:00",
     "automatic_sources": {
       "news_rss": {
-        "status": "error",
-        "last_attempt_at": "2026-10-11T21:03:10+08:00",
-        "item_count": 0,
-        "message": "not well-formed (invalid token): line 1, column 41"
+        "status": "healthy",
+        "last_attempt_at": "2026-10-11T13:19:08+08:00",
+        "item_count": 2,
+        "schedule": "every_2_hours"
       }
     },
     "connectors": {
@@ -31,9 +31,7 @@
       }
     },
     "pending_review": 0,
-    "errors": [
-      "News RSS: not well-formed (invalid token): line 1, column 41"
-    ]
+    "errors": []
   },
   "policy": {
     "collection_mode": "trusted_public_feed_or_reviewed_authorized_export",
@@ -71,6 +69,47 @@
   ],
   "items": [
     {
+      "id": "971b4a4318c8054b",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "国庆假期夜游市场持续升温，黄鹤楼光影秀点亮江城夜色",
+      "summary": "长江日报大武汉客户端10月3日讯（记者范雅琴 通讯员李博）10月2日晚，黄鹤楼再度迎来一场充满节日氛围的夜游盛会。“红耀名楼·礼赞华诞”国庆主题活动在“夜上黄鹤楼”精彩启幕，通过国庆主题光影秀、红歌共唱、国风巡游及沉浸式文化互动等内容，将家国情怀融入夜游场景，让八方游客在游园赏景之余，感受千年名楼与",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5346337.htm",
+      "published_at": "2026-10-03",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.e8NIWaFHya7bk22dlogt6A&pid=News&w=960&h=540&c=7&rs=1",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-10-11T13:27:03+08:00",
+      "discovery_query": "武汉 夜游 活动",
+      "image_source": "rss_thumbnail"
+    },
+    {
+      "id": "816aa75c7232ebed",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "武汉宣布：龟山电视塔将全面开放，多个景区可门票减免；发放零售 ...",
+      "summary": "国庆长假“相约长江看烟花”，龟山电视塔全面开放；中国京剧艺术节、琴台音乐节、武汉国际杂技艺术节、2026武汉网球公开 ...",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202609/t5341126.htm",
+      "published_at": "2026-09-17",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-10-11T13:27:03+08:00",
+      "discovery_query": "武汉 景区 最新 开放"
+    },
+    {
       "id": "29b5513fd37f84e1",
       "platform": "local_news",
       "source_type": "public_news_rss",
@@ -87,7 +126,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.vR4ItRiQlFsZ33TpStU1ug&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-11T21:03:11+08:00",
+      "collected_at": "2026-10-11T13:27:03+08:00",
       "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     }

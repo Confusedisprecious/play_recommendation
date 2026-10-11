@@ -96,6 +96,14 @@ def main():
     except Exception as e:
         print(f"  ⚠ 数据合并失败: {e}")
 
+    # 3.5 抓取实时天气，供前端首屏展示与室内外建议
+    print(f"\n🌦️ 阶段3.5: 实时天气")
+    try:
+        from fetch_weather import fetch_weather
+        fetch_weather()
+    except Exception as e:
+        print(f"  ⚠ 天气获取失败: {e}")
+
     # 4. 验证数据完整性
     print(f"\n📊 阶段4: 数据验证")
     spots = load_json("spots.json")

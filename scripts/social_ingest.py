@@ -32,9 +32,13 @@ DATA_DIR = BASE_DIR / "data"
 DEFAULT_INPUT = DATA_DIR / "social_sources.json"
 DEFAULT_OUTPUT = DATA_DIR / "social_feed.json"
 DEFAULT_CANDIDATES = DATA_DIR / "social_candidates.json"
+SOURCE_REGISTRY = DATA_DIR / "source_registry.json"
 USER_AGENT = "WuhanFamilyGuide/1.0 (+public-metadata-only)"
 LOCAL_TIMEZONE = ZoneInfo("Asia/Shanghai")
-ALLOWED_HOSTS = {
+
+# 社交平台域名保持硬编码；新闻资讯域名以 source_registry.json 的
+# auto_publish_domains 为准，避免两份白名单各自维护导致漂移。
+SOCIAL_HOSTS = {
     "xiaohongshu.com",
     "www.xiaohongshu.com",
     "douyin.com",
@@ -45,11 +49,20 @@ ALLOWED_HOSTS = {
     "bilibili.com",
     "www.bilibili.com",
     "b23.tv",
-    "news.hbtv.com.cn",
-    "wuhan.gov.cn",
-    "www.wuhan.gov.cn",
-    "wlj.wuhan.gov.cn",
 }
+
+
+def load_allowed_hosts() -> set[str]:
+    hosts = set(SOCIAL_HOSTS)
+    try:
+        registry = json.loads(SOURCE_REGISTRY.read_text(encoding="utf-8"))
+        hosts.update(registry.get("news_rss", {}).get("auto_publish_domains", []))
+    except (OSError, ValueError):
+        pass
+    return hosts
+
+
+ALLOWED_HOSTS = load_allowed_hosts()
 
 
 class MetadataParser(HTMLParser):
