@@ -1,9 +1,9 @@
 {
   "city": "武汉",
   "source": "Open-Meteo",
-  "fetched_at": "2026-10-12 02:59",
+  "fetched_at": "2026-10-12 07:44",
   "current": {
-    "temperature": 21.7,
+    "temperature": 21.1,
     "code": 0,
     "label": "晴"
   },
