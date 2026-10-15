@@ -1,41 +1,41 @@
 {
   "city": "武汉",
   "source": "Open-Meteo",
-  "fetched_at": "2026-10-15 19:45",
+  "fetched_at": "2026-10-16 01:08",
   "current": {
-    "temperature": 20.4,
+    "temperature": 19.8,
     "code": 3,
     "label": "阴"
   },
   "days": [
     {
-      "date": "2026-10-15",
-      "code": 80,
-      "label": "阵雨",
-      "t_max": 22.1,
-      "t_min": 19.4,
-      "rain_prob": 100
-    },
-    {
       "date": "2026-10-16",
-      "code": 80,
-      "label": "阵雨",
-      "t_max": 24.0,
-      "t_min": 20.0,
-      "rain_prob": 95
+      "code": 51,
+      "label": "毛毛雨",
+      "t_max": 24.5,
+      "t_min": 19.5,
+      "rain_prob": 82
     },
     {
       "date": "2026-10-17",
+      "code": 81,
+      "label": "阵雨",
+      "t_max": 30.7,
+      "t_min": 21.3,
+      "rain_prob": 96
+    },
+    {
+      "date": "2026-10-18",
       "code": 95,
       "label": "雷阵雨",
-      "t_max": 31.1,
-      "t_min": 21.6,
-      "rain_prob": 86
+      "t_max": 21.9,
+      "t_min": 17.7,
+      "rain_prob": 100
     }
   ],
   "advice": {
     "scene": "indoor",
-    "headline": "今天降水概率 100%，优先室内场馆",
+    "headline": "今天降水概率 82%，优先室内场馆",
     "detail": "雨具备好；若午后转晴，绿道散步也可以安排。"
   }
 }
