@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-15T12:50:15+08:00",
-  "latest_published_at": "2026-10-05",
+  "generated_at": "2026-10-15T19:40:46+08:00",
+  "latest_published_at": "2026-10-14",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
@@ -11,12 +11,12 @@
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-10-15T12:50:12+08:00",
+    "last_discovery_at": "2026-10-15T19:40:43+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-10-15T12:50:12+08:00",
-        "item_count": 2,
+        "last_attempt_at": "2026-10-15T19:40:43+08:00",
+        "item_count": 3,
         "schedule": "every_2_hours"
       }
     },
@@ -69,6 +69,27 @@
   ],
   "items": [
     {
+      "id": "8b1af3d7784d7e73",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "早安武汉｜武汉近郊一景区重新开放，周末日均近万人赶来，可露营 ...",
+      "summary": "金秋十月，武汉江夏灵山生态文化旅游区内游人如织。闭园改造10个月后，这座焕新归来的矿山景区，凭借其独特的矿山自然风光和优质的游园环境，成为武汉近郊短途出游、亲子度假、网红拍照打卡的热门宝藏目的地，周末日均接待游客近万人次。 岩壁下开出花海 灵山片区总面积约2000亩，总投资3.5亿元，曾是武汉南部大",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5348896.htm",
+      "published_at": "2026-10-14",
+      "place_name": "",
+      "district": "江夏区",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.yEI8VBnMOnsaFBmT1F9SXA&pid=News&w=960&h=540&c=7&rs=1",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-10-15T19:40:46+08:00",
+      "discovery_query": "武汉 景区 最新 开放",
+      "image_source": "rss_thumbnail"
+    },
+    {
       "id": "8f891dc31911ce1a",
       "platform": "local_news",
       "source_type": "public_news_rss",
@@ -85,7 +106,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.RIx0UWpIq_EmHny7KEqoqA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-15T12:50:15+08:00",
+      "collected_at": "2026-10-15T19:40:46+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -106,7 +127,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.e8NIWaFHya7bk22dlogt6A&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-15T12:50:15+08:00",
+      "collected_at": "2026-10-15T19:40:46+08:00",
       "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     },
@@ -127,7 +148,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-15T12:50:15+08:00",
+      "collected_at": "2026-10-15T19:40:46+08:00",
       "discovery_query": "武汉 夜游 活动"
     },
     {
@@ -147,7 +168,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.vR4ItRiQlFsZ33TpStU1ug&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-15T12:50:15+08:00",
+      "collected_at": "2026-10-15T19:40:46+08:00",
       "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     }
