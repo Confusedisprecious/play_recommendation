@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-17T23:43:26+08:00",
+  "generated_at": "2026-10-18T02:32:53+08:00",
   "latest_published_at": "2026-10-14",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-09-17",
-    "expired_items_removed": 0
+    "oldest_kept_date": "2026-09-18",
+    "expired_items_removed": 1
   },
   "source_health": {
-    "status": "healthy",
-    "last_discovery_at": "2026-10-17T23:43:23+08:00",
+    "status": "degraded",
+    "last_discovery_at": "2026-10-18T02:32:53+08:00",
     "automatic_sources": {
       "news_rss": {
-        "status": "healthy",
-        "last_attempt_at": "2026-10-17T23:43:23+08:00",
-        "item_count": 2,
-        "schedule": "every_2_hours"
+        "status": "error",
+        "last_attempt_at": "2026-10-18T02:32:53+08:00",
+        "item_count": 0,
+        "message": "not well-formed (invalid token): line 1, column 41"
       }
     },
     "connectors": {
@@ -31,7 +31,9 @@
       }
     },
     "pending_review": 0,
-    "errors": []
+    "errors": [
+      "News RSS: not well-formed (invalid token): line 1, column 41"
+    ]
   },
   "policy": {
     "collection_mode": "trusted_public_feed_or_reviewed_authorized_export",
@@ -85,7 +87,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.yEI8VBnMOnsaFBmT1F9SXA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-17T23:43:26+08:00",
+      "collected_at": "2026-10-18T02:32:53+08:00",
       "discovery_query": "武汉 景区 最新 开放",
       "image_source": "rss_thumbnail"
     },
@@ -106,7 +108,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.RIx0UWpIq_EmHny7KEqoqA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-17T23:43:26+08:00",
+      "collected_at": "2026-10-18T02:32:53+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -127,29 +129,9 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.e8NIWaFHya7bk22dlogt6A&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-17T23:43:26+08:00",
+      "collected_at": "2026-10-18T02:32:53+08:00",
       "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
-    },
-    {
-      "id": "816aa75c7232ebed",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "武汉宣布：龟山电视塔将全面开放，多个景区可门票减免；发放零售 ...",
-      "summary": "国庆长假“相约长江看烟花”，龟山电视塔全面开放；中国京剧艺术节、琴台音乐节、武汉国际杂技艺术节、2026武汉网球公开 ...",
-      "author": "长江网",
-      "url": "https://news.cjn.cn/whpd/yw_19947/202609/t5341126.htm",
-      "published_at": "2026-09-17",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "",
-      "review_status": "auto_trusted",
-      "collected_at": "2026-10-17T23:43:26+08:00",
-      "discovery_query": "武汉 景区 最新 开放"
     }
   ]
 }
