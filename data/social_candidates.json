@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T06:25:05+08:00",
+  "generated_at": "2026-10-18T12:43:32+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,7 +9,7 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-10-18T06:25:05+08:00",
+      "last_attempt_at": "2026-10-18T12:43:32+08:00",
       "item_count": 2,
       "schedule": "every_2_hours"
     }
@@ -84,26 +84,6 @@
       "image": "https://www.bing.com/th?id=ONUT.e8NIWaFHya7bk22dlogt6A&pid=News&w=960&h=540&c=7&rs=1",
       "image_source": "rss_thumbnail",
       "discovery_query": "武汉 夜游 活动",
-      "review_status": "auto_trusted"
-    },
-    {
-      "id": "816aa75c7232ebed",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "武汉宣布：龟山电视塔将全面开放，多个景区可门票减免；发放零售 ...",
-      "summary": "国庆长假“相约长江看烟花”，龟山电视塔全面开放；中国京剧艺术节、琴台音乐节、武汉国际杂技艺术节、2026武汉网球公开 ...",
-      "author": "长江网",
-      "url": "https://news.cjn.cn/whpd/yw_19947/202609/t5341126.htm",
-      "published_at": "2026-09-17",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "",
-      "image_source": "",
-      "discovery_query": "武汉 景区 最新 开放",
       "review_status": "auto_trusted"
     }
   ]
