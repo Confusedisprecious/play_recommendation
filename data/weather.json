@@ -1,35 +1,35 @@
 {
   "city": "武汉",
   "source": "Open-Meteo",
-  "fetched_at": "2026-10-20 04:00",
+  "fetched_at": "2026-10-20 07:46",
   "current": {
-    "temperature": 17.7,
-    "code": 80,
-    "label": "阵雨"
+    "temperature": 17.6,
+    "code": 51,
+    "label": "毛毛雨"
   },
   "days": [
     {
       "date": "2026-10-20",
-      "code": 82,
-      "label": "强阵雨",
-      "t_max": 19.6,
-      "t_min": 17.6,
+      "code": 53,
+      "label": "毛毛雨",
+      "t_max": 20.2,
+      "t_min": 17.5,
       "rain_prob": 100
     },
     {
       "date": "2026-10-21",
       "code": 3,
       "label": "阴",
-      "t_max": 20.2,
-      "t_min": 14.8,
+      "t_max": 20.8,
+      "t_min": 15.3,
       "rain_prob": 4
     },
     {
       "date": "2026-10-22",
-      "code": 53,
+      "code": 51,
       "label": "毛毛雨",
-      "t_max": 20.0,
-      "t_min": 13.2,
+      "t_max": 20.9,
+      "t_min": 13.5,
       "rain_prob": 25
     }
   ],
