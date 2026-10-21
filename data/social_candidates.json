@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T05:42:24+08:00",
+  "generated_at": "2026-10-21T08:40:25+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,10 +8,10 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "error",
-      "last_attempt_at": "2026-10-21T05:42:24+08:00",
-      "item_count": 0,
-      "message": "not well-formed (invalid token): line 1, column 41"
+      "status": "healthy",
+      "last_attempt_at": "2026-10-21T08:40:25+08:00",
+      "item_count": 2,
+      "schedule": "every_2_hours"
     }
   },
   "connectors": {
@@ -24,10 +24,28 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [
-    "News RSS: not well-formed (invalid token): line 1, column 41"
-  ],
+  "errors": [],
   "items": [
+    {
+      "id": "a29b48bc6a5040f7",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "佛祖岭街道旭光社区亲子嘉年华欢乐启幕 共绘治理同心圆",
+      "summary": "长江网讯（通讯员何博 余静怡） 10月17日，武汉市东湖高新区佛祖岭街道旭光社区在光谷绿城桂府小区活动广场举办“青春同行趣相伴 亲子同乐共治理”亲子嘉年华活动，辖区亲子家庭、青少年、居民群众、志愿者齐聚一堂，约500人次参与，在欢声笑语中体悟共建、共治、共享的“三共”项目内涵。 活动设置签到打卡、趣味闯关、手工 DIY、礼品兑换四大功能区域。前期社区通过微信群、网格员入户广泛招募家庭，社区工作人员 ...",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/csqpd/wh_20004/202610/t5351116.htm",
+      "published_at": "2026-10-20",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 亲子 活动",
+      "review_status": "auto_trusted"
+    },
     {
       "id": "8b1af3d7784d7e73",
       "platform": "local_news",
