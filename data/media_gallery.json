@@ -1386,6 +1386,33 @@
       "source_title": "江夏永旺梦乐城2023年11月开业!",
       "asset_note": "本地展示副本来自图片搜索缩略图，原页面版权归其权利人；如权利人要求将立即替换。",
       "review_status": "人工核对地点名称与画面"
+    },
+    {
+      "place_id": 64,
+      "name": "武汉城建开元森泊度假乐园",
+      "image": "images/spots/64.jpg",
+      "source_url": "https://www.wuhan.gov.cn/sy/whyw/202506/t20250602_2589693.shtml",
+      "source_title": "长江日报 / 武汉市人民政府门户网站",
+      "credit": "长江日报报道配图 / 武汉市人民政府门户网站",
+      "review_status": "来源页面实景图"
+    },
+    {
+      "place_id": 64,
+      "name": "武汉城建开元森泊度假乐园",
+      "image": "images/spots/64-2.jpg",
+      "source_url": "https://www.wuhan.gov.cn/sy/whyw/202506/t20250602_2589693.shtml",
+      "source_title": "长江日报 / 武汉市人民政府门户网站",
+      "credit": "长江日报报道配图 / 武汉市人民政府门户网站",
+      "review_status": "来源页面实景图"
+    },
+    {
+      "place_id": 64,
+      "name": "武汉城建开元森泊度假乐园",
+      "image": "images/spots/64-3.jpg",
+      "source_url": "https://www.wuhan.gov.cn/sy/whyw/202506/t20250602_2589693.shtml",
+      "source_title": "长江日报 / 武汉市人民政府门户网站",
+      "credit": "长江日报报道配图 / 武汉市人民政府门户网站",
+      "review_status": "来源页面实景图"
     }
   ]
 }

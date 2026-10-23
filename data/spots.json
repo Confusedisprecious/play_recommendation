@@ -2521,5 +2521,51 @@
       "images/spots/63-2.jpg",
       "images/spots/63-3.jpg"
     ]
+  },
+  {
+    "id": 64,
+    "name": "武汉城建开元森泊度假乐园",
+    "category": "playground",
+    "district": "蔡甸区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "华中地区最大的以水为主题的全龄段亲子度假乐园，位于后官湖畔。核心是30℃恒温室内水乐园，另有幻想岛儿童乐园、树屋与船屋特色度假、卡丁车赛道和国际会议中心，室内室外都能玩，秋冬想玩水也合适。",
+    "tags": [
+      "室内恒温水乐园",
+      "全龄段亲子",
+      "树屋船屋",
+      "度假酒店",
+      "幻想岛儿童乐园",
+      "卡丁车"
+    ],
+    "rating": null,
+    "address": "蔡甸区生态城大道1号（中法武汉生态示范城，后官湖畔）",
+    "hours": "园区与水乐园开放时间以官方当日公告为准",
+    "transport": "紧邻四环线中法城出入口，建议自驾或打车前往；园区有大型停车场",
+    "image": "images/spots/64.jpg",
+    "events": [],
+    "deals": [],
+    "age_min": 1,
+    "age_max": 14,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "配套大型停车场，节假日建议早点到",
+    "niche": false,
+    "opened_at": "2025-06",
+    "source": "长江日报 / 武汉市人民政府门户网站",
+    "source_url": "https://www.wuhan.gov.cn/sy/whyw/202506/t20250602_2589693.shtml",
+    "verified_at": "2026-10-22",
+    "image_credit": "长江日报报道配图 / 武汉市人民政府门户网站",
+    "travel_note": "门票价格与营业时间请以官方渠道为准；室内水乐园恒温30℃，秋冬也能玩水；室外水乐园夏季开放，秋冬季可能调整为其他活动。",
+    "gallery": [
+      "images/spots/64.jpg",
+      "images/spots/64-2.jpg",
+      "images/spots/64-3.jpg"
+    ]
   }
 ]
