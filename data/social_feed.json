@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T19:13:36+08:00",
+  "generated_at": "2026-10-24T23:20:21+08:00",
   "latest_published_at": "2026-10-20",
   "freshness": {
     "live_window_days": 7,
@@ -10,14 +10,14 @@
     "expired_items_removed": 0
   },
   "source_health": {
-    "status": "degraded",
-    "last_discovery_at": "2026-10-24T19:13:35+08:00",
+    "status": "healthy",
+    "last_discovery_at": "2026-10-24T23:19:54+08:00",
     "automatic_sources": {
       "news_rss": {
-        "status": "error",
-        "last_attempt_at": "2026-10-24T19:13:35+08:00",
-        "item_count": 0,
-        "message": "not well-formed (invalid token): line 1, column 41"
+        "status": "healthy",
+        "last_attempt_at": "2026-10-24T23:19:54+08:00",
+        "item_count": 2,
+        "schedule": "every_2_hours"
       }
     },
     "connectors": {
@@ -31,9 +31,7 @@
       }
     },
     "pending_review": 0,
-    "errors": [
-      "News RSS: not well-formed (invalid token): line 1, column 41"
-    ]
+    "errors": []
   },
   "policy": {
     "collection_mode": "trusted_public_feed_or_reviewed_authorized_export",
@@ -87,29 +85,8 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-24T19:13:36+08:00",
+      "collected_at": "2026-10-24T23:20:21+08:00",
       "discovery_query": "武汉 亲子 活动"
-    },
-    {
-      "id": "d7170b967b4f0ab4",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "10月30日相约武汉金秋菊展 持续至下月底全城20个展区展点",
-      "summary": "楚天都市报极目新闻讯（通讯员江林语）武汉秋天最值得期待的金秋菊展，什么时候如常签到？武汉市园林和林业局近日官宣：武汉市第43届金秋菊展将于10月30日在全城开展，持续展至11月30日，全城设置20个展区和展点。 武汉市园林和林业局生态修复处相关负责人介绍，2026年的武汉市第43届金秋菊展以“湿地涵",
-      "author": "荆楚网新闻频道",
-      "url": "https://news.cnhubei.com/content/2026-10/21/content_20245365.html",
-      "published_at": "2026-10-20",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "https://www.bing.com/th?id=ONUT.vH25Wy9P9bBq5-qiM4claQ&pid=News&w=960&h=540&c=7&rs=1",
-      "review_status": "auto_trusted",
-      "collected_at": "2026-10-24T19:13:36+08:00",
-      "discovery_query": "武汉 公园 展览",
-      "image_source": "rss_thumbnail"
     },
     {
       "id": "8b1af3d7784d7e73",
@@ -128,7 +105,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.yEI8VBnMOnsaFBmT1F9SXA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-24T19:13:36+08:00",
+      "collected_at": "2026-10-24T23:20:21+08:00",
       "discovery_query": "武汉 景区 最新 开放",
       "image_source": "rss_thumbnail"
     },
@@ -149,7 +126,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.RIx0UWpIq_EmHny7KEqoqA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-24T19:13:36+08:00",
+      "collected_at": "2026-10-24T23:20:21+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -170,7 +147,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.e8NIWaFHya7bk22dlogt6A&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-24T19:13:36+08:00",
+      "collected_at": "2026-10-24T23:20:21+08:00",
       "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     }

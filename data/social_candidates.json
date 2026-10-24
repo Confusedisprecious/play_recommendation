@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T19:13:35+08:00",
+  "generated_at": "2026-10-24T23:19:54+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,10 +8,10 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "error",
-      "last_attempt_at": "2026-10-24T19:13:35+08:00",
-      "item_count": 0,
-      "message": "not well-formed (invalid token): line 1, column 41"
+      "status": "healthy",
+      "last_attempt_at": "2026-10-24T23:19:54+08:00",
+      "item_count": 2,
+      "schedule": "every_2_hours"
     }
   },
   "connectors": {
@@ -24,9 +24,7 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [
-    "News RSS: not well-formed (invalid token): line 1, column 41"
-  ],
+  "errors": [],
   "items": [
     {
       "id": "a29b48bc6a5040f7",
@@ -46,26 +44,6 @@
       "image": "",
       "image_source": "",
       "discovery_query": "武汉 亲子 活动",
-      "review_status": "auto_trusted"
-    },
-    {
-      "id": "d7170b967b4f0ab4",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "10月30日相约武汉金秋菊展 持续至下月底全城20个展区展点",
-      "summary": "楚天都市报极目新闻讯（通讯员江林语）武汉秋天最值得期待的金秋菊展，什么时候如常签到？武汉市园林和林业局近日官宣：武汉市第43届金秋菊展将于10月30日在全城开展，持续展至11月30日，全城设置20个展区和展点。 武汉市园林和林业局生态修复处相关负责人介绍，2026年的武汉市第43届金秋菊展以“湿地涵秋 菊耀江城”为主题，将在10月30日至11月30日持续展出一个月，设置汉口江滩、中山公园、沙湖公园 ...",
-      "author": "荆楚网新闻频道",
-      "url": "https://news.cnhubei.com/content/2026-10/21/content_20245365.html",
-      "published_at": "2026-10-20",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "https://www.bing.com/th?id=ONUT.vH25Wy9P9bBq5-qiM4claQ&pid=News&w=960&h=540&c=7&rs=1",
-      "image_source": "rss_thumbnail",
-      "discovery_query": "武汉 公园 展览",
       "review_status": "auto_trusted"
     },
     {

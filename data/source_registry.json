@@ -143,7 +143,24 @@
   "feeds": {
     "provider": "RSSHub",
     "base_url_env": "RSSHUB_BASE_URL",
-    "routes": []
+    "routes": [
+      {
+        "path": "/bilibili/vsearch/武汉遛娃/pubdate/no",
+        "label": "B站视频搜索：武汉遛娃（最新发布）",
+        "platform": "bilibili"
+      },
+      {
+        "path": "/bilibili/vsearch/武汉亲子/pubdate/no",
+        "label": "B站视频搜索：武汉亲子（最新发布）",
+        "platform": "bilibili"
+      },
+      {
+        "path": "/bilibili/vsearch/武汉溜娃/pubdate/no",
+        "label": "B站视频搜索：武汉溜娃（最新发布）",
+        "platform": "bilibili"
+      }
+    ],
+    "routes_note": "RSSHub 关键词路由需在运行环境提供 RSSHUB_BASE_URL；bilibili/vsearch 需要 chromium 支持（CI 使用 diygod/rsshub-chromium-bundled 镜像）。抓到的视频进入候选后由 scripts/review_candidates.py 人工核验发布。可信官方账号（如微博政务号）可用 {path, platform, trusted: true} 形式配置，直接标记 auto_trusted。"
   },
   "news_rss": {
     "provider": "Bing News RSS",

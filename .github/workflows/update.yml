@@ -34,16 +34,28 @@ jobs:
           python -m pip install --upgrade pip
           pip install httpx beautifulsoup4 lxml
 
+      - name: 启动 RSSHub（B站视频源）
+        run: |
+          # chromium-bundled 镜像内置无头浏览器，bilibili/vsearch 等路由依赖它
+          docker run -d --name rsshub -p 127.0.0.1:1200:1200 diygod/rsshub-chromium-bundled
+          curl -s --retry 40 --retry-delay 3 --retry-connrefused --max-time 120 http://127.0.0.1:1200/healthz || \
+            curl -s --retry 20 --retry-delay 3 --retry-connrefused --max-time 120 http://127.0.0.1:1200/ >/dev/null
+          echo "RSSHub ready"
+
       - name: 运行数据更新脚本
         env:
           SEARXNG_BASE_URL: ${{ secrets.SEARXNG_BASE_URL }}
-          RSSHUB_BASE_URL: ${{ secrets.RSSHUB_BASE_URL }}
+          RSSHUB_BASE_URL: http://127.0.0.1:1200
         run: |
           echo "📍 开始更新数据..."
           python scripts/discover_social.py
           python scripts/update_all.py
           python scripts/generate_recommendation.py
           echo "✅ 数据更新完成"
+
+      - name: 关闭 RSSHub
+        if: always()
+        run: docker rm -f rsshub || true
 
       - name: 提交更新到仓库
         run: |

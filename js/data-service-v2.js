@@ -33,11 +33,24 @@
     return [...new Set([item.image, ...gallery].filter(isLocalImage))].slice(0, 5);
   }
 
+  // 社区资讯最多展示 14 天，过期内容直接不进入页面
+  const MAX_FEED_AGE_DAYS = 14;
+
+  function withinFeedWindow(value) {
+    if (!value) return false;
+    const date = new Date(String(value).replace(' ', 'T'));
+    if (Number.isNaN(date.getTime())) return false;
+    return Date.now() - date.getTime() <= MAX_FEED_AGE_DAYS * 86400000;
+  }
+
   function normalizeSocial(payload) {
     if (!payload || !Array.isArray(payload.items)) return { items: [], platforms: [], source_health: {}, policy: {} };
     return {
       ...payload,
-      items: payload.items.filter((item) => item && ['reviewed', 'auto_trusted'].includes(item.review_status) && /^https?:\/\//.test(item.url || ''))
+      items: payload.items.filter((item) => item
+        && ['reviewed', 'auto_trusted'].includes(item.review_status)
+        && /^https?:\/\//.test(item.url || '')
+        && withinFeedWindow(item.published_at))
     };
   }
 

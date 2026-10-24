@@ -223,24 +223,57 @@ def discover_news_rss(config: dict) -> list[dict]:
     return items[: int(config.get("max_items", 24))]
 
 
+def rss_published_date(item: ET.Element) -> str:
+    """pubDate/published/updated 转 YYYY-MM-DD；解析失败返回空串。"""
+    raw = child_text(item, ("pubDate", "published", "updated"))
+    if not raw:
+        return ""
+    try:
+        parsed = parsedate_to_datetime(raw)
+    except (TypeError, ValueError):
+        try:
+            parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            return ""
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc).date().isoformat()
+
+
 def discover_rsshub(config: dict, base_url: str) -> list[dict]:
     candidates = []
-    for route in config.get("routes", []):
-        root = fetch_xml(base_url.rstrip("/") + "/" + route.lstrip("/"))
+    for entry in config.get("routes", []):
+        if isinstance(entry, dict):
+            route = str(entry.get("path", "")).strip()
+            platform_hint = str(entry.get("platform", "")).strip().lower()
+            trusted = bool(entry.get("trusted", False))
+            label = str(entry.get("label", "")).strip() or route
+        else:
+            route, platform_hint, trusted, label = str(entry).strip(), "", False, str(entry).strip()
+        if not route:
+            continue
+        # 关键词路由里可能含中文，需按路径段转义
+        encoded = urllib.parse.quote(route, safe="/%:-._~()=")
+        root = fetch_xml(base_url.rstrip("/") + "/" + encoded.lstrip("/"))
         for item in list(root.iter("item"))[:20]:
             url = child_text(item, ("link",))
             if not url:
                 continue
+            published_at = rss_published_date(item)
+            if published_at and published_at < (datetime.now(timezone.utc) - timedelta(days=30)).date().isoformat():
+                continue
             candidates.append(
                 {
                     "id": candidate_id(url),
-                    "platform": platform_for(url),
+                    "platform": platform_hint or platform_for(url),
                     "source_type": "rsshub_feed",
-                    "title": child_text(item, ("title",))[:120],
-                    "summary": child_text(item, ("description", "summary"))[:240],
+                    "title": clean_text(child_text(item, ("title",)), 120),
+                    "summary": clean_text(child_text(item, ("description", "summary")), 240),
+                    "author": clean_text(child_text(item, ("author", "creator")), 60),
                     "url": url,
-                    "discovery_query": route,
-                    "review_status": "pending",
+                    "published_at": published_at,
+                    "discovery_query": label,
+                    "review_status": "auto_trusted" if trusted else "pending",
                 }
             )
     return candidates

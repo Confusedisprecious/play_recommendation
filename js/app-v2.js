@@ -31,6 +31,40 @@
     niche: '小众宝藏：优先展示新开放、社区型和容易被忽略的亲子地点。'
   };
 
+  // 首屏轮播：使用项目内已有的实景图，交叉淡化 + 缓慢推镜
+  const heroSlides = [
+    { image: 'images/media/east-lake.jpg', alt: '东湖湖面与磨山风景', label: '今日灵感 · 户外半日', title: '沿东湖，慢慢骑一圈', sub: '武昌区 · 绿道 · 免费开放' },
+    { image: 'images/media/yellow-crane-tower.jpg', alt: '黄鹤楼与长江', label: '今日灵感 · 城市地标', title: '登黄鹤楼，看两江交汇', sub: '武昌区 · 地标 · 建议预约' },
+    { image: 'images/media/wuhan-botanical-garden.jpg', alt: '武汉植物园花丛', label: '今日灵感 · 自然课堂', title: '植物园里认识季节', sub: '洪山区 · 四季花展' },
+    { image: 'images/media/wuhan-skyline.jpg', alt: '武汉城市天际线', label: '今日灵感 · 江城天际', title: '江滩散步，看武汉天际线', sub: '江岸区 · 江滩 · 免费开放' }
+  ];
+
+  function setupHeroSlideshow() {
+    const photo = document.querySelector('.hero-photo');
+    const caption = document.querySelector('.hero-visual .photo-caption');
+    const indexBadge = document.querySelector('.hero-visual .photo-index');
+    if (!photo || !caption || !indexBadge) return;
+    photo.innerHTML = heroSlides.map((slide, i) =>
+      `<img src="${slide.image}" alt="${slide.alt}" class="hero-slide${i === 0 ? ' active' : ''}" loading="${i === 0 ? 'eager' : 'lazy'}" decoding="async">`
+    ).join('');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const capLabel = caption.querySelector('span');
+    const capTitle = caption.querySelector('strong');
+    const capSub = caption.querySelector('small');
+    let current = 0;
+    window.setInterval(() => {
+      const slides = photo.querySelectorAll('.hero-slide');
+      if (!slides.length) return;
+      current = (current + 1) % slides.length;
+      slides.forEach((el, i) => el.classList.toggle('active', i === current));
+      const slide = heroSlides[current];
+      if (capLabel) capLabel.textContent = slide.label;
+      if (capTitle) capTitle.textContent = slide.title;
+      if (capSub) capSub.textContent = slide.sub;
+      indexBadge.textContent = `No. ${String(current + 1).padStart(2, '0')}`;
+    }, 6000);
+  }
+
   function indoorSceneBySeason() {
     const month = today.getMonth() + 1;
     if ([6, 7, 8].includes(month)) return { strong: '高温室内', small: '有空调，少暴晒', copy: '高温避暑：以场馆、商场与室内乐园为主，少暴晒。' };
@@ -127,6 +161,40 @@
     if ([6, 7, 8].includes(month)) return 'summer';
     if ([9, 10, 11].includes(month)) return 'autumn';
     return 'winter';
+  }
+
+  function weatherIconKind(code) {
+    const value = Number(code);
+    if ([0, 1].includes(value)) return 'sun';
+    if ([51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 99].includes(value)) return 'rain';
+    if ([71, 73, 75, 77, 85, 86].includes(value)) return 'snow';
+    return 'cloud';
+  }
+
+  // ---- 滚动入场：区域标题与动态渲染的卡片进入视口时轻柔上浮 ----
+  const REVEAL_SELECTOR = '.section-heading, .scene-rail, .filter-workspace, .deal-card, .social-card';
+  let revealObserver = null;
+
+  function observeReveals(scope) {
+    if (!revealObserver) return;
+    scope.querySelectorAll(REVEAL_SELECTOR).forEach((el) => {
+      if (el.classList.contains('reveal')) return;
+      el.classList.add('reveal');
+      revealObserver.observe(el);
+    });
+  }
+
+  function setupReveal() {
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+    observeReveals(document);
   }
 
   function loadPreferences() {
@@ -416,6 +484,11 @@
     } else {
       elements.heroDate.textContent = `武汉 · ${dateLabel}`;
     }
+    elements.heroDate.querySelector('.wx-badge')?.remove();
+    const wxIcon = document.createElement('span');
+    wxIcon.className = `wx-badge wx-${weatherIconKind(weather && weather.current && weather.current.code)}`;
+    wxIcon.setAttribute('aria-hidden', 'true');
+    elements.heroDate.appendChild(wxIcon);
     elements.dataStatus.innerHTML = [
       ['01', `今天 · ${dateLabel}`, weatherAdvice],
       ['02', `最近数据：${formatDate(updateDate, { year: 'numeric', month: 'long', day: 'numeric' })}`, safeText(state.data.update.data_version, '版本待确认') === '待确认' ? '版本待确认' : `数据版本 ${state.data.update.data_version}`],
@@ -488,12 +561,16 @@
     elements.dealGrid.innerHTML = validDeals.map((deal, index) => {
       const place = state.spots.find((item) => Number(item.id) === Number(deal.place_id));
       const price = Number(deal.price || 0);
+      const end = parseDate(deal.end_date);
+      const daysLeft = end ? Math.ceil((end.getTime() + 86400000 - today.getTime()) / 86400000) : null;
+      const countdown = daysLeft === null ? '' : `<span class="deal-countdown${daysLeft <= 3 ? ' ending' : ''}">${daysLeft <= 0 ? '今日截止' : `还剩 ${daysLeft} 天`}</span>`;
       return `<article class="deal-card" ${place ? `data-place-id="${Number(place.id)}" role="button" tabindex="0"` : ''}>
-        <div class="deal-card-head"><span class="deal-number">${String(index + 1).padStart(2, '0')} / Offer</span><span class="verify-badge">需复核</span></div>
+        <div class="deal-card-head"><span class="deal-number">${String(index + 1).padStart(2, '0')} / Offer</span><span class="deal-head-badges">${countdown}<span class="verify-badge">需复核</span></span></div>
         <h3>${escapeHtml(deal.title)}</h3><p>${escapeHtml(safeText(deal.desc, deal.location))}</p>
         <div class="deal-card-footer"><span>${escapeHtml(deal.location || '地点待确认')}</span><strong>${price > 0 ? `¥${price}` : '价格以官方为准'}</strong></div>
       </article>`;
     }).join('');
+    observeReveals(elements.dealGrid);
     elements.dealGrid.querySelectorAll('[data-place-id]').forEach((item) => item.addEventListener('keydown', (event) => { if (['Enter', ' '].includes(event.key)) { event.preventDefault(); openPlace(Number(item.dataset.placeId)); } }));
   }
 
@@ -514,7 +591,8 @@
       <div class="pipeline-item muted"><span class="pipeline-dot"></span><span>待审核：${Number(health.pending_review || 0)} 条</span></div>`;
 
     if (!items.length) {
-      elements.socialList.innerHTML = `<div class="social-card"><div class="social-platform">00</div><div class="social-copy"><h3>暂无仍在时效范围内的社交内容</h3><p>新的授权导出内容经人工核验后才会显示。</p></div></div>`;
+      elements.socialList.innerHTML = `<div class="social-card"><div class="social-platform">00</div><div class="social-copy"><h3>最近 14 天暂无新内容</h3><p>新的官方资讯与核验视频会自动出现在这里。</p></div></div>`;
+      observeReveals(elements.socialList);
       return;
     }
 
@@ -524,6 +602,7 @@
         <div class="social-copy"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(safeText(item.summary, '摘要待补充'))}</p><div class="social-meta"><span>${escapeHtml(platformLabels[item.platform] || item.platform)}</span><span>${item.review_status === 'auto_trusted' ? '官方来源' : '人工核验'}</span><span>${escapeHtml(item.author || '作者未标注')}</span><span>${escapeHtml(relativeDate(item.published_at))}</span>${daysBetween(parseDate(item.published_at)) > 7 ? '<span>历史参考</span>' : '<span>近期内容</span>'}</div></div>
         <a class="social-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" aria-label="查看原内容">${icon('external')}</a>
       </article>`).join('');
+    observeReveals(elements.socialList);
   }
 
   function openPlace(placeId) {
@@ -674,6 +753,8 @@
     bindEvents();
     updateFavoriteCount();
     updateSeasonUI();
+    setupHeroSlideshow();
+    setupReveal();
     showLoadingCards();
     try {
       state.data = await window.WeekendDataService.loadAll();
