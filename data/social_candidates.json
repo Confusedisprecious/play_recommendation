@@ -1,17 +1,22 @@
 {
-  "generated_at": "2026-10-24T23:19:54+08:00",
+  "generated_at": "2026-10-25T18:18:28+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
-    "rsshub": false,
+    "rsshub": true,
     "news_rss": true
   },
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-10-24T23:19:54+08:00",
+      "last_attempt_at": "2026-10-25T18:18:28+08:00",
       "item_count": 2,
       "schedule": "every_2_hours"
+    },
+    "rsshub": {
+      "status": "healthy",
+      "last_attempt_at": "2026-10-25T18:18:28+08:00",
+      "item_count": 27
     }
   },
   "connectors": {
@@ -26,6 +31,42 @@
   },
   "errors": [],
   "items": [
+    {
+      "id": "16b43655cf16c143",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "不烧心的3D打印耗材",
+      "summary": "Length: 00:30 AuthorID: 516403439 Play: 350 Favorite: 1 Danmaku: 0 Comment: 0 - Match By: tag",
+      "author": "paulson沈",
+      "url": "https://www.bilibili.com/video/av117483126196680",
+      "published_at": "2026-10-22",
+      "discovery_query": "B站视频搜索：武汉遛娃（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "bcc11f3167a9a14d",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "武汉遛娃首选光谷希尔顿，小火车 + 双泳池，家长轻松躺平",
+      "summary": "Length: 00:28 AuthorID: 1971226385 Play: 9 Favorite: 0 Danmaku: 0 Comment: 1 Match By: title,tag",
+      "author": "带大家玩遍全世界",
+      "url": "https://www.bilibili.com/video/av117482488599823",
+      "published_at": "2026-10-22",
+      "discovery_query": "B站视频搜索：武汉溜娃（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "4d3f91f89104d7f0",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "带7月龄宝宝自驾2100km！第五天 武汉-萍乡！",
+      "summary": "Length: 05:58 AuthorID: 3706982777227343 Play: 17841 Favorite: 94 Danmaku: 1 Comment: 7 Match By: title,tag",
+      "author": "王萌萌成长日记",
+      "url": "https://www.bilibili.com/video/av117482622815568",
+      "published_at": "2026-10-22",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
     {
       "id": "a29b48bc6a5040f7",
       "platform": "local_news",
@@ -45,6 +86,110 @@
       "image_source": "",
       "discovery_query": "武汉 亲子 活动",
       "review_status": "auto_trusted"
+    },
+    {
+      "id": "d7170b967b4f0ab4",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "10月30日相约武汉金秋菊展 持续至下月底全城20个展区展点",
+      "summary": "楚天都市报极目新闻讯（通讯员江林语）武汉秋天最值得期待的金秋菊展，什么时候如常签到？武汉市园林和林业局近日官宣：武汉市第43届金秋菊展将于10月30日在全城开展，持续展至11月30日，全城设置20个展区和展点。 武汉市园林和林业局生态修复处相关负责人介绍，2026年的武汉市第43届金秋菊展以“湿地涵秋 菊耀江城”为主题，将在10月30日至11月30日持续展出一个月，设置汉口江滩、中山公园、沙湖公园 ...",
+      "author": "荆楚网新闻频道",
+      "url": "https://news.cnhubei.com/content/2026-10/21/content_20245365.html",
+      "published_at": "2026-10-20",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.vH25Wy9P9bBq5-qiM4claQ&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
+      "discovery_query": "武汉 公园 展览",
+      "review_status": "auto_trusted"
+    },
+    {
+      "id": "1cecd86a886e3ed1",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "小学生3D打印作品",
+      "summary": "Length: 00:14 AuthorID: 516403439 Play: 340 Favorite: 0 Danmaku: 0 Comment: 0 - Match By: tag",
+      "author": "paulson沈",
+      "url": "https://www.bilibili.com/video/av117471851970635",
+      "published_at": "2026-10-20",
+      "discovery_query": "B站视频搜索：武汉遛娃（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "5d108fe9df2a0d83",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "带7月龄宝宝自驾2100km！第四天 武汉恒隆广场！",
+      "summary": "Length: 07:32 AuthorID: 3706982777227343 Play: 25826 Favorite: 119 Danmaku: 29 Comment: 6 Match By: title,tag",
+      "author": "王萌萌成长日记",
+      "url": "https://www.bilibili.com/video/av117470610393949",
+      "published_at": "2026-10-20",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "005ddb1d84e3b817",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "带7月龄宝宝自驾2100km！第三天从景德镇出发到武汉！",
+      "summary": "Length: 08:35 AuthorID: 3706982777227343 Play: 8713 Favorite: 63 Danmaku: 34 Comment: 5 Match By: title,tag",
+      "author": "王萌萌成长日记",
+      "url": "https://www.bilibili.com/video/av117465241619416",
+      "published_at": "2026-10-19",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "7b31f30c381a97c4",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "武汉哪里可以免费露营钓鱼做柴火饭，一个饭盒搞定亲子三人的午饭，柴火饭就是香，锅巴真好吃",
+      "summary": "Length: 01:33 AuthorID: 25425318 Play: 114 Favorite: 1 Danmaku: 0 Comment: 1 - Match By: title,tag",
+      "author": "范大伟",
+      "url": "https://www.bilibili.com/video/av117460678281871",
+      "published_at": "2026-10-18",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "9d4983230b793677",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "武汉遛娃地21｜和平公园，草坪露营+儿童乐园",
+      "summary": "Length: 00:40 AuthorID: 363880810 Play: 152 Favorite: 0 Danmaku: 0 Comment: 0 - Match By: title,tag",
+      "author": "阿巡漫游记",
+      "url": "https://www.bilibili.com/video/av117454353204860",
+      "published_at": "2026-10-17",
+      "discovery_query": "B站视频搜索：武汉溜娃（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "c8db419ab55f53dd",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "📍带小小孩在武汉三天两晚慢节奏亲子游",
+      "summary": "Length: 02:45 AuthorID: 510621129 Play: 545 Favorite: 5 Danmaku: 0 Comment: 3 住江景民宿、吃本地美食、带娃东湖骑行，看编钟越王勾践剑，赏最美江景灯光秀，在欢乐谷里撒欢一整天！轻松欢快亲子游保姆篇，直接抄作业就行。 Match By: title,description,tag",
+      "author": "小艾阿姨要努力",
+      "url": "https://www.bilibili.com/video/av117450829990879",
+      "published_at": "2026-10-16",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "18526dcffe381117",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "武汉1h🚗轿车直达江心岛，长江日落天花板",
+      "summary": "Length: 09:01 AuthorID: 22355387 Play: 6654 Favorite: 175 Danmaku: 6 Comment: 34 我在武汉周边找到一个超级休闲治愈的露营地，一座江心小岛。沿江1.5公里全是平整草坪，面朝长江，江边坐满钓鱼佬。傍晚整条大江被夕阳染成金色。江堤上就是古代点将台，状元门里走出过清代湖北首位状元，1965年的老棉花站改成打卡游玩点，苏东坡当年就从西河古渡上岸游春。最主要的是全免费，武汉1小时直达。这里就是黄州叶路洲。 这",
+      "author": "胡小米啊",
+      "url": "https://www.bilibili.com/video/av117444320500409",
+      "published_at": "2026-10-15",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
     },
     {
       "id": "8b1af3d7784d7e73",
@@ -67,6 +212,54 @@
       "review_status": "auto_trusted"
     },
     {
+      "id": "dfc2ce01de9cdb57",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "📍被严重低估的武汉最大的城中湖免费遛娃公园",
+      "summary": "Length: 01:06 AuthorID: 510621129 Play: 1134 Favorite: 22 Danmaku: 0 Comment: 2 整个公园分成A、B、C、D、E、F好几个区，每个片区风景、玩法都不一样，可以免费入园，遛娃、露营、散步都非常合适。 📍导航直接搜：沙湖公园琴园（A区）梦想花园 开车过来，可以停沙湖路的侧方停车位。 这里最讨小朋友喜欢的就是沙坑，沙子细腻干净，边上就有洗手池，特别省心，洗手间也就在游乐区附近，不用跑很远。 整个游玩区域比",
+      "author": "小艾阿姨要努力",
+      "url": "https://www.bilibili.com/video/av117433918554598",
+      "published_at": "2026-10-13",
+      "discovery_query": "B站视频搜索：武汉遛娃（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "1a7879b891b5fc85",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "最好的教育，是让孩子坚持运动💪武汉上门少儿体育｜家门口高效运动纠正不良体态｜提升身体素质｜精进球类技能不推销、不套路、只做专业训练武汉三镇均可上门上...",
+      "summary": "Length: 00:20 AuthorID: 1801869009 Play: 186 Favorite: 3 Danmaku: 0 Comment: 1 - Match By: title,tag",
+      "author": "小严要自律",
+      "url": "https://www.bilibili.com/video/av117431301311379",
+      "published_at": "2026-10-13",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "0cd4ce605adfd144",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "亲子徒步-武汉七山步道",
+      "summary": "Length: 00:43 AuthorID: 1570939 Play: 61 Favorite: 0 Danmaku: 0 Comment: 0 - Match By: title,tag",
+      "author": "DengBruce",
+      "url": "https://www.bilibili.com/video/av117399021945291",
+      "published_at": "2026-10-07",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "afeb4c1a7cae3637",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "花海封神‼️亲子友好路线，轻徒步登高远眺",
+      "summary": "Length: 04:08 AuthorID: 22355387 Play: 3814 Favorite: 81 Danmaku: 4 Comment: 38 十月武汉最值得徒步的一座山，大概是开爆了一山花海的龙泉山。山顶是始建于西汉的远眺亭，站在天马峰上，梁子湖一览无余。1000级台阶一路延伸到山脚，此刻遍山硫华菊，金黄与橙红交织成海，一路生花。山腰藏着唐代灵泉寺，还有和明十三陵并列的九王寝。最主要是5公里轻徒步，任何人都轻松拿下。 🌟 核心亮点 1️⃣ 5公里轻野环线：1",
+      "author": "胡小米啊",
+      "url": "https://www.bilibili.com/video/av117394743758991",
+      "published_at": "2026-10-06",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
       "id": "8f891dc31911ce1a",
       "platform": "local_news",
       "source_type": "public_news_rss",
@@ -87,6 +280,42 @@
       "review_status": "auto_trusted"
     },
     {
+      "id": "c581592e7cadb6f4",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "【武汉漫游】长江大桥桥头堡终于开放！带娃走了一遍，说点攻略里没写的",
+      "summary": "Length: 02:33 AuthorID: 1892739867 Play: 191 Favorite: 3 Danmaku: 0 Comment: 0 📍适合：亲子、城市漫步 🎫 门票：免费 ⏰ 开放时间：8:00—18:00 ⏱ 桥头堡建议游览：30—45分钟 🏢 桥头堡：7层，高约35米 👟 提醒：楼梯台阶较多，低龄儿童注意体力 ① 一楼大厅｜先看雕塑和铁轨 📚 可以给孩子讲： 1957年武汉长江大桥通车后，京汉、粤汉铁路在武汉接轨，南北铁路交通由此贯通。 现在桥下",
+      "author": "西墨小漫游",
+      "url": "https://www.bilibili.com/video/av117388603430759",
+      "published_at": "2026-10-05",
+      "discovery_query": "B站视频搜索：武汉溜娃（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "3c557f89d8a58978",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "亲子超友好🚶轻徒步天花板，武汉必徒路线",
+      "summary": "Length: 06:25 AuthorID: 22355387 Play: 20316 Favorite: 620 Danmaku: 9 Comment: 40 如果评选中国城市中心徒步路线，武汉东湖七山步道一定榜上有名。它藏在国家5A级东湖风景区内，却是一条免费的徒步线路。串联七座山，穿过中国最大城中湖之一的山海，从山脊线一路走到世界光谷的车水马龙，最后抵达传统中心城区最高点。沿途有抗战碉堡历史遗存，还有15处观景打卡点，既有原生野径，也有块石台阶，武汉市民称它为市内最适",
+      "author": "胡小米啊",
+      "url": "https://www.bilibili.com/video/av117383872125504",
+      "published_at": "2026-10-04",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "ccb99c4b23fc89b7",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "抛开父女不谈，你也是我一生中为数不多的挚友 （武汉美食篇）",
+      "summary": "Length: 00:14 AuthorID: 476266104 Play: 2277 Favorite: 22 Danmaku: 0 Comment: 4 Match By: title,tag",
+      "author": "小兔子Lia",
+      "url": "https://www.bilibili.com/video/av117382110578382",
+      "published_at": "2026-10-04",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
       "id": "971b4a4318c8054b",
       "platform": "local_news",
       "source_type": "public_news_rss",
@@ -105,6 +334,54 @@
       "image_source": "rss_thumbnail",
       "discovery_query": "武汉 夜游 活动",
       "review_status": "auto_trusted"
+    },
+    {
+      "id": "fff56468b6e860ad",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "有一天唐老鸭去了武汉,然后就没有然后了",
+      "summary": "Length: 00:36 AuthorID: 3546947304556839 Play: 2856 Favorite: 22 Danmaku: 0 Comment: 0 Match By: title,tag",
+      "author": "不白吃是我-",
+      "url": "https://www.bilibili.com/video/av117369510824788",
+      "published_at": "2026-10-02",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "d002da76d7c136d7",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "国庆自驾，武汉出发2h,一次性串联5个小众景点!",
+      "summary": "Length: 12:19 AuthorID: 525560265 Play: 512 Favorite: 5 Danmaku: 0 Comment: 0 百年古宅、高山云海、古镇光影、山溪戏水，吊锅解馋，人少景美，性价比高！三集实地亲子拍摄，文字攻略与地图定位从本视频10分30秒开始 #武汉周边自驾游 #罗田板栗 #鸠兹古镇 #亲子游 #国庆去哪玩 Match By: title,description,tag",
+      "author": "clampcatlg",
+      "url": "https://www.bilibili.com/video/av117346542883260",
+      "published_at": "2026-09-28",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "6e0fd5ef0a1e8efa",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "十五月亮十六圆｜iCAR 武汉车友俱乐部线下户外活动纪实",
+      "summary": "Length: 01:59 AuthorID: 1460435508 Play: 414 Favorite: 0 Danmaku: 0 Comment: 0 🌕十五的月亮十六圆。本次 iCAR 武汉车友俱乐部组织户外车友聚会。现场包含观光小火车、高尔夫体验、射箭、真人 CS、亲子互动游戏、烧烤晚宴，同步进行车主访谈，记录车友真实感受。 购买 iCAR，可参与每月至少一场官方组织车友活动，活动免费参与，无商业利益纠葛，纯粹休闲聚会。当代社会工作节奏快、压力大，拥有 iCAR，相",
+      "author": "大胡子玩iCAR",
+      "url": "https://www.bilibili.com/video/av117343724243699",
+      "published_at": "2026-09-27",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
+    },
+    {
+      "id": "831351379009b3d5",
+      "platform": "bilibili",
+      "source_type": "rsshub_feed",
+      "title": "📍武汉江滩超大面积的免费遛娃挖沙天花板！",
+      "summary": "Length: 01:22 AuthorID: 510621129 Play: 3307 Favorite: 155 Danmaku: 0 Comment: 2 游玩设施是我目前见过最多最全的，在这里无论是低龄宝宝还是大孩子，都能放电一整天，重点是所有设施全免费！ 导航：汉口江滩三期西北门，🚗停车很方便； 🚇1号线头道街站A口出来，步行大概十分钟就能到。 场地边上有大片绿地，可以搭⛺野餐、放风筝，江滩绿道还能骑行。 提醒大家，这里树荫茂密，夏天🦟有点多，来玩最好穿长裤，带上驱",
+      "author": "小艾阿姨要努力",
+      "url": "https://www.bilibili.com/video/av117337667669407",
+      "published_at": "2026-09-26",
+      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
+      "review_status": "pending"
     }
   ]
 }
