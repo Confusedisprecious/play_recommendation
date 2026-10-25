@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T19:44:11+08:00",
+  "generated_at": "2026-10-26T00:32:33+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,13 +9,13 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-10-25T19:44:11+08:00",
-      "item_count": 3,
+      "last_attempt_at": "2026-10-26T00:32:33+08:00",
+      "item_count": 4,
       "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "error",
-      "last_attempt_at": "2026-10-25T19:44:11+08:00",
+      "last_attempt_at": "2026-10-26T00:32:33+08:00",
       "item_count": 0,
       "message": "HTTP Error 503: Service Unavailable"
     }
@@ -69,6 +69,26 @@
       "published_at": "2026-10-22",
       "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
       "review_status": "pending"
+    },
+    {
+      "id": "c7a1a2f7bddb72c6",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "走读紫阳公园：一堂课“丈量”首义纪念游线",
+      "summary": "10月18日，2026武汉公园历史文化通识课第一课在紫阳公园开讲。武汉图书馆地方文献部副主任、武汉地方志专家库专家王钢，带着全市近30组亲子家庭，把课堂搬进了这片“历史现场”。 2026武汉公园历史文化通识课在紫阳公园开讲。 “武汉公园历史文化通识课”由武汉市园林和林业局主办，这是一堂面向公众的城市文化通识课，让“在公园，读懂武汉”成为可感、可学、可传承的城市体验。 紫阳公园。 一湖千年： 公园即 ...",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5351426.htm",
+      "published_at": "2026-10-21",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.6GLacgOCZSo6TWUSgtQYkg&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
+      "discovery_query": "武汉 公园 展览",
+      "review_status": "auto_trusted"
     },
     {
       "id": "a29b48bc6a5040f7",

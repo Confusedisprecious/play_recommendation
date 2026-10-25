@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-10-25T19:44:27+08:00",
-  "latest_published_at": "2026-10-20",
+  "generated_at": "2026-10-26T00:32:49+08:00",
+  "latest_published_at": "2026-10-21",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-09-25",
+    "oldest_kept_date": "2026-09-26",
     "expired_items_removed": 0
   },
   "source_health": {
     "status": "degraded",
-    "last_discovery_at": "2026-10-25T19:44:11+08:00",
+    "last_discovery_at": "2026-10-26T00:32:33+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-10-25T19:44:11+08:00",
-        "item_count": 3,
+        "last_attempt_at": "2026-10-26T00:32:33+08:00",
+        "item_count": 4,
         "schedule": "every_2_hours"
       },
       "rsshub": {
         "status": "error",
-        "last_attempt_at": "2026-10-25T19:44:11+08:00",
+        "last_attempt_at": "2026-10-26T00:32:33+08:00",
         "item_count": 0,
         "message": "HTTP Error 503: Service Unavailable"
       }
@@ -77,6 +77,27 @@
   ],
   "items": [
     {
+      "id": "c7a1a2f7bddb72c6",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "走读紫阳公园：一堂课“丈量”首义纪念游线",
+      "summary": "10月18日，2026武汉公园历史文化通识课第一课在紫阳公园开讲。武汉图书馆地方文献部副主任、武汉地方志专家库专家王钢，带着全市近30组亲子家庭，把课堂搬进了这片“历史现场”。 2026武汉公园历史文化通识课在紫阳公园开讲。 “武汉公园历史文化通识课”由武汉市园林和林业局主办，这是一堂面向公众的城市",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5351426.htm",
+      "published_at": "2026-10-21",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.6GLacgOCZSo6TWUSgtQYkg&pid=News&w=960&h=540&c=7&rs=1",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-10-26T00:32:49+08:00",
+      "discovery_query": "武汉 公园 展览",
+      "image_source": "rss_thumbnail"
+    },
+    {
       "id": "a29b48bc6a5040f7",
       "platform": "local_news",
       "source_type": "public_news_rss",
@@ -93,7 +114,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-25T19:44:27+08:00",
+      "collected_at": "2026-10-26T00:32:49+08:00",
       "discovery_query": "武汉 亲子 活动"
     },
     {
@@ -113,7 +134,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.vH25Wy9P9bBq5-qiM4claQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-25T19:44:27+08:00",
+      "collected_at": "2026-10-26T00:32:49+08:00",
       "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
@@ -134,7 +155,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.yEI8VBnMOnsaFBmT1F9SXA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-25T19:44:27+08:00",
+      "collected_at": "2026-10-26T00:32:49+08:00",
       "discovery_query": "武汉 景区 最新 开放",
       "image_source": "rss_thumbnail"
     },
@@ -155,7 +176,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.RIx0UWpIq_EmHny7KEqoqA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-25T19:44:27+08:00",
+      "collected_at": "2026-10-26T00:32:49+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -176,7 +197,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.e8NIWaFHya7bk22dlogt6A&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-25T19:44:27+08:00",
+      "collected_at": "2026-10-26T00:32:49+08:00",
       "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     }
