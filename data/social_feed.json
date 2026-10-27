@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T05:04:30+08:00",
+  "generated_at": "2026-10-27T09:31:31+08:00",
   "latest_published_at": "2026-10-21",
   "freshness": {
     "live_window_days": 7,
@@ -11,17 +11,17 @@
   },
   "source_health": {
     "status": "degraded",
-    "last_discovery_at": "2026-10-27T05:04:14+08:00",
+    "last_discovery_at": "2026-10-27T09:31:15+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-10-27T05:04:14+08:00",
-        "item_count": 3,
+        "last_attempt_at": "2026-10-27T09:31:15+08:00",
+        "item_count": 2,
         "schedule": "every_2_hours"
       },
       "rsshub": {
         "status": "error",
-        "last_attempt_at": "2026-10-27T05:04:14+08:00",
+        "last_attempt_at": "2026-10-27T09:31:15+08:00",
         "item_count": 0,
         "message": "HTTP Error 503: Service Unavailable"
       }
@@ -36,7 +36,7 @@
         "credential_scope": "local_only"
       }
     },
-    "pending_review": 22,
+    "pending_review": 21,
     "errors": [
       "RSSHub: HTTP Error 503: Service Unavailable"
     ]
@@ -93,7 +93,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.6GLacgOCZSo6TWUSgtQYkg&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T05:04:30+08:00",
+      "collected_at": "2026-10-27T09:31:31+08:00",
       "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
@@ -114,7 +114,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T05:04:30+08:00",
+      "collected_at": "2026-10-27T09:31:31+08:00",
       "discovery_query": "武汉 亲子 活动"
     },
     {
@@ -134,7 +134,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.vH25Wy9P9bBq5-qiM4claQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T05:04:30+08:00",
+      "collected_at": "2026-10-27T09:31:31+08:00",
       "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
@@ -155,7 +155,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.yEI8VBnMOnsaFBmT1F9SXA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T05:04:30+08:00",
+      "collected_at": "2026-10-27T09:31:31+08:00",
       "discovery_query": "武汉 景区 最新 开放",
       "image_source": "rss_thumbnail"
     },
@@ -176,7 +176,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.RIx0UWpIq_EmHny7KEqoqA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T05:04:30+08:00",
+      "collected_at": "2026-10-27T09:31:31+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -197,7 +197,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.e8NIWaFHya7bk22dlogt6A&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T05:04:30+08:00",
+      "collected_at": "2026-10-27T09:31:31+08:00",
       "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     }

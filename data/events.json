@@ -3287,5 +3287,36 @@
     "indoor": true,
     "parking": "待确认",
     "source": "武汉文旅局"
+  },
+  {
+    "id": 137,
+    "name": "五洲云集处，世界在场2026-10-27",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn./zwgk_27/zwdt/xydt/202610/t20261027_2868530.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-137/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
   }
 ]

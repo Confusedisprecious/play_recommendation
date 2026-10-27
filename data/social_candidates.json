@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T05:04:14+08:00",
+  "generated_at": "2026-10-27T09:31:15+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,13 +9,13 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-10-27T05:04:14+08:00",
-      "item_count": 3,
+      "last_attempt_at": "2026-10-27T09:31:15+08:00",
+      "item_count": 2,
       "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "error",
-      "last_attempt_at": "2026-10-27T05:04:14+08:00",
+      "last_attempt_at": "2026-10-27T09:31:15+08:00",
       "item_count": 0,
       "message": "HTTP Error 503: Service Unavailable"
     }
@@ -403,18 +403,6 @@
       "author": "大胡子玩iCAR",
       "url": "https://www.bilibili.com/video/av117343724243699",
       "published_at": "2026-09-27",
-      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
-      "review_status": "pending"
-    },
-    {
-      "id": "831351379009b3d5",
-      "platform": "bilibili",
-      "source_type": "rsshub_feed",
-      "title": "📍武汉江滩超大面积的免费遛娃挖沙天花板！",
-      "summary": "Length: 01:22 AuthorID: 510621129 Play: 3348 Favorite: 158 Danmaku: 0 Comment: 2 游玩设施是我目前见过最多最全的，在这里无论是低龄宝宝还是大孩子，都能放电一整天，重点是所有设施全免费！ 导航：汉口江滩三期西北门，🚗停车很方便； 🚇1号线头道街站A口出来，步行大概十分钟就能到。 场地边上有大片绿地，可以搭⛺野餐、放风筝，江滩绿道还能骑行。 提醒大家，这里树荫茂密，夏天🦟有点多，来玩最好穿长裤，带上驱",
-      "author": "小艾阿姨要努力",
-      "url": "https://www.bilibili.com/video/av117337667669407",
-      "published_at": "2026-09-26",
       "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
       "review_status": "pending"
     }
