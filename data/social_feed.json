@@ -1,28 +1,29 @@
 {
-  "generated_at": "2026-10-27T22:38:03+08:00",
-  "latest_published_at": "2026-10-26",
+  "generated_at": "2026-10-28T04:46:13+08:00",
+  "latest_published_at": "2026-10-27",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-09-27",
+    "oldest_kept_date": "2026-09-28",
     "expired_items_removed": 0
   },
   "source_health": {
-    "status": "healthy",
-    "last_discovery_at": "2026-10-27T22:37:51+08:00",
+    "status": "degraded",
+    "last_discovery_at": "2026-10-28T04:45:58+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-10-27T22:37:51+08:00",
+        "last_attempt_at": "2026-10-28T04:45:58+08:00",
         "item_count": 5,
         "schedule": "every_2_hours"
       },
       "rsshub": {
-        "status": "healthy",
-        "last_attempt_at": "2026-10-27T22:37:51+08:00",
-        "item_count": 27
+        "status": "error",
+        "last_attempt_at": "2026-10-28T04:45:58+08:00",
+        "item_count": 0,
+        "message": "HTTP Error 503: Service Unavailable"
       }
     },
     "connectors": {
@@ -36,7 +37,9 @@
       }
     },
     "pending_review": 22,
-    "errors": []
+    "errors": [
+      "RSSHub: HTTP Error 503: Service Unavailable"
+    ]
   },
   "policy": {
     "collection_mode": "trusted_public_feed_or_reviewed_authorized_export",
@@ -81,7 +84,7 @@
       "summary": "长江网讯（通讯员娄佳） 为深化文明旅游宣传，提升居民文明素养，10月24日上午，汪田社区新时代文明实践站依托光谷生态大走廊优质资源，组织辖区15组亲子家庭、约45名居民开展“武汉以我为荣·文明旅游——文明光谷，步履同行”文明实践活动。活动通过亲子健步走、环保捡拾、手绘帐篷等形式，将文明旅游宣传与户外",
       "author": "长江网",
       "url": "https://news.cjn.cn/csqpd/wh_20004/202610/t5353243.htm",
-      "published_at": "2026-10-26",
+      "published_at": "2026-10-27",
       "place_name": "",
       "district": "",
       "tags": [
@@ -90,7 +93,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.ZU5X9o1Up_kfrvBiclq1TA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T22:38:03+08:00",
+      "collected_at": "2026-10-28T04:46:13+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -102,17 +105,18 @@
       "summary": "长江日报大武汉客户端10月27日讯第43届武汉金秋菊展将于10月30日启幕。10月27日，记者提前探访汉口江滩主展区，现场搭建进入冲刺阶段，特色火车站花艺景观已成型。本届菊展设汉口江滩、中山公园、沙湖公园、武汉动物园四大主题展区及各区集中展点、绿色驿站特色展点。不少市民提前赶来，在缤纷花丛间拍照打卡",
       "author": "长江网",
       "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5353328.htm",
-      "published_at": "2026-10-26",
+      "published_at": "2026-10-27",
       "place_name": "",
       "district": "",
       "tags": [
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "",
+      "image": "https://www.bing.com/th?id=ONUT.UH-_SARRlSnGq0XsXu91sQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T22:38:03+08:00",
-      "discovery_query": "武汉 公园 展览"
+      "collected_at": "2026-10-28T04:46:13+08:00",
+      "discovery_query": "武汉 公园 展览",
+      "image_source": "rss_thumbnail"
     },
     {
       "id": "c7a1a2f7bddb72c6",
@@ -129,10 +133,11 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "",
+      "image": "https://www.bing.com/th?id=ONUT.6GLacgOCZSo6TWUSgtQYkg&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T22:38:03+08:00",
-      "discovery_query": "武汉 公园 展览"
+      "collected_at": "2026-10-28T04:46:13+08:00",
+      "discovery_query": "武汉 公园 展览",
+      "image_source": "rss_thumbnail"
     },
     {
       "id": "a29b48bc6a5040f7",
@@ -151,7 +156,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T22:38:03+08:00",
+      "collected_at": "2026-10-28T04:46:13+08:00",
       "discovery_query": "武汉 亲子 活动"
     },
     {
@@ -171,7 +176,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.vH25Wy9P9bBq5-qiM4claQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T22:38:03+08:00",
+      "collected_at": "2026-10-28T04:46:13+08:00",
       "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
@@ -192,7 +197,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.yEI8VBnMOnsaFBmT1F9SXA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T22:38:03+08:00",
+      "collected_at": "2026-10-28T04:46:13+08:00",
       "discovery_query": "武汉 景区 最新 开放",
       "image_source": "rss_thumbnail"
     },
@@ -213,7 +218,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.RIx0UWpIq_EmHny7KEqoqA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T22:38:03+08:00",
+      "collected_at": "2026-10-28T04:46:13+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -234,7 +239,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.e8NIWaFHya7bk22dlogt6A&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T22:38:03+08:00",
+      "collected_at": "2026-10-28T04:46:13+08:00",
       "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     }
