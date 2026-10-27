@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T15:59:34+08:00",
+  "generated_at": "2026-10-27T22:38:03+08:00",
   "latest_published_at": "2026-10-26",
   "freshness": {
     "live_window_days": 7,
@@ -11,18 +11,18 @@
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-10-27T15:59:24+08:00",
+    "last_discovery_at": "2026-10-27T22:37:51+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-10-27T15:59:24+08:00",
-        "item_count": 3,
+        "last_attempt_at": "2026-10-27T22:37:51+08:00",
+        "item_count": 5,
         "schedule": "every_2_hours"
       },
       "rsshub": {
         "status": "healthy",
-        "last_attempt_at": "2026-10-27T15:59:24+08:00",
-        "item_count": 26
+        "last_attempt_at": "2026-10-27T22:37:51+08:00",
+        "item_count": 27
       }
     },
     "connectors": {
@@ -35,7 +35,7 @@
         "credential_scope": "local_only"
       }
     },
-    "pending_review": 21,
+    "pending_review": 22,
     "errors": []
   },
   "policy": {
@@ -90,9 +90,29 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.ZU5X9o1Up_kfrvBiclq1TA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T15:59:34+08:00",
+      "collected_at": "2026-10-27T22:38:03+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
+    },
+    {
+      "id": "efb78001b1435331",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "武汉金秋菊展要来了，先睹为快！",
+      "summary": "长江日报大武汉客户端10月27日讯第43届武汉金秋菊展将于10月30日启幕。10月27日，记者提前探访汉口江滩主展区，现场搭建进入冲刺阶段，特色火车站花艺景观已成型。本届菊展设汉口江滩、中山公园、沙湖公园、武汉动物园四大主题展区及各区集中展点、绿色驿站特色展点。不少市民提前赶来，在缤纷花丛间拍照打卡",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5353328.htm",
+      "published_at": "2026-10-26",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-10-27T22:38:03+08:00",
+      "discovery_query": "武汉 公园 展览"
     },
     {
       "id": "c7a1a2f7bddb72c6",
@@ -109,11 +129,10 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "https://www.bing.com/th?id=ONUT.6GLacgOCZSo6TWUSgtQYkg&pid=News&w=960&h=540&c=7&rs=1",
+      "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T15:59:34+08:00",
-      "discovery_query": "武汉 公园 展览",
-      "image_source": "rss_thumbnail"
+      "collected_at": "2026-10-27T22:38:03+08:00",
+      "discovery_query": "武汉 公园 展览"
     },
     {
       "id": "a29b48bc6a5040f7",
@@ -132,7 +151,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T15:59:34+08:00",
+      "collected_at": "2026-10-27T22:38:03+08:00",
       "discovery_query": "武汉 亲子 活动"
     },
     {
@@ -152,7 +171,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.vH25Wy9P9bBq5-qiM4claQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T15:59:34+08:00",
+      "collected_at": "2026-10-27T22:38:03+08:00",
       "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
@@ -173,7 +192,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.yEI8VBnMOnsaFBmT1F9SXA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T15:59:34+08:00",
+      "collected_at": "2026-10-27T22:38:03+08:00",
       "discovery_query": "武汉 景区 最新 开放",
       "image_source": "rss_thumbnail"
     },
@@ -194,7 +213,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.RIx0UWpIq_EmHny7KEqoqA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T15:59:34+08:00",
+      "collected_at": "2026-10-27T22:38:03+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -215,7 +234,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.e8NIWaFHya7bk22dlogt6A&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-10-27T15:59:34+08:00",
+      "collected_at": "2026-10-27T22:38:03+08:00",
       "discovery_query": "武汉 夜游 活动",
       "image_source": "rss_thumbnail"
     }
