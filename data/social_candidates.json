@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T00:42:40+08:00",
+  "generated_at": "2026-10-29T06:41:07+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,14 +9,15 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-10-29T00:42:40+08:00",
+      "last_attempt_at": "2026-10-29T06:41:07+08:00",
       "item_count": 4,
       "schedule": "every_2_hours"
     },
     "rsshub": {
-      "status": "healthy",
-      "last_attempt_at": "2026-10-29T00:42:40+08:00",
-      "item_count": 24
+      "status": "error",
+      "last_attempt_at": "2026-10-29T06:41:07+08:00",
+      "item_count": 0,
+      "message": "HTTP Error 503: Service Unavailable"
     }
   },
   "connectors": {
@@ -29,7 +30,9 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [],
+  "errors": [
+    "RSSHub: HTTP Error 503: Service Unavailable"
+  ],
   "items": [
     {
       "id": "399069daf7e128b8",
@@ -98,8 +101,8 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "https://www.bing.com/th?id=ONUT.ZU5X9o1Up_kfrvBiclq1TA&pid=News&w=960&h=540&c=7&rs=1",
-      "image_source": "rss_thumbnail",
+      "image": "",
+      "image_source": "",
       "discovery_query": "武汉 亲子 活动",
       "review_status": "auto_trusted"
     },
