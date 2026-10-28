@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T04:45:58+08:00",
+  "generated_at": "2026-10-28T09:27:14+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,13 +9,13 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-10-28T04:45:58+08:00",
+      "last_attempt_at": "2026-10-28T09:27:14+08:00",
       "item_count": 5,
       "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "error",
-      "last_attempt_at": "2026-10-28T04:45:58+08:00",
+      "last_attempt_at": "2026-10-28T09:27:14+08:00",
       "item_count": 0,
       "message": "HTTP Error 503: Service Unavailable"
     }
@@ -84,6 +84,26 @@
       "image": "https://www.bing.com/th?id=ONUT.UH-_SARRlSnGq0XsXu91sQ&pid=News&w=960&h=540&c=7&rs=1",
       "image_source": "rss_thumbnail",
       "discovery_query": "武汉 公园 展览",
+      "review_status": "auto_trusted"
+    },
+    {
+      "id": "399069daf7e128b8",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "早安武汉 | 武汉金秋菊展即将启幕，先睹为快",
+      "summary": "第43届武汉金秋菊展将于10月30日启幕。10月27日，记者提前探访汉口江滩主展区，现场搭建进入冲刺阶段，特色火车站花艺景观已成型。 本届菊展设汉口江滩、中山公园、沙湖公园、武汉动物园四大主题展区及各区集中展点、绿色驿站特色展点。不少市民提前赶来，在缤纷花丛间拍照打卡，抢先感受江城秋日风光。 10月21日，央地共建武汉区域科技创新中心工作推进会在汉举行。该会议去年已经完整开过一轮。两年，11场，科 ...",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5353387.htm",
+      "published_at": "2026-10-27",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 菊展",
       "review_status": "auto_trusted"
     },
     {
@@ -443,18 +463,6 @@
       "author": "clampcatlg",
       "url": "https://www.bilibili.com/video/av117346542883260",
       "published_at": "2026-09-28",
-      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
-      "review_status": "pending"
-    },
-    {
-      "id": "6e0fd5ef0a1e8efa",
-      "platform": "bilibili",
-      "source_type": "rsshub_feed",
-      "title": "十五月亮十六圆｜iCAR 武汉车友俱乐部线下户外活动纪实",
-      "summary": "Length: 01:59 AuthorID: 1460435508 Play: 423 Favorite: 0 Danmaku: 0 Comment: 0 🌕十五的月亮十六圆。本次 iCAR 武汉车友俱乐部组织户外车友聚会。现场包含观光小火车、高尔夫体验、射箭、真人 CS、亲子互动游戏、烧烤晚宴，同步进行车主访谈，记录车友真实感受。 购买 iCAR，可参与每月至少一场官方组织车友活动，活动免费参与，无商业利益纠葛，纯粹休闲聚会。当代社会工作节奏快、压力大，拥有 iCAR，相",
-      "author": "大胡子玩iCAR",
-      "url": "https://www.bilibili.com/video/av117343724243699",
-      "published_at": "2026-09-27",
       "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
       "review_status": "pending"
     }
