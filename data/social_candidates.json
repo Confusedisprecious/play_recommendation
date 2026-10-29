@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T06:41:07+08:00",
+  "generated_at": "2026-10-29T13:58:07+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,13 +9,13 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-10-29T06:41:07+08:00",
+      "last_attempt_at": "2026-10-29T13:58:07+08:00",
       "item_count": 4,
       "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "error",
-      "last_attempt_at": "2026-10-29T06:41:07+08:00",
+      "last_attempt_at": "2026-10-29T13:58:07+08:00",
       "item_count": 0,
       "message": "HTTP Error 503: Service Unavailable"
     }
@@ -101,8 +101,8 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "",
-      "image_source": "",
+      "image": "https://www.bing.com/th?id=ONUT.ZU5X9o1Up_kfrvBiclq1TA&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
       "discovery_query": "武汉 亲子 活动",
       "review_status": "auto_trusted"
     },
@@ -471,18 +471,6 @@
       "author": "不白吃是我-",
       "url": "https://www.bilibili.com/video/av117369510824788",
       "published_at": "2026-10-02",
-      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
-      "review_status": "pending"
-    },
-    {
-      "id": "d002da76d7c136d7",
-      "platform": "bilibili",
-      "source_type": "rsshub_feed",
-      "title": "国庆自驾，武汉出发2h,一次性串联5个小众景点!",
-      "summary": "Length: 12:19 AuthorID: 525560265 Play: 519 Favorite: 5 Danmaku: 0 Comment: 0 百年古宅、高山云海、古镇光影、山溪戏水，吊锅解馋，人少景美，性价比高！三集实地亲子拍摄，文字攻略与地图定位从本视频10分30秒开始 #武汉周边自驾游 #罗田板栗 #鸠兹古镇 #亲子游 #国庆去哪玩 Match By: title,description,tag",
-      "author": "clampcatlg",
-      "url": "https://www.bilibili.com/video/av117346542883260",
-      "published_at": "2026-09-28",
       "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
       "review_status": "pending"
     }
