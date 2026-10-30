@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T07:59:03+08:00",
+  "generated_at": "2026-10-30T13:59:29+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,13 +9,13 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-10-30T07:59:03+08:00",
+      "last_attempt_at": "2026-10-30T13:59:29+08:00",
       "item_count": 3,
       "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "error",
-      "last_attempt_at": "2026-10-30T07:59:03+08:00",
+      "last_attempt_at": "2026-10-30T13:59:29+08:00",
       "item_count": 0,
       "message": "HTTP Error 503: Service Unavailable"
     }
@@ -34,6 +34,26 @@
     "RSSHub: HTTP Error 503: Service Unavailable"
   ],
   "items": [
+    {
+      "id": "f92b5f0b521fc4f6",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "园藏秋意，菊漾书香！武汉洪山幸福湾菊展邀市民赏秋",
+      "summary": "在武汉市洪山区南湖幸福湾水上公园，你可能会产生错觉：花丛里怎么有大象漫步？水岸边怎么有海豚？公园里怎么还立着一本巨书？今天，武汉市第43届（洪山区第39届）金秋菊展正式展出。其实昨天布展刚完成，就有心急的市民来探营了。走，跟着我们循着花香去看看。 本届菊展布展面积约1500平方米。顺着南湖湿地的地貌，各色菊花犹如一条彩带，沿着湖湾岸线蜿蜒铺开。 顺着步道走到水岸边，花海中“摊开”了一本巨大的仿真书 ...",
+      "author": "长江云 - 湖北网络广播电视台官方网站",
+      "url": "https://news.hbtv.com.cn/p/4639115.html",
+      "published_at": "2026-10-29",
+      "place_name": "",
+      "district": "洪山区",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 菊展",
+      "review_status": "auto_trusted"
+    },
     {
       "id": "399069daf7e128b8",
       "platform": "local_news",
