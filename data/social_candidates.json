@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T13:54:50+08:00",
+  "generated_at": "2026-10-31T20:45:13+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,13 +9,13 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-10-31T13:54:50+08:00",
+      "last_attempt_at": "2026-10-31T20:45:13+08:00",
       "item_count": 4,
       "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "error",
-      "last_attempt_at": "2026-10-31T13:54:50+08:00",
+      "last_attempt_at": "2026-10-31T20:45:13+08:00",
       "item_count": 0,
       "message": "HTTP Error 503: Service Unavailable"
     }
@@ -63,7 +63,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.9capGNR-XiPVTUEQP6ZXHg&pid=News&w=960&h=540&c=7&rs=1",
       "image_source": "rss_thumbnail",
-      "discovery_query": "武汉 菊展",
+      "discovery_query": "武汉 公园 展览",
       "review_status": "auto_trusted"
     },
     {
@@ -83,6 +83,26 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.dhW0knjPVvVYL9BFnhsCFw&pid=News&w=960&h=540&c=7&rs=1",
       "image_source": "rss_thumbnail",
+      "discovery_query": "武汉 菊展",
+      "review_status": "auto_trusted"
+    },
+    {
+      "id": "bac139edeb22a549",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "武汉金秋菊展开幕 解锁花样秋色",
+      "summary": "10月30日，武汉规模最大的秋季花展——第43届金秋菊展开门迎客。这场陪伴武汉人70年的秋日花事，今年打出“花展+文商旅体”组合拳，焕发全新活力。 记者 杨旭珲：武汉的秋天有一种特别的美，叫做“满城尽带黄金甲”。今年的武汉金秋菊展如约而至，全市20个展区展位，上千种品种、60万盆菊花铺展成满城秋色，无需预约，无需门票，随处可看。 武汉市民 张女士：这个菊花展，它陪伴我们到老，是我们永久的记忆、美好 ...",
+      "author": "长江云 - 湖北网络广播电视台官方网站",
+      "url": "https://news.hbtv.com.cn/p/4639379.html",
+      "published_at": "2026-10-30",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
       "discovery_query": "武汉 菊展",
       "review_status": "auto_trusted"
     },
