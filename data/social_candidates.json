@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T07:53:29+08:00",
+  "generated_at": "2026-10-31T13:54:50+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,13 +9,13 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-10-31T07:53:29+08:00",
+      "last_attempt_at": "2026-10-31T13:54:50+08:00",
       "item_count": 4,
       "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "error",
-      "last_attempt_at": "2026-10-31T07:53:29+08:00",
+      "last_attempt_at": "2026-10-31T13:54:50+08:00",
       "item_count": 0,
       "message": "HTTP Error 503: Service Unavailable"
     }
