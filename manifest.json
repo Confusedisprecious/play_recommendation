@@ -1,0 +1,25 @@
+{
+  "name": "周末在武汉 · 亲子去处指南",
+  "short_name": "周末在武汉",
+  "description": "按天气、年龄、区域和预算发现适合一家人的公园、博物馆、商场与游乐场。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f2e9",
+  "theme_color": "#f7f2e9",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

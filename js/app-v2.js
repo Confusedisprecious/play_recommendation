@@ -93,6 +93,7 @@
   function cacheElements() {
     [
       'loading-screen', 'hero-date', 'hero-search', 'hero-search-input', 'search-helper', 'data-status',
+      'weekend-pulse', 'weekend-strip', 'seasonal-banner', 'lucky-button',
       'scene-rail', 'scene-description', 'hot-feature', 'hot-ranking', 'result-summary', 'filter-search',
       'filter-drawer-button', 'filter-groups', 'district-filters', 'sort-select', 'favorite-filter',
       'place-grid', 'empty-state', 'reset-filters', 'load-more', 'deal-grid', 'social-list',
@@ -163,6 +164,130 @@
     return 'winter';
   }
 
+  // 时令专题：按日期区间自动上/下线，信息来自官方公开报道，展区点击直达场所详情
+  const SEASONAL_FEATURES = [
+    {
+      start: '2026-10-20', end: '2026-11-30',
+      kicker: 'IN SEASON · 秋日限定',
+      title: '菊耀江城，银杏正黄',
+      description: '武汉第43届金秋菊展（10月30日—11月30日）全城 20 个展区展点，千余种菊花约 60 万盆，主题“湿地涵秋，菊耀江城”。四大主展区点击直达；赏银杏可去解放公园与 500 多岁的汉阳树，汉口江滩的芦荻花海能一直看到 12 月。',
+      chips: [
+        { label: '汉口江滩 · 主展区', placeId: 23 },
+        { label: '中山公园 · 主展区', placeId: 16 },
+        { label: '沙湖公园 · 主展区', placeId: 18 },
+        { label: '武汉动物园 · 主展区', placeId: 19 },
+        { label: '解放公园 · 赏银杏', placeId: 17 }
+      ],
+      source: '武汉金秋菊展官方报道',
+      sourceUrl: 'https://wlj.wuhan.gov.cn/'
+    },
+    {
+      start: '2026-12-01', end: '2027-02-28',
+      kicker: 'IN SEASON · 冬日暖意',
+      title: '泡汤看灯，室内遛娃',
+      description: '冬天的武汉不冷场：春节前后园博园与东湖灯会次第亮灯，温泉与室内乐园是最稳的亲子选择。出发前记得核对灯会与场馆的当日安排。',
+      chips: [
+        { label: '武汉自然博物馆', placeId: 14 },
+        { label: '武汉科学技术馆', placeId: 43 },
+        { label: '极地海洋世界', placeId: 10 }
+      ],
+      source: '本地公开资讯',
+      sourceUrl: ''
+    },
+    {
+      start: '2027-03-01', end: '2027-04-20',
+      kicker: 'IN SEASON · 樱花季',
+      title: '东湖樱园，春日限定',
+      description: '樱花季的东湖磨山与堤角公园是全城焦点，花期短、人多，建议工作日或一早错峰前往。',
+      chips: [
+        { label: '东湖磨山 · 樱花园', placeId: 44 },
+        { label: '堤角公园', placeId: 24 }
+      ],
+      source: '',
+      sourceUrl: ''
+    }
+  ];
+
+  function renderSeasonalBanner() {
+    const banner = elements.seasonalBanner;
+    if (!banner) return;
+    const todayIso = today.toISOString().slice(0, 10);
+    const feature = SEASONAL_FEATURES.find((f) => todayIso >= f.start && todayIso <= f.end);
+    if (!feature) {
+      banner.classList.add('hidden');
+      return;
+    }
+    const chips = feature.chips
+      .map((chip) => {
+        const place = state.spots.find((s) => Number(s.id) === Number(chip.placeId));
+        if (!place) return '';
+        return `<button class="seasonal-chip" type="button" data-place-id="${Number(place.id)}">${escapeHtml(chip.label)}</button>`;
+      })
+      .join('');
+    banner.innerHTML = `
+      <div class="seasonal-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="seasonal-copy">
+        <p class="section-kicker">${escapeHtml(feature.kicker)}</p>
+        <h2 id="seasonal-title">${escapeHtml(feature.title)}</h2>
+        <p class="seasonal-desc">${escapeHtml(feature.description)}</p>
+        <div class="seasonal-chips">${chips}</div>
+        ${feature.sourceUrl ? `<a class="seasonal-source" href="${escapeHtml(feature.sourceUrl)}" target="_blank" rel="noopener noreferrer">${icon('external')}来源：${escapeHtml(feature.source)}</a>` : ''}
+      </div>`;
+    banner.querySelectorAll('.seasonal-chip').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const targetTop = document.getElementById('discover').offsetTop - 78;
+        openPlace(Number(chip.dataset.placeId));
+        window.scrollTo({ top: targetTop, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      });
+    });
+    observeReveals(banner);
+  }
+
+  // 周末天气条：优先展示最近的周六/周日预报，没进 3 天窗口就如实说明
+  function renderWeekendStrip() {
+    const strip = elements.weekendStrip;
+    if (!strip) return;
+    const days = (state.data.weather && state.data.weather.days) || [];
+    if (!days.length) {
+      strip.classList.add('hidden');
+      return;
+    }
+    const weekend = days.filter((d) => [0, 6].includes(parseDate(d.date)?.getDay() ?? -1));
+    const picks = weekend.length ? weekend.slice(0, 2) : days.slice(0, 2);
+    const isWeekendView = weekend.length > 0;
+    const label = isWeekendView ? '这个周末' : '近两天天气';
+    strip.innerHTML = `
+      <span class="strip-label">${icon('sun')}${label}</span>
+      ${picks.map((d) => {
+        const date = parseDate(d.date);
+        const weekName = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][date.getDay()];
+        const rain = Number(d.rain_prob || 0);
+        return `<span class="weekend-day"><span class="wd-name">${weekName} ${formatDate(d.date, { month: 'numeric', day: 'numeric' })}</span><span class="wx-badge wx-${weatherIconKind(d.code)}" aria-hidden="true"></span><strong>${escapeHtml(d.label)} ${Math.round(Number(d.t_max))}°C</strong><small>降水 ${rain}%</small></span>`;
+      }).join('')}
+      <span class="strip-note">${isWeekendView ? '按预报安排行程，出发前再核一次' : '周末还没进 3 天预报窗口，之后再来刷新'}</span>`;
+  }
+
+  function renderWeekendPulse() {
+    const el = elements.weekendPulse;
+    if (!el) return;
+    const day = today.getDay();
+    let text = '';
+    if (day === 6) text = '今天就是周末 · 出发吧';
+    else if (day === 0) text = '周末进行时 · 抓紧今天';
+    else if (day === 5) text = '明天就是周末 · 今晚定去处';
+    else text = `距周末还有 ${6 - day - 1} 天 · 提前计划不踩空`;
+    el.innerHTML = `<span class="pulse-dot" aria-hidden="true"></span>${escapeHtml(text)}`;
+  }
+
+  function showLuckyPlace() {
+    const pool = getFilteredSpots();
+    const list = pool.length ? pool : state.spots;
+    if (!list.length) return;
+    const pick = list[Math.floor(Math.random() * list.length)];
+    showToast(`手气不错：${pick.name}`);
+    openPlace(Number(pick.id));
+  }
+
   function weatherIconKind(code) {
     const value = Number(code);
     if ([0, 1].includes(value)) return 'sun';
@@ -172,13 +297,13 @@
   }
 
   // ---- 滚动入场：区域标题与动态渲染的卡片进入视口时轻柔上浮 ----
-  const REVEAL_SELECTOR = '.section-heading, .scene-rail, .filter-workspace, .deal-card, .social-card';
+  const REVEAL_SELECTOR = '.section-heading, .scene-rail, .filter-workspace, .deal-card, .social-card, .seasonal-banner';
   let revealObserver = null;
 
   function observeReveals(scope) {
     if (!revealObserver) return;
-    scope.querySelectorAll(REVEAL_SELECTOR).forEach((el) => {
-      if (el.classList.contains('reveal')) return;
+    const targets = scope.matches?.(REVEAL_SELECTOR) ? [scope, ...scope.querySelectorAll(REVEAL_SELECTOR)] : scope.querySelectorAll(REVEAL_SELECTOR);
+    targets.forEach((el) => {
       el.classList.add('reveal');
       revealObserver.observe(el);
     });
@@ -237,6 +362,7 @@
 
   function bindEvents() {
     elements.heroSearch.addEventListener('submit', handleHeroSearch);
+    elements.luckyButton.addEventListener('click', showLuckyPlace);
     elements.filterSearch.addEventListener('input', (event) => {
       state.query = event.target.value.trim();
       state.visibleLimit = pageSize;
@@ -761,6 +887,9 @@
       enrichData(state.data);
       renderDistricts();
       renderStatus();
+      renderSeasonalBanner();
+      renderWeekendStrip();
+      renderWeekendPulse();
       renderHot();
       renderPlaces();
       renderDeals();

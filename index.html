@@ -6,6 +6,15 @@
   <meta name="description" content="武汉亲子周末去处指南，按天气、年龄、区域和预算发现适合一家人的公园、博物馆、商场与游乐场。">
   <meta name="theme-color" content="#f7f2e9">
   <title>周末在武汉 · 亲子去处指南</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="周末在武汉 · 亲子去处指南">
+  <meta property="og:description" content="按天气、年龄、区域和预算发现适合一家人的公园、博物馆、商场与游乐场。">
+  <meta property="og:url" content="https://confusedisprecious.github.io/play_recommendation/">
+  <meta property="og:image" content="https://confusedisprecious.github.io/play_recommendation/images/media/east-lake.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/style-v2.css">
   <link rel="stylesheet" href="css/responsive-v2.css">
 </head>
@@ -51,9 +60,11 @@
           <p class="eyebrow"><span id="hero-date">武汉 · 今天</span></p>
           <h1>把周末，<br>交给<em>武汉</em>。</h1>
           <p class="hero-lede">按天气、年龄、区域与预算找到适合一家人的去处。公开官网与人工核验内容分开标注，活动安排出发前再确认一次。</p>
+          <p class="weekend-pulse" id="weekend-pulse" role="status"></p>
           <form class="hero-search" id="hero-search" role="search">
             <svg class="icon" aria-hidden="true"><use href="assets/tabler-icons.svg#icon-search"></use></svg>
             <input id="hero-search-input" type="search" aria-label="搜索地点或活动" autocomplete="off" placeholder="试试：雨天、免费、东湖、博物馆">
+            <button class="lucky-button" id="lucky-button" type="button" title="随机挑一个去处">手气不错</button>
             <button type="submit">找去处</button>
           </form>
           <p class="search-helper" id="search-helper" role="status" aria-live="polite">正在加载本地场所数据…</p>
@@ -69,6 +80,13 @@
         </div>
       </div>
       <div class="shell data-status" id="data-status" aria-label="数据状态"></div>
+      <div class="shell weekend-strip" id="weekend-strip" aria-label="周末天气"></div>
+    </section>
+
+    <section class="seasonal-section" id="seasonal" aria-labelledby="seasonal-title">
+      <div class="shell">
+        <div class="seasonal-banner reveal" id="seasonal-banner"></div>
+      </div>
     </section>
 
     <section class="scene-section" aria-labelledby="scene-title">
