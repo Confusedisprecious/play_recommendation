@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T04:35:28+08:00",
+  "generated_at": "2026-11-02T09:34:13+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,14 +8,14 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "error",
-      "last_attempt_at": "2026-11-02T04:35:28+08:00",
-      "item_count": 0,
-      "message": "not well-formed (invalid token): line 1, column 41"
+      "status": "healthy",
+      "last_attempt_at": "2026-11-02T09:34:13+08:00",
+      "item_count": 3,
+      "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "error",
-      "last_attempt_at": "2026-11-02T04:35:28+08:00",
+      "last_attempt_at": "2026-11-02T09:34:13+08:00",
       "item_count": 0,
       "message": "HTTP Error 503: Service Unavailable"
     }
@@ -31,7 +31,6 @@
     }
   },
   "errors": [
-    "News RSS: not well-formed (invalid token): line 1, column 41",
     "RSSHub: HTTP Error 503: Service Unavailable"
   ],
   "items": [
@@ -76,7 +75,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.9capGNR-XiPVTUEQP6ZXHg&pid=News&w=960&h=540&c=7&rs=1",
       "image_source": "rss_thumbnail",
-      "discovery_query": "武汉 菊展",
+      "discovery_query": "武汉 公园 展览",
       "review_status": "auto_trusted"
     },
     {
@@ -606,18 +605,6 @@
       "image_source": "rss_thumbnail",
       "discovery_query": "武汉 夜游 活动",
       "review_status": "auto_trusted"
-    },
-    {
-      "id": "fff56468b6e860ad",
-      "platform": "bilibili",
-      "source_type": "rsshub_feed",
-      "title": "有一天唐老鸭去了武汉,然后就没有然后了",
-      "summary": "Length: 00:36 AuthorID: 3546947304556839 Play: 2987 Favorite: 23 Danmaku: 0 Comment: 1 Match By: title,tag",
-      "author": "不白吃是我-",
-      "url": "https://www.bilibili.com/video/av117369510824788",
-      "published_at": "2026-10-02",
-      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
-      "review_status": "pending"
     }
   ]
 }
