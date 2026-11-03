@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T11:29:49+08:00",
+  "generated_at": "2026-11-03T20:01:38+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,14 +9,15 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-11-03T11:29:49+08:00",
+      "last_attempt_at": "2026-11-03T20:01:38+08:00",
       "item_count": 3,
       "schedule": "every_2_hours"
     },
     "rsshub": {
-      "status": "healthy",
-      "last_attempt_at": "2026-11-03T11:29:49+08:00",
-      "item_count": 26
+      "status": "error",
+      "last_attempt_at": "2026-11-03T20:01:38+08:00",
+      "item_count": 0,
+      "message": "HTTP Error 503: Service Unavailable"
     }
   },
   "connectors": {
@@ -29,7 +30,9 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [],
+  "errors": [
+    "RSSHub: HTTP Error 503: Service Unavailable"
+  ],
   "items": [
     {
       "id": "8cba053e7359f1f9",
@@ -196,7 +199,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.t9ZXMyOHsfAaJTupO_ppPA&pid=News&w=960&h=540&c=7&rs=1",
       "image_source": "rss_thumbnail",
-      "discovery_query": "武汉 公园 展览",
+      "discovery_query": "武汉 菊展",
       "review_status": "auto_trusted"
     },
     {
