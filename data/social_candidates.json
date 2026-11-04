@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T03:35:07+08:00",
+  "generated_at": "2026-11-04T08:40:03+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,14 +8,14 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "error",
-      "last_attempt_at": "2026-11-04T03:35:07+08:00",
-      "item_count": 0,
-      "message": "not well-formed (invalid token): line 1, column 41"
+      "status": "healthy",
+      "last_attempt_at": "2026-11-04T08:40:03+08:00",
+      "item_count": 4,
+      "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "error",
-      "last_attempt_at": "2026-11-04T03:35:07+08:00",
+      "last_attempt_at": "2026-11-04T08:40:03+08:00",
       "item_count": 0,
       "message": "HTTP Error 503: Service Unavailable"
     }
@@ -31,7 +31,6 @@
     }
   },
   "errors": [
-    "News RSS: not well-formed (invalid token): line 1, column 41",
     "RSSHub: HTTP Error 503: Service Unavailable"
   ],
   "items": [
@@ -585,30 +584,6 @@
       "url": "https://www.bilibili.com/video/av117388603430759",
       "published_at": "2026-10-05",
       "discovery_query": "B站视频搜索：武汉溜娃（最新发布）",
-      "review_status": "pending"
-    },
-    {
-      "id": "3c557f89d8a58978",
-      "platform": "bilibili",
-      "source_type": "rsshub_feed",
-      "title": "亲子超友好🚶轻徒步天花板，武汉必徒路线",
-      "summary": "Length: 06:25 AuthorID: 22355387 Play: 21452 Favorite: 653 Danmaku: 9 Comment: 42 如果评选中国城市中心徒步路线，武汉东湖七山步道一定榜上有名。它藏在国家5A级东湖风景区内，却是一条免费的徒步线路。串联七座山，穿过中国最大城中湖之一的山海，从山脊线一路走到世界光谷的车水马龙，最后抵达传统中心城区最高点。沿途有抗战碉堡历史遗存，还有15处观景打卡点，既有原生野径，也有块石台阶，武汉市民称它为市内最适",
-      "author": "胡小米啊",
-      "url": "https://www.bilibili.com/video/av117383872125504",
-      "published_at": "2026-10-04",
-      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
-      "review_status": "pending"
-    },
-    {
-      "id": "ccb99c4b23fc89b7",
-      "platform": "bilibili",
-      "source_type": "rsshub_feed",
-      "title": "抛开父女不谈，你也是我一生中为数不多的挚友 （武汉美食篇）",
-      "summary": "Length: 00:14 AuthorID: 476266104 Play: 2505 Favorite: 24 Danmaku: 0 Comment: 4 Match By: title,tag",
-      "author": "小兔子Lia",
-      "url": "https://www.bilibili.com/video/av117382110578382",
-      "published_at": "2026-10-04",
-      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
       "review_status": "pending"
     }
   ]
