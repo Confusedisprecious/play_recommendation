@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T07:45:29+08:00",
+  "generated_at": "2026-11-05T14:59:00+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,15 +8,16 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "healthy",
-      "last_attempt_at": "2026-11-05T07:45:29+08:00",
-      "item_count": 3,
-      "schedule": "every_2_hours"
+      "status": "error",
+      "last_attempt_at": "2026-11-05T14:59:00+08:00",
+      "item_count": 0,
+      "message": "not well-formed (invalid token): line 1, column 41"
     },
     "rsshub": {
-      "status": "healthy",
-      "last_attempt_at": "2026-11-05T07:45:29+08:00",
-      "item_count": 26
+      "status": "error",
+      "last_attempt_at": "2026-11-05T14:59:00+08:00",
+      "item_count": 0,
+      "message": "HTTP Error 503: Service Unavailable"
     }
   },
   "connectors": {
@@ -29,7 +30,10 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [],
+  "errors": [
+    "News RSS: not well-formed (invalid token): line 1, column 41",
+    "RSSHub: HTTP Error 503: Service Unavailable"
+  ],
   "items": [
     {
       "id": "b7104f6588d78e7b",
@@ -573,38 +577,6 @@
       "url": "https://www.bilibili.com/video/av117394743758991",
       "published_at": "2026-10-06",
       "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
-      "review_status": "pending"
-    },
-    {
-      "id": "8f891dc31911ce1a",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "两天打卡25家！武汉宝妈带娃刷遍江城博物馆：这才是武汉国庆遛娃 ...",
-      "summary": "国庆假期，武汉遛娃天花板被网友实力解锁！沉浸式逛展、收集独家电子签章、解锁小众宝藏场馆，这场不走寻常路的亲子研学之旅，也让无数武汉市民发现，江城最有温度的国庆风景藏在一座座博物馆里。随着武汉市“游遍江城博物馆”打卡活动火热进行，本期50家精选文博场馆串联起三镇文脉，成为这个国庆假期的新晋热门出游地。 毛泽东旧居前站满听讲解的游客。武汉革命博物馆供图 打卡25家场馆，逛遍三镇 小众博物馆都在我身边 ...",
-      "author": "长江网",
-      "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5346697.htm",
-      "published_at": "2026-10-05",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "https://www.bing.com/th?id=ONUT.RIx0UWpIq_EmHny7KEqoqA&pid=News&w=960&h=540&c=7&rs=1",
-      "image_source": "rss_thumbnail",
-      "discovery_query": "武汉 亲子 活动",
-      "review_status": "auto_trusted"
-    },
-    {
-      "id": "c581592e7cadb6f4",
-      "platform": "bilibili",
-      "source_type": "rsshub_feed",
-      "title": "【武汉漫游】长江大桥桥头堡终于开放！带娃走了一遍，说点攻略里没写的",
-      "summary": "Length: 02:33 AuthorID: 1892739867 Play: 229 Favorite: 5 Danmaku: 0 Comment: 0 📍适合：亲子、城市漫步 🎫 门票：免费 ⏰ 开放时间：8:00—18:00 ⏱ 桥头堡建议游览：30—45分钟 🏢 桥头堡：7层，高约35米 👟 提醒：楼梯台阶较多，低龄儿童注意体力 ① 一楼大厅｜先看雕塑和铁轨 📚 可以给孩子讲： 1957年武汉长江大桥通车后，京汉、粤汉铁路在武汉接轨，南北铁路交通由此贯通。 现在桥下",
-      "author": "西墨小漫游",
-      "url": "https://www.bilibili.com/video/av117388603430759",
-      "published_at": "2026-10-05",
-      "discovery_query": "B站视频搜索：武汉溜娃（最新发布）",
       "review_status": "pending"
     }
   ]
