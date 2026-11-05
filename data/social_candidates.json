@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T00:31:50+08:00",
+  "generated_at": "2026-11-06T07:41:46+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,14 +8,14 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "healthy",
-      "last_attempt_at": "2026-11-06T00:31:50+08:00",
-      "item_count": 5,
-      "schedule": "every_2_hours"
+      "status": "error",
+      "last_attempt_at": "2026-11-06T07:41:46+08:00",
+      "item_count": 0,
+      "message": "not well-formed (invalid token): line 1, column 41"
     },
     "rsshub": {
       "status": "healthy",
-      "last_attempt_at": "2026-11-06T00:31:50+08:00",
+      "last_attempt_at": "2026-11-06T07:41:46+08:00",
       "item_count": 23
     }
   },
@@ -29,7 +29,9 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [],
+  "errors": [
+    "News RSS: not well-formed (invalid token): line 1, column 41"
+  ],
   "items": [
     {
       "id": "b7104f6588d78e7b",
@@ -248,7 +250,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "东湖七山，值得N刷的亲子户外徒步路线！",
-      "summary": "Length: 02:59 AuthorID: 444665424 Play: 502 Favorite: 23 Danmaku: 0 Comment: 0 定位：喻家山北路汪湖便民停车场，收费：3元/小时 路线：喻家山—南望山—午餐—枫多山—东湖绿道骑行—斧头山—风筝山、夹山、团山——停车场 Match By: title,tag",
+      "summary": "Length: 02:59 AuthorID: 444665424 Play: 507 Favorite: 23 Danmaku: 0 Comment: 0 定位：喻家山北路汪湖便民停车场，收费：3元/小时 路线：喻家山—南望山—午餐—枫多山—东湖绿道骑行—斧头山—风筝山、夹山、团山——停车场 Match By: title,tag",
       "author": "果爸爱旅行",
       "url": "https://www.bilibili.com/video/av117512083802920",
       "published_at": "2026-10-27",
@@ -356,7 +358,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "带7月龄宝宝自驾2100km！第五天 武汉-萍乡！",
-      "summary": "Length: 05:58 AuthorID: 3706982777227343 Play: 35544 Favorite: 158 Danmaku: 1 Comment: 10 Match By: title,tag",
+      "summary": "Length: 05:58 AuthorID: 3706982777227343 Play: 35562 Favorite: 158 Danmaku: 1 Comment: 10 Match By: title,tag",
       "author": "王萌萌成长日记",
       "url": "https://www.bilibili.com/video/av117482622815568",
       "published_at": "2026-10-22",
@@ -440,7 +442,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "带7月龄宝宝自驾2100km！第四天 武汉恒隆广场！",
-      "summary": "Length: 07:32 AuthorID: 3706982777227343 Play: 43970 Favorite: 192 Danmaku: 35 Comment: 6 Match By: title,tag",
+      "summary": "Length: 07:32 AuthorID: 3706982777227343 Play: 43984 Favorite: 192 Danmaku: 35 Comment: 6 Match By: title,tag",
       "author": "王萌萌成长日记",
       "url": "https://www.bilibili.com/video/av117470610393949",
       "published_at": "2026-10-20",
@@ -472,7 +474,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "带7月龄宝宝自驾2100km！第三天从景德镇出发到武汉！",
-      "summary": "Length: 08:35 AuthorID: 3706982777227343 Play: 15033 Favorite: 110 Danmaku: 43 Comment: 5 Match By: title,tag",
+      "summary": "Length: 08:35 AuthorID: 3706982777227343 Play: 15037 Favorite: 110 Danmaku: 43 Comment: 5 Match By: title,tag",
       "author": "王萌萌成长日记",
       "url": "https://www.bilibili.com/video/av117465241619416",
       "published_at": "2026-10-19",
@@ -508,7 +510,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "📍带小小孩在武汉三天两晚慢节奏亲子游",
-      "summary": "Length: 02:45 AuthorID: 510621129 Play: 713 Favorite: 7 Danmaku: 0 Comment: 4 住江景民宿、吃本地美食、带娃东湖骑行，看编钟越王勾践剑，赏最美江景灯光秀，在欢乐谷里撒欢一整天！轻松欢快亲子游保姆篇，直接抄作业就行。 Match By: title,description,tag",
+      "summary": "Length: 02:45 AuthorID: 510621129 Play: 716 Favorite: 7 Danmaku: 0 Comment: 4 住江景民宿、吃本地美食、带娃东湖骑行，看编钟越王勾践剑，赏最美江景灯光秀，在欢乐谷里撒欢一整天！轻松欢快亲子游保姆篇，直接抄作业就行。 Match By: title,description,tag",
       "author": "小艾阿姨要努力",
       "url": "https://www.bilibili.com/video/av117450829990879",
       "published_at": "2026-10-16",
@@ -520,7 +522,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "武汉1h🚗轿车直达江心岛，长江日落天花板",
-      "summary": "Length: 09:01 AuthorID: 22355387 Play: 8484 Favorite: 227 Danmaku: 6 Comment: 38 我在武汉周边找到一个超级休闲治愈的露营地，一座江心小岛。沿江1.5公里全是平整草坪，面朝长江，江边坐满钓鱼佬。傍晚整条大江被夕阳染成金色。江堤上就是古代点将台，状元门里走出过清代湖北首位状元，1965年的老棉花站改成打卡游玩点，苏东坡当年就从西河古渡上岸游春。最主要的是全免费，武汉1小时直达。这里就是黄州叶路洲。 这",
+      "summary": "Length: 09:01 AuthorID: 22355387 Play: 8490 Favorite: 228 Danmaku: 6 Comment: 38 我在武汉周边找到一个超级休闲治愈的露营地，一座江心小岛。沿江1.5公里全是平整草坪，面朝长江，江边坐满钓鱼佬。傍晚整条大江被夕阳染成金色。江堤上就是古代点将台，状元门里走出过清代湖北首位状元，1965年的老棉花站改成打卡游玩点，苏东坡当年就从西河古渡上岸游春。最主要的是全免费，武汉1小时直达。这里就是黄州叶路洲。 这",
       "author": "胡小米啊",
       "url": "https://www.bilibili.com/video/av117444320500409",
       "published_at": "2026-10-15",
@@ -552,7 +554,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "📍被严重低估的武汉最大的城中湖免费遛娃公园",
-      "summary": "Length: 01:06 AuthorID: 510621129 Play: 1725 Favorite: 76 Danmaku: 0 Comment: 3 整个公园分成A、B、C、D、E、F好几个区，每个片区风景、玩法都不一样，可以免费入园，遛娃、露营、散步都非常合适。 📍导航直接搜：沙湖公园琴园（A区）梦想花园 开车过来，可以停沙湖路的侧方停车位。 这里最讨小朋友喜欢的就是沙坑，沙子细腻干净，边上就有洗手池，特别省心，洗手间也就在游乐区附近，不用跑很远。 整个游玩区域比",
+      "summary": "Length: 01:06 AuthorID: 510621129 Play: 1728 Favorite: 76 Danmaku: 0 Comment: 3 整个公园分成A、B、C、D、E、F好几个区，每个片区风景、玩法都不一样，可以免费入园，遛娃、露营、散步都非常合适。 📍导航直接搜：沙湖公园琴园（A区）梦想花园 开车过来，可以停沙湖路的侧方停车位。 这里最讨小朋友喜欢的就是沙坑，沙子细腻干净，边上就有洗手池，特别省心，洗手间也就在游乐区附近，不用跑很远。 整个游玩区域比",
       "author": "小艾阿姨要努力",
       "url": "https://www.bilibili.com/video/av117433918554598",
       "published_at": "2026-10-13",
