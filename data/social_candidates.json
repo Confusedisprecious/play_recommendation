@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T14:59:00+08:00",
+  "generated_at": "2026-11-06T00:31:50+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,16 +8,15 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "error",
-      "last_attempt_at": "2026-11-05T14:59:00+08:00",
-      "item_count": 0,
-      "message": "not well-formed (invalid token): line 1, column 41"
+      "status": "healthy",
+      "last_attempt_at": "2026-11-06T00:31:50+08:00",
+      "item_count": 5,
+      "schedule": "every_2_hours"
     },
     "rsshub": {
-      "status": "error",
-      "last_attempt_at": "2026-11-05T14:59:00+08:00",
-      "item_count": 0,
-      "message": "HTTP Error 503: Service Unavailable"
+      "status": "healthy",
+      "last_attempt_at": "2026-11-06T00:31:50+08:00",
+      "item_count": 23
     }
   },
   "connectors": {
@@ -30,17 +29,14 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [
-    "News RSS: not well-formed (invalid token): line 1, column 41",
-    "RSSHub: HTTP Error 503: Service Unavailable"
-  ],
+  "errors": [],
   "items": [
     {
       "id": "b7104f6588d78e7b",
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "3D打印仿真食品模型",
-      "summary": "Length: 00:12 AuthorID: 516403439 Play: 378 Favorite: 0 Danmaku: 0 Comment: 0 - Match By: tag",
+      "summary": "Length: 00:12 AuthorID: 516403439 Play: 390 Favorite: 0 Danmaku: 0 Comment: 0 - Match By: tag",
       "author": "paulson沈",
       "url": "https://www.bilibili.com/video/av117553120676600",
       "published_at": "2026-11-04",
@@ -52,7 +48,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "〖悬挂式单轨 亲子快乐线〗武汉市光谷空轨旅游线龙泉山→九峰山全程前方展望POV",
-      "summary": "Length: 03:49 AuthorID: 3546557391571537 Play: 90 Favorite: 1 Danmaku: 0 Comment: 4 这次封面好像是整了依托奋（）为了尽可能的展示沿线风景导致模板过于简化了（） 光谷空轨旅游线是中国首条悬挂式单轨线路，也因此吸引很多游客慕名体验，其实车里全是一群小屁孩，2节编组的车都快被他们挤满了（笑） 总之空轨是个好东西，就是太能抢钱了（） Match By: title,tag",
+      "summary": "Length: 03:49 AuthorID: 3546557391571537 Play: 207 Favorite: 1 Danmaku: 0 Comment: 4 这次封面好像是整了依托奋（）为了尽可能的展示沿线风景导致模板过于简化了（） 光谷空轨旅游线是中国首条悬挂式单轨线路，也因此吸引很多游客慕名体验，其实车里全是一群小屁孩，2节编组的车都快被他们挤满了（笑） 总之空轨是个好东西，就是太能抢钱了（） Match By: title,tag",
       "author": "波奇交摄",
       "url": "https://www.bilibili.com/video/av117557012990567",
       "published_at": "2026-11-04",
@@ -76,7 +72,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "happy波带你武汉野生动物王国",
-      "summary": "Length: 01:34 AuthorID: 1757368132 Play: 258 Favorite: 0 Danmaku: 0 Comment: 2 武汉野生动物王国藏在蔡甸山林间，园区面积大，动物种类丰富，还有飞禽秀、童话剧场等精彩动物表演，能近距离和小动物互动。带娃逛完整趟腿都走酸了，看着孩子开心的模样，勾起童年回忆。小时候去中山公园，就只有海豹表演。你们小时候都去过哪些动物园？原来简单的快乐，是可以代代传递的。 Match By: title,descripti",
+      "summary": "Length: 01:34 AuthorID: 1757368132 Play: 261 Favorite: 0 Danmaku: 0 Comment: 2 武汉野生动物王国藏在蔡甸山林间，园区面积大，动物种类丰富，还有飞禽秀、童话剧场等精彩动物表演，能近距离和小动物互动。带娃逛完整趟腿都走酸了，看着孩子开心的模样，勾起童年回忆。小时候去中山公园，就只有海豹表演。你们小时候都去过哪些动物园？原来简单的快乐，是可以代代传递的。 Match By: title,descripti",
       "author": "happy波三镇跑",
       "url": "https://www.bilibili.com/video/av117544413365915",
       "published_at": "2026-11-02",
@@ -224,6 +220,26 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.t9ZXMyOHsfAaJTupO_ppPA&pid=News&w=960&h=540&c=7&rs=1",
       "image_source": "rss_thumbnail",
+      "discovery_query": "武汉 菊展",
+      "review_status": "auto_trusted"
+    },
+    {
+      "id": "2638f8c6713ce7e0",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "2026武汉设计日11月4日开幕，看展览逛市集，全市设置了多个体验场景",
+      "summary": "长江日报大武汉客户端10月28日讯（记者宋磊）10月28日，记者从武汉市政府新闻办举办的新闻发布会上获悉，2026 武汉设计日将于11月4日至6日举办。 “把图纸上的空间蓝图，转化为市民可触摸的城市实景。”武汉市自然资源和城乡建设局相关负责人介绍，2026 武汉设计日以“设计，让生活更美好”为主题，本届设计日主会场设在四美塘铁路遗址文化公园，同步在江岸、江汉、武昌、汉阳设置多处分会场。 本届设计日 ...",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5353577.htm",
+      "published_at": "2026-10-28",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "image_source": "",
       "discovery_query": "武汉 公园 展览",
       "review_status": "auto_trusted"
     },
@@ -232,7 +248,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "东湖七山，值得N刷的亲子户外徒步路线！",
-      "summary": "Length: 02:59 AuthorID: 444665424 Play: 462 Favorite: 21 Danmaku: 0 Comment: 0 定位：喻家山北路汪湖便民停车场，收费：3元/小时 路线：喻家山—南望山—午餐—枫多山—东湖绿道骑行—斧头山—风筝山、夹山、团山——停车场 Match By: title,tag",
+      "summary": "Length: 02:59 AuthorID: 444665424 Play: 502 Favorite: 23 Danmaku: 0 Comment: 0 定位：喻家山北路汪湖便民停车场，收费：3元/小时 路线：喻家山—南望山—午餐—枫多山—东湖绿道骑行—斧头山—风筝山、夹山、团山——停车场 Match By: title,tag",
       "author": "果爸爱旅行",
       "url": "https://www.bilibili.com/video/av117512083802920",
       "published_at": "2026-10-27",
@@ -340,7 +356,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "带7月龄宝宝自驾2100km！第五天 武汉-萍乡！",
-      "summary": "Length: 05:58 AuthorID: 3706982777227343 Play: 35062 Favorite: 155 Danmaku: 1 Comment: 10 Match By: title,tag",
+      "summary": "Length: 05:58 AuthorID: 3706982777227343 Play: 35544 Favorite: 158 Danmaku: 1 Comment: 10 Match By: title,tag",
       "author": "王萌萌成长日记",
       "url": "https://www.bilibili.com/video/av117482622815568",
       "published_at": "2026-10-22",
@@ -424,7 +440,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "带7月龄宝宝自驾2100km！第四天 武汉恒隆广场！",
-      "summary": "Length: 07:32 AuthorID: 3706982777227343 Play: 43385 Favorite: 190 Danmaku: 35 Comment: 6 Match By: title,tag",
+      "summary": "Length: 07:32 AuthorID: 3706982777227343 Play: 43970 Favorite: 192 Danmaku: 35 Comment: 6 Match By: title,tag",
       "author": "王萌萌成长日记",
       "url": "https://www.bilibili.com/video/av117470610393949",
       "published_at": "2026-10-20",
@@ -456,7 +472,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "带7月龄宝宝自驾2100km！第三天从景德镇出发到武汉！",
-      "summary": "Length: 08:35 AuthorID: 3706982777227343 Play: 14850 Favorite: 108 Danmaku: 43 Comment: 5 Match By: title,tag",
+      "summary": "Length: 08:35 AuthorID: 3706982777227343 Play: 15033 Favorite: 110 Danmaku: 43 Comment: 5 Match By: title,tag",
       "author": "王萌萌成长日记",
       "url": "https://www.bilibili.com/video/av117465241619416",
       "published_at": "2026-10-19",
@@ -468,7 +484,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "武汉哪里可以免费露营钓鱼做柴火饭，一个饭盒搞定亲子三人的午饭，柴火饭就是香，锅巴真好吃",
-      "summary": "Length: 01:33 AuthorID: 25425318 Play: 130 Favorite: 2 Danmaku: 0 Comment: 1 - Match By: title,tag",
+      "summary": "Length: 01:33 AuthorID: 25425318 Play: 134 Favorite: 2 Danmaku: 0 Comment: 1 - Match By: title,tag",
       "author": "范大伟",
       "url": "https://www.bilibili.com/video/av117460678281871",
       "published_at": "2026-10-18",
@@ -480,7 +496,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "武汉遛娃地21｜和平公园，草坪露营+儿童乐园",
-      "summary": "Length: 00:40 AuthorID: 363880810 Play: 169 Favorite: 1 Danmaku: 0 Comment: 0 - Match By: title,tag",
+      "summary": "Length: 00:40 AuthorID: 363880810 Play: 170 Favorite: 1 Danmaku: 0 Comment: 0 - Match By: title,tag",
       "author": "阿巡漫游记",
       "url": "https://www.bilibili.com/video/av117454353204860",
       "published_at": "2026-10-17",
@@ -492,7 +508,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "📍带小小孩在武汉三天两晚慢节奏亲子游",
-      "summary": "Length: 02:45 AuthorID: 510621129 Play: 711 Favorite: 7 Danmaku: 0 Comment: 4 住江景民宿、吃本地美食、带娃东湖骑行，看编钟越王勾践剑，赏最美江景灯光秀，在欢乐谷里撒欢一整天！轻松欢快亲子游保姆篇，直接抄作业就行。 Match By: title,description,tag",
+      "summary": "Length: 02:45 AuthorID: 510621129 Play: 713 Favorite: 7 Danmaku: 0 Comment: 4 住江景民宿、吃本地美食、带娃东湖骑行，看编钟越王勾践剑，赏最美江景灯光秀，在欢乐谷里撒欢一整天！轻松欢快亲子游保姆篇，直接抄作业就行。 Match By: title,description,tag",
       "author": "小艾阿姨要努力",
       "url": "https://www.bilibili.com/video/av117450829990879",
       "published_at": "2026-10-16",
@@ -504,7 +520,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "武汉1h🚗轿车直达江心岛，长江日落天花板",
-      "summary": "Length: 09:01 AuthorID: 22355387 Play: 8436 Favorite: 226 Danmaku: 6 Comment: 38 我在武汉周边找到一个超级休闲治愈的露营地，一座江心小岛。沿江1.5公里全是平整草坪，面朝长江，江边坐满钓鱼佬。傍晚整条大江被夕阳染成金色。江堤上就是古代点将台，状元门里走出过清代湖北首位状元，1965年的老棉花站改成打卡游玩点，苏东坡当年就从西河古渡上岸游春。最主要的是全免费，武汉1小时直达。这里就是黄州叶路洲。 这",
+      "summary": "Length: 09:01 AuthorID: 22355387 Play: 8484 Favorite: 227 Danmaku: 6 Comment: 38 我在武汉周边找到一个超级休闲治愈的露营地，一座江心小岛。沿江1.5公里全是平整草坪，面朝长江，江边坐满钓鱼佬。傍晚整条大江被夕阳染成金色。江堤上就是古代点将台，状元门里走出过清代湖北首位状元，1965年的老棉花站改成打卡游玩点，苏东坡当年就从西河古渡上岸游春。最主要的是全免费，武汉1小时直达。这里就是黄州叶路洲。 这",
       "author": "胡小米啊",
       "url": "https://www.bilibili.com/video/av117444320500409",
       "published_at": "2026-10-15",
@@ -536,7 +552,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "📍被严重低估的武汉最大的城中湖免费遛娃公园",
-      "summary": "Length: 01:06 AuthorID: 510621129 Play: 1693 Favorite: 74 Danmaku: 0 Comment: 3 整个公园分成A、B、C、D、E、F好几个区，每个片区风景、玩法都不一样，可以免费入园，遛娃、露营、散步都非常合适。 📍导航直接搜：沙湖公园琴园（A区）梦想花园 开车过来，可以停沙湖路的侧方停车位。 这里最讨小朋友喜欢的就是沙坑，沙子细腻干净，边上就有洗手池，特别省心，洗手间也就在游乐区附近，不用跑很远。 整个游玩区域比",
+      "summary": "Length: 01:06 AuthorID: 510621129 Play: 1725 Favorite: 76 Danmaku: 0 Comment: 3 整个公园分成A、B、C、D、E、F好几个区，每个片区风景、玩法都不一样，可以免费入园，遛娃、露营、散步都非常合适。 📍导航直接搜：沙湖公园琴园（A区）梦想花园 开车过来，可以停沙湖路的侧方停车位。 这里最讨小朋友喜欢的就是沙坑，沙子细腻干净，边上就有洗手池，特别省心，洗手间也就在游乐区附近，不用跑很远。 整个游玩区域比",
       "author": "小艾阿姨要努力",
       "url": "https://www.bilibili.com/video/av117433918554598",
       "published_at": "2026-10-13",
@@ -572,7 +588,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "花海封神‼️亲子友好路线，轻徒步登高远眺",
-      "summary": "Length: 04:08 AuthorID: 22355387 Play: 4062 Favorite: 83 Danmaku: 5 Comment: 38 十月武汉最值得徒步的一座山，大概是开爆了一山花海的龙泉山。山顶是始建于西汉的远眺亭，站在天马峰上，梁子湖一览无余。1000级台阶一路延伸到山脚，此刻遍山硫华菊，金黄与橙红交织成海，一路生花。山腰藏着唐代灵泉寺，还有和明十三陵并列的九王寝。最主要是5公里轻徒步，任何人都轻松拿下。 🌟 核心亮点 1️⃣ 5公里轻野环线：1",
+      "summary": "Length: 04:08 AuthorID: 22355387 Play: 4069 Favorite: 84 Danmaku: 5 Comment: 38 十月武汉最值得徒步的一座山，大概是开爆了一山花海的龙泉山。山顶是始建于西汉的远眺亭，站在天马峰上，梁子湖一览无余。1000级台阶一路延伸到山脚，此刻遍山硫华菊，金黄与橙红交织成海，一路生花。山腰藏着唐代灵泉寺，还有和明十三陵并列的九王寝。最主要是5公里轻徒步，任何人都轻松拿下。 🌟 核心亮点 1️⃣ 5公里轻野环线：1",
       "author": "胡小米啊",
       "url": "https://www.bilibili.com/video/av117394743758991",
       "published_at": "2026-10-06",
