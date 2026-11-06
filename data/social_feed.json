@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T14:58:14+08:00",
+  "generated_at": "2026-11-06T23:59:55+08:00",
   "latest_published_at": "2026-10-30",
   "freshness": {
     "live_window_days": 7,
@@ -10,19 +10,20 @@
     "expired_items_removed": 0
   },
   "source_health": {
-    "status": "healthy",
-    "last_discovery_at": "2026-11-06T14:58:05+08:00",
+    "status": "degraded",
+    "last_discovery_at": "2026-11-06T23:59:39+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-11-06T14:58:05+08:00",
-        "item_count": 3,
+        "last_attempt_at": "2026-11-06T23:59:39+08:00",
+        "item_count": 4,
         "schedule": "every_2_hours"
       },
       "rsshub": {
-        "status": "healthy",
-        "last_attempt_at": "2026-11-06T14:58:05+08:00",
-        "item_count": 22
+        "status": "error",
+        "last_attempt_at": "2026-11-06T23:59:39+08:00",
+        "item_count": 0,
+        "message": "HTTP Error 503: Service Unavailable"
       }
     },
     "connectors": {
@@ -36,7 +37,9 @@
       }
     },
     "pending_review": 21,
-    "errors": []
+    "errors": [
+      "RSSHub: HTTP Error 503: Service Unavailable"
+    ]
   },
   "policy": {
     "collection_mode": "trusted_public_feed_or_reviewed_authorized_export",
@@ -90,8 +93,8 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.9capGNR-XiPVTUEQP6ZXHg&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
-      "discovery_query": "武汉 菊展",
+      "collected_at": "2026-11-06T23:59:55+08:00",
+      "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
     {
@@ -111,7 +114,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.dhW0knjPVvVYL9BFnhsCFw&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 菊展",
       "image_source": "rss_thumbnail"
     },
@@ -132,7 +135,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -152,7 +155,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -172,7 +175,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -192,8 +195,8 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.t9ZXMyOHsfAaJTupO_ppPA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
-      "discovery_query": "武汉 菊展",
+      "collected_at": "2026-11-06T23:59:55+08:00",
+      "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
     {
@@ -213,7 +216,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -233,7 +236,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.ZU5X9o1Up_kfrvBiclq1TA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -254,7 +257,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.UH-_SARRlSnGq0XsXu91sQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
@@ -275,7 +278,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 亲子 活动"
     },
     {
@@ -295,7 +298,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -315,7 +318,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 亲子 活动"
     },
     {
@@ -335,7 +338,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.vH25Wy9P9bBq5-qiM4claQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
@@ -356,9 +359,29 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.ae9L1UFr_OQPVefzX3W75A&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
+    },
+    {
+      "id": "e936e8a5baac4bfb",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "速看！武汉金秋菊展来了",
+      "summary": "长江日报大武汉客户端10月20日讯 江城进入赏秋季。连日来，“武汉菊友之家”微信群持续热闹刷屏，群友们晒出自家阳台上含苞待放的菊花；社交媒体上，心急的网友已在互相打听：武汉秋天最值得期待的金秋菊展，什么时候到来？10月19日，武汉市园林和林业 ...",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5351009.htm",
+      "published_at": "2026-10-20",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-11-06T23:59:55+08:00",
+      "discovery_query": "武汉 菊展"
     },
     {
       "id": "8b1af3d7784d7e73",
@@ -377,7 +400,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.yEI8VBnMOnsaFBmT1F9SXA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-06T14:58:14+08:00",
+      "collected_at": "2026-11-06T23:59:55+08:00",
       "discovery_query": "武汉 景区 最新 开放",
       "image_source": "rss_thumbnail"
     }
