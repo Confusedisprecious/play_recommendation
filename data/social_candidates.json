@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T17:08:07+08:00",
+  "generated_at": "2026-11-09T00:43:27+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,14 +9,15 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-11-08T17:08:07+08:00",
-      "item_count": 3,
+      "last_attempt_at": "2026-11-09T00:43:27+08:00",
+      "item_count": 2,
       "schedule": "every_2_hours"
     },
     "rsshub": {
-      "status": "healthy",
-      "last_attempt_at": "2026-11-08T17:08:07+08:00",
-      "item_count": 24
+      "status": "error",
+      "last_attempt_at": "2026-11-09T00:43:27+08:00",
+      "item_count": 0,
+      "message": "HTTP Error 503: Service Unavailable"
     }
   },
   "connectors": {
@@ -29,7 +30,9 @@
       "credential_scope": "local_only"
     }
   },
-  "errors": [],
+  "errors": [
+    "RSSHub: HTTP Error 503: Service Unavailable"
+  ],
   "items": [
     {
       "id": "58ebe875a5cdf2f1",
@@ -154,9 +157,9 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "https://www.bing.com/th?id=ONUT.9capGNR-XiPVTUEQP6ZXHg&pid=News&w=960&h=540&c=7&rs=1",
-      "image_source": "rss_thumbnail",
-      "discovery_query": "武汉 公园 展览",
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 菊展",
       "review_status": "auto_trusted"
     },
     {
