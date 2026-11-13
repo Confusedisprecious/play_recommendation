@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T02:23:41+08:00",
+  "generated_at": "2026-11-13T09:11:27+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,14 +8,14 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "error",
-      "last_attempt_at": "2026-11-13T02:23:41+08:00",
-      "item_count": 0,
-      "message": "not well-formed (invalid token): line 1, column 41"
+      "status": "healthy",
+      "last_attempt_at": "2026-11-13T09:11:27+08:00",
+      "item_count": 1,
+      "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "error",
-      "last_attempt_at": "2026-11-13T02:23:41+08:00",
+      "last_attempt_at": "2026-11-13T09:11:27+08:00",
       "item_count": 0,
       "message": "HTTP Error 503: Service Unavailable"
     }
@@ -31,7 +31,6 @@
     }
   },
   "errors": [
-    "News RSS: not well-formed (invalid token): line 1, column 41",
     "RSSHub: HTTP Error 503: Service Unavailable"
   ],
   "items": [
@@ -642,30 +641,6 @@
       "image_source": "rss_thumbnail",
       "discovery_query": "武汉 景区 最新 开放",
       "review_status": "auto_trusted"
-    },
-    {
-      "id": "dfc2ce01de9cdb57",
-      "platform": "bilibili",
-      "source_type": "rsshub_feed",
-      "title": "📍被严重低估的武汉最大的城中湖免费遛娃公园",
-      "summary": "Length: 01:06 AuthorID: 510621129 Play: 1862 Favorite: 89 Danmaku: 0 Comment: 2 整个公园分成A、B、C、D、E、F好几个区，每个片区风景、玩法都不一样，可以免费入园，遛娃、露营、散步都非常合适。 📍导航直接搜：沙湖公园琴园（A区）梦想花园 开车过来，可以停沙湖路的侧方停车位。 这里最讨小朋友喜欢的就是沙坑，沙子细腻干净，边上就有洗手池，特别省心，洗手间也就在游乐区附近，不用跑很远。 整个游玩区域比",
-      "author": "小艾阿姨要努力",
-      "url": "https://www.bilibili.com/video/av117433918554598",
-      "published_at": "2026-10-13",
-      "discovery_query": "B站视频搜索：武汉遛娃（最新发布）",
-      "review_status": "pending"
-    },
-    {
-      "id": "1a7879b891b5fc85",
-      "platform": "bilibili",
-      "source_type": "rsshub_feed",
-      "title": "最好的教育，是让孩子坚持运动💪武汉上门少儿体育｜家门口高效运动纠正不良体态｜提升身体素质｜精进球类技能不推销、不套路、只做专业训练武汉三镇均可上门上...",
-      "summary": "Length: 00:20 AuthorID: 1801869009 Play: 193 Favorite: 2 Danmaku: 0 Comment: 1 - Match By: title,tag",
-      "author": "小严要自律",
-      "url": "https://www.bilibili.com/video/av117431301311379",
-      "published_at": "2026-10-13",
-      "discovery_query": "B站视频搜索：武汉亲子（最新发布）",
-      "review_status": "pending"
     }
   ]
 }
