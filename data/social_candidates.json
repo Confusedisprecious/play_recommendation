@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T17:41:35+08:00",
+  "generated_at": "2026-11-14T01:51:14+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -8,15 +8,16 @@
   },
   "source_status": {
     "news_rss": {
-      "status": "error",
-      "last_attempt_at": "2026-11-13T17:41:35+08:00",
-      "item_count": 0,
-      "message": "not well-formed (invalid token): line 1, column 41"
+      "status": "healthy",
+      "last_attempt_at": "2026-11-14T01:51:14+08:00",
+      "item_count": 1,
+      "schedule": "every_2_hours"
     },
     "rsshub": {
-      "status": "healthy",
-      "last_attempt_at": "2026-11-13T17:41:35+08:00",
-      "item_count": 26
+      "status": "error",
+      "last_attempt_at": "2026-11-14T01:51:14+08:00",
+      "item_count": 0,
+      "message": "HTTP Error 503: Service Unavailable"
     }
   },
   "connectors": {
@@ -30,7 +31,7 @@
     }
   },
   "errors": [
-    "News RSS: not well-formed (invalid token): line 1, column 41"
+    "RSSHub: HTTP Error 503: Service Unavailable"
   ],
   "items": [
     {
@@ -204,9 +205,9 @@
         "实时资讯",
         "武汉文旅"
       ],
-      "image": "https://www.bing.com/th?id=ONUT.9capGNR-XiPVTUEQP6ZXHg&pid=News&w=960&h=540&c=7&rs=1",
-      "image_source": "rss_thumbnail",
-      "discovery_query": "武汉 公园 展览",
+      "image": "",
+      "image_source": "",
+      "discovery_query": "武汉 菊展",
       "review_status": "auto_trusted"
     },
     {
