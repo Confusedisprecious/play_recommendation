@@ -1,41 +1,41 @@
 {
   "city": "武汉",
   "source": "Open-Meteo",
-  "fetched_at": "2026-11-21 20:47",
+  "fetched_at": "2026-11-22 04:35",
   "current": {
-    "temperature": 12.3,
+    "temperature": 9.4,
     "code": 0,
     "label": "晴"
   },
   "days": [
     {
-      "date": "2026-11-21",
-      "code": 0,
-      "label": "晴",
-      "t_max": 17.2,
-      "t_min": 7.4,
-      "rain_prob": 0
-    },
-    {
       "date": "2026-11-22",
       "code": 3,
       "label": "阴",
-      "t_max": 17.1,
-      "t_min": 8.8,
+      "t_max": 17.0,
+      "t_min": 9.0,
       "rain_prob": 0
     },
     {
       "date": "2026-11-23",
       "code": 51,
       "label": "毛毛雨",
-      "t_max": 15.5,
-      "t_min": 11.2,
-      "rain_prob": 31
+      "t_max": 15.1,
+      "t_min": 11.3,
+      "rain_prob": 35
+    },
+    {
+      "date": "2026-11-24",
+      "code": 3,
+      "label": "阴",
+      "t_max": 15.4,
+      "t_min": 8.1,
+      "rain_prob": 3
     }
   ],
   "advice": {
     "scene": "outdoor",
-    "headline": "今天晴 17°C，户外放电正合适",
-    "detail": "公园、绿道和骑行都适合安排。"
+    "headline": "今天阴 17°C，户外放电正合适",
+    "detail": "明天降雨概率较高，户外活动尽量安排在今天。"
   }
 }
