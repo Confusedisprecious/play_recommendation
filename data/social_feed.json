@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-11-22T20:40:49+08:00",
-  "latest_published_at": "2026-11-05",
+  "generated_at": "2026-11-23T04:45:27+08:00",
+  "latest_published_at": "2026-11-22",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-10-23",
+    "oldest_kept_date": "2026-10-24",
     "expired_items_removed": 0
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-11-22T20:40:44+08:00",
+    "last_discovery_at": "2026-11-23T04:45:21+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-11-22T20:40:44+08:00",
-        "item_count": 1,
+        "last_attempt_at": "2026-11-23T04:45:21+08:00",
+        "item_count": 2,
         "schedule": "every_2_hours"
       },
       "rsshub": {
         "status": "healthy",
-        "last_attempt_at": "2026-11-22T20:40:44+08:00",
-        "item_count": 22
+        "last_attempt_at": "2026-11-23T04:45:21+08:00",
+        "item_count": 23
       }
     },
     "connectors": {
@@ -35,7 +35,7 @@
         "credential_scope": "local_only"
       }
     },
-    "pending_review": 20,
+    "pending_review": 21,
     "errors": []
   },
   "policy": {
@@ -74,6 +74,27 @@
   ],
   "items": [
     {
+      "id": "33018b618d624cda",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "武汉亲子家庭天兴洲观鸟，石膏复刻鸟脚印",
+      "summary": "11月22日，武汉市观鸟协会组织15组亲子家庭登上天兴洲，开展观鸟活动。活动中，亲子家庭在导师带领下走进洲头滩地，观察灌草丛、沙滩、浅水和江面里的越冬水鸟，学习使用望远镜、辨认鸟类。随后，大家在沙滩上寻找水鸟足迹，由导师根据趾数、趾长和蹼痕讲解鸟类的类群与活动习性，并选取完整脚印浇筑石膏，制成“足迹",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202611/t5361501.htm",
+      "published_at": "2026-11-22",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.tSHKO9qfRpgEIB__spOk_g&pid=News&w=960&h=540&c=7&rs=1",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-11-23T04:45:27+08:00",
+      "discovery_query": "武汉 亲子 活动",
+      "image_source": "rss_thumbnail"
+    },
+    {
       "id": "3d82552601350d89",
       "platform": "local_news",
       "source_type": "public_news_rss",
@@ -90,7 +111,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -110,7 +131,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -130,7 +151,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -150,7 +171,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.dhW0knjPVvVYL9BFnhsCFw&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 菊展",
       "image_source": "rss_thumbnail"
     },
@@ -171,7 +192,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -191,7 +212,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -211,7 +232,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -231,7 +252,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -251,7 +272,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -271,7 +292,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.ZU5X9o1Up_kfrvBiclq1TA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -292,7 +313,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.UH-_SARRlSnGq0XsXu91sQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
@@ -313,7 +334,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-22T20:40:49+08:00",
+      "collected_at": "2026-11-23T04:45:27+08:00",
       "discovery_query": "武汉 亲子 活动"
     }
   ]
