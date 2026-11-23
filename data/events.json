@@ -3780,5 +3780,98 @@
     "indoor": true,
     "parking": "待确认",
     "source": "武汉文旅局"
+  },
+  {
+    "id": 153,
+    "name": "武汉市文化和旅游局行政处罚事先告知书送达公告（魏军强）",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202611/t20261123_2883674.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-153/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 154,
+    "name": "武汉市文化和旅游局行政处罚决定书送达公告 （孙飞）",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202611/t20261123_2883673.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-154/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
+  },
+  {
+    "id": 155,
+    "name": "武汉市文化和旅游局行政处罚事先告知书送达公告（武汉圆梦假期国际旅行社有限公司）",
+    "category": "event",
+    "district": "武昌区",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "description": "https://wlj.wuhan.gov.cn/202611/t20261123_2883672.shtml",
+    "tags": [
+      "文旅活动",
+      "热门活动"
+    ],
+    "rating": 4.0,
+    "address": "待确认",
+    "hours": "待确认",
+    "transport": "待确认",
+    "image": "https://picsum.photos/seed/event-155/400/300",
+    "events": [],
+    "deals": [],
+    "age_min": 3,
+    "age_max": 12,
+    "price": 0,
+    "free": false,
+    "indoor": true,
+    "parking": "待确认",
+    "source": "武汉文旅局"
   }
 ]
