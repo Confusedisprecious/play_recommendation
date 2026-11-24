@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-11-23T22:52:51+08:00",
+  "generated_at": "2026-11-24T10:56:48+08:00",
   "latest_published_at": "2026-11-22",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
-    "oldest_kept_date": "2026-10-24",
+    "oldest_kept_date": "2026-10-25",
     "expired_items_removed": 0
   },
   "source_health": {
-    "status": "healthy",
-    "last_discovery_at": "2026-11-23T22:52:46+08:00",
+    "status": "degraded",
+    "last_discovery_at": "2026-11-24T10:56:45+08:00",
     "automatic_sources": {
       "news_rss": {
-        "status": "healthy",
-        "last_attempt_at": "2026-11-23T22:52:46+08:00",
+        "status": "error",
+        "last_attempt_at": "2026-11-24T10:56:45+08:00",
         "item_count": 0,
-        "schedule": "every_2_hours"
+        "message": "not well-formed (invalid token): line 1, column 41"
       },
       "rsshub": {
         "status": "healthy",
-        "last_attempt_at": "2026-11-23T22:52:46+08:00",
+        "last_attempt_at": "2026-11-24T10:56:45+08:00",
         "item_count": 23
       }
     },
@@ -36,7 +36,9 @@
       }
     },
     "pending_review": 21,
-    "errors": []
+    "errors": [
+      "News RSS: not well-formed (invalid token): line 1, column 41"
+    ]
   },
   "policy": {
     "collection_mode": "trusted_public_feed_or_reviewed_authorized_export",
@@ -90,7 +92,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.tSHKO9qfRpgEIB__spOk_g&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -111,7 +113,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -131,7 +133,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -151,7 +153,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -171,7 +173,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.dhW0knjPVvVYL9BFnhsCFw&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 菊展",
       "image_source": "rss_thumbnail"
     },
@@ -192,7 +194,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -212,7 +214,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -232,7 +234,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -252,7 +254,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -272,7 +274,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -292,7 +294,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.ZU5X9o1Up_kfrvBiclq1TA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -313,7 +315,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.UH-_SARRlSnGq0XsXu91sQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
@@ -334,7 +336,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-23T22:52:51+08:00",
+      "collected_at": "2026-11-24T10:56:48+08:00",
       "discovery_query": "武汉 亲子 活动"
     }
   ]
