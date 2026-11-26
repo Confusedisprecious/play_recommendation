@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-26T05:48:52+08:00",
-  "latest_published_at": "2026-11-22",
+  "generated_at": "2026-11-26T12:12:09+08:00",
+  "latest_published_at": "2026-11-25",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
@@ -11,17 +11,17 @@
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-11-26T05:48:46+08:00",
+    "last_discovery_at": "2026-11-26T12:12:03+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-11-26T05:48:46+08:00",
-        "item_count": 1,
+        "last_attempt_at": "2026-11-26T12:12:03+08:00",
+        "item_count": 2,
         "schedule": "every_2_hours"
       },
       "rsshub": {
         "status": "healthy",
-        "last_attempt_at": "2026-11-26T05:48:46+08:00",
+        "last_attempt_at": "2026-11-26T12:12:03+08:00",
         "item_count": 24
       }
     },
@@ -74,6 +74,27 @@
   ],
   "items": [
     {
+      "id": "dd2e2205760237d1",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "菊花不是一朵花而是一“束”花，这些菊花奥秘你知道吗？",
+      "summary": "武汉人秋日的仪式感，是到公园看菊展。双休假日，解放公园里市民围看武汉本土培育的“盘龙”系列菊花，打卡拍照，连声赞叹“太美了”。 解放公园绿色驿站布置的菊花景点。 近日，桂建芳院士自然科普工作室开展“湿地花城秋日的主角·菊” 自然科普活动，解放公园园林工程师姜曼带领湿地小卫士们从多个维度读懂菊花，在花",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202611/t5362569.htm",
+      "published_at": "2026-11-25",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.kg1qaiVHvEwwhBiNz5OlZg&pid=News&w=960&h=540&c=7&rs=1",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-11-26T12:12:09+08:00",
+      "discovery_query": "武汉 菊展",
+      "image_source": "rss_thumbnail"
+    },
+    {
       "id": "33018b618d624cda",
       "platform": "local_news",
       "source_type": "public_news_rss",
@@ -90,7 +111,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.tSHKO9qfRpgEIB__spOk_g&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -111,7 +132,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -131,7 +152,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -151,7 +172,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -171,7 +192,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.dhW0knjPVvVYL9BFnhsCFw&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 菊展",
       "image_source": "rss_thumbnail"
     },
@@ -192,7 +213,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -212,7 +233,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -232,7 +253,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -252,7 +273,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -272,7 +293,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -292,7 +313,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.ZU5X9o1Up_kfrvBiclq1TA&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -313,7 +334,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.UH-_SARRlSnGq0XsXu91sQ&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 公园 展览",
       "image_source": "rss_thumbnail"
     },
@@ -334,7 +355,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-26T05:48:52+08:00",
+      "collected_at": "2026-11-26T12:12:09+08:00",
       "discovery_query": "武汉 亲子 活动"
     }
   ]

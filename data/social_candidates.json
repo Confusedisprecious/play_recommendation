@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T05:48:46+08:00",
+  "generated_at": "2026-11-26T12:12:03+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,13 +9,13 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-11-26T05:48:46+08:00",
-      "item_count": 1,
+      "last_attempt_at": "2026-11-26T12:12:03+08:00",
+      "item_count": 2,
       "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "healthy",
-      "last_attempt_at": "2026-11-26T05:48:46+08:00",
+      "last_attempt_at": "2026-11-26T12:12:03+08:00",
       "item_count": 24
     }
   },
@@ -32,11 +32,31 @@
   "errors": [],
   "items": [
     {
+      "id": "dd2e2205760237d1",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "菊花不是一朵花而是一“束”花，这些菊花奥秘你知道吗？",
+      "summary": "武汉人秋日的仪式感，是到公园看菊展。双休假日，解放公园里市民围看武汉本土培育的“盘龙”系列菊花，打卡拍照，连声赞叹“太美了”。 解放公园绿色驿站布置的菊花景点。 近日，桂建芳院士自然科普工作室开展“湿地花城秋日的主角·菊” 自然科普活动，解放公园园林工程师姜曼带领湿地小卫士们从多个维度读懂菊花，在花香之中完成一场有趣的自然科普。 解锁花序，读懂生长密码 “我们眼前看到的这一大朵菊花，并不是一‘朵’ ...",
+      "author": "长江网",
+      "url": "https://news.cjn.cn/whpd/yw_19947/202611/t5362569.htm",
+      "published_at": "2026-11-25",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.kg1qaiVHvEwwhBiNz5OlZg&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
+      "discovery_query": "武汉 菊展",
+      "review_status": "auto_trusted"
+    },
+    {
       "id": "9d171c92158c8c98",
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "掌管耗材的“神”",
-      "summary": "Length: 00:19 AuthorID: 516403439 Play: 359 Favorite: 0 Danmaku: 0 Comment: 0 - Match By: tag",
+      "summary": "Length: 00:19 AuthorID: 516403439 Play: 360 Favorite: 0 Danmaku: 0 Comment: 0 - Match By: tag",
       "author": "paulson沈",
       "url": "https://www.bilibili.com/video/av117670125177303",
       "published_at": "2026-11-24",
@@ -48,7 +68,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "这场亲子活动让爱被听见",
-      "summary": "Length: 01:05 AuthorID: 2141544330 Play: 19 Favorite: 0 Danmaku: 0 Comment: 0 心与心常相拥，爱与爱共生长——大方学校小学部“亲子润心”心理健康服务月精彩回顾 Match By: title,description,author,tag",
+      "summary": "Length: 01:05 AuthorID: 2141544330 Play: 30 Favorite: 0 Danmaku: 0 Comment: 0 心与心常相拥，爱与爱共生长——大方学校小学部“亲子润心”心理健康服务月精彩回顾 Match By: title,description,author,tag",
       "author": "武汉大方学校",
       "url": "https://www.bilibili.com/video/av117669302896192",
       "published_at": "2026-11-24",
@@ -80,7 +100,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "武汉10个免费遛娃宝藏地！值得反复刷N次",
-      "summary": "Length: 02:57 AuthorID: 510621129 Play: 540 Favorite: 25 Danmaku: 0 Comment: 1 记得点赞收藏，周末带娃直接冲。 Match By: title,description,tag",
+      "summary": "Length: 02:57 AuthorID: 510621129 Play: 555 Favorite: 28 Danmaku: 0 Comment: 1 记得点赞收藏，周末带娃直接冲。 Match By: title,description,tag",
       "author": "小艾阿姨要努力",
       "url": "https://www.bilibili.com/video/av117660377417891",
       "published_at": "2026-11-22",
@@ -104,7 +124,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "几好的太阳额！来东湖遛娃溜女朋友的～珍藏路线～#东湖游玩攻略 #武汉旅游攻略 #户外亲子徒步爬山 #中国地质大学 #珠宝首饰",
-      "summary": "Length: 03:11 AuthorID: 519738984 Play: 418 Favorite: 3 Danmaku: 0 Comment: 2 - Match By: title,tag",
+      "summary": "Length: 03:11 AuthorID: 519738984 Play: 420 Favorite: 3 Danmaku: 0 Comment: 2 - Match By: title,tag",
       "author": "魔滴刚",
       "url": "https://www.bilibili.com/video/av117641284948371",
       "published_at": "2026-11-19",
@@ -116,7 +136,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "武汉麓客岛最新0元遛娃攻略免费天花板：开放时间有调整，水线公园也暂停开放了。",
-      "summary": "Length: 01:26 AuthorID: 510621129 Play: 574 Favorite: 11 Danmaku: 0 Comment: 3 - Match By: title",
+      "summary": "Length: 01:26 AuthorID: 510621129 Play: 581 Favorite: 11 Danmaku: 0 Comment: 3 - Match By: title",
       "author": "小艾阿姨要努力",
       "url": "https://www.bilibili.com/video/av117626336445675",
       "published_at": "2026-11-16",
@@ -176,7 +196,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "带老人娃逛武汉赏秋，最怕的就是台阶！",
-      "summary": "Length: 04:32 AuthorID: 19051389 Play: 488 Favorite: 13 Danmaku: 0 Comment: 2 谁懂啊！三代人一起在武汉赏秋，最折磨人的不是走路，是台阶！ 带爷爷奶奶 + 小朋友出门，爬山、爬台阶的景点直接 pass！ 这条路线，全程平路，一步台阶都不用爬 第一站：解放公园公孙坪银杏 上百棵银杏连成林子，11 月中旬金黄，落叶堆到脚踝。 奶奶安安静静看风景，小朋友在落叶里撒欢，画面太治愈。 第二站：沙湖公园 C 区",
+      "summary": "Length: 04:32 AuthorID: 19051389 Play: 497 Favorite: 14 Danmaku: 0 Comment: 2 谁懂啊！三代人一起在武汉赏秋，最折磨人的不是走路，是台阶！ 带爷爷奶奶 + 小朋友出门，爬山、爬台阶的景点直接 pass！ 这条路线，全程平路，一步台阶都不用爬 第一站：解放公园公孙坪银杏 上百棵银杏连成林子，11 月中旬金黄，落叶堆到脚踝。 奶奶安安静静看风景，小朋友在落叶里撒欢，画面太治愈。 第二站：沙湖公园 C 区",
       "author": "小橙的城市地图",
       "url": "https://www.bilibili.com/video/av117585886648391",
       "published_at": "2026-11-09",
@@ -488,7 +508,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "东湖七山，值得N刷的亲子户外徒步路线！",
-      "summary": "Length: 02:59 AuthorID: 444665424 Play: 1162 Favorite: 51 Danmaku: 0 Comment: 0 定位：喻家山北路汪湖便民停车场，收费：3元/小时 路线：喻家山—南望山—午餐—枫多山—东湖绿道骑行—斧头山—风筝山、夹山、团山——停车场 Match By: title,tag",
+      "summary": "Length: 02:59 AuthorID: 444665424 Play: 1167 Favorite: 51 Danmaku: 0 Comment: 0 定位：喻家山北路汪湖便民停车场，收费：3元/小时 路线：喻家山—南望山—午餐—枫多山—东湖绿道骑行—斧头山—风筝山、夹山、团山——停车场 Match By: title,tag",
       "author": "果爸爱旅行",
       "url": "https://www.bilibili.com/video/av117512083802920",
       "published_at": "2026-10-27",
