@@ -1,15 +1,6 @@
 [
   {
     "rank": 1,
-    "title": "武汉动物园",
-    "heat": 9900,
-    "trend": "up",
-    "place_id": 19,
-    "reason": "限时优惠 · 社交平台 2 条提及 · 近期活动",
-    "social_mentions": 2
-  },
-  {
-    "rank": 2,
     "title": "武汉自然博物馆·贝林大河生命馆",
     "heat": 9600,
     "trend": "stable",
@@ -18,16 +9,16 @@
     "social_mentions": 0
   },
   {
-    "rank": 3,
-    "title": "汉口江滩",
-    "heat": 8800,
+    "rank": 2,
+    "title": "武汉动物园",
+    "heat": 9000,
     "trend": "up",
-    "place_id": 23,
-    "reason": "社交平台 2 条提及 · 近期活动 · 免费入场",
-    "social_mentions": 2
+    "place_id": 19,
+    "reason": "限时优惠 · 社交平台 1 条提及 · 近期活动",
+    "social_mentions": 1
   },
   {
-    "rank": 4,
+    "rank": 3,
     "title": "永旺梦乐城金银潭",
     "heat": 8700,
     "trend": "stable",
@@ -36,7 +27,7 @@
     "social_mentions": 0
   },
   {
-    "rank": 5,
+    "rank": 4,
     "title": "武汉极地海洋世界",
     "heat": 8600,
     "trend": "stable",
@@ -45,7 +36,7 @@
     "social_mentions": 0
   },
   {
-    "rank": 6,
+    "rank": 5,
     "title": "武汉欢乐谷",
     "heat": 8200,
     "trend": "stable",
@@ -54,16 +45,7 @@
     "social_mentions": 0
   },
   {
-    "rank": 7,
-    "title": "沙湖公园",
-    "heat": 8100,
-    "trend": "up",
-    "place_id": 18,
-    "reason": "社交平台 4 条提及 · 免费入场",
-    "social_mentions": 4
-  },
-  {
-    "rank": 8,
+    "rank": 6,
     "title": "玛雅海滩水公园",
     "heat": 8000,
     "trend": "stable",
@@ -72,13 +54,31 @@
     "social_mentions": 0
   },
   {
-    "rank": 9,
+    "rank": 7,
     "title": "花博汇",
     "heat": 8000,
     "trend": "stable",
     "place_id": 45,
     "reason": "限时优惠 · 近期活动",
     "social_mentions": 0
+  },
+  {
+    "rank": 8,
+    "title": "汉口江滩",
+    "heat": 7900,
+    "trend": "up",
+    "place_id": 23,
+    "reason": "社交平台 1 条提及 · 近期活动 · 免费入场",
+    "social_mentions": 1
+  },
+  {
+    "rank": 9,
+    "title": "沙湖公园",
+    "heat": 7800,
+    "trend": "up",
+    "place_id": 18,
+    "reason": "社交平台 3 条提及 · 免费入场",
+    "social_mentions": 3
   },
   {
     "rank": 10,
