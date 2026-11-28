@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T03:31:03+08:00",
+  "generated_at": "2026-11-28T10:46:32+08:00",
   "publish_requires_review": true,
   "configured": {
     "searxng": false,
@@ -9,13 +9,13 @@
   "source_status": {
     "news_rss": {
       "status": "healthy",
-      "last_attempt_at": "2026-11-28T03:31:03+08:00",
-      "item_count": 1,
+      "last_attempt_at": "2026-11-28T10:46:32+08:00",
+      "item_count": 2,
       "schedule": "every_2_hours"
     },
     "rsshub": {
       "status": "healthy",
-      "last_attempt_at": "2026-11-28T03:31:03+08:00",
+      "last_attempt_at": "2026-11-28T10:46:32+08:00",
       "item_count": 25
     }
   },
@@ -36,7 +36,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "武汉免费遛娃烧烤露营，能玩水玩沙公园",
-      "summary": "Length: 01:44 AuthorID: 510621129 Play: 176 Favorite: 3 Danmaku: 0 Comment: 0 从武昌市区开车半个小时就能到！这里有着超美的杉树林，细腻的江边沙滩，在树荫下露营太舒服啦！附免费沙滩详细路线攻略和露营好物分享 Match By: title,tag",
+      "summary": "Length: 01:44 AuthorID: 510621129 Play: 536 Favorite: 7 Danmaku: 0 Comment: 4 从武昌市区开车半个小时就能到！这里有着超美的杉树林，细腻的江边沙滩，在树荫下露营太舒服啦！附免费沙滩详细路线攻略和露营好物分享 Match By: title,tag",
       "author": "小艾阿姨要努力",
       "url": "https://www.bilibili.com/video/av117688781244122",
       "published_at": "2026-11-27",
@@ -44,11 +44,31 @@
       "review_status": "pending"
     },
     {
+      "id": "c2305b5a840be4af",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "“00后”养菊达人拥有个人主题展台 武汉金秋菊展越办越年轻",
+      "summary": "11月17日，沙湖公园的秋雨打在花瓣上，几朵白色丝菊被雨水压低了头。朱恒伸手轻轻抖落花心积存的雨水，花头又重新舒展开来。这是武汉金秋菊展的现场，也是他第一次以“民间养菊达人”的身份，在这里拥有一个属于自己的个人主题展台。 神似荷包蛋的“汴京初桂” 草编花盆高低错落，近百盆菊花多是其他展台上见不到的国产品种。那盆白色的“天河雪山神”丝菊，整个菊展独此一处。一盆叫“汴京初桂”的菊花花瓣卷曲如驼背，形似 ...",
+      "author": "荆楚网新闻频道",
+      "url": "https://news.cnhubei.com/content/2026-11/28/content_20307636.html",
+      "published_at": "2026-11-27",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.i06xyzXVzwXVUFVcG3miqg&pid=News&w=960&h=540&c=7&rs=1",
+      "image_source": "rss_thumbnail",
+      "discovery_query": "武汉 菊展",
+      "review_status": "auto_trusted"
+    },
+    {
       "id": "8fd26507a3e3264a",
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "3D打印不倒翁自由",
-      "summary": "Length: 00:29 AuthorID: 516403439 Play: 327 Favorite: 1 Danmaku: 0 Comment: 0 - Match By: tag",
+      "summary": "Length: 00:29 AuthorID: 516403439 Play: 330 Favorite: 1 Danmaku: 0 Comment: 0 - Match By: tag",
       "author": "paulson沈",
       "url": "https://www.bilibili.com/video/av117681533485828",
       "published_at": "2026-11-26",
@@ -80,7 +100,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "掌管耗材的“神”",
-      "summary": "Length: 00:19 AuthorID: 516403439 Play: 380 Favorite: 0 Danmaku: 0 Comment: 0 - Match By: tag",
+      "summary": "Length: 00:19 AuthorID: 516403439 Play: 381 Favorite: 0 Danmaku: 0 Comment: 0 - Match By: tag",
       "author": "paulson沈",
       "url": "https://www.bilibili.com/video/av117670125177303",
       "published_at": "2026-11-24",
@@ -124,7 +144,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "武汉10个免费遛娃宝藏地！值得反复刷N次",
-      "summary": "Length: 02:57 AuthorID: 510621129 Play: 654 Favorite: 41 Danmaku: 0 Comment: 1 记得点赞收藏，周末带娃直接冲。 Match By: title,description,tag",
+      "summary": "Length: 02:57 AuthorID: 510621129 Play: 682 Favorite: 43 Danmaku: 0 Comment: 1 记得点赞收藏，周末带娃直接冲。 Match By: title,description,tag",
       "author": "小艾阿姨要努力",
       "url": "https://www.bilibili.com/video/av117660377417891",
       "published_at": "2026-11-22",
@@ -160,7 +180,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "武汉麓客岛最新0元遛娃攻略免费天花板：开放时间有调整，水线公园也暂停开放了。",
-      "summary": "Length: 01:26 AuthorID: 510621129 Play: 624 Favorite: 13 Danmaku: 0 Comment: 3 - Match By: title",
+      "summary": "Length: 01:26 AuthorID: 510621129 Play: 633 Favorite: 13 Danmaku: 0 Comment: 3 - Match By: title",
       "author": "小艾阿姨要努力",
       "url": "https://www.bilibili.com/video/av117626336445675",
       "published_at": "2026-11-16",
@@ -220,7 +240,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "带老人娃逛武汉赏秋，最怕的就是台阶！",
-      "summary": "Length: 04:32 AuthorID: 19051389 Play: 542 Favorite: 15 Danmaku: 0 Comment: 2 谁懂啊！三代人一起在武汉赏秋，最折磨人的不是走路，是台阶！ 带爷爷奶奶 + 小朋友出门，爬山、爬台阶的景点直接 pass！ 这条路线，全程平路，一步台阶都不用爬 第一站：解放公园公孙坪银杏 上百棵银杏连成林子，11 月中旬金黄，落叶堆到脚踝。 奶奶安安静静看风景，小朋友在落叶里撒欢，画面太治愈。 第二站：沙湖公园 C 区",
+      "summary": "Length: 04:32 AuthorID: 19051389 Play: 553 Favorite: 15 Danmaku: 0 Comment: 2 谁懂啊！三代人一起在武汉赏秋，最折磨人的不是走路，是台阶！ 带爷爷奶奶 + 小朋友出门，爬山、爬台阶的景点直接 pass！ 这条路线，全程平路，一步台阶都不用爬 第一站：解放公园公孙坪银杏 上百棵银杏连成林子，11 月中旬金黄，落叶堆到脚踝。 奶奶安安静静看风景，小朋友在落叶里撒欢，画面太治愈。 第二站：沙湖公园 C 区",
       "author": "小橙的城市地图",
       "url": "https://www.bilibili.com/video/av117585886648391",
       "published_at": "2026-11-09",
@@ -312,7 +332,7 @@
       "platform": "bilibili",
       "source_type": "rsshub_feed",
       "title": "〖悬挂式单轨 亲子快乐线〗武汉市光谷空轨旅游线龙泉山→九峰山全程前方展望POV",
-      "summary": "Length: 03:49 AuthorID: 3546557391571537 Play: 253 Favorite: 1 Danmaku: 1 Comment: 6 这次封面好像是整了依托奋（）为了尽可能的展示沿线风景导致模板过于简化了（） 光谷空轨旅游线是中国首条悬挂式单轨线路，也因此吸引很多游客慕名体验，其实车里全是一群小屁孩，2节编组的车都快被他们挤满了（笑） 总之空轨是个好东西，就是太能抢钱了（） Match By: title,tag",
+      "summary": "Length: 03:49 AuthorID: 3546557391571537 Play: 254 Favorite: 1 Danmaku: 1 Comment: 6 这次封面好像是整了依托奋（）为了尽可能的展示沿线风景导致模板过于简化了（） 光谷空轨旅游线是中国首条悬挂式单轨线路，也因此吸引很多游客慕名体验，其实车里全是一群小屁孩，2节编组的车都快被他们挤满了（笑） 总之空轨是个好东西，就是太能抢钱了（） Match By: title,tag",
       "author": "波奇交摄",
       "url": "https://www.bilibili.com/video/av117557012990567",
       "published_at": "2026-11-04",
@@ -465,66 +485,6 @@
       "image": "",
       "image_source": "",
       "discovery_query": "武汉 菊展",
-      "review_status": "auto_trusted"
-    },
-    {
-      "id": "399069daf7e128b8",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "早安武汉 | 武汉金秋菊展即将启幕，先睹为快",
-      "summary": "第43届武汉金秋菊展将于10月30日启幕。10月27日，记者提前探访汉口江滩主展区，现场搭建进入冲刺阶段，特色火车站花艺景观已成型。 本届菊展设汉口江滩、中山公园、沙湖公园、武汉动物园四大主题展区及各区集中展点、绿色驿站特色展点。不少市民提前赶来，在缤纷花丛间拍照打卡，抢先感受江城秋日风光。 10月21日，央地共建武汉区域科技创新中心工作推进会在汉举行。该会议去年已经完整开过一轮。两年，11场，科 ...",
-      "author": "长江网",
-      "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5353387.htm",
-      "published_at": "2026-10-28",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "",
-      "image_source": "",
-      "discovery_query": "武汉 公园 展览",
-      "review_status": "auto_trusted"
-    },
-    {
-      "id": "d4877ee9e785a53d",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "即将开展！武汉金秋菊展最全攻略请查收",
-      "summary": "以“湿地涵秋，菊耀江城”为主题，武汉市第43届金秋菊展将于10月30日正式开展，并持续展至11月30日。从1956年的首届菊展延续至今，这场秋日花事已走过七十载。本届菊展由武汉市园林和林业局主办、联动各方携手共办，20个展区展点遍布全城，从看花到以场景入画，更打出一套“花展+文商旅体”的组合拳，让七十年的菊香在这个秋天焕发新活力。",
-      "author": "长江云 - 湖北网络广播电视台官方网站",
-      "url": "https://news.hbtv.com.cn/p/4638715.html",
-      "published_at": "2026-10-28",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "",
-      "image_source": "",
-      "discovery_query": "武汉 菊展",
-      "review_status": "auto_trusted"
-    },
-    {
-      "id": "2638f8c6713ce7e0",
-      "platform": "local_news",
-      "source_type": "public_news_rss",
-      "title": "2026武汉设计日11月4日开幕，看展览逛市集，全市设置了多个体验场景",
-      "summary": "长江日报大武汉客户端10月28日讯（记者宋磊）10月28日，记者从武汉市政府新闻办举办的新闻发布会上获悉，2026 武汉设计日将于11月4日至6日举办。 “把图纸上的空间蓝图，转化为市民可触摸的城市实景。”武汉市自然资源和城乡建设局相关负责人介绍，2026 武汉设计日以“设计，让生活更美好”为主题，本届设计日主会场设在四美塘铁路遗址文化公园，同步在江岸、江汉、武昌、汉阳设置多处分会场。 本届设计日 ...",
-      "author": "长江网",
-      "url": "https://news.cjn.cn/whpd/yw_19947/202610/t5353577.htm",
-      "published_at": "2026-10-28",
-      "place_name": "",
-      "district": "",
-      "tags": [
-        "实时资讯",
-        "武汉文旅"
-      ],
-      "image": "",
-      "image_source": "",
-      "discovery_query": "武汉 公园 展览",
       "review_status": "auto_trusted"
     }
   ]

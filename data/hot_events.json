@@ -46,6 +46,15 @@
   },
   {
     "rank": 6,
+    "title": "沙湖公园",
+    "heat": 8100,
+    "trend": "up",
+    "place_id": 18,
+    "reason": "社交平台 4 条提及 · 免费入场",
+    "social_mentions": 4
+  },
+  {
+    "rank": 7,
     "title": "玛雅海滩水公园",
     "heat": 8000,
     "trend": "stable",
@@ -54,7 +63,7 @@
     "social_mentions": 0
   },
   {
-    "rank": 7,
+    "rank": 8,
     "title": "花博汇",
     "heat": 8000,
     "trend": "stable",
@@ -63,22 +72,13 @@
     "social_mentions": 0
   },
   {
-    "rank": 8,
+    "rank": 9,
     "title": "汉口江滩",
     "heat": 7900,
     "trend": "up",
     "place_id": 23,
     "reason": "社交平台 1 条提及 · 近期活动 · 免费入场",
     "social_mentions": 1
-  },
-  {
-    "rank": 9,
-    "title": "沙湖公园",
-    "heat": 7800,
-    "trend": "up",
-    "place_id": 18,
-    "reason": "社交平台 3 条提及 · 免费入场",
-    "social_mentions": 3
   },
   {
     "rank": 10,

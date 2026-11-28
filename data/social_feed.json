@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-11-28T03:31:08+08:00",
-  "latest_published_at": "2026-11-25",
+  "generated_at": "2026-11-28T10:46:37+08:00",
+  "latest_published_at": "2026-11-27",
   "freshness": {
     "live_window_days": 7,
     "current_window_days": 30,
     "stale_after_days": 30,
     "retention_days": 30,
     "oldest_kept_date": "2026-10-29",
-    "expired_items_removed": 3
+    "expired_items_removed": 0
   },
   "source_health": {
     "status": "healthy",
-    "last_discovery_at": "2026-11-28T03:31:03+08:00",
+    "last_discovery_at": "2026-11-28T10:46:32+08:00",
     "automatic_sources": {
       "news_rss": {
         "status": "healthy",
-        "last_attempt_at": "2026-11-28T03:31:03+08:00",
-        "item_count": 1,
+        "last_attempt_at": "2026-11-28T10:46:32+08:00",
+        "item_count": 2,
         "schedule": "every_2_hours"
       },
       "rsshub": {
         "status": "healthy",
-        "last_attempt_at": "2026-11-28T03:31:03+08:00",
+        "last_attempt_at": "2026-11-28T10:46:32+08:00",
         "item_count": 25
       }
     },
@@ -74,6 +74,27 @@
   ],
   "items": [
     {
+      "id": "c2305b5a840be4af",
+      "platform": "local_news",
+      "source_type": "public_news_rss",
+      "title": "“00后”养菊达人拥有个人主题展台 武汉金秋菊展越办越年轻",
+      "summary": "11月17日，沙湖公园的秋雨打在花瓣上，几朵白色丝菊被雨水压低了头。朱恒伸手轻轻抖落花心积存的雨水，花头又重新舒展开来。这是武汉金秋菊展的现场，也是他第一次以“民间养菊达人”的身份，在这里拥有一个属于自己的个人主题展台。 神似荷包蛋的“汴京初桂” 草编花盆高低错落，近百盆菊花多是其他展台上见不到的国",
+      "author": "荆楚网新闻频道",
+      "url": "https://news.cnhubei.com/content/2026-11/28/content_20307636.html",
+      "published_at": "2026-11-27",
+      "place_name": "",
+      "district": "",
+      "tags": [
+        "实时资讯",
+        "武汉文旅"
+      ],
+      "image": "https://www.bing.com/th?id=ONUT.i06xyzXVzwXVUFVcG3miqg&pid=News&w=960&h=540&c=7&rs=1",
+      "review_status": "auto_trusted",
+      "collected_at": "2026-11-28T10:46:37+08:00",
+      "discovery_query": "武汉 菊展",
+      "image_source": "rss_thumbnail"
+    },
+    {
       "id": "dd2e2205760237d1",
       "platform": "local_news",
       "source_type": "public_news_rss",
@@ -90,7 +111,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.kg1qaiVHvEwwhBiNz5OlZg&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-28T03:31:08+08:00",
+      "collected_at": "2026-11-28T10:46:37+08:00",
       "discovery_query": "武汉 菊展",
       "image_source": "rss_thumbnail"
     },
@@ -111,7 +132,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.tSHKO9qfRpgEIB__spOk_g&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-28T03:31:08+08:00",
+      "collected_at": "2026-11-28T10:46:37+08:00",
       "discovery_query": "武汉 亲子 活动",
       "image_source": "rss_thumbnail"
     },
@@ -132,7 +153,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-28T03:31:08+08:00",
+      "collected_at": "2026-11-28T10:46:37+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -152,7 +173,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-28T03:31:08+08:00",
+      "collected_at": "2026-11-28T10:46:37+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -172,7 +193,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-28T03:31:08+08:00",
+      "collected_at": "2026-11-28T10:46:37+08:00",
       "discovery_query": "武汉 公园 展览"
     },
     {
@@ -192,7 +213,7 @@
       ],
       "image": "https://www.bing.com/th?id=ONUT.dhW0knjPVvVYL9BFnhsCFw&pid=News&w=960&h=540&c=7&rs=1",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-28T03:31:08+08:00",
+      "collected_at": "2026-11-28T10:46:37+08:00",
       "discovery_query": "武汉 菊展",
       "image_source": "rss_thumbnail"
     },
@@ -213,7 +234,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-28T03:31:08+08:00",
+      "collected_at": "2026-11-28T10:46:37+08:00",
       "discovery_query": "武汉 菊展"
     },
     {
@@ -233,7 +254,7 @@
       ],
       "image": "",
       "review_status": "auto_trusted",
-      "collected_at": "2026-11-28T03:31:08+08:00",
+      "collected_at": "2026-11-28T10:46:37+08:00",
       "discovery_query": "武汉 菊展"
     }
   ]
